@@ -1,0 +1,161 @@
+include::settings.adoc[]
+
+= Lehrkonzept Programmierung II
+
+// ###################################################
+// ###################################################
+// ###################################################
+== Überblick
+
+[subs=normal]
+----
+*Titel*   : *Programmierung II*
+*Kontext* : _Zugüberwachung & -disposition_
+----
+
+[subs=normal]
+----
+*Übersicht*
+ Hochschule        : Duale Hochschule BaWü (Mannheim)
+ Fachbereich       : Studienbereich Wirtschaft, Wirtschaftsinformatik,
+                     Appl. Management
+ Lehrveranstaltung : Programmierung II (W3WI_109)
+ Lehrform          : Vorlesung, Übung, Laborübung, Case Study
+ Prüfungsleistung  : Klausur oder Portfolio
+ Dozent            : Thorsten Eckstein
+
+*Lehrinhalte (Pflicht)*
+ Fortgeschrittene objektorientierte Konzepte: Generische Interfaces
+ und Klassen, Nutzung der Klassenbibliothek. Aufbau grafischer Ober-
+ flächen: Layout, typische Komponenten für grafische Benutzungs-
+ schnittstellen, Ereignisbehandlung. Fortgeschrittene Programmier-
+ methodik: Parallele Programmierung mit Threads, Synchronisations- &
+ Kommunikationskonzepte, Ein- und Ausgabe über Streams, Datenbanken
+ und Objektrelationales Mapping.
+
+*Ergänzende Lehrinhalte*
+ - Design Prinzipien
+ - Design Patterns
+ - Code Qualität
+ - TDD, JUnit
+
+ *KW    Mo       - So          Kurstag*
+(07    12.02.24 - 18.02.24    Allg. Einführungstag)
+ 08    19.02.24 - 25.02.24    1: *Di., 20.02.*
+ 09    26.02.24 - 03.03.24    2: *Di., 27.02.*
+ 10    04.03.24 - 10.03.24    3: *Di., 05.03.*
+ 11    11.03.24 - 17.03.24    4: *Di., 12.03.*
+ 12    18.03.24 - 24.03.24    5: *Di., 19.03.*
+ 13    25.03.24 - 31.03.24    6: *Di., 26.03.* [29.03.-01.04. Ostern]
+ 14    01.04.24 - 07.04.24    7: *Di., 02.04.*
+ 15    08.04.24 - 14.04.24    8: *Di., 09.04.*
+ 16    22.04.24 - 28.04.24    9: *Di., 16.04.*
+ 17    29.04.24 - 05.05.24   10: *Di., 23.04.*
+----
+
+
+// ###################################################
+// ###################################################
+// ###################################################
+== Inhaltsverzeichnis
+
+[subs="normal"]
+----
+ {course-1}
+ {course-2}
+ {course-3}
+ {course-4}
+ {course-5}
+ {course-6}
+ {course-7}
+ {course-8}
+ {course-9}
+ {course-10}
+----
+
+
+// ###################################################
+// ###################################################
+// ###################################################
+== Kursstruktur
+
+Die grundsätzlich geplante Strukturierung der Kurstage sieht wie folgt aus. Insgesamt `03:00` Zeitstunden, grob aufgeteilt nach:
+
+[cols="^1s,^2m,^1m,5"]
+|===
+| Teil 1 | Zeit (ungefähr) | Dauer | Inhalt
+
+|
+| 09:15 - 09:45
+| 30'
+| [red]#*Theorie*#, Recap
+
+|
+| 09:45 - 10:30
+| 45'
+| [blue]#*Praxis*#: Individuell oder in Teamarbeit & Lösung
+
+|
+| 10:30 - 10:45
+| 15'
+e| Pause
+|===
+
+[cols="^1s,^2m,^1m,5"]
+|===
+| Teil 2 | Zeit (ungefähr) | Dauer | Inhalt
+
+
+|
+| 10:45 - 11:15
+| 30'
+| [red]#*Theorie*#
+
+|
+| 11:15 - 12:00
+| 45'
+| [blue]#*Praxis*#: Individuell oder in Teamarbeit & Lösung
+
+|
+| 12:00 - 12:15
+| 15'
+e| Abschluss (Q&A, Organisation, etc.)
+|===
+
+// ###################################################
+// ###################################################
+// ###################################################
+== Links & Referenzen
+
+Asciidoc::
+-> https://docs.asciidoctor.org/asciidoc/latest/[docs.asciidoctor.org]
+
+Oracle Java 17 Documentation::
+-> https://docs.oracle.com/en/java/javase/17/docs/api/index.html[docs.oracle.com]
+
+UML Beziehungen::
+-> https://www.ibm.com/docs/de/rational-soft-arch/9.6.1?topic=diagrams-relationships-in-class[Beziehungen in Klassendiagrammen]
+
+Generics::
+-> https://de.wikipedia.org/wiki/Generische_Programmierung_in_Java[Generics bei Wikipedia]
+
+Lambdas::
+-> https://www.baeldung.com/java-8-lambda-expressions-tips[Lambda Ausdrücke am Beispiel]
+
+Funktionale Interfaces::
+-> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/function/package-summary.html[docs.oracle.com für `java.util.function`]
+
+Integration::
+-> https://www.amazon.de/s?k=enterprise+integration+patterns+deutsch&i=stripbooks&crid=28SN4MQVVJUZV&sprefix=enterprise+integration+patterns%2Cstripbooks%2C74&ref=nb_sb_ss_fb_1_31[Edison Wesley: Enterprise Integration Patterns]
+
+== Glossar
+
+include::glossary.adoc[]
+
+
+//[.dhbw]#ein-test-text#
+//include::examples-from-websites.adoc[]
+
+////
+IMPORTANT: [.red]#_Die Anzahl der Kurse muss variabel bleiben, in Abhängigkeit von Länge des Semesters, des Kursfortschritts sowie des Prüfungszeitraums_#
+////

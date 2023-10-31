@@ -1,0 +1,143 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+// local document variables ---------------------------------------------------------------------
+:module-package: generics
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
+
+:toc:
+
+== Java Generics
+
+*Fachlicher Kontext*
+----
+ + eher Theorie
+ + Standard-Beispiele/-Übungsaufgaben
+----
+
+
+=== Preparation
+
+include::../../docs/asciidoc/includes/update-project.adoc[]
+
+
+=== Theorie & Einführung
+
+*Generische Programmierung* in Java ist durch `Generics` seit langem möglich. Der Begriff steht synonym für "parametrisierte Typen". Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Dazu wird der sogenannte *Diamond-Operator* `<>` bei Klasse oder Methode genutzt:
+
+[source, java]
+ List<T> list; // 'T' oft als Kürzel für 'Type'
+ public Printer<T> { ...}
+
+Erst bei der Verwendung der Klassen, Schnittstellen und Methoden im Code werden diese Typ-Variablen durch konkrete Typen durch den Entwickler ersetzt.
+
+Damit kann *typsichere Programmierung* meistens gewährleistet werden. In der Regel wird die Codemenge durch Generics reduziert (Prinzip: `DRY`), manchmal wird er allerdings auch schwerer wartbar und abnehmende Lesbarkeit. Die folgenden zwei Varianten finden sich in der Praxis am häufigsten:
+
+* Java Generics `Klasse`
+* Java Generics `Methode`
+
+TIP: [small]#_Viele Beispiele finden sich auch im Collections Framework, etwa die  Interfaces `List<T>` oder `Map<K,V>`. Siehe dazu z.B. -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/package-summary.html[Java 17 Package Documentation für `java.util`]!_#
+
+[source,java,lines,title="Beispiel einer generischen Klasse"]
+----
+include::{module-sources}/demo/Joiner.java[tag="generic-class"]
+----
+
+Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
+
+[source,java,title="Beispiel einer generischen Methode"]
+----
+include::{module-sources}/demo/Printer.java[tag="generic-method"]
+----
+
+*Bounded Generics*
+
+Oft kommen sogenannte *bounded generics* zum Einsatz.
+Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der generische Typ erben muss. Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
+
+[source, java]
+----
+ public <T extends Number> add(T first, T second) { ... }
+----
+
+*Wildcards*
+
+Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durchaus auch die sogenannte *Wildcard* `?` nutzen. Das schafft Flexibilität hinsichtlich der spezifizierbaren Typen, verhindert aber die Nutzung der Typvariable selbst innerhalb der Klasse.
+
+
+=== Demonstrationen
+
+Die Unit-Tests zur *Demonstration* finden sich hier:
+
+[subs="normal"]
+ {module-demo-path-tests}/GenericsTests.java
+
+Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
+
+[subs="normal"]
+ {module-demo-path-sources}/*.java
+
+
+=== Exercises
+
+Nutze folgendes Package für deine *Unit-Tests*:
+
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
+
+Die im Test benutzten *Implementierungen* gehören in das Package:
+
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
+
+{nl}
+
+
+[[generics-exercise-1]]
+*Übung 1:*
+
+Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für...
+
+* addieren,
+* subtrahieren,
+* multiplizieren und
+* dividieren.
+
+Der Taschenrechner sollte mit einem beliebigen Zahlentyp umgehen können.
+
+TIP: Zahlentypen in Java haben eine gemeinsame Superklasse `java.lang.Number`.
+
+_Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface implementiert, und schreibe dazu einen kleinen Test, der die Funktionsfähigkeit mindestens einer der Rechenarten am Beispiel auch mal testet._
+
+
+[[generics-exercise-2]]
+*Übung 2:*
+
+Implementiere eine konkrete Klasse `Workflow`.
+
+Diese Klasse soll eine statische, generische Methode `execute` bekommen, die beliebige Workflow-`Schritte` ausführen kann.
+
+Die Workflow-Schritte sollen von einer Eltern-Klasse namens `Step` erben. Implementiere mindestens 2 konkrete Workflow-Schritte.
+
+Realisiere für die "Ausführung" der `execute` Methode einfach eine Konsolenausgabe, z.B. des Names des konkreten Workflow-Schrittes (d.h. der Klassenname).
+
+
+Übungsfragen::
+In der nachstehenden Testklasse finden sich kleine "Quizfragen" für die Inhalte des Kurses 3:
+
+[subs=attributes]
+ {course-3-exam}/ExamTest.java
+
+
+=== Tipps, Patterns & Best Practices
+
+* Bei Listen sollte man immer mittels Diamond-Operator `<>` den Datentyp für die Liste angeben
+* Benutze den Wildcard-Type `?` (Bsp. `<? extends Number>`) wenn möglich

@@ -1,0 +1,272 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+// local document variables ---------------------------------------------------------------------
+:module-package: exceptions
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
+
+:toc:
+
+== Exception Handling
+
+
+=== Preparation
+
+include::../../docs/asciidoc/includes/update-project.adoc[]
+
+
+=== Theorie & Einführung
+
+==== Exceptions Hierarchie
+
+*Allgemein:*
+
+//tag::content[]
+* [ ] Checked vs. Runtime (unchecked) exceptions
+* [ ] Technische vsw. Fachliche Exceptions
+* [ ] Exception Handling - was ist zu tun?
+//end::content[]
+
+*Fachlicher Kontext*
+----
+ + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
+ + Dokumentation des fachlichen Klassenmodells aus den vorangegangenen Beispielen
+----
+
+
+[plantuml, title="Exceptions Hierarchie", png, align="center"]
+....
+include::diagrams/exceptions-hierarchy.puml[]
+....
+
+Throwable::
+Die `Throwable` Klasse ist die Superklasse von allen `Errors` oder `Exceptions` innerhalb von Java. Nur Objekte, die Instanzen dieser Klasse oder einer seiner Subklassen sind, werden von der JVM selbst geworfen, durch `throw new` manuell geworfen oder das entsprechende Schlüsselwort `throws` deklariert werden.
+Gleichermaßen können nur diese oder ihre Subklassen als Argumenttyp im `catch` Abschnitt genutzt werden.
+
+Die wichtigsten Codefragmente:
+
+[source, java, lines]
+----
+ public void process() throws ValidationException {
+    // code that may throw an exception
+ }
+
+ public void process() {
+   // code that may throw an exception in
+   // a specific situation
+   if (!condition) {
+     throw new ValidationException();
+   }
+ }
+
+ try {
+     // ...
+ } catch (ValidationException ve) {
+     // ...
+ }
+----
+
+Error::
+Die `Error` Subklasse zeigt ein "ernstes" Problem an, das eine Applikation nicht "fangen" oder "behandeln" sollte. Die meisten solcher Fehler bilden außergewöhnliche Fehlerbedingungen oder -zustände ab, die (in aller Regel) nicht _zur Laufzeit_ gehoben werden können.
+
+Exception::
+Die Klasse `Exception` und dessen Subklassen bilden Situationen im Code ab, die bekannt sind, eintreten könnten und daher "gefangen" und behandelt werden sollten. Tritt eine solche geplante Fehlersituation auf, so sollte der Fehler so behandelt werden, dass die Applikation nicht abgebrochen werden muss. Eine häufige Reaktion auf diese Art von Fehlern münden häufig in Meldungen an die Benutzer einer Anwendung.
+
+Ein *Beispiel*-Klassenmodell:
+
+[plantuml, title="Exceptions Beispiel", png, align="center"]
+....
+include::diagrams/exceptions-model.puml[]
+....
+
+
+==== Exception Handling
+
+Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden, aber *NICHT* so:
+
+[source, java, indent="0"]
+include::{module-sources}/demo/DataLoader.java[tags=exception-handling-1]
+
+Besser ist eine echte Verarbeitung des Fehlers. Hier sind sehr verschiedene Prozesse möglich, anhängig vom eingetretenen Fehler. In vielen Fällen sind bei Fehlern sowohl ...
+
+* _technische_ als auch
+* _fachliche_
+
+Dinge zu tun. Dazu kann z.B. ein eigener, applikationsspezifischer `ExceptionHandler` eingesetzt werden, der die Behandlung an eine andere Komponente _delegiert_:
+
+[source, java]
+----
+try {
+    risky();
+} catch (Exception ex) {
+    // do something important for this exception situation
+    this.getLogger().error(ex);
+    this.rollback();
+    this.clearCache();
+    this.sendEmailToVIP();
+}
+----
+
+oder
+
+[source, java, indent="0"]
+include::{module-sources}/demo/DataLoader.java[tags=exception-handling-2]
+
+
+==== Mehrere Exceptions
+
+In manchen Fällen gibt es Methoden oder Codeabschnitte, die gleich mehrere Fehler verursachen können. Sind dies `checked` Exceptions, so müssen sie alle mittels `catch` erfasst und behandelt werden. Dazu gibt es 3 Optionen:
+
+. Fangen der *allgemeinsten Exception* als derjenigen, von denen alle anderen vorkommenden Exceptions abgeleitet sind
+
+[source, java]
+----
+try {
+    risky();
+} catch (Exception ex) {
+    // ...
+}
+----
+
+CAUTION: -> _<<Anti-Pattern-GenExcHdl, Anti-Pattern: Generische Exception Handler>>_
+
+[start=2]
+. *Mehrere* `catch` Abschnitte
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException ex) {
+    // ...
+} catch (EOFException ex) {
+    // ...
+}
+----
+
+[start=3]
+. Ein *Multi-Catch* Block
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException | EOFException ex) {
+    // ...
+}
+----
+
+CAUTION: _-> <<Anti-Pattern-ThrRethr, Anti Pattern "Throw-Rethrow">>_
+
+[source, java]
+----
+try {
+    risky();
+} catch (FileNotFoundException ex) {
+    throw new IAmSureThisIsAMuchBetterException(ex);
+}
+----
+
+==== Der `finally` Block
+
+Der `finally` Block, der grundsätzlich zum Konstrukt `try-catch-finally` gehört, wird _immer_ ausgeführt, wenn der `try` Block beendet wird. Dies stellt sicher, dass der `finally` Block auch dann ausgeführt wird, wenn eine unerwartete Exception aufgetreten ist. Darüber hinaus ist der `finally` Block auch über das reine Exception Handling hinaus nützlich, er erlaubt dem Entwickler insbesondere ein _clean up_ durchzuführen, d.h. allokierte Ressourcen wie z.B. geöffnete Dateien oder Speicherbereiche wieder freizugeben:
+
+[source, java]
+----
+String data = "data-to-save-to-file";
+try {
+
+    // can go wrong
+    fileWriter.write(data);
+
+} catch (Exception ex) {
+    // ... handle 'expectable' exception
+} finally {
+    // clean up 'ressources'
+    if (fileWriter != null) {
+        f.close();
+    }
+}
+----
+
+Vor allem bei der Verarbeitung von Dateien bei sogenannten `IO` (kurz für Input-Output) Operationen - siehe Beispiel-Code - ist das _CleanUp_ sehr wichtig und eine gute Praxis!
+
+
+==== `throws` und `throw`
+
+Das `throws` *Schlüsselwort* zeigt im Rahmen einer Methodensignatur an, dass diese Methode eine Ausnahme werfen könnte.
+
+Das Schlüsselwort `throw` dagegen wirft eine tatsächliche, konkrete Exception.
+
+[source, java]
+----
+public void vote(int ageOfVoter) throws TooYoungToVoteException {
+  if (ageOfVoter < 18) {
+    throw new TooYoungToVoteException(
+      "Voter's must be at least 18 years old!");
+  }
+  // continue normally ...
+}
+----
+
+
+=== Demonstrationen
+
+Die Unit-Tests zur *Demonstration* finden sich hier:
+
+[subs="normal"]
+ {module-demo-path-tests}/ExceptionTests.java
+
+Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
+
+[subs="normal"]
+ {module-demo-path-sources}/*.java
+
+
+=== Exercises
+
+Nutze folgendes Package für deine *Unit-Tests*:
+
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
+
+Die im Test benutzten *Implementierungen* gehören in das Package:
+
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
+
+{nl}
+
+[[exception-exercise-1]]
+*Übung 1:*
+
+. *Implementiere* das Interface `Executable` sowie eine Methode `void execute()`.
+. *Implementiere* dazu auch eine neue _echte, eigene_ Exception, die von `CheckedException` abgeleitet werden soll.
+. *Wirf* diese neue Exception einfach mittels `throws` in der Methode `execute()`.
+. Schreibe nun einen Unit-Test, der die Methode `execute()` aufruft und die geworfene Exception *abfängt* und *behandelt*.
+
+{nl}
+
+=== Tipps, Patterns & Best Practices
+
+[[Flache-Exception-Hierarchien]]
+Empfehlung: Flache Exception Hierarchien::
+sind eine gute Praxis. Es erleichtert vor allem Entwicklern den Zugang zur Nutzung zum Exception Handling, da es sehr "gerne" vernachlässigt wird.
+
+[[Anti-Pattern-GenExcHdl]]
+Anti Pattern: Generische Exception Handler::
+Das ist ein "Anti-Pattern", weil die wahre Fehlerursache hierdurch sehr schnell verschleiert wird!
+
+[[Anti-Pattern-ThrRethr]]
+Anti Pattern: Throw-Rethrow Exceptions::
+Das _"throw-rethrow"_ Muster ist auch ein Anti-Pattern. Auch dieses erschwert stark das Erkennen der Fehlerursache und erzeugt einfach viel Code (_"Boilerplate-Code"_). Es verstösst auch gegen das `KISS` Prinzip (_Keep-It-Simple-And-Stupid_).
+
+

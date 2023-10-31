@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2020 Thorsten Eckstein
+  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>de.dhbw.adv-dev</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0</version>
+
+    <packaging>pom</packaging>
+
+    <name>AdvancedProgrammingII</name>
+    <description>DHBW Mannheim :: LV Advanced Programming in Java (II)</description>
+    <url>https://github.com/ThorstenEckstein/dhbw-advanced-programming</url>
+
+    <modules>
+        <!-- shared parts of this project -->
+        <module>commons</module>
+        <module>docs</module>
+        <!-- modules -->
+        <module>module-databases</module>
+        <module>module-enums</module>
+        <module>module-exceptions</module>
+        <module>module-funcprogramming</module>
+        <module>module-generics</module>
+        <module>module-javadoc</module>
+        <module>module-loops</module>
+        <module>module-semantics</module>
+    </modules>
+
+    <properties>
+        <java.version>19</java.version>
+        <!-- [BRIEF, DEFAULT, VERBOSE]
+        <maven.plugin.validation>VERBOSE</maven.plugin.validation>-->
+
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.surefire.plugin.version>3.1.0</maven.surefire.plugin.version>
+
+        <unit-jupiter-engine.version>5.9.3</unit-jupiter-engine.version>
+        <junit-jupiter-params.version>5.9.3</junit-jupiter-params.version>
+        <junit-platform-suite-engine.version>1.9.3</junit-platform-suite-engine.version>
+    </properties>
+
+    <!--
+     | Basically, there are 2 ways to distribute dependencies to child poms:
+     |
+     | 1. Using <dependencies />
+     |    You can declare the dependencies in the parent pom in the <dependencies /> node.
+     |    Each child will benefit from the dependency and does not need to re-declare it, these dependencies
+     |    are in place.
+     |    NOTE: Child pom will always import these dependencies, regardless of being required or not, that is the biggest
+     |    disadvantage of this approach.
+     |
+     | 2. Using <dependencyManagement />
+     |    You can declare the dependencies in the parent pom under the <dependencyManagement /> node.
+     |    Each child that requires it, adds the dependency in its own <dependencies /> node.
+     |    In such a case, the version of the dependency is not required to be specified. This way is the
+     |    recommended way to manage dependencies, and used in all modules, where no version should appear!
+     |
+    <dependencyManagement>
+        <dependencies>
+            ... insert managed dependencies here ...
+        </dependencies>
+    </dependencyManagement>
+    -->
+
+    <!--
+     | Following dependencies are automatically known/added in (all) child modules
+    -->
+    <dependencies>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${unit-jupiter-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-params</artifactId>
+            <version>${junit-jupiter-params.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-suite-engine</artifactId>
+            <version>${junit-platform-suite-engine.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>${maven.compiler.plugin.version}</version>
+                    <configuration>
+                        <release>17</release>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${maven.surefire.plugin.version}</version>
+                    <!--
+                    <configuration>
+                        <argLine>
+                            - -illegal-access=permit
+                        </argLine>
+                    </configuration>
+                    -->
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+</project>

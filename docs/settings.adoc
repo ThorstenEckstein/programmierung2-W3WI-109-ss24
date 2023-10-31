@@ -1,0 +1,137 @@
+// NOTES:
+// - The asciidoc intention "errors in source code blocks" is disabled
+//   (see asciidoc plugin intention settings, Settings > Editor Intentions)
+
+// document settings
+:icons: font
+:sectnums:
+:toc-title: Inhaltsverzeichnis
+:toclevels: 3
+//:stylesdir: styles
+//:stylesheet: dhbw.css
+
+// special settings
+// For passthrough macros see also:
+//  -> https://docs.asciidoctor.org/asciidoc/latest/pass
+:nl: pass:[<br/>]
+:tbd: pass:n[[blue]#_to be continued here ..._#]
+:continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
+//:example: pass:[&#63;]
+//:example-caption: {example}
+
+// pass-through
+:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
+
+// content settings
+:course-title-count: {counter:course-title-count}
+
+////
+:course-1:  {title-prefix} 1 - Klassen, Interfaces (Setup)
+:course-2:  {title-prefix} 2 - Datentypen Konditionale Programmierung
+:course-3:  {title-prefix} 3 - Listen, Aufzählungen und Schleifen
+:course-4:  {title-prefix} 4 - Generische Progammierung
+:course-5:  {title-prefix} 5 - Exceptions, Code Dokumentation
+:course-6:  {title-prefix} 6 - Funktionale Programmierung
+////
+
+:title-prefix: Kurstag
+:course-1:  {title-prefix} 1 - Einführung & technisches Setup
+////
+ - Allgemeine Einführung in Java
+ - IDE Setup mit IntelliJ
+ - Einführung in die Versionsverwaltung mit Git
+ - Einführung in die Projektorganisation (Strukturen & Verzeichnisse)
+ - Einführung in das "Dependency Management" mit Maven ("pom")
+ - Einführung in TDD
+////
+:course-2:  {title-prefix} 2 - Datenstrukturen & -typen
+////
+ - Klassen & Objekte
+ - Vererbung & Implementierung (Interfaces)
+ - abstrakte Klassen
+ - Access Modifier (Sichtbarkeiten, Scopes)
+////
+:course-3:  {title-prefix} 3 - ?
+:course-4:  {title-prefix} 4 - ?
+:course-5:  {title-prefix} 5 - ?
+:course-6:  {title-prefix} 6 - ?
+:course-7:  {title-prefix} 7 - ?
+:course-8:  {title-prefix} 8 - ?
+:course-9:  {title-prefix} 9 - ?
+:course-10: {title-prefix} 10 - ?
+
+// ------------------------------------------------------------
+// use this for referencing sources in current module!
+:course-1-src:  ../src/main/java/de/dhbw/course1
+:course-1-test: ../src/test/java/de/dhbw/course1
+:course-1-exam: <your-repo>/exam/test/de/dhbw/exam/course1
+
+:course-2-src:  ../src/main/java/de/dhbw/course2
+:course-2-test: ../src/test/java/de/dhbw/course2
+:course-2-exam: <your-repo>/exam/test/de/dhbw/exam/course2
+
+:course-3-src:  ../src/main/java/de/dhbw/course3
+:course-3-test: ../src/test/java/de/dhbw/course3
+:course-3-exam: <your-repo>/exam/test/de/dhbw/exam/course3
+
+:course-4-src:  ../src/main/java/de/dhbw/course4
+:course-4-test: ../src/test/java/de/dhbw/course4
+:course-4-exam: <your-repo>/exam/test/de/dhbw/exam/course4
+
+:course-5-src:  ../src/main/java/de/dhbw/course5
+:course-5-test: ../src/test/java/java/de/dhbw/course5
+:course-5-exam: <your-repo>/exam/test/de/dhbw/exam/course5
+
+:course-6-src:  ../src/main/java/de/dhbw/course6
+:course-6-test: ../src/test/java/java/de/dhbw/course6
+:course-6-exam: <your-repo>/exam/test/de/dhbw/exam/course6
+
+:course-7-src:  ../src/main/java/de/dhbw/course7
+:course-7-test: ../src/test/java/de/dhbw/course7
+:course-7-exam: <your-repo>/exam/test/de/dhbw/exam/course7
+
+:course-8-src:  ../src/main/java/de/dhbw/course8
+:course-8-test: ../src/test/java/de/dhbw/course8
+:course-8-exam: <your-repo>/exam/test/de/dhbw/exam/course8
+
+:course-9-src:  ../src/main/java/de/dhbw/course9
+:course-9-test: ../src/test/java/de/dhbw/course9
+:course-9-exam: <your-repo>/exam/test/de/dhbw/exam/course9
+
+:course-10-src:  ../src/main/java/de/dhbw/course10
+:course-10-test: ../src/test/java/de/dhbw/course10
+:course-10-exam: <your-repo>/exam/test/de/dhbw/exam/course10
+
+// -------- module variables
+
+// vars to access from inner module
+:generics-root:        {project-root}/generics
+:generics-src:         {generics-root}/src/main/java/de/dhbw/generics
+:generics-test:        {generics-root}/src/test/java/de/dhbw/generics
+:generics-exam:        <your-repo>/exam/test/de/dhbw/exam/generics
+
+// ------------------------------------------------------------
+// use this from modules to reference sources in other modules!
+:project-root: ../..
+:src-from-course-1:    {project-root}/course-1/src/main/java
+:src-from-course-2:    {project-root}/course-2/src/main/java
+:src-from-course-3:    {project-root}/course-3/src/main/java
+:src-from-course-4:    {project-root}/course-4/src/main/java
+:src-from-course-5:    {project-root}/course-5/src/main/java
+:src-from-course-6:    {project-root}/course-6/src/main/java
+:src-from-course-7:    {project-root}/course-7/src/main/java
+:src-from-course-8:    {project-root}/course-8/src/main/java
+:src-from-course-9:    {project-root}/course-9/src/main/java
+:src-from-course-10:   {project-root}/course-10/src/main/java
+
+:tests-from-course-1:  {project-root}/course-1/src/test/java
+:tests-from-course-2:  {project-root}/course-2/src/test/java
+:tests-from-course-3:  {project-root}/course-3/src/test/java
+:tests-from-course-4:  {project-root}/course-4/src/test/java
+:tests-from-course-5:  {project-root}/course-5/src/test/java
+:tests-from-course-6:  {project-root}/course-6/src/test/java
+:tests-from-course-7:  {project-root}/course-7/src/test/java
+:tests-from-course-8:  {project-root}/course-8/src/test/java
+:tests-from-course-9:  {project-root}/course-9/src/test/java
+:tests-from-course-10: {project-root}/course-10/src/test/java
+

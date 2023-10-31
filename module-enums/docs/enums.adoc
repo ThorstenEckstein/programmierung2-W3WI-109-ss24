@@ -1,0 +1,214 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+// local document variables ---------------------------------------------------------------------
+:module-package: enums
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
+
+:toc:
+
+== Java Enums
+
+
+=== Preparation
+
+include::../../docs/asciidoc/includes/update-project.adoc[]
+
+
+=== Theorie & Einführung
+
+`Enumerations` (Aufzählungen) sind vordefinierte *Wertelisten* und können typsicher genutzt werden.
+
+Java 5 hat das Schlüsselwort `enum` eingeführt. Es bezeichnet einen speziellen Typ einer Klasse und erbt immer (implizit) von `java.lang.Enum`. Die offizielle Dokumentation findet sich hier: -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html[Enum.html]
+
+Konstanten, die mithilfe von Enums definiert werden,
+
+* machen den Code besser lesbar,
+* erlauben typ-sichere Nutzung zur Compile-Time,
+* listen den Wertebereich von vorneherein auf und
+* vermeiden Fehler durch die Verhinderung von falschen Werten, die nicht aus der Menge der definierten stammen.
+
+Die Aufzählungswerte haben einen *Index* (=Ordinal), beginnend mit `0`, und können automatisch von einem String in den gleichlautenden Enum-Wert umgewandelt werden.
+
+Ein einfaches Beispiel:
+
+[source, java]
+----
+public enum Color {
+    Red,   // ordinal 0
+    Green, // ordinal 1
+    Blue;  // ordinal 2
+}
+
+// Die Nutzung erfolgt einfach durch:
+Color blue = Color.Blue;
+
+// Das Ordinal
+int ordinal = Color.Blue.ordinal();
+
+// oder bzgl. der Umwandlung von String in den enum Typ
+Color blue = Color.valueOf("Blue");
+----
+
+Der Aufruf der von `enum` zur Verfügung gestellten Methode `ordinal()` gibt entsprechend die *Ordnungszahl* bzw. den *Positionsindex* des jeweiligen Enum-Wertes zurück.
+
+
+==== Zusätzliche Methoden
+
+`Enums` erlauben darüber hinaus die Implementierung von *zusätzlichen Methoden* in der Enum-Klasse.
+
+.-> *Demo 1* in EnumsTest.java
+[source, java]
+----
+public enum Color {
+    Red,
+    Green,
+    Brown,
+    Unknown;
+
+    public String getPalette() {
+        return "RGB";
+    }
+}
+----
+
+
+==== Enums in Switch-Ausdrücken
+
+Ein weiterer Vorteil ist die bequeme Nutzung der enum Konstanten in `switch` Statements:
+
+.-> *Demo 2* in EnumsTest.java
+[source, java]
+----
+public enum ColorPalette {
+    RGB, CYMK;
+}
+
+switch (color) {
+    case RGB  -> { /* ... do stuff ...       */ }
+    case CYMK -> { /* ... do other stuff ... */ }
+}
+----
+
+TIP: Ergänzung zur Nutzung vom *logischen UND* in den Unit-Tests -> siehe `src/test/java/de/dhbw/enums/OperatorTests.java`
+
+
+==== Zusätzliche Datenfelder
+
+Das Enums "normale" Klassen sind, lassen sie sich mit *instanz-spezifischen Datenfeldern* (_Instanzvariablen_) erweitern. Dazu müssen lediglich die Datenfelder selbst sowie ein oder mehrere *Konstruktoren* erzeugt werden, um die (ebenfalls konstanten) Werte für die Enum-Konstanten zu definieren.
+
+Dazu ein Beispiel:
+
+.-> *Demo 3* in EnumsTest.java
+[source, java]
+----
+
+public enum FoodGroup {
+
+  Fruchtsaefte("Fruchtsäfte"),
+  Suesswaren("Süßwaren"),
+  Sonstiges("Sonstiges");
+
+  private final String label;
+
+  FoodGroup(String label) {
+    this.label = label;
+  }
+}
+----
+
+
+=== Logische Operatoren
+
+Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten und werden z. B. für Bedingungen von `if` Anweisungen oder Schleifen verwendet.
+
+Durch die logischen Operatoren können einzelne Wahrheitswerte negiert oder verknüpft werden, wobei das Ergebnis immer ein `boolean` ist.
+
+Es gibt verschiedene *logische Operatoren*:
+
+[cols="^1m,9e"]
+|===
+| Operator | Erläuterung/Bedeutung
+
+| &&
+| Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Werte wahr sind. Ist an dieser Stelle bereits der erste Operator falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
+
+| &
+| Einfaches UND ist eine logische UND-Verknüpfung. Bei dieser logischen UND-Verknüpfung werden beide Operanden ausgewertet.
+
+| &vert;&vert;
+| Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Werte falsch sind. Ist an dieser Stelle bereits der erste Operator wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
+
+| &vert;
+| Einfaches ODER ist eine logische ODER-Verknüpfung. Bei dieser logischen ODER-Verknüpfung werden beide Operanden ausgewertet.
+
+| !
+| Das Ausrufezeichen ist der Negierungsoperator in der booleschen Logik. Aus wahr (true) wird falsch (false) und umgekehrt.
+
+| ^
+| Das "Dach" wird als Exklusiv-Oder bezeichnet. Entweder der erste oder der zweite Ausdruck muss wahr sein. Es dürfen aber nicht beide Ausdrücke gleich sein, damit das Ergebnis wahr wird.
+|===
+
+Tests zur *Demonstration*:
+
+ module-enums/src/test/java/de/dhbw/enums/OperatorTests.java
+
+
+=== Demonstrationen
+
+Die Unit-Tests zur *Demonstration* finden sich hier:
+
+[subs="normal"]
+ {module-demo-path-tests}/EnumTests.java
+
+Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
+
+[subs="normal"]
+ {module-demo-path-sources}/*.java
+
+
+=== Exercises
+
+Nutze folgendes Package für deine *Unit-Tests*:
+
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
+
+Die im Test benutzten *Implementierungen* gehören in das Package:
+
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
+
+{nl}
+
+
+[[enums-exercise-1]]
+*Übung 1:*
+
+Ändere die Methode `mix` in der Enumeration `Color`, sodass sie anstatt des Konditional-Ausdruckes `if-elseif-else` nun den `switch` Ausdruck nutzt, um die Mischfarben zurückzugeben.
+
+
+[[enums-exercise-2]]
+*Übung 2:*
+
+Erweitere die vorbereitete Enumeration `de.dhbw.enums.exercises.RgbColor` mit drei Attributen `r` (red), `g` (green) und `b` (blue), jeweils mit Datentyp `int`, sodass jede Enum-Konstante direkt den RGB-Wert erhält.
+
+Nutze die Methode `getRGB()`, um die jeweils zugeordneten RGB-Werte in einem Unit-Test zu prüfen.
+
+
+[[enums-exercise-3]]
+*Übung 3:*
+
+Erstelle eine `boolean` Variable, _negiere_ diese und teste das Ergebnis in einem Unit-Test.
+
+
+=== Tipps, Patterns & Best Practices
+

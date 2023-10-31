@@ -1,0 +1,214 @@
+include::../../docs/asciidoc/settings.adoc[]
+
+// local document variables ---------------------------------------------------------------------
+:module-package: loops
+
+:module-sources: ../src/main/java/de/dhbw/{module-package}
+:module-tests: ../src/test/java/de/dhbw/{module-package}
+
+:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
+:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+
+:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
+:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
+// ----------------------------------------------------------------------------------------------
+
+:toc:
+
+== Java Loops
+
+
+=== Preparation
+
+include::../../docs/asciidoc/includes/update-project.adoc[]
+
+
+=== Theorie & Einführung
+
+
+==== `for (each)`
+
+A for loop is a control structure that allows to repeat certain operations by incrementing and evaluating a loop counter.
+
+Before the first iteration, the loop counter gets initialized, then the condition evaluation is performed followed by the step definition (usually a simple incrementation).
+
+The *syntax* of the for loop is:
+
+[source, java]
+----
+for (Initialization; Boolean-Expression; Step) {
+   statement;
+}
+----
+
+Let's see a simple example:
+
+[source, java]
+----
+for (int i = 0; i < 5; i++) {
+   System.out.println("simple for loop: i = " + i);
+}
+----
+
+The initialization, Boolean-expression, and step used in for statements are optional. Here's an example of an infinite for loop:
+
+[source, java]
+----
+for ( ; ; ) {
+    // infinite for loop
+}
+----
+
+*Enhanced for Loop*
+
+Since Java 5, there is a second kind of for loop called the *enhanced for* which makes it easier to iterate over all elements in an array or a collection.
+
+The syntax of the enhanced for loop is:
+
+[source, java]
+----
+for(Type item : items) {
+    statement;
+}
+----
+
+Since this loop is simplified in comparison to the standard for loop, we need to declare only two things when initializing a loop:
+
+. The *handle* for an element we're currently iterating over
+. The *source* array/collection we're iterating
+
+That means, for each element in items, assign the element to the item variable and run the body of the loop.
+
+_Enhanced Loop_ example:
+
+[source, java]
+----
+int[] intArr = { 0,1,2,3,4 };
+
+for (int num : intArr) {
+    System.out.println(
+        "Enhanced for-each loop: i = " + num);
+}
+----
+
+We can use it to iterate over various Java data structures:
+
+Given a `List<String> list` object – we can iterate by:
+
+[source, java]
+----
+for (String item : list) {
+    System.out.println(item);
+}
+----
+
+*Loop with Lamdba* (functional interface)
+
+[source, java]
+----
+List<String> letters = new ArrayList<>();
+
+letters.add("A");
+letters.add("B");
+letters.add("C");
+
+letters.forEach(letter -> System.out.println(letter));
+----
+
+
+==== `(do) while`
+
+*while*
+
+The while loop is one of Java's fundamental loop statements. It repeats a statement or a block of statements while its controlling Boolean-expression is true.
+
+The *syntax* of the while loop is:
+
+[source, java]
+----
+while (Boolean-expression) {
+    statement;
+}
+----
+
+The loop's Boolean-expression is evaluated before the first iteration of the loop – which means that if the condition is evaluated to false, the loop _might not_ run even once.
+
+A simple example:
+
+[source, java]
+----
+int i = 0;
+while (i < 5) {
+    System.out.println("While loop: i = " + i++);
+}
+----
+
+*do-while*
+
+The do-while loop works just like the while loop except for the fact that the first condition evaluation happens after the first iteration of the loop:
+
+[source, java]
+----
+do {
+   statement;
+} while (Boolean-expression);
+----
+
+A simple example:
+
+[source, java]
+----
+int i = 0;
+do {
+   System.out.println("Do-While loop: i = " + i++);
+} while (i < 5);
+----
+
+
+
+=== Demonstrationen
+
+Die Unit-Tests zur *Demonstration* finden sich hier:
+
+[subs="normal"]
+ {module-demo-path-tests}/LoopTests.java
+
+Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
+
+[subs="normal"]
+ {module-demo-path-sources}/*.java
+
+
+=== Exercises
+
+Nutze folgendes Package für deine *Unit-Tests*:
+
+[subs="normal"]
+ {module-exercises-path-tests}/ExerciseTests.java
+
+Die im Test benutzten *Implementierungen* gehören in das Package:
+
+[subs="normal"]
+ {module-exercises-path-sources}/*.java
+
+
+[[loop-exercise-1]]
+*Übung 1:*
+
+Gegeben eine Liste mit Zahlen.
+Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` (IntelliJ `fori`) Schleife und teste das Ergebnis mithilfe von `assertEquals`.
+
+_Optional_: Wandele die for Schleife in eine "enhanced for" Schleife um.
+
+[[loop-exercise-2]]
+*Übung 2:*
+
+Gegeben ein Startwert von `10`. Implementiere einen _CountDown_ mithilfe einer `while` Schleife, die den CountDown solange runterzählt, bis die `0` erreicht ist und dann abbricht.
+
+
+=== References
+
+See also:
+
+* https://www.baeldung.com/java-for-loop[For Loop]
+* https://www.baeldung.com/java-while-loop[While Loop]

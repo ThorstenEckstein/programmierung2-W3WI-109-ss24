@@ -1,0 +1,161 @@
+include::settings.adoc[]
+
+:toc:
+
+== Seminarstruktur
+
+=== Seminartag 1 - technisches Setup & Grundlagen
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
+| * [ ] {nbsp} | Projektstruktur
+| * [ ] {nbsp} | Einführung Dependency-Management mit Maven (`pom`)
+| * [ ] {nbsp} | Einführung Quellcodeverwaltung mit Git
+| * [ ] {nbsp} | Klassen & Objekte (Instanzen)
+| * [ ] {nbsp} | Vererbung & Implementierung mit Interfaces
+| * [ ] {nbsp} | Abstrakte Klassen
+| * [ ] {nbsp} | Access Modifier (Sichtbarkeiten, Scopes)
+| * [ ] {nbsp} | Schlüsselwort `static`
+| * [ ] {nbsp} | (_Optional_) `equals()` und `hashCode()`
+|===
+
+=== Seminartag 2 - Grundlagen (Forts.) & IDE-Nutzung
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | Update Project
+| * [ ] {nbsp} | Einführung Test-Driven-Development (TDD)
+| * [ ] {nbsp} | Übung 1: Das erste Klassenmodell & der erste (Unit-)Test
+| * [ ] {nbsp} | Schleifen
+| * [ ] {nbsp} | Übung 2: For-Each-Loop
+| * [ ] {nbsp} | Code Generierung mit der IDE (Autocompletion, Vorschläge)
+| * [ ] {nbsp} | Fehleranalyse: Debugging mit der IDE
+|===
+
+====
+{continue-here}
+====
+
+=== Seminartag 3
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | Übung 1a: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
+a| * [ ] {nbsp} | Übung 1b: equals() und hashCode()
+a| * [ ] {nbsp} | Unit-Test Demo: In `BasicsTest` die Wiederholungsüb. durchgehen (Passengers add/remove)
+a| * [ ] {nbsp} | Methoden überladen, überschreiben/übersteuern
+a| * [ ] {nbsp} | Unit-Test Demo: Overload, Override mit "Display"
+|===
+
+=== Seminartag 4
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | Einführung Datentypen & Umwandlung
+a| * [ ] {nbsp} | Demo: Datentyp-Umwandlung
+a| * [ ] {nbsp} | Übung 2a+b: Datentyp-Umwandlung
+a| * [ ] {nbsp} | Schlüsselwort "Static"
+a| * [ ] {nbsp} | Demo: Static (Factory) Klasse
+a| * [ ] {nbsp} | Wiederholung Klassenmodell
+a| * [ ] {nbsp} | Übung 3: Klassenmodell implementieren und "generate code" nutzen
+a| * [ ] {nbsp} | Collections Framework Einführung
+a| * [ ] {nbsp} | Übung 4a: Eine Liste implementieren und die "for-each-loop" nutzen zur Summierung
+a| * [ ] {nbsp} | Übung 4b: Eine SortedMap implementieren und sie Sortierung prüfen
+|===
+
+=== Seminartag 5
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | Theorie: Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition
+a| * [ ] {nbsp} | Demo: OneToOne, OneToMany am Beispiel
+a| * [ ] {nbsp} | Übung 5: Assoziation mit Kurs und Student:innen
+a| * [ ] {nbsp} | Theorie: Many-To-Many
+a| * [ ] {nbsp} | Demo: ManyToMany am Beispiel der n:m Relation (Kurs, Student:innen)
+a| * [ ] {nbsp} | Übung 6: ManyToMany, Information Hiding
+|===
+
+=== Seminartag 6
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | (*Modul*) Einführung Java Generics
+a| * [ ] {nbsp} | Demo in Klasse GenericsTest
+a| * [ ] {nbsp} | Übungen 1 - Calculator
+a| * [ ] {nbsp} | Übungen 2 - Workflow mit Steps
+|===
+
+=== Seminartag 7
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | NEU: (*Exkurs*) Packages & Import (Compiler Errors und Behebung)
+a| * [ ] {nbsp} | (*Modul*) funktionale Programmierung, Streaming API
+a| * [ ] {nbsp} | Demo in Klasse Lambda- und StreamingTests
+a| * [ ] {nbsp} | Übungen 1 - Loop über bool'sche Liste mit Ausgabe
+a| * [ ] {nbsp} | Übungen 2a+2b - "Summe berechnen" früher + heute
+a| * [ ] {nbsp} | Übungen 3 - (optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen
+|===
+
+=== Seminartag 8
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | (*Modul*) Enumerations
+a| * [ ] {nbsp} | Demos mit EnumTests
+a| * [ ] {nbsp} | Übung 1 - 'Switch' anstelle von 'if-elseif-else'
+a| * [ ] {nbsp} | Übung 2 - Enum mit r,g,b Datenfeldern
+a| * [ ] {nbsp} | (*Modul*) Exceptions
+a| * [ ] {nbsp} | Demos, mit/ohne Context, mit/ohne Handler
+|===
+
+=== Seminartag 9
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | Zwischenprüfung
+a| * [ ] {nbsp} | Übungen 1 - Neue Exception bauen, werfen und behandeln
+a| * [ ] {nbsp} | (*Exkurs*) Logische Operatoren (aktuell noch in module-enums
+a| * [ ] {nbsp} | Theorie logische Operatoren
+a| * [ ] {nbsp} | Demos mit OperatorTests
+a| * [ ] {nbsp} | (*Exkurs*) Schleifen
+a| * [ ] {nbsp} | Demos mit LoopTests
+|===
+
+=== Seminartag 10
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+a| * [ ] {nbsp} | (*Modul*) Referenz-Semantik
+a| * [ ] {nbsp} | Demo in Klasse SemanticTests
+a| * [ ] {nbsp} | Übungen 1 - Grafische Erläuterung
+a| * [ ] {nbsp} | (OPTIONAL) (*Modul*) Datenbanken
+a| * [ ] {nbsp} | Demo in Klasse DataSourceDBUnitTests & vorbereiteten SQL Dateien
+a| * [ ] {nbsp} | Literaturempfehlungen -> docs/asciidoc/references.pdf
+a| * [ ] {nbsp} | Live-Projekt Beispiele (Doremar, RBLTNG)
+a| * [ ] {nbsp} | Code-Qualität
+a| * [ ] {nbsp} | Bewerbungsgespräch (Softwareentwickler)
+a| * [ ] {nbsp} | Fragen, Wiederholungen, FAQ zu den Kursinhalten
+a| * [ ] {nbsp} | Informationen zur Abschlussprüfung
+|===

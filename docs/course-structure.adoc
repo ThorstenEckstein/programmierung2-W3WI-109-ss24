@@ -1,47 +1,51 @@
 include::settings.adoc[]
 
 :author: Thorsten Eckstein
+:icons: font
+:icon-set: fas
 
 :toc:
 
 == Seminarstruktur
 
-=== Seminartag 1 - technisches Setup & Grundlagen
+////
+icon:trophy[] -> erfolg
+icon:tags[]   -> theorie
+icon:eye[]    -> demo
+////
+
+=== Seminartag 1 - technisches Setup, Klassen & Variablen
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
-| * [ ] {nbsp} | IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
-| * [ ] {nbsp} | Projektstruktur
+| * [ ] {nbsp} | icon:gear[] IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
+| * [ ] {nbsp} | Die Projektstruktur
 | * [ ] {nbsp} | Einführung Dependency-Management mit Maven (`pom`)
 | * [ ] {nbsp} | Einführung Quellcodeverwaltung mit Git
 | * [ ] {nbsp} | Klassen & Objekte (Instanzen)
 | * [ ] {nbsp} | Vererbung & Implementierung mit Interfaces
-| * [ ] {nbsp} | Abstrakte Klassen
-| * [ ] {nbsp} | Access Modifier (Sichtbarkeiten, Scopes)
-| * [ ] {nbsp} | Schlüsselwort `static`
-| * [ ] {nbsp} | (_Optional_) `equals()` und `hashCode()`
+| * [ ] {nbsp} | Abstraktionen
+| * [ ] {nbsp} | Sichtbarkeiten & Scopes: Access Modifier
 |===
 
-=== Seminartag 2 - Grundlagen (Forts.) & IDE-Nutzung
+=== Seminartag 2 - Kontrollstrukturen & IDE-Nutzung
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
-| * [ ] {nbsp} | Update Project
+| * [ ] {nbsp} | icon:gear[] Update Project
 | * [ ] {nbsp} | Einführung Test-Driven-Development (TDD)
-| * [ ] {nbsp} | Übung 1: Das erste Klassenmodell & der erste (Unit-)Test
+| * [ ] {nbsp} | icon:flask[] Übung 1: Das erste Klassenmodell & der erste (Unit-)Test
 | * [ ] {nbsp} | Schleifen
-| * [ ] {nbsp} | Übung 2: For-Each-Loop
+| * [ ] {nbsp} | icon:flask[] Übung 2: Verschiedene Loops
+| * [ ] {nbsp} | Schlüsselwort `static`
+| * [ ] {nbsp} | Demo: Static (Factory) Klasse
 | * [ ] {nbsp} | Code Generierung mit der IDE (Autocompletion, Vorschläge)
 | * [ ] {nbsp} | Fehleranalyse: Debugging mit der IDE
 |===
-
-====
-{continue-here}
-====
 
 === Seminartag 3
 
@@ -49,12 +53,20 @@ include::settings.adoc[]
 |===
 | Done          | Inhalt, Kommentar
 
-a| * [ ] {nbsp} | Übung 1a: "News Klasse" mit "Code Generation" erzeugen. Neu: Konstruktor
-a| * [ ] {nbsp} | Übung 1b: equals() und hashCode()
-a| * [ ] {nbsp} | Unit-Test Demo: In `BasicsTest` die Wiederholungsüb. durchgehen (Passengers add/remove)
-a| * [ ] {nbsp} | Methoden überladen, überschreiben/übersteuern
-a| * [ ] {nbsp} | Unit-Test Demo: Overload, Override mit "Display"
+| * [ ] {nbsp} | icon:gear[] Update Project
+| * [ ] {nbsp} | Methoden überladen, überschreiben/übersteuern
+| * [ ] {nbsp} | Demo: Overload, Override mit "Display"
+| * [ ] {nbsp} | icon:flask[] Übung 1: Override
+| * [ ] {nbsp} | Einführung Datentypen & Casting
+| * [ ] {nbsp} | Demo: Datentyp-Umwandlung
+| * [ ] {nbsp} | icon:flask[] Übung 2 (a+b): Datentyp-Umwandlung
+| * [ ] {nbsp} | Der Objektvertrag
+| * [ ] {nbsp} | Demo: `equals()` und `hashCode()`
 |===
+
+====
+{continue-here}
+====
 
 === Seminartag 4
 

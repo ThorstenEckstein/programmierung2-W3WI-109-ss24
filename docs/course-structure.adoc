@@ -1,5 +1,7 @@
 include::settings.adoc[]
 
+:author: Thorsten Eckstein
+
 :toc:
 
 == Seminarstruktur

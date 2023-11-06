@@ -4,6 +4,12 @@ include::settings.adoc[]
 :icons: font
 :icon-set: fas
 
+// document-specific variables
+:exersize: icon:flask[] Übung
+:update: icon:gear[] Update Project
+:demo: Demo:
+:theory:
+
 :toc:
 
 == Seminarstruktur
@@ -14,117 +20,120 @@ icon:tags[]   -> theorie
 icon:eye[]    -> demo
 ////
 
-=== Seminartag 1 - technisches Setup, Klassen & Variablen
+=== Seminartag 1: Technisches Setup, Klassen & Variablen
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | icon:gear[] IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
-| * [ ] {nbsp} | Die Projektstruktur
-| * [ ] {nbsp} | Einführung Dependency-Management mit Maven (`pom`)
-| * [ ] {nbsp} | Einführung Quellcodeverwaltung mit Git
-| * [ ] {nbsp} | Klassen & Objekte (Instanzen)
-| * [ ] {nbsp} | Vererbung & Implementierung mit Interfaces
-| * [ ] {nbsp} | Abstraktionen
-| * [ ] {nbsp} | Sichtbarkeiten & Scopes: Access Modifier
+| * [ ] {nbsp} | {theory} Die Projektstruktur
+| * [ ] {nbsp} | {theory} Dependency-Management mit Maven (`pom`)
+| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit Git
+| * [ ] {nbsp} | {theory} Klassen & Objekte (Instanzen)
+| * [ ] {nbsp} | {theory} Vererbung & Implementierung mit Interfaces
+| * [ ] {nbsp} | {theory} Abstraktionen
+| * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
 |===
 
-=== Seminartag 2 - Kontrollstrukturen & IDE-Nutzung
+=== Seminartag 2: Kontrollstrukturen & IDE-Nutzung
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
-| * [ ] {nbsp} | icon:gear[] Update Project
-| * [ ] {nbsp} | Einführung Test-Driven-Development (TDD)
-| * [ ] {nbsp} | icon:flask[] Übung 1: Das erste Klassenmodell & der erste (Unit-)Test
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Test-Driven-Development (TDD)
+| * [ ] {nbsp} | {exersize} 1: Das erste Klassenmodell mit (Unit-)Test
+| * [ ] {nbsp} | {theory} Packages & Import (Compiler Errors)
 | * [ ] {nbsp} | Schleifen
-| * [ ] {nbsp} | icon:flask[] Übung 2: Verschiedene Loops
+| * [ ] {nbsp} | {exersize} 2: Verschiedene Loops
 | * [ ] {nbsp} | Schlüsselwort `static`
-| * [ ] {nbsp} | Demo: Static (Factory) Klasse
-| * [ ] {nbsp} | Code Generierung mit der IDE (Autocompletion, Vorschläge)
-| * [ ] {nbsp} | Fehleranalyse: Debugging mit der IDE
+| * [ ] {nbsp} | {demo} Static (Factory) Klasse
+| * [ ] {nbsp} | {theory} Code Generierung mit der IDE (Autocompletion, Vorschläge)
+| * [ ] {nbsp} | {theory} Fehleranalyse: Debugging mit der IDE
 |===
 
-=== Seminartag 3
+=== Seminartag 3: Datentypen & Polymorphismus
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Wiederholung Klassenmodell
+| * [ ] {nbsp} | {theory} Methoden überladen, überschreiben/übersteuern
+| * [ ] {nbsp} | {demo} Overload, Override am Beispiel
+| * [ ] {nbsp} | {exersize} 1: Override
+| * [ ] {nbsp} | {theory} Datentypen & Casting
+| * [ ] {nbsp} | {demo} Datentyp-Umwandlung
+| * [ ] {nbsp} | {exersize} 2 (a+b): Datentyp-Umwandlung
+|===
+
+=== Seminartag 4: Datenstrukturen & Objektvertrag
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {exersize} 1: Klassenmodell implementieren und "generate code" nutzen
+| * [ ] {nbsp} | {theory} Collections Framework Einführung
+| * [ ] {nbsp} | {exersize} Übung 2a: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
+| * [ ] {nbsp} | {exersize} 2b: Eine SortedMap implementieren und die Sortierung prüfen
+| * [ ] {nbsp} | {theory} Der Objektvertrag
+| * [ ] {nbsp} | {demo} `equals()` und `hashCode()`
+|===
+
+=== Seminartag 5: Beziehungen & Relationen
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | Beziehungsarten, Relationen
+| * [ ] {nbsp} | Aggregation und Komposition
+| * [ ] {nbsp} | {demo} One-To-One, One-To-Many
+| * [ ] {nbsp} | {exersize} 1: Assoziation mit Kurs und Student:innen
+| * [ ] {nbsp} | Many-To-Many
+| * [ ] {nbsp} | {demo} Many-To-Many am Beispiel der n:m Relation
+| * [ ] {nbsp} | {exersize} 2: ManyToMany
+| * [ ] {nbsp} | _??? Information Hiding ???_
+|===
+
+=== Seminartag 6: Generics
 
 [cols="^1a,<9a"]
 |===
 | Done          | Inhalt, Kommentar
 
-| * [ ] {nbsp} | icon:gear[] Update Project
-| * [ ] {nbsp} | Methoden überladen, überschreiben/übersteuern
-| * [ ] {nbsp} | Demo: Overload, Override mit "Display"
-| * [ ] {nbsp} | icon:flask[] Übung 1: Override
-| * [ ] {nbsp} | Einführung Datentypen & Casting
-| * [ ] {nbsp} | Demo: Datentyp-Umwandlung
-| * [ ] {nbsp} | icon:flask[] Übung 2 (a+b): Datentyp-Umwandlung
-| * [ ] {nbsp} | Der Objektvertrag
-| * [ ] {nbsp} | Demo: `equals()` und `hashCode()`
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Java Generics
+| * [ ] {nbsp} | {demo} in `GenericsTest`
+| * [ ] {nbsp} | {exersize} 1: Calculator
+| * [ ] {nbsp} | {exersize} 2: Workflow mit Steps
+|===
+
+=== Seminartag 7: Funktionale Programmierung & Streaming API
+
+[cols="^1a,<9a"]
+|===
+| Done          | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Funktionale Programmierung
+| * [ ] {nbsp} | {demo} Klasse LambdaTest
+| * [ ] {nbsp} | {theory} Streaming API
+| * [ ] {nbsp} | {demo} Klasse StreamingTests
+| * [ ] {nbsp} | {exersize} 1: Loop über bool'sche Liste mit Ausgabe
+| * [ ] {nbsp} | {exersize} 2 (a+b): "Summe berechnen" früher + heute
+| * [ ] {nbsp} | {exersize} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
 |===
 
 ====
 {continue-here}
 ====
-
-=== Seminartag 4
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | Einführung Datentypen & Umwandlung
-a| * [ ] {nbsp} | Demo: Datentyp-Umwandlung
-a| * [ ] {nbsp} | Übung 2a+b: Datentyp-Umwandlung
-a| * [ ] {nbsp} | Schlüsselwort "Static"
-a| * [ ] {nbsp} | Demo: Static (Factory) Klasse
-a| * [ ] {nbsp} | Wiederholung Klassenmodell
-a| * [ ] {nbsp} | Übung 3: Klassenmodell implementieren und "generate code" nutzen
-a| * [ ] {nbsp} | Collections Framework Einführung
-a| * [ ] {nbsp} | Übung 4a: Eine Liste implementieren und die "for-each-loop" nutzen zur Summierung
-a| * [ ] {nbsp} | Übung 4b: Eine SortedMap implementieren und sie Sortierung prüfen
-|===
-
-=== Seminartag 5
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | Theorie: Beziehungsarten (Besitz, Aufruf, Vererbung, ...), Aggregation vs. Komposition
-a| * [ ] {nbsp} | Demo: OneToOne, OneToMany am Beispiel
-a| * [ ] {nbsp} | Übung 5: Assoziation mit Kurs und Student:innen
-a| * [ ] {nbsp} | Theorie: Many-To-Many
-a| * [ ] {nbsp} | Demo: ManyToMany am Beispiel der n:m Relation (Kurs, Student:innen)
-a| * [ ] {nbsp} | Übung 6: ManyToMany, Information Hiding
-|===
-
-=== Seminartag 6
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | (*Modul*) Einführung Java Generics
-a| * [ ] {nbsp} | Demo in Klasse GenericsTest
-a| * [ ] {nbsp} | Übungen 1 - Calculator
-a| * [ ] {nbsp} | Übungen 2 - Workflow mit Steps
-|===
-
-=== Seminartag 7
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | NEU: (*Exkurs*) Packages & Import (Compiler Errors und Behebung)
-a| * [ ] {nbsp} | (*Modul*) funktionale Programmierung, Streaming API
-a| * [ ] {nbsp} | Demo in Klasse Lambda- und StreamingTests
-a| * [ ] {nbsp} | Übungen 1 - Loop über bool'sche Liste mit Ausgabe
-a| * [ ] {nbsp} | Übungen 2a+2b - "Summe berechnen" früher + heute
-a| * [ ] {nbsp} | Übungen 3 - (optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen
-|===
 
 === Seminartag 8
 
@@ -136,6 +145,8 @@ a| * [ ] {nbsp} | (*Modul*) Enumerations
 a| * [ ] {nbsp} | Demos mit EnumTests
 a| * [ ] {nbsp} | Übung 1 - 'Switch' anstelle von 'if-elseif-else'
 a| * [ ] {nbsp} | Übung 2 - Enum mit r,g,b Datenfeldern
+a| * [ ] {nbsp} | Java Records (zu Modul enums)
+a| * [ ] {nbsp} | Demo mit records
 a| * [ ] {nbsp} | (*Modul*) Exceptions
 a| * [ ] {nbsp} | Demos, mit/ohne Context, mit/ohne Handler
 |===

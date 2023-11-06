@@ -20,6 +20,10 @@ icon:tags[]   -> theorie
 icon:eye[]    -> demo
 ////
 
+// TODO:
+// (1) Element "Zwischenprüfung" einbauen
+// (2) Modul "Datenbanken" einbauen
+
 === Seminartag 1: Technisches Setup, Klassen & Variablen
 
 [cols="^1a,<9a"]
@@ -29,14 +33,16 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | icon:gear[] IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
 | * [ ] {nbsp} | {theory} Die Projektstruktur
 | * [ ] {nbsp} | {theory} Dependency-Management mit Maven (`pom`)
+| * [ ] {nbsp} | Fachlicher Schwerpunkt des Kurses (Zugdisposition)
 | * [ ] {nbsp} | {theory} Quellcodeverwaltung mit Git
 | * [ ] {nbsp} | {theory} Klassen & Objekte (Instanzen)
+| * [ ] {nbsp} | {theory} Statische Klassen und Variablen mit `static`
+| * [ ] {nbsp} | {theory} Abstrakte Klassen
 | * [ ] {nbsp} | {theory} Vererbung & Implementierung mit Interfaces
-| * [ ] {nbsp} | {theory} Abstraktionen
 | * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
 |===
 
-=== Seminartag 2: Kontrollstrukturen & IDE-Nutzung
+=== Seminartag 2: Datentypen & Operatoren
 
 [cols="^1a,<9a"]
 |===
@@ -46,41 +52,40 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {theory} Test-Driven-Development (TDD)
 | * [ ] {nbsp} | {exersize} 1: Das erste Klassenmodell mit (Unit-)Test
 | * [ ] {nbsp} | {theory} Packages & Import (Compiler Errors)
-| * [ ] {nbsp} | Schleifen
-| * [ ] {nbsp} | {exersize} 2: Verschiedene Loops
-| * [ ] {nbsp} | Schlüsselwort `static`
-| * [ ] {nbsp} | {demo} Static (Factory) Klasse
+| * [ ] {nbsp} | {theory} Datentypen & Casting
+| * [ ] {nbsp} | {demo} Datentyp-Umwandlung
+| * [ ] {nbsp} | {exersize} 2 (a+b): Datentyp-Umwandlung
+| * [ ] {nbsp} | {theory} Logische Operatoren
+| * [ ] {nbsp} | {demo} OperatorTests
 | * [ ] {nbsp} | {theory} Code Generierung mit der IDE (Autocompletion, Vorschläge)
 | * [ ] {nbsp} | {theory} Fehleranalyse: Debugging mit der IDE
 |===
 
-=== Seminartag 3: Datentypen & Polymorphismus
+=== Seminartag 3: Polymorphismus & Kontrollstrukturen
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Wiederholung Klassenmodell
+| * [ ] {nbsp} | {exersize} 1: Wiederholung Klassenmodell implementieren und "generate code" nutzen
 | * [ ] {nbsp} | {theory} Methoden überladen, überschreiben/übersteuern
 | * [ ] {nbsp} | {demo} Overload, Override am Beispiel
 | * [ ] {nbsp} | {exersize} 1: Override
-| * [ ] {nbsp} | {theory} Datentypen & Casting
-| * [ ] {nbsp} | {demo} Datentyp-Umwandlung
-| * [ ] {nbsp} | {exersize} 2 (a+b): Datentyp-Umwandlung
+| * [ ] {nbsp} | Schleifen
+| * [ ] {nbsp} | {exersize} 2: Verschiedene Loops
 |===
 
-=== Seminartag 4: Datenstrukturen & Objektvertrag
+=== Seminartag 4: Collections Framework & Objektvertrag
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {exersize} 1: Klassenmodell implementieren und "generate code" nutzen
 | * [ ] {nbsp} | {theory} Collections Framework Einführung
-| * [ ] {nbsp} | {exersize} Übung 2a: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
-| * [ ] {nbsp} | {exersize} 2b: Eine SortedMap implementieren und die Sortierung prüfen
+| * [ ] {nbsp} | {exersize} Übung 1: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
+| * [ ] {nbsp} | {exersize} 2: Eine sortierte `Map` implementieren und die Sortierung prüfen
 | * [ ] {nbsp} | {theory} Der Objektvertrag
 | * [ ] {nbsp} | {demo} `equals()` und `hashCode()`
 |===
@@ -92,17 +97,16 @@ icon:eye[]    -> demo
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | Beziehungsarten, Relationen
+| * [ ] {nbsp} | Beziehungsarten (vs. Relationen)
 | * [ ] {nbsp} | Aggregation und Komposition
 | * [ ] {nbsp} | {demo} One-To-One, One-To-Many
 | * [ ] {nbsp} | {exersize} 1: Assoziation mit Kurs und Student:innen
 | * [ ] {nbsp} | Many-To-Many
 | * [ ] {nbsp} | {demo} Many-To-Many am Beispiel der n:m Relation
 | * [ ] {nbsp} | {exersize} 2: ManyToMany
-| * [ ] {nbsp} | _??? Information Hiding ???_
 |===
 
-=== Seminartag 6: Generics
+=== Seminartag 6: Generische Programmierung & Enums
 
 [cols="^1a,<9a"]
 |===
@@ -112,7 +116,11 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {theory} Java Generics
 | * [ ] {nbsp} | {demo} in `GenericsTest`
 | * [ ] {nbsp} | {exersize} 1: Calculator
-| * [ ] {nbsp} | {exersize} 2: Workflow mit Steps
+//| * [ ] {nbsp} | {exersize} 2: Workflow mit Steps
+| * [ ] {nbsp} | {theory} Enumerations
+| * [ ] {nbsp} | {demo} EnumTests
+| * [ ] {nbsp} | {exersize} 2: 'Switch' anstelle von 'if-elseif-else'
+| * [ ] {nbsp} | {exersize} 3: Enum mit r,g,b Datenfeldern
 |===
 
 === Seminartag 7: Funktionale Programmierung & Streaming API
@@ -128,59 +136,56 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {demo} Klasse StreamingTests
 | * [ ] {nbsp} | {exersize} 1: Loop über bool'sche Liste mit Ausgabe
 | * [ ] {nbsp} | {exersize} 2 (a+b): "Summe berechnen" früher + heute
-| * [ ] {nbsp} | {exersize} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
+
+// | * [ ] {nbsp} | {exersize} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
+
+| * [ ] {nbsp} | Ausgabe Übungsklausur, Erläuterungen
+|===
+
+=== Seminartag 8: Exceptions, Enums & Records
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Gemeinsame Besprechung der Übungsklausur
+| * [ ] {nbsp} | {theory} Records
+| * [ ] {nbsp} | {demo} Records
+| * [ ] {nbsp} | {theory} Exceptions & Exception Handling
+| * [ ] {nbsp} | {demo} mit/ohne Context, mit/ohne Handler
+| * [ ] {nbsp} | {exersize} 3: Neue Exception bauen, werfen und behandeln
+|===
+
+=== Seminartag 9: ???
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {update}
+| * [ ] {nbsp} |
+| * [ ] {nbsp} |
+| * [ ] {nbsp} |
+| * [ ] {nbsp} |
+| * [ ] {nbsp} |
+|===
+
+=== Seminartag 10: Optionale Themen, Semesterabschluss
+
+[cols="^1a,<9a"]
+|===
+| Done         | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {theory} _Option 1: Referenz-Semantik (Test, Grafische Erläuterung)_
+| * [ ] {nbsp} | {theory} _Option 2: Code-Qualität_
+| * [ ] {nbsp} | Projekt-Beispiele (Doremar, RBLTNG, ISTP)
+| * [ ] {nbsp} | Bewerbungsgespräch (Softwareentwickler)
+| * [ ] {nbsp} | Literaturempfehlungen -> docs/asciidoc/references.pdf
+| * [ ] {nbsp} | Fragen, Wiederholungen, FAQ zu den Kursinhalten
+| * [ ] {nbsp} | Informationen zur Abschlussprüfung
 |===
 
 ====
 {continue-here}
 ====
-
-=== Seminartag 8
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | (*Modul*) Enumerations
-a| * [ ] {nbsp} | Demos mit EnumTests
-a| * [ ] {nbsp} | Übung 1 - 'Switch' anstelle von 'if-elseif-else'
-a| * [ ] {nbsp} | Übung 2 - Enum mit r,g,b Datenfeldern
-a| * [ ] {nbsp} | Java Records (zu Modul enums)
-a| * [ ] {nbsp} | Demo mit records
-a| * [ ] {nbsp} | (*Modul*) Exceptions
-a| * [ ] {nbsp} | Demos, mit/ohne Context, mit/ohne Handler
-|===
-
-=== Seminartag 9
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | Zwischenprüfung
-a| * [ ] {nbsp} | Übungen 1 - Neue Exception bauen, werfen und behandeln
-a| * [ ] {nbsp} | (*Exkurs*) Logische Operatoren (aktuell noch in module-enums
-a| * [ ] {nbsp} | Theorie logische Operatoren
-a| * [ ] {nbsp} | Demos mit OperatorTests
-a| * [ ] {nbsp} | (*Exkurs*) Schleifen
-a| * [ ] {nbsp} | Demos mit LoopTests
-|===
-
-=== Seminartag 10
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-a| * [ ] {nbsp} | (*Modul*) Referenz-Semantik
-a| * [ ] {nbsp} | Demo in Klasse SemanticTests
-a| * [ ] {nbsp} | Übungen 1 - Grafische Erläuterung
-a| * [ ] {nbsp} | (OPTIONAL) (*Modul*) Datenbanken
-a| * [ ] {nbsp} | Demo in Klasse DataSourceDBUnitTests & vorbereiteten SQL Dateien
-a| * [ ] {nbsp} | Literaturempfehlungen -> docs/asciidoc/references.pdf
-a| * [ ] {nbsp} | Live-Projekt Beispiele (Doremar, RBLTNG)
-a| * [ ] {nbsp} | Code-Qualität
-a| * [ ] {nbsp} | Bewerbungsgespräch (Softwareentwickler)
-a| * [ ] {nbsp} | Fragen, Wiederholungen, FAQ zu den Kursinhalten
-a| * [ ] {nbsp} | Informationen zur Abschlussprüfung
-|===

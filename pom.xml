@@ -31,10 +31,22 @@
         <module>module-semantics</module>
     </modules>
 
+    <!--
+    | Known issues:
+    |
+    | (1) Warning-Message at the end of a build:
+    |    [WARNING] Plugin validation issues were detected in 1 plugin(s)
+    |    [WARNING]  * org.apache.maven.plugins:maven-resources-plugin:3.3.0
+    |    [WARNING] For more or less details, use 'maven.plugin.validation' property with one of the
+    |              values (case insensitive): [BRIEF, DEFAULT, VERBOSE]
+    |  Remark: See "https://stackoverflow.com/questions/76355897/plugin-validation-issues-were-detected-in-plugins"
+    |  Remark: Introduced in maven 3.9.x the maven validator shows you plugins that are not maven 4.x compatible.
+    |          As long as you stay below maven 4.x there will be no impact to your build.
+    |
+    -->
+
     <properties>
         <java.version>19</java.version>
-        <!-- [BRIEF, DEFAULT, VERBOSE]
-        <maven.plugin.validation>VERBOSE</maven.plugin.validation>-->
 
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>

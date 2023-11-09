@@ -21,6 +21,7 @@
         <module>commons</module>
         <module>docs</module>
         <!-- modules -->
+        <module>module-classes</module>
         <module>module-databases</module>
         <module>module-enums</module>
         <module>module-exceptions</module>
@@ -46,8 +47,10 @@
     -->
 
     <properties>
+        <!-- project configuration -->
         <java.version>19</java.version>
 
+        <!-- maven plugin configuration -->
         <maven.compiler.source>19</maven.compiler.source>
         <maven.compiler.target>19</maven.compiler.target>
 
@@ -56,9 +59,12 @@
         <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
         <maven.surefire.plugin.version>3.1.0</maven.surefire.plugin.version>
 
+        <!-- dependencies specified for child-modules -->
         <unit-jupiter-engine.version>5.9.3</unit-jupiter-engine.version>
         <junit-jupiter-params.version>5.9.3</junit-jupiter-params.version>
         <junit-platform-suite-engine.version>1.9.3</junit-platform-suite-engine.version>
+        <commons.version>1.0</commons.version>
+
     </properties>
 
     <!--
@@ -77,12 +83,16 @@
      |    In such a case, the version of the dependency is not required to be specified. This way is the
      |    recommended way to manage dependencies, and used in all modules, where no version should appear!
      |
+    -->
     <dependencyManagement>
         <dependencies>
-            ... insert managed dependencies here ...
+            <dependency>
+                <groupId>de.dhbw.adv-dev</groupId>
+                <artifactId>commons</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    -->
 
     <!--
      | Following dependencies are automatically known/added in (all) child modules

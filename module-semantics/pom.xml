@@ -14,7 +14,7 @@
     <name>module-semantics</name>
 
 	<properties>
-		<commons.version>1.0</commons.version>
+		<!-- nothing specific yet, see parent pom -->
 	</properties>
 
 	<dependencies>
@@ -22,7 +22,6 @@
 		<dependency>
 			<groupId>de.dhbw.adv-dev</groupId>
 			<artifactId>commons</artifactId>
-			<version>1.0</version>
 		</dependency>
 
 	</dependencies>

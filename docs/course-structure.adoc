@@ -1,12 +1,10 @@
 include::settings.adoc[]
 
 :author: Thorsten Eckstein
-:icons: font
-:icon-set: fas
 
 // document-specific variables
 :exersize: icon:flask[] Übung
-:update: icon:gear[] Update Project
+:update: {symbol-update-project} Update Project
 :demo: Demo:
 :theory:
 
@@ -24,23 +22,37 @@ icon:eye[]    -> demo
 // (1) Element "Zwischenprüfung" einbauen
 // (2) Modul "Datenbanken" einbauen
 
+
 === Seminartag 1: Technisches Setup, Klassen & Variablen
+
+////
+[cols="1h,3"]
+|===
+| Variable      | Value
+
+| module-1-name | {module-1-name}
+| module-1-root | {module-1-root}
+| course-1-src  | {module-1-src}
+| course-1-test | {module-1-test}
+|===
+////
 
 [cols="^1a,<9a"]
 |===
 | Done         | Inhalt, Kommentar
 
-| * [ ] {nbsp} | icon:gear[] IDE Setup (Git, IntelliJ, Maven, ggf. PlugIns)
+| * [ ] {nbsp} | icon:gear[] IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
 | * [ ] {nbsp} | {theory} Die Projektstruktur
-| * [ ] {nbsp} | {theory} Dependency-Management mit Maven (`pom`)
+| * [ ] {nbsp} | {theory} Dependency-Management mit `Maven` (`pom`)
 | * [ ] {nbsp} | Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit Git
+| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit `Git`
 | * [ ] {nbsp} | {theory} Klassen & Objekte (Instanzen)
 | * [ ] {nbsp} | {theory} Statische Klassen und Variablen mit `static`
 | * [ ] {nbsp} | {theory} Abstrakte Klassen
 | * [ ] {nbsp} | {theory} Vererbung & Implementierung mit Interfaces
 | * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
 |===
+
 
 === Seminartag 2: Datentypen & Operatoren
 
@@ -61,6 +73,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {theory} Fehleranalyse: Debugging mit der IDE
 |===
 
+
 === Seminartag 3: Polymorphismus & Kontrollstrukturen
 
 [cols="^1a,<9a"]
@@ -76,6 +89,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {exersize} 2: Verschiedene Loops
 |===
 
+
 === Seminartag 4: Collections Framework & Objektvertrag
 
 [cols="^1a,<9a"]
@@ -89,6 +103,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {theory} Der Objektvertrag
 | * [ ] {nbsp} | {demo} `equals()` und `hashCode()`
 |===
+
 
 === Seminartag 5: Beziehungen & Relationen
 
@@ -106,6 +121,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {exersize} 2: ManyToMany
 |===
 
+
 === Seminartag 6: Generische Programmierung & Enums
 
 [cols="^1a,<9a"]
@@ -122,6 +138,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {exersize} 2: 'Switch' anstelle von 'if-elseif-else'
 | * [ ] {nbsp} | {exersize} 3: Enum mit r,g,b Datenfeldern
 |===
+
 
 === Seminartag 7: Funktionale Programmierung & Streaming API
 
@@ -142,6 +159,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | Ausgabe Übungsklausur, Erläuterungen
 |===
 
+
 === Seminartag 8: Exceptions, Enums & Records
 
 [cols="^1a,<9a"]
@@ -157,21 +175,8 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {exersize} 3: Neue Exception bauen, werfen und behandeln
 |===
 
-=== Seminartag 9: ???
 
-[cols="^1a,<9a"]
-|===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} |
-| * [ ] {nbsp} |
-| * [ ] {nbsp} |
-| * [ ] {nbsp} |
-| * [ ] {nbsp} |
-|===
-
-=== Seminartag 10: Optionale Themen, Semesterabschluss
+=== Seminartag 9: Optionale Themen, Semesterabschluss
 
 [cols="^1a,<9a"]
 |===

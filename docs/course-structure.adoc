@@ -32,6 +32,7 @@ icon:eye[]    -> demo
 
 | module-1-name | {module-1-name}
 | module-1-root | {module-1-root}
+| course-1-docs | {module-1-docs}
 | course-1-src  | {module-1-src}
 | course-1-test | {module-1-test}
 |===

@@ -31,29 +31,33 @@
 :course-title-count: {counter:course-title-count}
 
 :title-prefix: Kurstag
-:course-1:  {title-prefix} 1 - Einführung & technisches Setup
-:course-2:  {title-prefix} 2 - Datenstrukturen & -typen
-:course-3:  {title-prefix} 3 - ?
-:course-4:  {title-prefix} 4 - ?
-:course-5:  {title-prefix} 5 - ?
-:course-6:  {title-prefix} 6 - ?
-:course-7:  {title-prefix} 7 - ?
-:course-8:  {title-prefix} 8 - ?
-:course-9:  {title-prefix} 9 - ?
-
+:course-1:  {title-prefix} 1 - Technisches Setup, Klassen & Variablen
+:course-2:  {title-prefix} 2 - Datentypen & Operatoren
+:course-3:  {title-prefix} 3 - Polymorphismus & Kontrollstrukturen
+:course-4:  {title-prefix} 4 - Collections Framework & Objektvertrag
+:course-5:  {title-prefix} 5 - Beziehungen & Relationen
+:course-6:  {title-prefix} 6 - Generische Programmierung & Enums
+:course-7:  {title-prefix} 7 - Funktionale Programmierung & Streaming API
+:course-8:  {title-prefix} 8 - Exceptions, Enums & Records
+:course-9:  {title-prefix} 9 - Optionale Themen, Semesterabschluss
 
 // ######################### referencing support
 //:repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
-:modules-root: ..
-:module-sources: src/main/java
-:module-tests: src/test/java
-:common-package: /de/dhbw
-:demo-package: /demo
-:exercise-package: /exercise
-:solution-package: /solution
+// for all modules
+:modules-root:     ..
+:modules-prefix:   module
+// for each module
+:module-docs:      docs
+:module-sources:   src/main/java
+:module-tests:     src/test/java
+:common-package:   /de/dhbw
+:package-demo:     /demo
+:package-exercise: /exercise
+:package-solution: /solution
 
 // use this for referencing sources in module docs!
-:module-1-name: module-classes
+:module-1-name: {modules-prefix}-classes
 :module-1-root: {modules-root}/{module-1-name}
+:module-1-docs: {module-1-root}/{module-docs}
 :module-1-src:  {module-1-root}/{module-sources}
 :module-1-test: {module-1-root}/{module-tests}

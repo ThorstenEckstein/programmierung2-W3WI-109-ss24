@@ -142,6 +142,41 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 
 == Die Projektstruktur
 
+Jedes Projekt bzw. `Modul` hat eine ähnliche Struktur ("_Convention over Configuration_"), das erleichtert auch einfach die Nutzung und Wiedererkennung:
+
+Im *Allgemeinen*:
+
+[subs=normal]
+----
+{dir-icon} <Projekt-Wurzel>
+  {dir-icon} <Modul-Wurzel>
+    {dir-icon} docs        -> Dokumentation zum Modul
+    {dir-icon} src         -> Wurzel für den gesamten Sourcecode
+      {dir-icon-src} main      -> Wurzel für den "produktiven" Sourcecode
+      {dir-icon-test} test      -> Wurzel für den Test-Sourcecode
+    {dir-icon} target      -> Kompilierte Klassen
+----
+
+Das ganze mal am *Beispiel*:
+
+[subs=normal]
+----
+{dir-icon} LV
+  {dir-icon} module-classes
+    {dir-icon} docs
+    {dir-icon} src
+      {dir-icon-src} main
+        {dir-icon-src} java
+          {dir-icon-src} de
+            {dir-icon-src} dhbw
+              {dir-icon-src} demo
+              {dir-icon-src} exercise
+              {dir-icon-src} solution
+      {dir-icon-test} test
+    {dir-icon} target
+----
+
+
 == Dependency-Management mit Maven (pom)
 
 == Fachlicher Schwerpunkt des Kurses (Zugdisposition)

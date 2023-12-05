@@ -25,6 +25,9 @@
 :update: {symbol-update-project} Update Project
 :demo: Demo:
 :theory:
+:dir-icon: pass:n[[yellow]#icon:folder[]#]
+:dir-icon-src: pass:n[[yellow]#icon:folder[]#]
+:dir-icon-test: pass:n[[yellow]#icon:folder[]#]
 
 
 // ######################### content settings

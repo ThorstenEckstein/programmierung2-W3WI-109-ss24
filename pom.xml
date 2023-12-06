@@ -22,6 +22,7 @@
         <module>docs</module>
         <!-- modules -->
         <module>module-classes</module>
+        <module>module-operators</module>
         <module>module-databases</module>
         <module>module-enums</module>
         <module>module-exceptions</module>

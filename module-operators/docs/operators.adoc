@@ -140,9 +140,6 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 [small]#_PS: Ich persönlich aktualisiere recht zeitnah alle PlugIns._#
 
 
-== Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-
-
 == Die Projektstruktur
 
 Jedes Projekt bzw. `Modul` hat eine ähnliche Struktur ("_Convention over Configuration_"), das vereinfacht die Nutzung und verbessert *Wiedererkennbarkeit*:
@@ -184,22 +181,18 @@ Am *Beispiel* des ersten Moduls `module-classes`:
 ----
 
 
-== Klassen & Objekte (Instanzen)
+== Dependency-Management mit Maven (pom)
 
+== Fachlicher Schwerpunkt des Kurses (Zugdisposition)
+
+== Quellcodeverwaltung mit Git
+
+== Klassen & Objekte (Instanzen)
 
 == Statische Klassen und Variablen mit static
 
+== Abstrakte Klassen
 
 == Vererbung & Implementierung mit Interfaces
 
-
-// == Abstrakte Klassen
-
-
-// == Sichtbarkeiten & Scopes: Access Modifier
-
-
-// == Quellcodeverwaltung mit Git
-
-
-// == Dependency-Management mit Maven (pom)
+== Sichtbarkeiten & Scopes: Access Modifier

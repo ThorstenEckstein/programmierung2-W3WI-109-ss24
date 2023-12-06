@@ -1,29 +1,19 @@
 include::settings.adoc[]
 
-:author: Thorsten Eckstein
-
-// document-specific variables
-:exersize: icon:flask[] Übung
-:update: {symbol-update-project} Update Project
-:demo: Demo:
-:theory:
-
 :toc:
 
-== Seminarstruktur
+= Programmierung II mit Java
 
 ////
-icon:trophy[] -> erfolg
-icon:tags[]   -> theorie
-icon:eye[]    -> demo
+ LV-Tag: 09:15 - 12:15 (3h)
+
 ////
 
 // TODO:
 // (1) Element "Zwischenprüfung" einbauen
 // (2) Modul "Datenbanken" einbauen
 
-
-=== Seminartag 1: Technisches Setup, Klassen & Variablen
+== {module}: Welcome, Setup, Klassen & Variablen
 
 ////
 [cols="1h,3"]
@@ -32,51 +22,97 @@ icon:eye[]    -> demo
 
 | module-1-name | {module-1-name}
 | module-1-root | {module-1-root}
-| course-1-docs | {module-1-docs}
-| course-1-src  | {module-1-src}
-| course-1-test | {module-1-test}
+| module-1-docs | {module-1-docs}
+| module-1-src  | {module-1-src}
+| module-1-test | {module-1-test}
 |===
 ////
 
-[cols="^1a,<9a"]
+NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {icon-dir} `module-classes`
+
+[cols="^1a,^1,<8a", grid=rows]
 |===
-| Done         | Inhalt, Kommentar
+| Done         | Typ             | Inhalt, Kommentar
 
-| * [ ] {nbsp} | icon:gear[] IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
-| * [ ] {nbsp} | {theory} Die Projektstruktur
-| * [ ] {nbsp} | {theory} Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-| * [ ] {nbsp} | {theory} Klassen & Objekte (Instanzen)
-| * [ ] {nbsp} | {exercise} 1: Eine Klasse mit Instanz, Feld & Methode
-| * [ ] {nbsp} | {theory} Statische Klassen und Variablen mit `static`
-| * [ ] {nbsp} | {theory} Abstrakte Klassen
-| * [ ] {nbsp} | {theory} Vererbung & Implementierung mit Interfaces
-| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit `Git`
-| * [ ] {nbsp} | {theory} Projektverwaltung mit `Maven` (`pom`)
+// 09:15 - 09:45
+| * [ ] {nbsp} | {icon-welcome}  |
+Herzlich willkommen!
+
+- Wer bin ich?
+- Inhalt der LV
+- Wer seid ihr und woher kommt ihr?
+- Welche Erfahrungen mit Java sind vorhanden?
+- Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
+
+// 09:45 - 10:15 = 30'
+| * [ ] {nbsp} | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
+// 10:15 - 10:30 = 15'
+| * [ ] {nbsp} | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+
+// 10:30 - 10:45 ##### 15' PAUSE #####
+
+// 10:45 - 10:50 = 5'
+| * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git` (Sonderthema!)
+// 10:50 - 11:00 = 10'
+| * [ ] {nbsp} | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+
+{continue-here}
+
+// 11:00 - 11:15 = 15'
+| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+// 11:15 - 11:30 = 15'
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klasse mit Instanz, Feld & Methode
+// 11:30 - 11:45 = 15'
+| * [ ] {nbsp} | {icon-topic}    | *Statische Klassen* und Variablen mit `static`
+// 11:45 - 12:00 = 15'
+| * [ ] {nbsp} | {icon-topic}    | *Abstrakte* Klassen
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Abstraktion, statisches Feld und Methode
+
+
+// 12:00 - 12:15 = 15' PUFFER hinten raus
+
 |===
 
 
-=== Seminartag 2: Datentypen & Operatoren
+== {module}: Datentypen & Operatoren
 
-[cols="^1a,<9a"]
+NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {dir-icon} `module-operators`
+
+[cols="^1a,^1a,<8a", grid=rows]
 |===
-| Done         | Inhalt, Kommentar
+| Done         | Typ             | Inhalt, Kommentar
 
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
-| * [ ] {nbsp} | {theory} Test-Driven-Development (TDD)
-| * [ ] {nbsp} | {exercise} 1: Das erste Klassenmodell mit (Unit-)Test
-| * [ ] {nbsp} | {theory} Packages & Import (Compiler Errors)
-| * [ ] {nbsp} | {theory} Datentypen & Casting
-| * [ ] {nbsp} | {demo} Datentyp-Umwandlung
-| * [ ] {nbsp} | {exercise} 2 (a+b): Datentyp-Umwandlung
-| * [ ] {nbsp} | {theory} Logische Operatoren
-| * [ ] {nbsp} | {demo} OperatorTests
-| * [ ] {nbsp} | {theory} Code Generierung mit der IDE (Autocompletion, Vorschläge)
-| * [ ] {nbsp} | {theory} Fehleranalyse: Debugging mit der IDE
+| * [ ] {nbsp} | {icon-setup}    | {update}
+//
+| * [ ] {nbsp} | {icon-topic}    | *Vererbung & Implementierung* mit Interfaces
+//
+| * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Vererbung & Implementierung
+//
+| * [ ] {nbsp} | {icon-topic}    | Sichtbarkeiten & Scopes: Access Modifier
+//
+| * [ ] {nbsp} | {icon-theory}   | Test-Driven-Development (TDD)
+//
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Das erste Klassenmodell mit (Unit-)Test
+//
+| * [ ] {nbsp} | {icon-topic}    | Packages & Import (Compiler Errors)
+//
+| * [ ] {nbsp} | {icon-topic}    | Datentypen & Casting
+//
+| * [ ] {nbsp} | {icon-topic}    | Datentyp-Umwandlung
+//
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_ (a+b): Datentyp-Umwandlung
+//
+| * [ ] {nbsp} | {icon-topic}    | Logische Operatoren
+//
+| * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Operatoren
+//
+| * [ ] {nbsp} | {icon-theory}   | Code Generierung mit der IDE (Autocompletion, Vorschläge)
+//
+| * [ ] {nbsp} | {icon-theory}   | Fehleranalyse: Debugging mit der IDE
 |===
 
 
-=== Seminartag 3: Polymorphismus & Kontrollstrukturen
+== {module}: Polymorphismus & Kontrollstrukturen
 
 [cols="^1a,<9a"]
 |===
@@ -92,7 +128,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 4: Collections Framework & Objektvertrag
+== {module}: Collections Framework & Objektvertrag
 
 [cols="^1a,<9a"]
 |===
@@ -107,7 +143,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 5: Beziehungen & Relationen
+== {module}: Beziehungen & Relationen
 
 [cols="^1a,<9a"]
 |===
@@ -124,7 +160,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 6: Generische Programmierung & Enums
+== {module}: Generische Programmierung & Enums
 
 [cols="^1a,<9a"]
 |===
@@ -142,7 +178,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 7: Funktionale Programmierung & Streaming API
+== {module}: Funktionale Programmierung & Streaming API
 
 [cols="^1a,<9a"]
 |===
@@ -162,7 +198,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 8: Exceptions, Enums & Records
+== {module}: Exceptions, Enums & Records
 
 [cols="^1a,<9a"]
 |===
@@ -178,7 +214,7 @@ icon:eye[]    -> demo
 |===
 
 
-=== Seminartag 9: Optionale Themen, Semesterabschluss
+== {module}: Optionale Themen, Semesterabschluss
 
 [cols="^1a,<9a"]
 |===

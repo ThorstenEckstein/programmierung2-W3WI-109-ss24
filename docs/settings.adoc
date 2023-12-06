@@ -12,41 +12,52 @@
 //:stylesdir: styles
 //:stylesheet: dhbw.css
 
+// Special settings
 
-// ######################### special settings
-// For passthrough macros see also: -> https://docs.asciidoctor.org/asciidoc/latest/pass
+// For pass-through macros see also: -> https://docs.asciidoctor.org/asciidoc/latest/pass
 :nl: pass:[<br/>]
 :tbd: pass:n[[blue]#_to be continued here ..._#]
 :continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
 //:example: pass:[&#63;]
 //:example-caption: {example}
 
-:exercise: icon:flask[] Übung
-:update: {symbol-update-project} Update Project
+:module: Modul
+:update: pass:n[_Update project ..._]
 :demo: Demo:
-:theory:
 
-:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
-:dir-icon: pass:n[[yellow]#icon:folder[]#]
-:dir-icon-src: pass:n[[yellow]#icon:folder[]#]
-:dir-icon-test: pass:n[[yellow]#icon:folder[]#]
+// Icons
+
+:icon-welcome:        icon:heart[role=red]
+:icon-update-project: icon:arrow-circle-o-down[role=red]
+:icon-dir:            icon:folder[role=yellow]
+:icon-dir-src:        icon:folder[role=yellow]
+:icon-dir-test:       icon:folder[role=yellow]
+:icon-exercise:       icon:flask[role=red]
+:icon-topic:          icon:book[role=gray]
+:icon-theory:
+:icon-award:          icon:trophy[role=yellow]
+:icon-demo:           icon:eye[role=gray]
+:icon-setup:          icon:gear[role=blue]
+:icon-exam:           icon:graduation-cap[role=black]
+:icon-domain:         icon:train[role=red]
 
 
-// ######################### content settings
+// Titles
+
 :course-title-count: {counter:course-title-count}
 
-:title-prefix: Kurstag
-:course-1:  {title-prefix} 1 - Technisches Setup, Klassen & Variablen
-:course-2:  {title-prefix} 2 - Datentypen & Operatoren
-:course-3:  {title-prefix} 3 - Polymorphismus & Kontrollstrukturen
-:course-4:  {title-prefix} 4 - Collections Framework & Objektvertrag
-:course-5:  {title-prefix} 5 - Beziehungen & Relationen
-:course-6:  {title-prefix} 6 - Generische Programmierung & Enums
-:course-7:  {title-prefix} 7 - Funktionale Programmierung & Streaming API
-:course-8:  {title-prefix} 8 - Exceptions, Enums & Records
-:course-9:  {title-prefix} 9 - Optionale Themen, Semesterabschluss
+:module-1:  {module} 1 - Technisches Setup, Klassen & Variablen
+:module-2:  {module} 2 - Datentypen & Operatoren
+:module-3:  {module} 3 - Polymorphismus & Kontrollstrukturen
+:module-4:  {module} 4 - Collections Framework & Objektvertrag
+:module-5:  {module} 5 - Beziehungen & Relationen
+:module-6:  {module} 6 - Generische Programmierung & Enums
+:module-7:  {module} 7 - Funktionale Programmierung & Streaming API
+:module-8:  {module} 8 - Exceptions, Enums & Records
+:module-9:  {module} 9 - Optionale Themen, Semesterabschluss
 
-// ######################### referencing support
+// Referencing support
+
 //:repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
 // for all modules
 :modules-root:     ..
@@ -60,7 +71,7 @@
 :package-exercise: /exercise
 :package-solution: /solution
 
-// use this for referencing sources in module docs!
+// Use this for referencing sources in module docs!
 :module-1-name: {modules-prefix}-classes
 :module-1-root: {modules-root}/{module-1-name}
 :module-1-docs: {module-1-root}/{module-docs}

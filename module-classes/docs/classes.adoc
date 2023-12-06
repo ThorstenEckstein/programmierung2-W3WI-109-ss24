@@ -142,7 +142,7 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 
 == Die Projektstruktur
 
-Jedes Projekt bzw. `Modul` hat eine ähnliche Struktur ("_Convention over Configuration_"), das erleichtert auch einfach die Nutzung und Wiedererkennung:
+Jedes Projekt bzw. `Modul` hat eine ähnliche Struktur ("_Convention over Configuration_"), das vereinfacht die Nutzung und verbessert *Wiedererkennbarkeit*:
 
 Im *Allgemeinen*:
 
@@ -153,25 +153,29 @@ Im *Allgemeinen*:
     {dir-icon} docs        -> Dokumentation zum Modul
     {dir-icon} src         -> Wurzel für den gesamten Sourcecode
       {dir-icon-src} main      -> Wurzel für den "produktiven" Sourcecode
+        {dir-icon-src} java ...
       {dir-icon-test} test      -> Wurzel für den Test-Sourcecode
+        {dir-icon-src} java ...
     {dir-icon} target      -> Kompilierte Klassen
 ----
 
-Das ganze mal am *Beispiel*:
+Am *Beispiel* des ersten Moduls `module-classes`:
 
 [subs=normal]
 ----
-{dir-icon} LV
+{dir-icon} <Repository-Wurzel-Verzeichnis>
   {dir-icon} module-classes
     {dir-icon} docs
     {dir-icon} src
       {dir-icon-src} main
-        {dir-icon-src} java
+        {dir-icon-src} java              -> ab hier "Package" Verzeichnisse
           {dir-icon-src} de
             {dir-icon-src} dhbw
-              {dir-icon-src} demo
-              {dir-icon-src} exercise
-              {dir-icon-src} solution
+              {dir-icon-src} demo        -> Klassen zur Demonstration,
+                               ggf. mit Unterverzeichnissen
+              {dir-icon-src} exercise    -> Klassen, die im Rahmen von Tests
+                               implementiert werden
+              {dir-icon-src} solution    -> Klassen, die Lösungen für die Tests sind
       {dir-icon-test} test
     {dir-icon} target
 ----

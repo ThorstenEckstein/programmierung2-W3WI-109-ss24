@@ -1,27 +1,15 @@
-package de.dhbw.basics;
+package de.dhbw;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
-import de.dhbw.demo.visibility.VisibilityExampleClass;
 import de.dhbw.commons.Logger;
+import de.dhbw.demo.visibility.VisibilityExampleClass;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class BasicsTest {
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-    private final Logger logger = new Logger(BasicsTest.class);
+public class VisibilityDemoTest {
 
-    //tag::classes-and-instances[]
-    @Test
-    @DisplayName("Demo 1: Klassen instanziieren")
-    public void canInstantiateClass() {
-        // given
-
-        // when
-
-        // then
-    }
-    //end::classes-and-instances[]
+    private final Logger logger = new Logger(VisibilityDemoTest.class);
 
     //tag::visibility[]
     @Test

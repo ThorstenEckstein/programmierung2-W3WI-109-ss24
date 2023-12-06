@@ -44,14 +44,14 @@ icon:eye[]    -> demo
 
 | * [ ] {nbsp} | icon:gear[] IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
 | * [ ] {nbsp} | {theory} Die Projektstruktur
-| * [ ] {nbsp} | {theory} Dependency-Management mit `Maven` (`pom`)
-| * [ ] {nbsp} | Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit `Git`
+| * [ ] {nbsp} | {theory} Fachlicher Schwerpunkt des Kurses (Zugdisposition)
 | * [ ] {nbsp} | {theory} Klassen & Objekte (Instanzen)
+| * [ ] {nbsp} | {exercise} 1: Eine Klasse mit Instanz, Feld & Methode
 | * [ ] {nbsp} | {theory} Statische Klassen und Variablen mit `static`
 | * [ ] {nbsp} | {theory} Abstrakte Klassen
 | * [ ] {nbsp} | {theory} Vererbung & Implementierung mit Interfaces
-| * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
+| * [ ] {nbsp} | {theory} Quellcodeverwaltung mit `Git`
+| * [ ] {nbsp} | {theory} Projektverwaltung mit `Maven` (`pom`)
 |===
 
 
@@ -62,12 +62,13 @@ icon:eye[]    -> demo
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {update}
+| * [ ] {nbsp} | {theory} Sichtbarkeiten & Scopes: Access Modifier
 | * [ ] {nbsp} | {theory} Test-Driven-Development (TDD)
-| * [ ] {nbsp} | {exersize} 1: Das erste Klassenmodell mit (Unit-)Test
+| * [ ] {nbsp} | {exercise} 1: Das erste Klassenmodell mit (Unit-)Test
 | * [ ] {nbsp} | {theory} Packages & Import (Compiler Errors)
 | * [ ] {nbsp} | {theory} Datentypen & Casting
 | * [ ] {nbsp} | {demo} Datentyp-Umwandlung
-| * [ ] {nbsp} | {exersize} 2 (a+b): Datentyp-Umwandlung
+| * [ ] {nbsp} | {exercise} 2 (a+b): Datentyp-Umwandlung
 | * [ ] {nbsp} | {theory} Logische Operatoren
 | * [ ] {nbsp} | {demo} OperatorTests
 | * [ ] {nbsp} | {theory} Code Generierung mit der IDE (Autocompletion, Vorschläge)
@@ -82,12 +83,12 @@ icon:eye[]    -> demo
 | Done         | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {exersize} 1: Wiederholung Klassenmodell implementieren und "generate code" nutzen
+| * [ ] {nbsp} | {exercise} 1: Wiederholung Klassenmodell implementieren und "generate code" nutzen
 | * [ ] {nbsp} | {theory} Methoden überladen, überschreiben/übersteuern
 | * [ ] {nbsp} | {demo} Overload, Override am Beispiel
-| * [ ] {nbsp} | {exersize} 1: Override
+| * [ ] {nbsp} | {exercise} 1: Override
 | * [ ] {nbsp} | Schleifen
-| * [ ] {nbsp} | {exersize} 2: Verschiedene Loops
+| * [ ] {nbsp} | {exercise} 2: Verschiedene Loops
 |===
 
 
@@ -99,8 +100,8 @@ icon:eye[]    -> demo
 
 | * [ ] {nbsp} | {update}
 | * [ ] {nbsp} | {theory} Collections Framework Einführung
-| * [ ] {nbsp} | {exersize} Übung 1: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
-| * [ ] {nbsp} | {exersize} 2: Eine sortierte `Map` implementieren und die Sortierung prüfen
+| * [ ] {nbsp} | {exercise} Übung 1: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
+| * [ ] {nbsp} | {exercise} 2: Eine sortierte `Map` implementieren und die Sortierung prüfen
 | * [ ] {nbsp} | {theory} Der Objektvertrag
 | * [ ] {nbsp} | {demo} `equals()` und `hashCode()`
 |===
@@ -116,10 +117,10 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | Beziehungsarten (vs. Relationen)
 | * [ ] {nbsp} | Aggregation und Komposition
 | * [ ] {nbsp} | {demo} One-To-One, One-To-Many
-| * [ ] {nbsp} | {exersize} 1: Assoziation mit Kurs und Student:innen
+| * [ ] {nbsp} | {exercise} 1: Assoziation mit Kurs und Student:innen
 | * [ ] {nbsp} | Many-To-Many
 | * [ ] {nbsp} | {demo} Many-To-Many am Beispiel der n:m Relation
-| * [ ] {nbsp} | {exersize} 2: ManyToMany
+| * [ ] {nbsp} | {exercise} 2: ManyToMany
 |===
 
 
@@ -132,12 +133,12 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {update}
 | * [ ] {nbsp} | {theory} Java Generics
 | * [ ] {nbsp} | {demo} in `GenericsTest`
-| * [ ] {nbsp} | {exersize} 1: Calculator
-//| * [ ] {nbsp} | {exersize} 2: Workflow mit Steps
+| * [ ] {nbsp} | {exercise} 1: Calculator
+//| * [ ] {nbsp} | {exercise} 2: Workflow mit Steps
 | * [ ] {nbsp} | {theory} Enumerations
 | * [ ] {nbsp} | {demo} EnumTests
-| * [ ] {nbsp} | {exersize} 2: 'Switch' anstelle von 'if-elseif-else'
-| * [ ] {nbsp} | {exersize} 3: Enum mit r,g,b Datenfeldern
+| * [ ] {nbsp} | {exercise} 2: 'Switch' anstelle von 'if-elseif-else'
+| * [ ] {nbsp} | {exercise} 3: Enum mit r,g,b Datenfeldern
 |===
 
 
@@ -152,10 +153,10 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {demo} Klasse LambdaTest
 | * [ ] {nbsp} | {theory} Streaming API
 | * [ ] {nbsp} | {demo} Klasse StreamingTests
-| * [ ] {nbsp} | {exersize} 1: Loop über bool'sche Liste mit Ausgabe
-| * [ ] {nbsp} | {exersize} 2 (a+b): "Summe berechnen" früher + heute
+| * [ ] {nbsp} | {exercise} 1: Loop über bool'sche Liste mit Ausgabe
+| * [ ] {nbsp} | {exercise} 2 (a+b): "Summe berechnen" früher + heute
 
-// | * [ ] {nbsp} | {exersize} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
+// | * [ ] {nbsp} | {exercise} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
 
 | * [ ] {nbsp} | Ausgabe Übungsklausur, Erläuterungen
 |===
@@ -173,7 +174,7 @@ icon:eye[]    -> demo
 | * [ ] {nbsp} | {demo} Records
 | * [ ] {nbsp} | {theory} Exceptions & Exception Handling
 | * [ ] {nbsp} | {demo} mit/ohne Context, mit/ohne Handler
-| * [ ] {nbsp} | {exersize} 3: Neue Exception bauen, werfen und behandeln
+| * [ ] {nbsp} | {exercise} 3: Neue Exception bauen, werfen und behandeln
 |===
 
 

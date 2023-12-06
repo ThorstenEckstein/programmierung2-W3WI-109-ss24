@@ -20,11 +20,13 @@
 :continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
 //:example: pass:[&#63;]
 //:example-caption: {example}
-:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
-:exersize: icon:flask[] Übung
+
+:exercise: icon:flask[] Übung
 :update: {symbol-update-project} Update Project
 :demo: Demo:
 :theory:
+
+:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 :dir-icon: pass:n[[yellow]#icon:folder[]#]
 :dir-icon-src: pass:n[[yellow]#icon:folder[]#]
 :dir-icon-test: pass:n[[yellow]#icon:folder[]#]

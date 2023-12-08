@@ -34,7 +34,7 @@ NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {icon-dir} `module-clas
 |===
 | Done         | Typ             | Inhalt, Kommentar
 
-// 09:15 - 09:45
+// 09:15 - 09:30 = 15'
 | * [ ] {nbsp} | {icon-welcome}  |
 Herzlich willkommen!
 
@@ -44,39 +44,33 @@ Herzlich willkommen!
 - Welche Erfahrungen mit Java sind vorhanden?
 - Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
 
-// 09:45 - 10:15 = 30'
-| * [ ] {nbsp} | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
-// 10:15 - 10:30 = 15'
+// 09:30 - 09:45 = 15'
 | * [ ] {nbsp} | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+// 09:45 - 10:00 = 15'
+| * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git`
+// 10:00 - 10:30 = 30'
+| * [ ] {nbsp} | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
 
-// 10:30 - 10:45 ##### 15' PAUSE #####
+// 10:30 - 10:45 = 15'
+|              |                 | */// PAUSE ///*
 
-// 10:45 - 10:50 = 5'
-| * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git` (Sonderthema!)
-// 10:50 - 11:00 = 10'
+// 10:45 - 11:00 = 15'
 | * [ ] {nbsp} | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+// 11:00 - 11:30 = 30'
+| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+// 11:30 - 11:45 = 15'
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+// 11:45 - 12:00 = 15'
+| * [ ] {nbsp} | {icon-topic}    | `static`: *statische* Felder und Methoden
+// 11:45 - 12:15 = 30'
+| * [ ] {nbsp} | {icon-topic}    | *Vererbung & Implementierung* mit Interfaces (Einführung)
+|===
 
 {continue-here}
 
-// 11:00 - 11:15 = 15'
-| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
-// 11:15 - 11:30 = 15'
-| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klasse mit Instanz, Feld & Methode
-// 11:30 - 11:45 = 15'
-| * [ ] {nbsp} | {icon-topic}    | *Statische Klassen* und Variablen mit `static`
-// 11:45 - 12:00 = 15'
-| * [ ] {nbsp} | {icon-topic}    | *Abstrakte* Klassen
-| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Abstraktion, statisches Feld und Methode
-
-
-// 12:00 - 12:15 = 15' PUFFER hinten raus
-
-|===
-
-
 == {module}: Datentypen & Operatoren
 
-NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {dir-icon} `module-operators`
+NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {icon-dir} `module-operators`
 
 [cols="^1a,^1a,<8a", grid=rows]
 |===
@@ -84,9 +78,13 @@ NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {dir-icon} `module-oper
 
 | * [ ] {nbsp} | {icon-setup}    | {update}
 //
-| * [ ] {nbsp} | {icon-topic}    | *Vererbung & Implementierung* mit Interfaces
+| * [ ] {nbsp} | {icon-topic}    | *Vererbung & Implementierung* mit Interfaces (Wiederholung)
 //
 | * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Vererbung & Implementierung
+//
+| * [ ] {nbsp} | {icon-topic}    | `abstract`: *Abstrakte* Klassen
+//
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Abstraktion, statisches Feld und Methode
 //
 | * [ ] {nbsp} | {icon-topic}    | Sichtbarkeiten & Scopes: Access Modifier
 //

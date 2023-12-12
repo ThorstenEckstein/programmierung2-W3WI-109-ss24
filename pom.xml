@@ -21,6 +21,7 @@
         <module>commons</module>
         <module>docs</module>
         <!-- modules -->
+        <module>module-intro</module>
         <module>module-classes</module>
         <module>module-operators</module>
         <module>module-databases</module>

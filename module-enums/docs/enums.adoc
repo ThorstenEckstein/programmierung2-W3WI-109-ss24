@@ -1,4 +1,4 @@
-include::../../docs/asciidoc/settings.adoc[]
+include::../../docs/settings.adoc[]
 
 // local document variables ---------------------------------------------------------------------
 :module-package: enums
@@ -20,7 +20,7 @@ include::../../docs/asciidoc/settings.adoc[]
 
 === Preparation
 
-include::../../docs/asciidoc/includes/update-project.adoc[]
+include::../../docs/includes/update-project.adoc[]
 
 
 === Theorie & Einführung

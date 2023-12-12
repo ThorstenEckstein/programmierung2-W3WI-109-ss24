@@ -6,15 +6,38 @@ include::../../docs/settings.adoc[]
 
 == Klassen & Objekte (Instanzen)
 
-Die wichtigsten Elemente von Java:
+[ <<classes-theory,Theorie>> | <<classes-demo,Demo>> | <<classes-exercise,Übungen>> ]
+
+[[classes-theory]]
+Etwas *Theorie* vorab:
+
+Unter einer *Klasse* (oder Objekttyp, -> <<ref-1,Ref. 1>>) versteht man in der objektorientierten Programmierung ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
+
+Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt Attribute (Eigenschaften, Felder) und Methoden (Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
+
+Eine Java Klasse hat grundsätzlich die folgende Signatur, inkl. Eigenschaften (Feldern) und Verhaltensweisen (Methoden):
 
 [source,java]
 ----
-- interface
-- (abstract) class
-- field
-- method
+public class MyClass {
+
+    String field;
+
+    String doSomething() {
+
+    }
+}
 ----
+
+[[classes-demo]]
+*Demo*:
+
+ src/test/java/de/dhbw/ClassesDemoTest.java
+
+[[classes-exercise]]
+*Übungen*:
+
+
 
 Erzeuge ein erstes, kleines *Klassenmodell*:
 
@@ -47,14 +70,16 @@ Das Schlüsselwort
 
 bedeutet im Wesentlichen, das die Felder (Attribute) oder Methoden einer Klasse nicht an die Erzeugung einer *Instanz* dieser Klasse gebunden sind. Das Ganze lässt sich besser anhand von Beispielen und Code verdeutlichen.
 
-Ein Beispiel:
+Ein *Beispiel*:
 
 [source, java]
 ----
 public class Configuration {
 
+    // statisches Feld
     public static final String SETTING_KEY_AUTHOR = "setting.author";
 
+    // statische Methode
     public static String getSetting(String key) {
         return settings.get(key);
     }
@@ -72,13 +97,15 @@ Dazu gibt es auch *Unit-Tests*:
 == Vererbung & Implementierung mit Interfaces
 
 
+== Referenzen
+
+[[ref-1]]
+Ref. 1: https://de.wikipedia.org/wiki/Klasse_(Objektorientierung)[https://de.wikipedia.org/wiki/Klasse_(Objektorientierung)]
+
+
 // == Abstrakte Klassen
 
 
 // == Sichtbarkeiten & Scopes: Access Modifier
 
 
-// == Quellcodeverwaltung mit Git
-
-
-// == Dependency-Management mit Maven (pom)

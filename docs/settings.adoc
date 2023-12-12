@@ -56,24 +56,19 @@
 :module-8:  {module} 8 - Exceptions, Enums & Records
 :module-9:  {module} 9 - Optionale Themen, Semesterabschluss
 
+//
 // Referencing support
-
 //:repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
-// for all modules
+//
+
+// For all modules apply ...
 :modules-root:     ..
 :modules-prefix:   module
 // for each module
 :module-docs:      docs
 :module-sources:   src/main/java
 :module-tests:     src/test/java
-:common-package:   /de/dhbw
+:basic-package:    de/dhbw
 :package-demo:     /demo
 :package-exercise: /exercise
 :package-solution: /solution
-
-// Use this for referencing sources in module docs!
-:module-1-name: {modules-prefix}-classes
-:module-1-root: {modules-root}/{module-1-name}
-:module-1-docs: {module-1-root}/{module-docs}
-:module-1-src:  {module-1-root}/{module-sources}
-:module-1-test: {module-1-root}/{module-tests}

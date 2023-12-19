@@ -62,7 +62,7 @@ public class ExceptionContextBuilder {
      * @return a new instance of exception context
      */
     public static ExceptionContext error(String message) {
-        return error(message, null);
+        return error(message, (Object) null);
     }
 
     /**

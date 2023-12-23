@@ -371,3 +371,19 @@ image::images/mvn-clean-compile-ui.png[]
 |===
 
 Das Projekt sollte jetzt "bauen", d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebnis wird angezeigt ... hoffentlich [green]#*SUCCESS*# für alle Module ;-) ...
+
+
+== Tipps, Tricks, Probleme & Lösungen
+
+=== Die Anzeige von Diagrammen in AsciiDoc Dokumenten schlägt fehl
+
+Fehlermeldung im Diagram signalisiert, dass das Tool `graphviz` fehlt.
+
+Dieses Tool muss ...
+
+ . zuerst installiert werden -> https://graphviz.org/download/[https://graphviz.org/download/] und dann
+ . in IntelliJ für das PlugIn AsciiDoc bekannt gemacht werden, durch Angabe des Pfades zur `dot` Ausführungsdatei (z.B. `dot.exe`)
+
+image::images/graphviz-executable.png[]
+
+IMPORTANT: Die Pfade im obigen Bild sind MacOS Pfade, unter `Windows` sehen diese etwas anders aus!

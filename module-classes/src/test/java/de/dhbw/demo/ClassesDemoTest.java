@@ -1,4 +1,4 @@
-package de.dhbw;
+package de.dhbw.demo;
 
 import de.dhbw.demo.classes.AClassWithField;
 import de.dhbw.demo.classes.AComplexClass;

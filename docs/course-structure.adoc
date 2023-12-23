@@ -7,11 +7,11 @@ include::settings.adoc[]
 ////
  LV-Tag: 09:15 - 12:15 (3h)
 
+ TODO:
+  (1) Element "Zwischenprüfung" einbauen
+  (2) Modul "Datenbanken" einbauen
 ////
 
-// TODO:
-// (1) Element "Zwischenprüfung" einbauen
-// (2) Modul "Datenbanken" einbauen
 
 == {module}: Welcome, Setup, Klassen & Variablen
 

@@ -66,8 +66,8 @@
 :modules-prefix:   module
 // for each module
 :module-docs:      docs
-:module-sources:   src/main/java
-:module-tests:     src/test/java
+:module-sources:   pass:n[src/[blue]#*main*#/java]
+:module-tests:     pass:n[src/[green]#*test*#/java]
 :basic-package:    de/dhbw
 :package-demo:     /demo
 :package-exercise: /exercise

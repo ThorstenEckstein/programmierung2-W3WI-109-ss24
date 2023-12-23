@@ -1,4 +1,4 @@
-package de.dhbw;
+package de.dhbw.demo;
 
 import de.dhbw.commons.Logger;
 import de.dhbw.demo.visibility.VisibilityExampleClass;

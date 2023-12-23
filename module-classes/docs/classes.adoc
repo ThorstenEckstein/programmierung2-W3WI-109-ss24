@@ -44,6 +44,8 @@ public class MyClass {
 
 Eine Klasse mit (Default-) *Konstruktor*:
 
+In Java spielen die Konstruktoren eine wichtige Rolle bei der Erstellung und Initialisierung von Objekten. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+
 [source,java]
 ----
 public class MyClass {
@@ -53,6 +55,13 @@ public class MyClass {
     }
 
 }
+----
+
+Die Initialisierung eines Objektes erfolgt in Verbindung mit dem Schlüsselwort `new`:
+
+[source,java]
+----
+MyClass myClazz = new MyClass();
 ----
 
 Eine Klasse mit einer *Methode* bzw. einer Verhaltensweise:
@@ -73,35 +82,32 @@ public class MyClass {
 *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/ClassesDemoTest.java
+ -> {module-ref-tests}/classes/ClassesDemoTest.java
 
 
 [[exercises_classes]]
 *Übungen*:
 
+[subs=normal]
+ -> {module-ref-tests}/exercise/classes/ExerciseTest.java
 
 
 Erzeuge ein erstes, kleines *Klassenmodell*:
 
-- Ein Interface `Train` mit mit zugehörigen Methoden für ein Attribut namens `train number`
-- Eine Klasse `EuroExpress`, die das Interface `Train` implementiert, also auch das erforderliche Attribut beinhaltet
-- Ebenso eine weitere Klasse `Intercity`, die das Interface `Train` implementiert
-- Einen Test, der je eine Instanz der zwei Implementierungen erzeugt und deren Zugnummer ausgibt
+*Übung 1*:
 
- Frage   : Was fällt bei der Implementierung jetzt besonders ins Auge?
- Antwort : ?
+- Eine Klasse `Zug` mit einem parameterlosen Konstruktor
+- Eine Klasse `Fernzug` mit einem parameterlosen Konstruktor
+- Eine Klasse `Regionalzug` mit einem parameterlosen Konstruktor
+- Einen Test, der die korrekte Instanziierung der Instanzen bestätigt
 
+*Übung 2*:
 
+- Ergänze die Klasse Zug mit einem Feld namens "number". Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
 
-////
-Das Interface `Train` sieht dabei vielleicht so aus:
+*Übung 3*:
 
-[source, java, linenums]
-----
-include::{course-1-src}/model/train/Train.java[lines=5..13]
-----
-////
-
+Was fällt bei den Implementierungen besonders ins Auge?
 
 
 == Statische Klassen und Variablen mit static

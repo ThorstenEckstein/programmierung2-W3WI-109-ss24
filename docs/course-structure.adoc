@@ -15,48 +15,9 @@ include::settings.adoc[]
 
 include::includes/module-structure-1.adoc[]
 
+include::includes/module-structure-2.adoc[]
 
-== {module}: Datentypen & Operatoren
-
-NOTE: Inhalte zu diesem Modul finden sich im Verzeichnis {icon-dir} `module-operators`
-
-[cols="^1a,^1a,<8a", grid=rows]
-|===
-| Done         | Typ             | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {icon-setup}    | {update}
-//
-| * [ ] {nbsp} | {icon-topic}    | *Implementierungen* mit Interfaces
-//
-| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Interfaces & deren Implementierung
-//
-| * [ ] {nbsp} | {icon-topic}    | `abstract`: *Abstrakte* Klassen
-//
-| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Abstraktion, statisches Feld und Methode
-//
-| * [ ] {nbsp} | {icon-topic}    | Sichtbarkeiten & Scopes: Access Modifier
-//
-| * [ ] {nbsp} | {icon-theory}   | Test-Driven-Development (TDD)
-//
-| * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Das erste volle Klassenmodell mit (Unit-)Test
-//
-| * [ ] {nbsp} | {icon-topic}    | Packages & Import (Compiler Errors)
-//
-| * [ ] {nbsp} | {icon-topic}    | Datentypen & Casting
-//
-| * [ ] {nbsp} | {icon-topic}    | Datentyp-Umwandlung
-//
-| * [ ] {nbsp} | {icon-exercise} | _Übung 2_ (a+b): Datentyp-Umwandlung
-//
-| * [ ] {nbsp} | {icon-topic}    | Logische Operatoren
-//
-| * [ ] {nbsp} | {icon-exercise} | _Übung 3_: Operatoren
-//
-| * [ ] {nbsp} | {icon-theory}   | Code Generierung mit der IDE (Autocompletion, Vorschläge)
-//
-| * [ ] {nbsp} | {icon-theory}   | Fehleranalyse: Debugging mit der IDE
-|===
-
+{continue-here}
 
 == {module}: Polymorphismus & Kontrollstrukturen
 

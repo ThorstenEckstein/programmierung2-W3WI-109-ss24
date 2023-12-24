@@ -22,6 +22,8 @@ Eine Java Klasse hat in der Regel folgende Bestandteile:
 * Konstruktor und
 * Verhaltensweise (Methode):
 
+Die wichtigsten Elemente von Java:
+
 Die *Klassensignatur* selbst:
 
 [source,java]

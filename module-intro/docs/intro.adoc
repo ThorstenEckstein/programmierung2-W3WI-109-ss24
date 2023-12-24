@@ -14,14 +14,7 @@ include::../../docs/settings.adoc[]
 | image:images/portrait.png[] | Thorsten Eckstein
 | Unternehmen     | DB Systel GmbH, Frankfurt a.M., ca. 7.000 Mitarbeiter, interner IT-Dienstleister der Deutschen Bahn
 | Qualifikationen | Dipl. Geo-Informatik, zertifizierter Softwareentwickler, zertifizierter Softwarearchitekt
-| ...             | ...
-
 |===
-
-- Inhalt der LV
-- Wer seid ihr und woher kommt ihr?
-- Welche Erfahrungen mit Java sind vorhanden?
-- Technische Voraussetzungen (IntelliJ, Java, Zugriff Internet)
 
 == Fachlicher Schwerpunkt des Kurses (Zugdisposition)
 
@@ -217,40 +210,41 @@ Dann sollte eine Java Version angezeigt werden.
 
 Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein muss (falls noch nicht vorhanden, bitte installieren):
 
- Versionen > IntelliJ IDEA 2023.2 (Community Edition)
+ IntelliJ IDEA 2023.3.2 (Ultimate Edition; Community Ed. sollte auch funktionieren)
 
 TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), die Lehrveranstaltung wurde für IntelliJ vorbereitet!#
 
-IntelliJ bietet ein neben dem Standard-Layout auch ein experimentelles, das aktiviert werden kann. Der Standard ist aber vollkommen ok.
+IntelliJ bietet ein neben dem Standard-Layout auch ein experimentelles, das aktiviert werden kann.
+
 
 [big]#IntelliJ *PlugIns*#
 
 
 *Bundled PlugIns*::
-Mit IntelliJ werden diverse PlugIns automatisch installiert, dazu gehören die folgenden, die für das Seminar erforderlich sind und anfangs mal geprüft werden sollen:
+Mit IntelliJ werden diverse PlugIns *automatisch mitinstalliert*, dazu gehören die folgenden, die für das Seminar erforderlich sind und anfangs mal geprüft werden sollen:
 
-[cols="5a,5e", grid="none", frame="none"]
+[cols="3a,7e", grid="none", frame="none"]
 |===
 | PlugIn | Kommentar
 
 | Git & GitHub
-| Source Code Management, lokaler Git-Client sollte mind. die Version 2.39.1 haben.
+| Source Code Management, lokaler Git-Client
 
-| image::images/maven-plugin.png[]
-| Build- & Dependency Management
+| Maven
+| Build, Dependency & Project Management
 |===
 
 
 *Non-bundled PlugIns*::
-Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich, die nicht sowieso mit IntelliJ installiert werden:
+Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, die _nicht_ mit IntelliJ installiert werden, also separat installiert werden müssen:
 
-[cols="3a,4e,3m", grid="none", frame="none"]
+[cols="4a,3e,3m", grid="none", frame="none"]
 |===
 | PlugIn | Was ist das? | Version
 
 | image::images/asciidoc-plugin.png[]
 | Einheitliche Erstellung von Dokumentationen
-| > 0.40.x
+| > 0.41.x
 
 | image::images/diagrams-net-plugin.png[]
 | Erstellung von beliebigen Diagrammtypen
@@ -260,12 +254,8 @@ Für den Code und Tests und die Dokumentation sind folgende PlugIns erforderlich
 | Erstellung von UML-Diagrammen
 | > 7.3.0-IJ2023.2
 
-| image::images/database-plugin.png[width="70%"]
-| Zugriff auf H2 Datenbank
-| > 3.4.2299.0
-
 |===
-[small]#_PS: Ich persönlich aktualisiere recht zeitnah alle PlugIns._#
+[small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns recht zeitnah._#
 
 
 == Projektverwaltung mit `Maven` & Projektstruktur
@@ -370,7 +360,7 @@ oder *(3b)*
 image::images/mvn-clean-compile-ui.png[]
 |===
 
-Das Projekt sollte jetzt "bauen", d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebnis wird angezeigt ... hoffentlich [green]#*SUCCESS*# für alle Module ;-) ...
+Das Projekt sollte jetzt insgesamt *"bauen"*, d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebnis wird angezeigt ... hoffentlich [green]#*SUCCESS*# für alle Module ;-) ...
 
 
 == Tipps, Tricks, Probleme & Lösungen

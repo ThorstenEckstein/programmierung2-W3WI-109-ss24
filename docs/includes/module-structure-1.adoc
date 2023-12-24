@@ -1,0 +1,80 @@
+include::../settings.adoc[]
+
+== {module}: Welcome, Setup, Klassen & Vererbung
+
+////
+[cols="1h,3"]
+|===
+| Variable      | Value
+
+| module-1-name | {module-1-name}
+| module-1-root | {module-1-root}
+| module-1-docs | {module-1-docs}
+| module-1-src  | {module-1-src}
+| module-1-test | {module-1-test}
+|===
+////
+
+Inhalte dieser LV finden sich in den Modul-Verzeichnissen
+
+* {icon-dir} `module-intro` und
+* {icon-dir} `module-classes`
+
+ifeval::[{show-timeslots} == true]
+[cols="^1a,<2,^1,<6a", grid=rows]
+|===
+| Done         | Zeit          | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | 09:15 - 09:30 | {icon-welcome}  |
+Herzlich willkommen!
+
+- Wer bin ich?
+- Inhalte der LV
+- Wer seid ihr und woher kommt ihr?
+- Welche Erfahrungen mit Java sind vorhanden?
+- Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
+
+| * [ ] {nbsp} | 09:30 - 09:45 | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+| * [ ] {nbsp} | 09:45 - 10:00 | {icon-theory}   | Quellcodeverwaltung mit `Git`
+| * [ ] {nbsp} | 10:00 - ...   | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
+| * [ ] {nbsp} |   ... - 10:30 | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+
+|              | 10:30 - 10:45 |                 | {pause}
+
+| * [ ] {nbsp} | 10:45 - 11:15 | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+| * [ ] {nbsp} | 11:15 - 11:30 | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+| * [ ] {nbsp} | 11:30 - 11:45 | {icon-topic}    | *Vererbung* in Klassenhierarchien
+| * [ ] {nbsp} | 11:45 - 12:00 | {icon-exercise} | _Übung 2_: Vererbung
+| * [ ] {nbsp} | 12:00 - 12:15 | {icon-topic}    | `static`: *statische* Felder und Methoden
+|===
+endif::[]
+
+ifeval::[{show-timeslots} == false]
+[cols="^1a,^1,<8a", grid=rows]
+|===
+| Done         | Typ             | Inhalt, Kommentar
+
+// 09:15 - 09:30 = 15'
+| * [ ] {nbsp} | {icon-welcome}  |
+Herzlich willkommen!
+
+- Wer bin ich?
+- Inhalt der LV
+- Wer seid ihr und woher kommt ihr?
+- Welche Erfahrungen mit Java sind vorhanden?
+- Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
+
+| * [ ] {nbsp} | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+| * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git`
+| * [ ] {nbsp} | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
+| * [ ] {nbsp} | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+
+|              |                 | {pause}
+
+| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+| * [ ] {nbsp} | {icon-topic}    | *Vererbung* in Klassenhierarchien
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Vererbung
+| * [ ] {nbsp} | {icon-topic}    | `static`: *statische* Felder und Methoden
+|===
+endif::[]

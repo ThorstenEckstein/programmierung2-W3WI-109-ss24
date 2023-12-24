@@ -12,20 +12,26 @@
 //:stylesdir: styles
 //:stylesheet: dhbw.css
 
-// Special settings
+// #
+// # Special settings
+// # For pass-through macros see also: -> https://docs.asciidoctor.org/asciidoc/latest/pass
+// #
 
-// For pass-through macros see also: -> https://docs.asciidoctor.org/asciidoc/latest/pass
 :nl: pass:[<br/>]
 :tbd: pass:n[[blue]#_to be continued here ..._#]
 :continue-here: pass:n[[red]#*... HIER FORTSETZEN ...*#]
 //:example: pass:[&#63;]
 //:example-caption: {example}
+:module:              Modul
+:update:              pass:n[_Update project ..._]
+:demo:                Demo:
+:pause:               pass:n[[green]#*/// PAUSE ///*#]
+// true -> shows tables that contain timeslots for content elements
+:show-timeslots:      true
 
-:module: Modul
-:update: pass:n[_Update project ..._]
-:demo: Demo:
-
-// Icons
+// #
+// # Icons
+// #
 
 :icon-welcome:        icon:heart[role=red]
 :icon-update-project: icon:arrow-circle-o-down[role=red]
@@ -41,8 +47,9 @@
 :icon-exam:           icon:graduation-cap[role=black]
 :icon-domain:         icon:train[role=red]
 
-
-// Titles
+// #
+// # Titles
+// #
 
 :course-title-count: {counter:course-title-count}
 
@@ -56,10 +63,10 @@
 :module-8:  {module} 8 - Exceptions, Enums & Records
 :module-9:  {module} 9 - Optionale Themen, Semesterabschluss
 
-//
-// Referencing support
-//:repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
-//
+// #
+// # Referencing support
+// :repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
+// #
 
 // For all modules apply ...
 :modules-root:     ..

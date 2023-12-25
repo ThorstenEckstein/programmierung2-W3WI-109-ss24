@@ -239,5 +239,6 @@ Erzeuge folgende *Klassen*:
 ** einer Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
 * Eine Klasse `Fernzug`, die von der Klasse `Zug` erbt
 * Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
+* Teste, welchen Wert das Feld `number` hat
 
 

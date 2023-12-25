@@ -42,10 +42,10 @@ Herzlich willkommen!
 |              | 10:30 - 10:45 |                 | {pause}
 
 | * [ ] {nbsp} | 10:45 - 11:15 | {icon-topic}    | *Klassen & Objekte* (Instanzen)
-| * [ ] {nbsp} | 11:15 - 11:30 | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
-| * [ ] {nbsp} | 11:30 - 11:45 | {icon-topic}    | *Vererbung* in Klassenhierarchien
-| * [ ] {nbsp} | 11:45 - 12:00 | {icon-exercise} | _Übung 2_: Vererbung
-| * [ ] {nbsp} | 12:00 - 12:15 | {icon-topic}    | `static`: *statische* Felder und Methoden
+| * [ ] {nbsp} | 11:15 - 11:30 | {icon-theory}   | Test-Driven-Development (TDD)
+| * [ ] {nbsp} | 11:30 - 11:45 | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+| * [ ] {nbsp} | 11:45 - 12:00 | {icon-topic}    | *Vererbung* & Polymorphismus
+| * [ ] {nbsp} | 12:00 - 12:15 | {icon-exercise} | _Übung 2_: Vererbung
 |===
 endif::[]
 

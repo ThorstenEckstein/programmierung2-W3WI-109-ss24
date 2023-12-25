@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+scale 1.0
+
+class Superclass {
+  public String aField
+  void aMethod()
+}
+
+abstract class Superclass
+
+Superclass <|-- Subclass    : inherits\n(extends)
+
+@enduml

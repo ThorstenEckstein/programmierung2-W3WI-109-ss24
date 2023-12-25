@@ -1,0 +1,12 @@
+// --- Hyperlinks
+// NOTE: used for real 'linking' & readers can 'follow' or 'call' by clicking
+:module-name:        module-interfaces
+:module-link-root:   ../{module-name}
+:module-link-docs:   {module-link-root}/{module-docs}
+:module-link-src:    {module-link-root}/{module-sources}
+:module-link-test:   {module-link-root}/{module-tests}
+
+// --- References
+// NOTE: used just 'redirect' readers & where to go next without clicking the link
+:module-ref-sources: {module-sources}/{basic-package}
+:module-ref-tests:   {module-tests}/{basic-package}

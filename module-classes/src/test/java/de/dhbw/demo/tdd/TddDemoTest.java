@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("ALL")
-public class TddByExampleTest {
+public class TddDemoTest {
 
     @BeforeAll
     public static void beforeAllTests() { /* global initialization */ }

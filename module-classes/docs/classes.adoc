@@ -97,14 +97,13 @@ Einschub: Zur Theorie des -> <<tdd,Test Driven Developments>>, dann kehren wir z
 *Übungen*:
 
 [subs=normal]
- -> {module-ref-tests}/exercise/classes/ExerciseTest.java
+ -> {module-ref-tests}/exercise/classes/ClassesExerciseTest.java
 
 
 Erzeuge ein erstes, kleines *Klassenmodell*:
 
 *Übung 1*:
 
-- Eine Klasse `Zug` mit einem parameterlosen Konstruktor
 - Eine Klasse `Fernzug` mit einem parameterlosen Konstruktor
 - Eine Klasse `Regionalzug` mit einem parameterlosen Konstruktor
 - Einen Test, der die korrekte Instanziierung der Instanzen bestätigt
@@ -160,7 +159,7 @@ Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) 
 Dazu eine *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/tdd/TddByExampleTest.java
+ -> {module-ref-tests}/demo/tdd/TddDemoTest.java
 
 
 == Vererbung & Polymorphismus
@@ -212,9 +211,33 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/inheritance/InheritanceTest.java
+ -> {module-ref-tests}/demo/inheritance/InheritanceDemoTest.java
 
 In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Bedeutung:
 
 * `super`: Referenz für Felder oder Methoden der *Super-Klasse*
 * `this`: Referenz für Felder oder Methoden aus der *eigenen Klasse*
+
+*Fragen*:
+
+. _Warum kann Vererbung sinnvoll sein?_
+. _Wozu kann Polymorphismus nützlich sein?_
+
+[[exercises_inheritance]]
+*Übungen*:
+
+[subs=normal]
+ -> {module-ref-tests}/exercise/inheritance/InheritanceExerciseTest.java
+
+
+*Übung 1*:
+
+Erzeuge folgende *Klassen*:
+
+* Eine Klasse `Zug` mit
+** einem String Feld `number` und
+** einer Methode `getNumber()`, die den Wert des gleichnamigen Feldes zurückgibt
+* Eine Klasse `Fernzug`, die von der Klasse `Zug` erbt
+* Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
+
+

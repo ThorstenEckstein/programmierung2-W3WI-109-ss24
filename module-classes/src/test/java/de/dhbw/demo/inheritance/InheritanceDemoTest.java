@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class InheritanceTest {
+public class InheritanceDemoTest {
 
     @Test
     @DisplayName("Demo: Vererbung von Methoden")

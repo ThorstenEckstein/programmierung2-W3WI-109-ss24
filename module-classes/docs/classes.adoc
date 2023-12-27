@@ -13,7 +13,7 @@ include::module-settings.adoc[]
 [[about_classes]]
 Kurz etwas *Theorie* vorab bzw. zur Wiederholung:
 
-Unter einer *Klasse* (oder Objekttyp, -> <<ref-1,Ref. 1>>) versteht man in der objektorientierten Programmierung ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
+Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der objektorientierten Programmierung ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
 
 Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt Attribute (Eigenschaften, Felder) und Methoden (Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
 
@@ -103,17 +103,17 @@ Einschub: Zur Theorie des -> <<tdd,Test Driven Developments>>, dann kehren wir z
 
 Erzeuge ein erstes, kleines *Klassenmodell*:
 
-*Übung 1*:
+Übung 1::
 
 - Eine Klasse `Fernzug` mit einem parameterlosen Konstruktor
 - Eine Klasse `Regionalzug` mit einem parameterlosen Konstruktor
 - Einen Test, der die korrekte Instanziierung der Instanzen bestätigt
 
-*Übung 2*:
+Übung 2::
 
 - Ergänze die Klasse Zug mit einem Feld namens "number". Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
 
-*Übung 3*:
+Übung 3::
 
 Was fällt bei den Implementierungen besonders ins Auge?
 
@@ -165,6 +165,10 @@ Dazu eine *Demo*:
 
 == Vererbung & Polymorphismus
 
+[ <<about_inheritance,Inhalt>> | <<demos_inheritance,Demo>> | <<exercises_inheritance,Übungen>> ]
+
+
+[[about_inheritance]]
 [big]#Vererbung#
 
 Bei der *Vererbung* in Java wird zwischen einer *Super*- und einer *Subklasse* unterschieden.
@@ -231,7 +235,7 @@ In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Be
  -> {module-ref-tests}/exercise/inheritance/InheritanceExerciseTest.java
 
 
-*Übung 1*:
+Übung 1::
 
 Erzeuge folgende *Klassen*:
 
@@ -243,3 +247,7 @@ Erzeuge folgende *Klassen*:
 * Teste, welchen Wert das Feld `number` hat
 
 
+== Referenzen
+
+[[ref-1]]
+Ref. 1: https://de.wikipedia.org/wiki/Klasse_(Objektorientierung)[https://de.wikipedia.org/wiki/Klasse_(Objektorientierung)]

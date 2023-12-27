@@ -75,9 +75,9 @@
 :module-sources:   pass:n[src/[blue]#*main*#/java]
 :module-tests:     pass:n[src/[green]#*test*#/java]
 :basic-package:    de/dhbw
-:package-demo:     /demo
-:package-exercise: /exercise
-:package-solution: /solution
+:package-demo:     demo
+:package-exercise: exercise
+:package-solution: solution
 
 // display global variables, set to 'true' to display in module docs!
 :show-variables: true

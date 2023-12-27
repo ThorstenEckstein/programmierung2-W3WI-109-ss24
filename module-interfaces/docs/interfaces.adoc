@@ -5,16 +5,142 @@ include::module-settings.adoc[]
 :toc:
 
 
-== Vererbung & Implementierung mit Interfaces
+== Implementierung mit Interfaces
 
 [ <<about_interfaces,Inhalt>> | <<demos_interfaces,Demo>> | <<exercises_interfaces,Übungen>> ]
 
 
 [[about_interfaces]]
+In Java, ein *Interface* ist ein abstrakter Datentyp, der einer Sammlung von Methoden und/oder Konstanten enthält. Dies ist ein wichtiges *Kernkonzept* in Java und wird vor allem eingesetzt, um Abstraktion, Polymorphism und Mehrfach-Vererbung umzusetzen.
+
+Die Signatur des Interfaces erfordert das Schlüsselwort
+
+ interface
+
+Eine Beispiel-Signatur
+
+[source, java]
+----
+public interface MyInterface {
+    // Inhalt des Interfaces
+}
+----
+
+Die Implementierung eines Interfaces erfolgt mit dem Schlüsselwort
+
+ implements
+
+Eine Beispiel-Realisierung
+
+[source, java]
+----
+public class Car implements Vehicle {
+    // Implementierung des Interfaces
+}
+----
+
+
+=== Erzeugungsregeln
+
+In einem *Interface* ist gestattet:
+
+* konstante Variablen
+* abstrakte Methoden
+* statische Methoden
+* `default` Methoden
+
+Darüber hinaus ist *wichtig*, dass ...
+
+* Interfaces nicht direkt instanziiert werden können,
+* ein Interface _"leer"_ sein kann, also ohne Konstanten oder Methoden,
+* das Schlüsselwort `final` nicht genutzt werden kann, da sonst ein Compiler Error entsteht,
+* alle Interface Deklarationen `public` oder `default` access haben müssen; der `abstract` Modifizierer wird vom Compiler automatisch hinzugefügt,
+* Interface Methoden nicht `protected` oder `final` sein können,
+* Seit Java 9 erlaubt ein Interface die Möglichkeit, private Methoden in Interfaces zu definieren,
+* Interface Variablen sind `public`, `static`, und `final` per Definition.
+
+Die _grafische_ Darstellung der Beziehung zwischen Interfaces und deren Implementierung sieht folgendermaßen aus:
+
+[plantuml, title="Interface & Realisierung", png, align="center"]
+....
+include::diagrams/interfaces.puml[]
+....
+
+=== Was kann mit Interfaces eigentlich erreicht werden?
+
+[big]#Verhaltensvorschrift#
+
+Schnittstellen werden verwendet, um bestimmte Verhaltensfunktionen zu definieren, die von "beliebigen" Klassen umgesetzt werden können. Beispiele für Java-Schnittstellen sind `Comparable`, `Comparator` und `Cloneable`. Sie können durch konkrete Klassen implementiert werden.
+
+Für mehr Information dazu siehe -> https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html[Comparable.html]
+
+[big]#Mehrfach-Vererbung#
+
+Java-Klassen unterstützen nur die einfache (singuläre) Vererbung. Durch die Verwendung von Schnittstellen sind wir jedoch auch in der Lage, Mehrfachvererbungen zu implementieren.
+
+[big]#Polymorphism#
+
+Bei Polymorphismus handelt es sich um die Fähigkeit eines Objekts, während der Laufzeit unterschiedliche Formen anzunehmen. Genauer gesagt handelt es sich um die Ausführung der `Override`-Methode, die sich zur Laufzeit auf einen bestimmten Objekttyp bezieht.
+
+In Java kann Polymorphismus mithilfe von Schnittstellen erreicht werden. Beispielsweise kann die Shape-Schnittstelle verschiedene Formen annehmen – es kann ein Kreis oder ein Quadrat sein.
+
+Am *Beispiel* der Klasse `Shape`:
+
+[source, java]
+----
+public interface Shape {
+  String name();
+}
+----
+
+Die Klasse `Kreis`:
+
+[source, java]
+----
+public class Circle implements Shape {
+
+    @Override
+    public String name() {
+        return "Circle";
+    }
+}
+----
+
+Und noch die `Quadrat` Klasse:
+
+[source, java]
+----
+public class Square implements Shape {
+
+    @Override
+    public String name() {
+        return "Square";
+    }
+}
+----
 
 
 [[demos_interfaces]]
+*Demo*:
 
+Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
+
+[subs=normal]
+ -> {mod-ref-test}/demo/InterfaceDemoTest.java
+
+[%linenums, java, indent=0]
+----
+include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
+----
+
+
+!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
+
+!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
+
+!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
+
+{continue-here}
 
 [[exercises_interfaces]]
 

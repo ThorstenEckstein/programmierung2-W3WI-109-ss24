@@ -13,7 +13,7 @@ public class InterfaceDemoTest {
 
     //tag::interface-demo-1[]
     @Test
-    @DisplayName("Demo 1: Interfaces")
+    @DisplayName("Demo 1: Interface & Realisierung")
     public void canRealizeInterface() {
         // given
         ClassContract classContract;

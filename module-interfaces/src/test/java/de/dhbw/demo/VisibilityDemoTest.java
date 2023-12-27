@@ -1,6 +1,5 @@
 package de.dhbw.demo;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.demo.visibility.VisibilityExampleClass;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class VisibilityDemoTest {
-
-    private final Logger logger = new Logger(VisibilityDemoTest.class);
 
     //tag::visibility[]
     @Test

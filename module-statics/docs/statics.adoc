@@ -9,6 +9,7 @@ include::module-settings.adoc[]
 
 [ <<about_statics,Inhalt>> | <<demos_statics,Demo>> | <<exercises_statics,Übungen>> ]
 
+// /////////////////////////////////////////////////////////////////////////////////
 [[about_statics]]
 Das Schlüsselwort
 
@@ -33,26 +34,29 @@ public class Configuration {
 }
 ----
 
+// /////////////////////////////////////////////////////////////////////////////////
 [[demos_statics]]
-Dazu gibt es eine *Demo*:
+Zum obigen Beispiel gibt's eine *Demo*:
 
-// Note: class reference can be easily determined using "path from content root"
 [subs=normal]
  {module-ref-tests}/demo/StaticsDemoTest.java (Test 3)
 
 
+// /////////////////////////////////////////////////////////////////////////////////
 [[exercises_statics]]
 *Übungen*:
 
 [subs=normal]
--> {module-ref-tests}/exercise/statics/StaticsExerciseTest.java
+ {module-ref-tests}/exercise/statics/StaticsExerciseTest.java
 
 *Übung 1*:
 
-Erzeuge
+Erzeuge ...
 
-- eine Klasse `Car` mit einem Feld `Type` und einem zugehörigen Konstruktor
+- eine Klasse `Car` mit einem Feld `Type` (String) und einem zugehörigen Konstruktor
 - eine Klasse `CarFactory` mit einer statischen Methode mit dem Parameter `Type`, die neue Car-Instanzen zurückgibt
-- einen Test, der die Factory benutzt und den Car-Type testet
+- einen Test, der die Factory benutzt und den/die Car-Type(s) testet
+
+
 
 

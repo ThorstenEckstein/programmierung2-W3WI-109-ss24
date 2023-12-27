@@ -37,8 +37,8 @@ public class Configuration {
 Dazu gibt es eine *Demo*:
 
 // Note: class reference can be easily determined using "path from content root"
-[subs=attributes]
- src/test/java/de/dhbw/StaticsDemoTest.java
+[subs=normal]
+ {module-ref-tests}/demo/StaticsDemoTest.java (Test 3)
 
 
 [[exercises_statics]]

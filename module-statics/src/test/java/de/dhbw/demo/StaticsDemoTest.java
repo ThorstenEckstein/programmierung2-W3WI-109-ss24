@@ -3,6 +3,7 @@ package de.dhbw.demo;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class StaticsDemoTest {
@@ -33,6 +34,19 @@ public class StaticsDemoTest {
 
         // then
         assertNotNull(returnValue);
+    }
+
+    @Test
+    @DisplayName("Demo 3: Configuration")
+    public void canGetConfigurationSetting() {
+        // given
+        String key = Configuration.SETTING_KEY_AUTHOR;
+
+        // when
+        String setting = Configuration.getSetting(key);
+
+        // then
+        assertEquals("Johnny Walker", setting);
     }
 
 }

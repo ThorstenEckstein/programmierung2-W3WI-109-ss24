@@ -1,0 +1,58 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+:toc:
+
+
+== Statische Klassen und Variablen
+
+[ <<about_statics,Inhalt>> | <<demos_statics,Demo>> | <<exercises_statics,Übungen>> ]
+
+[[about_statics]]
+Das Schlüsselwort
+
+ static
+
+bedeutet im Wesentlichen, das die Felder (Attribute) oder Methoden einer Klasse nicht an die Erzeugung einer *Instanz* dieser Klasse gebunden sind. Das Ganze lässt sich besser anhand von Beispielen und Code verdeutlichen.
+
+Ein *Beispiel*:
+
+[source, java]
+----
+public class Configuration {
+
+    // statisches Feld
+    public static final String SETTING_KEY_AUTHOR = "setting.author";
+
+    // statische Methode
+    public static String getSetting(String key) {
+        return settings.get(key);
+    }
+
+}
+----
+
+[[demos_statics]]
+Dazu gibt es eine *Demo*:
+
+// Note: class reference can be easily determined using "path from content root"
+[subs=attributes]
+ src/test/java/de/dhbw/StaticsDemoTest.java
+
+
+[[exercises_statics]]
+*Übungen*:
+
+[subs=normal]
+-> {module-ref-tests}/exercise/statics/StaticsExerciseTest.java
+
+*Übung 1*:
+
+Erzeuge
+
+- eine Klasse `Car` mit einem Feld `Type` und einem zugehörigen Konstruktor
+- eine Klasse `CarFactory` mit einer statischen Methode mit dem Parameter `Type`, die neue Car-Instanzen zurückgibt
+- einen Test, der die Factory benutzt und den Car-Type testet
+
+

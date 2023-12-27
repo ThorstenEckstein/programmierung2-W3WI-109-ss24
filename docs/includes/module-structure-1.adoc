@@ -1,19 +1,7 @@
 include::../settings.adoc[]
 
+
 == {module}: Welcome, Setup, Klassen & Vererbung
-
-////
-[cols="1h,3"]
-|===
-| Variable      | Value
-
-| module-1-name | {module-1-name}
-| module-1-root | {module-1-root}
-| module-1-docs | {module-1-docs}
-| module-1-src  | {module-1-src}
-| module-1-test | {module-1-test}
-|===
-////
 
 Inhalte dieser LV finden sich in den Modul-Verzeichnissen
 

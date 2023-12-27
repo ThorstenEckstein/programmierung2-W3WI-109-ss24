@@ -4,7 +4,7 @@ include::settings.adoc[]
 
 === Reorganisation von Themen und Kurstagen
 
-Idee: Fachliche Themen einzeln in separate `adoc` auslagern, und ebenso Code & Tests in einem separaten Modul und getrennt nach Packages bereitstellen. Wenn alle Themen auf diese Weise verfügbar sind, kann im zweiten Schritt jeder Kurz beliebig mit Themen ausgestaltet werden. Das könnte wie folgt aussehen:
+Idee: Fachliche Themen einzeln in separate `adoc` auslagern, und ebenso Code & Tests in einem separaten Modul und getrennt nach Packages bereitstellen. Wenn alle Themen auf diese Weise verfügbar sind, kann im zweiten Schritt jeder Kurs(tag) beliebig mit Themen ausgestaltet werden. Das könnte wie folgt aussehen:
 
 *Option 1*: Alle Sourcen & Tests in einem einzigen Modul, Doku aber in Kursen verteilt mit Themenzusammenstellung
 
@@ -38,7 +38,7 @@ Idee: Fachliche Themen einzeln in separate `adoc` auslagern, und ebenso Code & T
   /collections        (Modul)
     /src/main/java
     /src/test/java
-  /threads (Modul)
+  /threads            (Modul)
     /src/main/java
     /src/test/java
   /refsemantics       (Modul)

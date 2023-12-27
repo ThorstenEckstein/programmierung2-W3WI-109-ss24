@@ -1,5 +1,4 @@
 // --- Hyperlinks
-// NOTE: used for real 'linking' & readers can 'follow' or 'call' by clicking
 :module-name:        module-classes
 :module-link-root:   ../{module-name}
 :module-link-docs:   {module-link-root}/{module-docs}
@@ -7,6 +6,31 @@
 :module-link-test:   {module-link-root}/{module-tests}
 
 // --- References
-// NOTE: used just 'redirect' readers & where to go next without clicking the link
 :module-ref-sources: {module-sources}/{basic-package}
 :module-ref-tests:   {module-tests}/{basic-package}
+
+// display variables, set to 'true' to display in module docs!
+:show-variables: false
+
+ifeval::[{show-variables} == true]
+[big]#*Module Settings*#
+
+*About:*
+
+. Hyperlinks: variables having `link` in the name are used for real *hyperlinking*, readers can _follow_ or _call_ by clicking the link
+
+. References: variables having `ref` in the name are used just *redirect* visually, so readers _know_ where to go next without clicking the link
+
+[cols="3m,7m"]
+|===
+| Variable           | Value
+
+| module-name        | {module-name}
+| module-link-root   | {module-link-root}
+| module-link-docs   | {module-link-docs}
+| module-link-src    | {module-link-src}
+| module-link-test   | {module-link-test}
+| module-ref-sources | {module-ref-sources}
+| module-ref-tests   | {module-ref-tests}
+|===
+endif::[]

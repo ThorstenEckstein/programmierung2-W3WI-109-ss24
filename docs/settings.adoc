@@ -63,11 +63,6 @@
 :module-8:  {module} 8 - Exceptions, Enums & Records
 :module-9:  {module} 9 - Optionale Themen, Semesterabschluss
 
-// #
-// # Referencing support
-// :repo-root: /Users/thorsteneckstein/Projects/Lehre/WS24/Programmierung-II-W3WI-109
-// #
-
 // For all modules apply ...
 :modules-root:     ..
 :modules-prefix:   module
@@ -79,3 +74,30 @@
 :package-demo:     /demo
 :package-exercise: /exercise
 :package-solution: /solution
+
+// display global variables, set to 'true' to display in module docs!
+:show-variables: true
+
+ifeval::[{show-variables} == false]
+[big]#*Global Settings*#
+
+*About:*
+
+. variables having `modules` as prefix apply globally to all modules
+. variables having just `module` as prefix apply for each module
+
+[cols="3m,7m"]
+|===
+| Variable         | Value
+
+| modules-root     | {modules-root}
+| modules-prefix   | {modules-prefix}
+| module-docs      | {module-docs}
+| module-sources   | {module-sources}
+| module-tests     | {module-tests}
+| basic-package    | {basic-package}
+| package-demo     | {package-demo}
+| package-exercise | {package-exercise}
+| package-solution | {package-solution}
+|===
+endif::[]

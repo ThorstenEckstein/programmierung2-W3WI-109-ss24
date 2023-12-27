@@ -25,7 +25,11 @@
 :module:              Modul
 :update:              pass:n[_Update project ..._]
 :demo:                Demo:
-:pause:               pass:n[[green]#*/// PAUSE ///*#]
+:pause:               pass:n[[red]#*&nbsp;&nbsp;&nbsp;&nbsp;/// PAUSE ///*#]
+:indent-1:            pass:n[&nbsp;]
+:indent-2:            pass:n[&nbsp;&nbsp;]
+:indent-3:            pass:n[&nbsp;&nbsp;&nbsp;]
+:indent-4:            pass:n[&nbsp;&nbsp;&nbsp;&nbsp;]
 // true -> shows tables that contain timeslots for content elements
 :show-timeslots:      true
 

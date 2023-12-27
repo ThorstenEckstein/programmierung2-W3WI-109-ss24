@@ -18,7 +18,10 @@
     </properties>
 
     <dependencies>
-        <!-- nothing specific yet, see parent pom -->
+        <dependency>
+            <groupId>de.dhbw.adv-dev</groupId>
+            <artifactId>commons</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

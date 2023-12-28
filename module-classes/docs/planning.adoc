@@ -1,0 +1,33 @@
+include::../../docs/settings.adoc[]
+
+== {module}: Klassen & Vererbung
+
+Inhalte dieser LV finden sich in den Modul-Verzeichnissen
+
+* {icon-dir} `module-classes`
+
+ifeval::[{show-timeslots} == true]
+[cols="^1a,<2,^1,<6a", grid=rows]
+|===
+| Done         | Zeit          | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | 10:45 - 11:15 | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+| * [ ] {nbsp} | 11:15 - 11:30 | {icon-theory}   | Test-Driven-Development (TDD)
+| * [ ] {nbsp} | 11:30 - 11:45 | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+| * [ ] {nbsp} | 11:45 - 12:00 | {icon-topic}    | *Vererbung* & Polymorphismus
+| * [ ] {nbsp} | 12:00 - 12:15 | {icon-exercise} | _Übung 2_: Vererbung
+|===
+endif::[]
+
+ifeval::[{show-timeslots} == false]
+[cols="^1a,^1,<8a", grid=rows]
+|===
+| Done         | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
+| * [ ] {nbsp} | {icon-topic}    | *Vererbung* in Klassenhierarchien
+| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Vererbung
+| * [ ] {nbsp} | {icon-topic}    | `static`: *statische* Felder und Methoden
+|===
+endif::[]

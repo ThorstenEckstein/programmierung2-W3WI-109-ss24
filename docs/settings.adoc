@@ -81,6 +81,7 @@
 
 // display global variables, set to 'true' to display in module docs!
 :show-variables: true
+:show-structure: false
 
 ifeval::[{show-variables} == false]
 [big]#*Global Settings*#

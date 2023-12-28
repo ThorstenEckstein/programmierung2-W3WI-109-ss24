@@ -1,7 +1,17 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
+
+// table of contents
 :toc:
+
+
+// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
+ifeval::[{show-structure} == true]
+include::planning.adoc[]
+endif::[]
+//
 
 
 == Welcome
@@ -63,75 +73,9 @@ include::diagrams/business-model-soll.puml[]
 ....
 
 
-== Quellcodeverwaltung mit `Git` und `Github`
-
-Web: https://de.wikipedia.org/wiki/Git
-
-*Git* ist ein verteiltes Versionsverwaltungssystem für Quellcode.
-
-image:images/git-workflow.png[]
-
-Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien abgelegt, also z.B. ein Windows-Verzeichnis, in das der Quellcode heruntergeladen wird:
-
-[Beispiel]
- d:/Projekte/dhbw/programmierung-mit-java
-
-
-* Zuerst prüfen, ob `git` installiert ist. Das geht am besten im Kommandozeilen Tool durch
-
- git --version
-
-* was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
-
-* Zunächst muss das Repository "geklont",
-
-https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24
-
-d.h. heruntergeladen werden, und so zu einer lokalen Kopie wird:
-
- git clone https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24 -b hands-on
-
-//Dann bitte direkt auf den Branch `hands-on` durch
-// git checkout -b hands-on
-// wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
-
-* Zur Prüfung, auf welchem Branch man sich aktuell befindet, wechselt man in das neue, lokale Verzeichnis des Repositories und gibt ein:
-
- git branch
-
-* Hier sollte jetzt etwas Ähnliches erscheinen:
-
-   main
-   develop
- * hands-on
-
-CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
-
-._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
-[%collapsible]
-====
-- *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
-
- gci env:
-
-- oder um nur eine einzelne - hier der PATH - anzuzeigen:
-
- $env:PATH
-
-- *CMD (Command Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
-
- set
-
-- oder um nur eine einzelne - hier der PATH - anzuzeigen:
-
- echo %Path%
-====
-
-
-
 == IDE Setup
 
-==== Einrichtung eines lokalen _Workspaces_
+=== Einrichtung eines lokalen _Workspaces_
 
 TIP: Zuerst wird ein lokaler _Workspace_ eingerichtet, d.h. ein Wurzelverzeichnis, in das das SourceCode-Repository bzw. die Kursinhalte "geklont/gespeichert" werden kann.
 
@@ -361,6 +305,110 @@ image::images/mvn-clean-compile-ui.png[]
 |===
 
 Das Projekt sollte jetzt insgesamt *"bauen"*, d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebnis wird angezeigt ... hoffentlich [green]#*SUCCESS*# für alle Module ;-) ...
+
+
+== Organisation & Importierung von Java Klassen
+
+*Organisation*
+
+Die Ablage bzw. Speicherung eine Java Klassen in Form von Dateien erfolgt in Verzeichnissen, die ihrerseits hierarchisch angelegt werden (können aber nicht müssen). Im Kontext von Java werden diese Ablageverzeichnisse *Packages* genannt. Der Java Compiler registriert den Ablageort einer Java Klasse, indem in dieser ganz zu Beginn das Schlüsselwort
+
+ package
+
+genutzt wird, zusammen mit der voll-qualifizierten Verzeichnis-Hierarchie unter Nutzung von Punkten als Trennzeichen, also etwa
+
+ package de.dhbw.domain.model;
+
+
+Die _Eindeutigkeit_ einer Java Klassen ergibt sich also nicht "allein" aus ihrem Namen der Klassensignatur, sondern nur in Verbindung mit dem package, in dem sie sich befindet. Beides ergibt den sog. *voll-qualifizierten Klassen-Namen*, etwa
+
+ de.dhbw.domain.model.Train
+
+*Importierung (Nutzung)*
+
+Wenn eine Java Klasse in/von einer anderen genutzt werden soll, muss sie zuerst *importiert* bzw. *bekannt gemacht* werden. Dazu muss sie mit ihrem _voll-qualifizierten Namen_ (s.o.) ganz am Anfang der Datei angegeben werden. Das Package entspricht dabei dem Verzeichnis, in dem die Datei abgelegt ist. Dazu dient das *Schlüsselwort*
+
+ import
+
+wie im folgenden Beispiel zu sehen:
+
+[, java]
+----
+package de.dhbw.demo.model; <1>
+
+import java.util.List; <2>
+
+public class MyClass {
+   // Inhalte der Klasse weggelassen ...
+}
+----
+<1> Angabe des Speicherorts der Java Klasse
+<2> Importierung von anderen Java Klassen, häufig aus "Bibliotheken"
+
+
+== Quellcodeverwaltung mit `Git` und `Github`
+
+Web: https://de.wikipedia.org/wiki/Git
+
+*Git* ist ein verteiltes Versionsverwaltungssystem für Quellcode.
+
+image:images/git-workflow.png[]
+
+Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien abgelegt, also z.B. ein Windows-Verzeichnis, in das der Quellcode heruntergeladen wird:
+
+[Beispiel]
+d:/Projekte/dhbw/programmierung-mit-java
+
+
+* Zuerst prüfen, ob `git` installiert ist. Das geht am besten im Kommandozeilen Tool durch
+
+ git --version
+
+* was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
+
+* Zunächst muss das Repository "geklont",
+
+https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24
+
+d.h. heruntergeladen werden, und so zu einer lokalen Kopie wird:
+
+ git clone https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24 -b hands-on
+
+//Dann bitte direkt auf den Branch `hands-on` durch
+// git checkout -b hands-on
+// wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
+
+* Zur Prüfung, auf welchem Branch man sich aktuell befindet, wechselt man in das neue, lokale Verzeichnis des Repositories und gibt ein:
+
+ git branch
+
+* Hier sollte jetzt etwas Ähnliches erscheinen:
+
+   main
+   develop
+ * hands-on
+
+CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
+
+._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
+[%collapsible]
+====
+- *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ gci env:
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ $env:PATH
+
+- *CMD (Command Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ set
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ echo %Path%
+====
 
 
 == Tipps, Tricks, Probleme & Lösungen

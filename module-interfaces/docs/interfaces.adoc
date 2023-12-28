@@ -2,7 +2,15 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
+// table of contents
 :toc:
+
+
+// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
+ifeval::[{show-structure} == true]
+include::planning.adoc[]
+endif::[]
+//
 
 
 == Implementierung mit Interfaces
@@ -78,7 +86,7 @@ Für mehr Information dazu siehe -> https://docs.oracle.com/javase/8/docs/api/ja
 
 Java-Klassen unterstützen nur die einfache (singuläre) Vererbung. Durch die Verwendung von Schnittstellen sind wir jedoch auch in der Lage, Mehrfachvererbungen zu implementieren.
 
-[big]#Polymorphism#
+[big]#Polymorphismus#
 
 Bei Polymorphismus handelt es sich um die Fähigkeit eines Objekts, während der Laufzeit unterschiedliche Formen anzunehmen. Genauer gesagt handelt es sich um die Ausführung der `Override`-Methode, die sich zur Laufzeit auf einen bestimmten Objekttyp bezieht.
 
@@ -256,7 +264,6 @@ Erzeuge ein kleines, aber "vollständiges" *Klassenmodell* daraus:
 .. `PassengerWagon` und
 .. `FreightWagon`
 
-// //////////////////////////////////////////////////////////////
 
 [%collapsible, title="_Aufklappen mit grafischer Darstellung als kleine Hilfe..._"]
 ====

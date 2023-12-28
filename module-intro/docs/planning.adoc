@@ -1,0 +1,52 @@
+include::../../docs/settings.adoc[]
+
+== {module}: Welcome & Setup
+
+Modul-Verzeichnis:
+
+* {icon-dir} `module-intro`
+
+ifeval::[{show-timeslots} == true]
+[cols="^1a,<2,^1,<6a", grid=rows]
+|===
+| Done         | Zeit          | Typ             | Inhalt, Kommentar
+
+| * [ ] {nbsp} | 09:15 - 09:30 | {icon-welcome}  |
+Herzlich willkommen!
+
+- Wer bin ich?
+- Inhalte der LV
+- Wer seid ihr und woher kommt ihr?
+- Welche Erfahrungen mit Java sind vorhanden?
+- Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
+
+| * [ ] {nbsp} | 09:30 - 09:45 | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+| * [ ] {nbsp} | 09:45 - 10:00 | {icon-setup}    | IDE Setup (`IntelliJ`, ggf. PlugIns)
+| * [ ] {nbsp} | 10:00 - 10:15 | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+| * [ ] {nbsp} | 10:15 - 10:30 | {icon-theory}   | Organisation & Importierung von Java Klassen
+| * [ ] {nbsp} | 10:15 - 10:30 | {icon-theory}   | _Optional:_ Quellcodeverwaltung mit `Git`
+|===
+endif::[]
+
+ifeval::[{show-timeslots} == false]
+[cols="^1a,^1,<8a", grid=rows]
+|===
+| Done         | Typ             | Inhalt, Kommentar
+
+// 09:15 - 09:30 = 15'
+| * [ ] {nbsp} | {icon-welcome}  |
+Herzlich willkommen!
+
+- Wer bin ich?
+- Inhalt der LV
+- Wer seid ihr und woher kommt ihr?
+- Welche Erfahrungen mit Java sind vorhanden?
+- Technische Voraussetzungen (_IntelliJ, Java, Zugriff Internet_)
+
+| * [ ] {nbsp} | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
+| * [ ] {nbsp} | {icon-setup}    | IDE Setup (`Git, IntelliJ, Maven`, ggf. PlugIns)
+| * [ ] {nbsp} | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+| * [ ] {nbsp} | {icon-theory}   | Organisation & Importierung von Java Klassen
+| * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git`
+|===
+endif::[]

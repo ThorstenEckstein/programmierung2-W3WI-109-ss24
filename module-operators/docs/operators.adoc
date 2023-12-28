@@ -1,11 +1,16 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-////
-Autor: Thorsten Eckstein
-
-////
-
+// table of contents
 :toc:
+
+
+// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
+ifeval::[{show-structure} == true]
+include::planning.adoc[]
+endif::[]
+//
 
 
 == IDE Setup

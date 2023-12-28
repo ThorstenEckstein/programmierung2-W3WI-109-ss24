@@ -85,7 +85,7 @@ public class MyClass {
 *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/classes/ClassesDemoTest.java
+ -> {mod-ref-test}/demo/classes/ClassesDemoTest.java
 
 
 [IMPORTANT]
@@ -98,7 +98,7 @@ Einschub: Zur Theorie des -> <<tdd,Test Driven Developments>>, dann kehren wir z
 *Übungen*:
 
 [subs=normal]
- -> {module-ref-tests}/exercise/classes/ClassesExerciseTest.java
+ -> {mod-ref-test}/exercise/classes/ClassesExerciseTest.java
 
 
 Erzeuge ein erstes, kleines *Klassenmodell*:
@@ -160,7 +160,45 @@ Der "red, green, refactor" Ansatz hilft Entwicklern, den (zu implementierenden) 
 Dazu eine *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/tdd/TddDemoTest.java
+ -> {mod-ref-test}/demo/tdd/TddDemoTest.java
+
+
+== Code Generierung mit der IDE (Autocompletion, Vorschlagswesen)
+
+In aller Regel ist es sehr sinnvoll, die Entwicklungsumgebung (IDE) weitreichend zu nutzen. Das gilt insbesondere für die *Erzeugung von Quellcode*. Das Ganze ist grundsätzlich eine Sache der Übung, man sollte sich einfach daran gewöhnen, diese Hilfen möglichst viel als Entwickler:In zu nutzen!
+
+Ein paar *Tipps* dazu:
+
+*Generierung von Quellcode (Klassen, Methoden, etc.)*
+
+. mithilfe einer *Tastenkombination*
+.. unter MacOS: `Command + N`
+.. unter Windows: `Alt + Einfg` (ggf. auch `FN + Alt + Einfg`) oder
+. mithilfe der *Maus*
+
+// grid="none", frame="none"
+[cols="^1,^1", grid="none", frame="none"]
+|===
+| An der Cursorposition "Rechts-Klick" > `Generate ...`
+| An der Cursorposition > IntelliJ-Menü `Code` > `Generate ...`
+
+| image:images/contextmenu-1.png[]
+| image:images/contextmenu-2.png[]
+|===
+
+Hier wählt man dann einfach die gewünschte *kontext-spezifische* Funktion:
+
+[cols="^1,^1", grid="none", frame="none"]
+|===
+
+| z.B. die Generierung von Methoden _"Getter & Setter"_
+| oder die Implementierung von Interface-Methoden
+
+| image:images/contextmenu-3.png[]
+| image:images/contextmenu-4.png[]
+|===
+
+
 
 
 == Vererbung & Polymorphismus
@@ -201,7 +239,7 @@ include::diagrams/inheritance.puml[]
 *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/inheritance/InheritanceTest.java
+ -> {mod-ref-test}/demo/inheritance/InheritanceTest.java
 
 
 [big]#Polymorphismus#
@@ -216,7 +254,7 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 *Demo*:
 
 [subs=normal]
- -> {module-ref-tests}/demo/inheritance/InheritanceDemoTest.java
+ -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
 In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Bedeutung:
 
@@ -228,11 +266,12 @@ In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Be
 . _Warum kann Vererbung sinnvoll sein?_
 . _Wozu kann Polymorphismus nützlich sein?_
 
+
 [[exercises_inheritance]]
 *Übungen*:
 
 [subs=normal]
- -> {module-ref-tests}/exercise/inheritance/InheritanceExerciseTest.java
+ -> {mod-ref-test}/exercise/inheritance/InheritanceExerciseTest.java
 
 
 Übung 1::

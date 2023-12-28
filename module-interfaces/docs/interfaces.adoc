@@ -133,16 +133,138 @@ Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
 include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
 ----
 
-
-!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
-
-!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
-
-!!! ACHTUNG - Variablen in vorhergehenden MODULEN aktualisieren !!!
-
-{continue-here}
-
 [[exercises_interfaces]]
+*Übungen*:
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/InterfaceExerciseTest.java
+
+Übung 1::
+
+Erzeuge folgende *Klassen*:
+
+. Eine Schnittstelle `Zug` mit den Schnittstellenmethoden
+.. `getNumber` (soll den Wert des Feldes `number` vom Typ `String` zurückgeben) sowie
+.. `setNumber` (soll den Wert des Feldes `number` setzen)
+. Eine konkrete Klasse `Regionalzug`, die die Schnittstelle `Zug` realisiert
+
+
+== Abstrakte Klassen
+
+[big]#Schlüsselkonzepte#
+
+Die wichtigsten Merkmale von Abstraktionen in Form von `abstract classes`:
+
+Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
+
+ abstract
+
+* Eine abstrakte Klasse enthält den abstrakten *Modifikator* in der Klassensignatur
+* Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
+* Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
+* Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
+* Eine von einer abstrakten Klasse abgeleitete Unterklasse muss entweder alle abstrakten Methoden der Basisklasse implementieren oder selbst abstrakt sein
+
+Die zugehörige *grafische Darstellung* dieser Beziehung mit Beispiel:
+
+[plantuml, title="Abstrakte Klassen & Vererbung", png, align="center"]
+....
+include::diagrams/abstract.puml[]
+....
+
+*Beispiel* abstrakte Klasse & Methode:
+
+[source, java]
+----
+public abstract class MyClass {
+
+    public abstract void myMethod();
+
+}
+----
+
+[[demos_abstractclasses]]
+*Demo*:
+
+[subs=normal]
+ -> {mod-ref-test}/demo/AbstractsDemoTest.java
+
+
+[big]#Nutzung abstrakter Klassen#
+
+Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klassen werden häufig bei den folgenden Szenarien eingesetzt:
+
+* *Kapselung* allgemeiner Funktionen in einer Klasse (*Wiederverwendung* von Code). Diese sollen von mehreren verwandten Unterklassen gemeinsam genutzt werden
+* Es muss nur teilweise eine API definiert werden, die von Unterklassen leicht *erweitert* und verfeinert werden können
+* Die Unterklassen müssen eine oder mehrere gemeinsame Methoden oder Felder mit *geschützten* Zugriffsmodifikatoren erben
+* Da sich die Verwendung abstrakter Klassen außerdem implizit mit Basistypen und Untertypen befasst, werden außerdem die Vorteile des *Polymorphismus* genutzt
+
+Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
+
+
+== Sichtbarkeiten & Scopes: Access Modifier
+
+Die Standard *Access Modifier* sind `default`, `public`, `protected` sowie `private`. Sie bedeuten:
+
+`default`::
+
+Wenn kein Schlüsselwort explizit verwendet wird, legt Java einen Standardzugriff auf eine bestimmte Klasse, Methode oder Eigenschaft fest. Der *Standardzugriffs*-Modifikator wird auch `package-private` genannt, was bedeutet, dass alle Mitglieder innerhalb desselben Pakets sichtbar sind, aber von anderen Paketen aus nicht darauf zugegriffen werden kann:
+
+`public`::
+
+Wenn einer Klasse, Methode oder Eigenschaft das Schlüsselwort `public` hinzufügt wird, wird es auf der "ganzen Welt" verfügbar/sichtbar, d.h. alle anderen Klassen in allen Paketen können es verwenden. Dies ist der am wenigsten restriktive Zugriffsmodifikator.
+
+`protected`::
+
+Wenn eine Methode, Eigenschaft oder einen Konstruktor mit dem Schlüsselwort `protected` deklariert wird, kann auf das Mitglied aus demselben Paket zugegriffen werden (wie bei der Zugriffsebene Paket-Private) und zusätzlich aus allen Unterklassen dieser Klasse, auch wenn diese in anderen Paketen liegen.
+
+`private`::
+
+Auf jede Methode, Eigenschaft oder jeden Konstruktor mit dem Schlüsselwort `private` kann nur von derselben Klasse, also von "innen", aus zugegriffen werden. Dies ist der restriktivste Zugriffsmodifikator und bildet den Kern des Konzepts der Kapselung. Alle Daten werden vor der Außenwelt verborgen.
+
+*Demo:*
+
+[subs=normal]
+ -> {mod-ref-test}/demo/VisibilityDemoTest.java
+
+[source,java]
+----
+include::{mod-lnk-test}/demo/VisibilityDemoTest.java[tags="visibility"]
+----
+
+[[exercises_visibility]]
+*Übungen*:
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/ModelExerciseTest.java
+
+Übung 1::
+
+Ein Anwendungsfall (_echte Aussage aus einem Kunden-Interview)_:
+
+====
+_Es gibt zwei unterschiedliche Typen von (Zug-) Waggons. Es gibt Waggons für "Fahrgäste" und für "Frachtgüter". Als Teil eines Zuges sind die Waggons immer geordnet, sie bilden die sog. "Wagen-Reihung"._
+====
+
+Erzeuge ein kleines, aber "vollständiges" *Klassenmodell* daraus:
+
+. Eine Schnittstelle `Wagon` mit Methoden
+.. zum _Holen_ und _Setzen_ der Wagon-Reihenfolge (engl. `order` (Datentyp `int`))
+. Eine abstrakte Klasse `DefaultWagon`, die die Schnittstelle und die dortigen Methoden realisiert
+.. Das Feld `order` soll dabei möglichst stark geschützt sein
+. Zwei konkrete Klassen, die beide die abstrakte Klasse _beerben_, nämlich
+.. `PassengerWagon` und
+.. `FreightWagon`
+
+// //////////////////////////////////////////////////////////////
+
+[%collapsible, title="_Aufklappen mit grafischer Darstellung als kleine Hilfe..._"]
+====
+[plantuml, title="Ein kleines Klassenmodell", png, align="center"]
+....
+include::diagrams/model.puml[]
+....
+====
 
 
 == Referenzen

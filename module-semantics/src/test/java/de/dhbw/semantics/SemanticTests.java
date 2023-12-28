@@ -41,7 +41,7 @@ public class SemanticTests {
         logger.log("After square  : " + number);
 
         // then
-        assertEquals(100, number);
+        assertEquals(10, number);
     }
     //end::ref-semantics-prim[]
 

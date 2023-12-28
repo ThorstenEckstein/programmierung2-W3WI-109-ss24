@@ -1,13 +1,14 @@
-// --- Hyperlinks
+// --- Name
 :module-name:        module-classes
-:module-link-root:   ../{module-name}
-:module-link-docs:   {module-link-root}/{module-docs}
-:module-link-src:    {module-link-root}/{module-sources}
-:module-link-test:   {module-link-root}/{module-tests}
 
 // --- References
-:module-ref-sources: {module-sources}/{basic-package}
-:module-ref-tests:   {module-tests}/{basic-package}
+:mod-ref-src:  src/main/java/de/dhbw
+:mod-ref-test: src/test/java/de/dhbw
+
+// --- Hyperlinking
+:mod-lnk-docs: .
+:mod-lnk-src:  ../{mod-ref-src}
+:mod-lnk-test: ../{mod-ref-test}
 
 // display variables, set to 'true' to display in module docs!
 :show-variables: false
@@ -17,7 +18,7 @@ ifeval::[{show-variables} == true]
 
 *About:*
 
-. Hyperlinks: variables having `link` in the name are used for real *hyperlinking*, readers can _follow_ or _call_ by clicking the link
+. Hyperlinks: variables having `lnk` in the name are used for real *hyperlinking*, readers can _follow_ or _call_ by clicking the link
 
 . References: variables having `ref` in the name are used just *redirect* visually, so readers _know_ where to go next without clicking the link
 
@@ -26,11 +27,10 @@ ifeval::[{show-variables} == true]
 | Variable           | Value
 
 | module-name        | {module-name}
-| module-link-root   | {module-link-root}
-| module-link-docs   | {module-link-docs}
-| module-link-src    | {module-link-src}
-| module-link-test   | {module-link-test}
-| module-ref-sources | {module-ref-sources}
-| module-ref-tests   | {module-ref-tests}
+| mod-ref-src        | {mod-ref-src}
+| mod-ref-test       | {mod-ref-test}
+| mod-lnk-docs       | {mod-lnk-docs}
+| mod-lnk-src        | {mod-lnk-src}
+| mod-lnk-test       | {mod-lnk-test}
 |===
 endif::[]

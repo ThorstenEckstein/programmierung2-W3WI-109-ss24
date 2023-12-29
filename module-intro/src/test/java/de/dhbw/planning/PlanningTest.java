@@ -3,33 +3,24 @@ package de.dhbw.planning;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static de.dhbw.planning.PlanningUtil.*;
-import static de.dhbw.planning.ContentType.*;
 
 public class PlanningTest {
 
-    private String courseTitle;
-    private Semester semester;
-    private Set<CourseDay> courseDays = new HashSet<>();
+    private Course course;
 
     @BeforeEach
     void setUp() {
-        this.courseTitle  = "Programmierung II mit Java";
-        this.semester     = Semester.WS24;
+        this.course = MockFactory.mockCourse(
+                "Programmierung II mit Java",
+                Semester.WS24,
+                null
+        );
     }
 
     @Test
     public void canCreateBasicCourse() {
-        // given
-        Course course = Course.of(
-                courseTitle,
-                semester,
-                courseDays
-        );
+        // given - done in setUp()
 
         // when
         String title = course.getTitle();
@@ -39,31 +30,26 @@ public class PlanningTest {
     }
 
     @Test
-    public void canCreateCourseAgenda() {
+    public void canCreateModuleAgenda() {
         // given
-        Agenda agenda = new Agenda();
-
-        // mix of module and content!
-        Module mod1 = Module.of(
-                1,
-                "Welcome & Setup",
-                "module-intro");
-        Content con = Content.of(
-                Break,
-                DURATION_15_MIN,
-                "Pause",
-                false);
-        Module mod2 = Module.of(
-                2,
-                "Klassen, Vererbung & Polymorphismus",
-                "module-classes");
-
-        agenda.addItem(mod1);
-        agenda.addItem(con);
-        agenda.addItem(mod2);
+        Module module = Module.of(2, "Klassen, Vererbung & Polymorphismus", "module-classes");
+        Agenda agenda = MockFactory.mockModuleAgenda();
 
         // when
+        module.setAgenda(agenda);
+        AgendaPrinter.print(module.getAgenda());
+
+        // then
+        assertEquals("PT1H", module.getDuration().toString());
+    }
+
+    @Test
+    public void canCreateCourseDayAgenda() {
+        // given
         CourseDay courseDay = new CourseDay();
+        Agenda agenda = MockFactory.mockCourseDayAgenda();
+
+        // when
         courseDay.setAgenda(agenda);
 
         // then
@@ -71,42 +57,24 @@ public class PlanningTest {
     }
 
     @Test
-    public void canCreateModuleAgenda() {
+    public void canCreateCourseAgenda() {
         // given
-        Agenda agenda = new Agenda();
-
-        Content c1 = Content.of(
-                Welcome,
-                DURATION_15_MIN,
-                "Herzlich Willkommen",
-                false);
-        Content c2 = Content.of(
-                Domain,
-                DURATION_15_MIN,
-                "Fachlicher Schwerpunkt der Lehrveranstaltung",
-                false);
-        Content c3 = Content.of(
-                Setup,
-                DURATION_15_MIN,
-                "IDE Setup",
-                false);
-        Content c4 = Content.of(
-                Topic,
-                DURATION_15_MIN,
-                "Projektverwaltung mit Maven",
-                false);
-
-        agenda.addItem(c1);
-        agenda.addItem(c2);
-        agenda.addItem(c3);
-        agenda.addItem(c4);
+        Agenda agenda = MockFactory.mockCourseAgenda();
 
         // when
-        Module module = Module.of(2, "Klassen, Vererbung & Polymorphismus","module-classes");
-        module.setAgenda(agenda);
+        course.setAgenda(agenda);
 
         // then
-        AgendaPrinter.print(module.getAgenda());
+        AgendaPrinter.print(course.getAgenda());
+    }
+
+    @Test
+    public void canSumDuration() {
+        // given
+
+        // when
+
+        // then
     }
 
 }

@@ -1,14 +1,14 @@
 package de.dhbw.planning;
 
+import java.time.Duration;
+
 public class Module implements Item {
 
     private int index;
     private String title;
     private String directory;
 
-    /**
-     * Ausbaustufe 2
-     */
+    // Set of 'Content' instances
     private Agenda agenda;
 
     private Module(
@@ -55,5 +55,20 @@ public class Module implements Item {
 
     public void setAgenda(Agenda agenda) {
         this.agenda = agenda;
+    }
+
+    public Duration getDuration() {
+        return sum(agenda);
+    }
+
+    private Duration sum(Agenda agenda) {
+        if (agenda == null) {
+            throw new IllegalArgumentException("Can't calculate duration from specified agenda, because it is null!");
+        }
+        Duration sum = Duration.ZERO;
+        for (Item item : agenda.getItems()) {
+            sum = sum.plus(item.getDuration());
+        }
+        return sum;
     }
 }

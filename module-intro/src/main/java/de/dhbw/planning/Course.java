@@ -1,23 +1,21 @@
 package de.dhbw.planning;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Course {
 
     private String title;
     private final Semester semester;
 
-    private Set<CourseDay> courseDays = new HashSet<>();
+    // Set of 'CourseDay' instances
+    private Agenda agenda;
 
-    private Course(String title, Semester semester, Set<CourseDay> courseDays) {
+    private Course(String title, Semester semester, Agenda agenda) {
         this.title = title;
         this.semester = semester;
-        this.courseDays = courseDays;
+        this.agenda = agenda;
     }
 
-    public static Course of(String title, Semester semester, Set<CourseDay> courseDays) {
-        return new Course(title, semester, courseDays);
+    public static Course of(String title, Semester semester, Agenda agenda) {
+        return new Course(title, semester, agenda);
     }
 
     public Semester getSemester() {
@@ -33,15 +31,12 @@ public class Course {
         this.title = title;
     }
 
-    public Set<CourseDay> getCourseDays() {
-        return courseDays;
+    public Agenda getAgenda() {
+        return agenda;
     }
 
-    public void addModule(CourseDay module) {
-        this.courseDays.add(module);
+    public void setAgenda(Agenda agenda) {
+        this.agenda = agenda;
     }
 
-    public void setCourseDays(Set<CourseDay> courseDays) {
-        this.courseDays = courseDays;
-    }
 }

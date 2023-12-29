@@ -31,6 +31,16 @@ public class AgendaPrinter {
                         content.isCompleted()
                 );
             }
+            else if (item instanceof CourseDay courseDay) {
+                _item = String.format(
+                        "\n[%s] %s",
+                        CourseDay.class.getSimpleName(),
+                        courseDay.getTitle()
+                );
+            } else {
+                throw new IllegalArgumentException(
+                        "Agenda items of type '"+item.getClass().getSimpleName()+"' not yet supported!");
+            }
             _agenda.append(_item);
         }
         return _agenda.toString();

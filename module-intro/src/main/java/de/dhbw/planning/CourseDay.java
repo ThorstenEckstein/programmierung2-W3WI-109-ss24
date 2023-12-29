@@ -1,9 +1,12 @@
 package de.dhbw.planning;
 
-public class CourseDay {
+import java.time.Duration;
+
+public class CourseDay implements Item {
 
     private String title;
 
+    // Set of 'Module or Content' instances
     private Agenda agenda;
 
     public String getTitle() {
@@ -20,5 +23,21 @@ public class CourseDay {
 
     public void setAgenda(Agenda agenda) {
         this.agenda = agenda;
+    }
+
+    @Override
+    public Duration getDuration() {
+        return sum(agenda);
+    }
+
+    private Duration sum(Agenda agenda) {
+        if (agenda == null) {
+            throw new IllegalArgumentException("Can't calculate duration from specified agenda, because it is null!");
+        }
+        Duration sum = Duration.ZERO;
+        for (Item item : agenda.getItems()) {
+            sum = sum.plus(item.getDuration());
+        }
+        return sum;
     }
 }

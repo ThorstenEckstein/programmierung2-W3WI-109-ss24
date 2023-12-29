@@ -1,10 +1,16 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
 
-== {module}: Klassen & Vererbung
+Übersicht:
 
-Inhalte dieser LV finden sich in den Modul-Verzeichnissen
+[cols="1h,2", grid="none"]
+|===
 
-* {icon-dir} `module-classes`
+| Modultitel       | {module-title}
+| Modulverzeichnis | {icon-dir} `{module-name}`
+|===
+
+Modulstruktur:
 
 ifeval::[{show-timeslots} == true]
 [cols="^1a,<2,^1,<6a", grid=rows]
@@ -25,9 +31,9 @@ ifeval::[{show-timeslots} == false]
 | Done         | Typ             | Inhalt, Kommentar
 
 | * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
+| * [ ] {nbsp} | {icon-theory}   | Test-Driven-Development (TDD)
 | * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
 | * [ ] {nbsp} | {icon-topic}    | *Vererbung* in Klassenhierarchien
 | * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Vererbung
-| * [ ] {nbsp} | {icon-topic}    | `static`: *statische* Felder und Methoden
 |===
 endif::[]

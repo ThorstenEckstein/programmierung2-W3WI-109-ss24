@@ -1,4 +1,3 @@
-include::settings.adoc[]
 :icons: font
 
 [[alphabet]]

@@ -7,9 +7,32 @@ include::settings.adoc[]
 ////
  LV-Tag: 09:15 - 12:15 (3h)
 
+ LV-Tag  Datum       Tagesordnung    Modul
+ 1       19.02.24    Vor der Pause   module-intro
+ 1       19.02.24    Nach der Pause  module-classes
+
+
  TODO:
   (1) Element "Zwischenprüfung" einbauen
   (2) Modul "Datenbanken" einbauen
+////
+
+LV Planung:
+
+|===
+| LV | Plandatum | Modul | Optionale Module
+
+| 1
+| Di., 19.02.24
+| module-intro
+| -
+
+| 2
+| Di., 26.02.24
+| module-classes
+| -
+|===
+
 ////
 
 // Tag 1 - VOR der Pause
@@ -23,7 +46,6 @@ include::../module-interfaces/docs/planning.adoc[]
 include::../module-operators/docs/planning.adoc[]
 
 {continue-here}
-
 
 
 == {module}: Polymorphismus & Kontrollstrukturen
@@ -143,6 +165,4 @@ include::../module-operators/docs/planning.adoc[]
 | * [ ] {nbsp} | Informationen zur Abschlussprüfung
 |===
 
-====
-{continue-here}
-====
+////

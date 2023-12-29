@@ -1,15 +1,16 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
 
-== {module}: APIs, Abstraktionen & Sichtbarkeiten
+Übersicht:
 
-Inhalte dieser LV finden sich im Modul-Verzeichnis
+[cols="1h,2", grid="none"]
+|===
 
-* {icon-dir} `module-interfaces`
+| Modultitel       | {module-title}
+| Modulverzeichnis | {icon-dir} `{module-name}`
+|===
 
-*Optionales* Modul:
-
-* {icon-dir} `module-statics`
-
+Modulstruktur:
 
 ifeval::[{show-timeslots} == true]
 [cols="^1a,<2,^1,<6a", grid=rows]

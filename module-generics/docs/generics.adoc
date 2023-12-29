@@ -1,4 +1,4 @@
-include::../../docs/asciidoc/settings.adoc[]
+include::../../docs/settings.adoc[]
 
 // local document variables ---------------------------------------------------------------------
 :module-package: generics
@@ -26,7 +26,7 @@ include::../../docs/asciidoc/settings.adoc[]
 
 === Preparation
 
-include::../../docs/asciidoc/includes/update-project.adoc[]
+include::../../docs/includes/update-project.adoc[]
 
 
 === Theorie & Einführung
@@ -48,14 +48,14 @@ TIP: [small]#_Viele Beispiele finden sich auch im Collections Framework, etwa di
 
 [source,java,lines,title="Beispiel einer generischen Klasse"]
 ----
-include::{module-sources}/demo/Joiner.java[tag="generic-class"]
+include::../src/main/java/de/dhbw/generics/demo/Joiner.java[tag="generic-class"]
 ----
 
 Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 
 [source,java,title="Beispiel einer generischen Methode"]
 ----
-include::{module-sources}/demo/Printer.java[tag="generic-method"]
+include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method"]
 ----
 
 *Bounded Generics*

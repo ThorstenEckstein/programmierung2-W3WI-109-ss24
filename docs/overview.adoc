@@ -149,7 +149,7 @@ Integration::
 
 == Glossar
 
-include::glossary.adoc[]
+include::archive/glossary.adoc[]
 
 
 //[.dhbw]#ein-test-text#

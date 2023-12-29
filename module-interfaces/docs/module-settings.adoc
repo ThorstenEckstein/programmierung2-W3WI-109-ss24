@@ -1,5 +1,6 @@
 // --- Name
-:module-name:        module-interfaces
+:module-name:  module-interfaces
+:module-title: APIs, Abstraktionen & Sichtbarkeiten
 
 // --- References
 :mod-ref-src:  src/main/java/de/dhbw

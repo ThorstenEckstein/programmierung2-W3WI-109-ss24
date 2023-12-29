@@ -1,10 +1,16 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
 
-== {module}: Welcome & Setup
+Übersicht:
 
-Modul-Verzeichnis:
+[cols="1h,2", grid="none"]
+|===
 
-* {icon-dir} `module-intro`
+| Modultitel       | {module-title}
+| Modulverzeichnis | {icon-dir} `{module-name}`
+|===
+
+Modulstruktur:
 
 ifeval::[{show-timeslots} == true]
 [cols="^1a,<2,^1,<6a", grid=rows]
@@ -22,8 +28,8 @@ Herzlich willkommen!
 
 | * [ ] {nbsp} | 09:30 - 09:45 | {icon-domain}   | Fachlicher Schwerpunkt der Lehrveranstaltung
 | * [ ] {nbsp} | 09:45 - 10:00 | {icon-setup}    | IDE Setup (`IntelliJ`, ggf. PlugIns)
-| * [ ] {nbsp} | 10:00 - 10:15 | {icon-theory}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
-| * [ ] {nbsp} | 10:15 - 10:30 | {icon-theory}   | Organisation & Importierung von Java Klassen
+| * [ ] {nbsp} | 10:00 - 10:15 | {icon-topic}   | Projektverwaltung mit `Maven` (`pom`) & Projektstruktur
+| * [ ] {nbsp} | 10:15 - 10:30 | {icon-topic}   | Organisation & Importierung von Java Klassen
 | * [ ] {nbsp} | 10:15 - 10:30 | {icon-theory}   | _Optional:_ Quellcodeverwaltung mit `Git`
 |===
 endif::[]

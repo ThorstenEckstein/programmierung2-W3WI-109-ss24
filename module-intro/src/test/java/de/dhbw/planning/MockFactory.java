@@ -1,29 +1,159 @@
 package de.dhbw.planning;
 
 import java.time.Duration;
-import java.util.Set;
 
 import static de.dhbw.planning.ContentType.*;
-import static de.dhbw.planning.PlanningUtil.DURATION_15_MIN;
+import static de.dhbw.planning.PlanningUtil.*;
 
 public class MockFactory {
 
-    public static Course mockCourse(String title, Semester semester, Agenda agenda) {
+    /*
+     * ----------------------- Course
+     */
+
+    public static Course mockCourse(String title, Semester semester) {
         return Course.of(
                 title,
-                semester,
-                agenda
+                semester
         );
     }
 
-    public static CourseDay mockCourseDay(String... titleElements) {
+    public static Course mockCourse(String title, Semester semester, CourseDay... days) {
+        Course course = Course.of(title, semester);
+        Agenda agenda = new Agenda();
+
+        for (CourseDay day : days) {
+            agenda.addItem(day);
+        }
+        course.setAgenda(agenda);
+
+        return course;
+    }
+
+    /*
+     * ----------------------- CourseDay
+     */
+
+    public static CourseDay mockCourseDay(int counter) {
         CourseDay courseDay = new CourseDay();
-        String title = String.join(",", titleElements);
-        courseDay.setTitle(title);
-        courseDay.setAgenda(null);
+        courseDay.setTitle("Day " + counter);
+
         return courseDay;
     }
 
+    public static CourseDay mockCourseDay(int counter, Item... agendaItems) {
+        CourseDay courseDay = new CourseDay();
+        courseDay.setTitle("Day " + counter);
+        Agenda agenda = new Agenda();
+
+        for (Item item : agendaItems) {
+            agenda.addItem(item);
+        }
+        courseDay.setAgenda(agenda);
+
+        return courseDay;
+    }
+
+    /*
+     * ----------------------- Module
+     */
+
+    public static Module mockModule(int counter) {
+        return Module.of(
+                counter,
+                "Modul " + counter,
+                "module-" + counter);
+    }
+
+    public static Module mockModule(int counter, Content... agendaItems) {
+        Module module = mockModule(counter);
+        Agenda agenda = new Agenda();
+
+        for (Content content : agendaItems) {
+            agenda.addItem(content);
+        }
+        module.setAgenda(agenda);
+
+        return module;
+    }
+
+    /*
+     * ----------------------- Content
+     */
+
+    public static Content mockContent(int counter) {
+        return Content.of(
+                Unknown,
+                Duration.ZERO,
+                "Content description " + counter,
+                false);
+    }
+
+    public static Content mockContent(ContentType contentType, Duration duration, String description) {
+        return Content.of(
+                contentType,
+                duration,
+                description,
+                false);
+    }
+
+    public static Content mockWelcome() {
+        return Content.of(
+                Welcome,
+                DURATION_30_MIN,
+                "Herzlich Willkommen!",
+                false);
+    }
+
+    public static Content mockSetup() {
+        return Content.of(
+                Setup,
+                DURATION_30_MIN,
+                "Technisches IDE Setup",
+                false);
+    }
+
+    public static Content mockDomain() {
+        return Content.of(
+                Domain,
+                DURATION_15_MIN,
+                "Fachliche Einführung",
+                false);
+    }
+
+    public static Content mockTopic(String about) {
+        return Content.of(
+                Topic,
+                DURATION_45_MIN,
+                "Thema/Inhalt '" + about + "'",
+                false);
+    }
+
+    public static Content mockDemo(String about) {
+        return Content.of(
+                Demo,
+                DURATION_15_MIN,
+                "Demo zum Thema/Inhalt '" + about + "'",
+                false);
+    }
+
+    public static Content mockExercise(String about) {
+        return Content.of(
+                Exercise,
+                DURATION_30_MIN,
+                "Demo zum Thema/Inhalt '" + about + "'",
+                false);
+    }
+
+    public static Content mockBreak(int number) {
+        return Content.of(
+                Break,
+                DURATION_15_MIN,
+                "Pause " + number,
+                false);
+    }
+
+    /*
     public static Module mockModule(int index, String title, String directory) {
         return Module.of(
                 index,
@@ -111,5 +241,6 @@ public class MockFactory {
 
         return agenda;
     }
+    */
 
 }

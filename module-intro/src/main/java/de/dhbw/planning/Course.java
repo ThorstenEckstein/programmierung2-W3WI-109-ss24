@@ -1,5 +1,7 @@
 package de.dhbw.planning;
 
+import java.time.Duration;
+
 public class Course {
 
     private String title;
@@ -8,14 +10,13 @@ public class Course {
     // Set of 'CourseDay' instances
     private Agenda agenda;
 
-    private Course(String title, Semester semester, Agenda agenda) {
+    private Course(String title, Semester semester) {
         this.title = title;
         this.semester = semester;
-        this.agenda = agenda;
     }
 
-    public static Course of(String title, Semester semester, Agenda agenda) {
-        return new Course(title, semester, agenda);
+    public static Course of(String title, Semester semester) {
+        return new Course(title, semester);
     }
 
     public Semester getSemester() {
@@ -39,4 +40,16 @@ public class Course {
         this.agenda = agenda;
     }
 
+    public Duration getDuration() {
+        return Item.calculateTotalDuration(agenda, this.getClass());
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "title='" + title + '\'' +
+                ", semester=" + semester +
+                ", agenda=" + agenda +
+                '}';
+    }
 }

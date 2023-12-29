@@ -1,80 +1,238 @@
 package de.dhbw.planning;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static de.dhbw.planning.MockFactory.*;
 
 public class PlanningTest {
 
-    private Course course;
-
     @BeforeEach
     void setUp() {
-        this.course = MockFactory.mockCourse(
-                "Programmierung II mit Java",
-                Semester.WS24,
-                null
-        );
+        // nothing yet
     }
 
+    /*
+     * -------------------------- Course Tests
+     */
+
     @Test
-    public void canCreateBasicCourse() {
-        // given - done in setUp()
+    @DisplayName("[Course] LV ohne Agenda")
+    public void canCreateCourseWithAgenda() {
+        // given
+        Course course = mockCourse("Programmierung II mit Java", Semester.WS24);
 
         // when
         String title = course.getTitle();
 
         // then
         assertEquals("Programmierung II mit Java", title);
+
+        // print
+        PlanningPrinter.printSimple(course);
     }
 
     @Test
-    public void canCreateModuleAgenda() {
+    @DisplayName("[Course] Dauer einer LV")
+    public void canGetCourseDuration() {
         // given
-        Module module = Module.of(2, "Klassen, Vererbung & Polymorphismus", "module-classes");
-        Agenda agenda = MockFactory.mockModuleAgenda();
+
+        // day 1
+        Content welcome        = mockWelcome();
+        Content pause1         = mockBreak(1);
+        Content setup          = mockSetup();
+        Content classes        = mockTopic("Klassen & Vererbung");
+        Content polymorphism   = mockTopic("Polymorphismus");
+
+        Module module1         = mockModule(1, welcome, setup);
+        Module module2         = mockModule(2, classes, polymorphism);
+
+        CourseDay day1         = mockCourseDay(1, module1, pause1, module2);
+
+        // day 2
+        Content ifc            = mockTopic("Interfaces");
+        Content demoIfc        = mockDemo("Interfaces");
+        Content exerciseIfc    = mockExercise("Interfaces");
+        Content pause2         = mockBreak(2);
+        Content absCls         = mockTopic("Abstrakte Klassen");
+        Content demoAbsCls     = mockDemo("Abstrakte Klassen");
+        Content exerciseAbsCls = mockExercise("Abstrakte Klassen");
+
+        Module module3         = mockModule(3, ifc, demoIfc, exerciseIfc);
+        Module module4         = mockModule(4, absCls, demoAbsCls, exerciseAbsCls);
+
+        CourseDay day2         = MockFactory.mockCourseDay(2, module3, pause2, module4);
 
         // when
-        module.setAgenda(agenda);
-        AgendaPrinter.print(module.getAgenda());
+        Course course = mockCourse("Programmierung II mit Java", Semester.WS24, day1, day2);
+        Duration duration = course.getDuration();
 
         // then
-        assertEquals("PT1H", module.getDuration().toString());
+        assertEquals("PT6H", duration.toString());
+
+        // print
+        PlanningPrinter.printSimple(course);
+    }
+
+    /*
+     * -------------------------- LV-Tag (CourseDay) Tests
+     */
+
+    @Test
+    @DisplayName("[CourseDay] LV-Tag ohne Agenda")
+    public void canCreateCourseDayWithoutAgenda() {
+        // given
+        CourseDay courseDay = mockCourseDay(1);
+
+        // when
+        String title = courseDay.getTitle();
+
+        // then
+        assertEquals("Day 1", title);
+
+        // print
+        PlanningPrinter.printSimple(courseDay);
     }
 
     @Test
-    public void canCreateCourseDayAgenda() {
+    @DisplayName("[CourseDay] LV-Tag mit Agenda")
+    public void canCreateCourseDayWithAgenda() {
         // given
-        CourseDay courseDay = new CourseDay();
-        Agenda agenda = MockFactory.mockCourseDayAgenda();
+        Content welcome      = mockWelcome();
+        Content pause        = mockBreak(1);
+        Content setup        = mockSetup();
+        Content classes      = mockTopic("Klassen & Vererbung");
+        Content polymorphism = mockTopic("Polymorphismus");
+
+        Module module1       = mockModule(1, welcome, setup);
+        Module module2       = mockModule(2, classes, polymorphism);
+
+        CourseDay courseDay  = mockCourseDay(1, module1, pause, module2);
 
         // when
-        courseDay.setAgenda(agenda);
+        String title = courseDay.getTitle();
 
         // then
-        AgendaPrinter.print(courseDay.getAgenda());
+        assertEquals("Day 1", title);
+
+        // print
+        PlanningPrinter.printSimple(courseDay);
     }
 
     @Test
-    public void canCreateCourseAgenda() {
+    @DisplayName("[CourseDay] Dauer eines LV-Tages")
+    public void canGetCourseDayDuration() {
         // given
-        Agenda agenda = MockFactory.mockCourseAgenda();
+        Content welcome      = mockWelcome();
+        Content pause        = mockBreak(1);
+        Content setup        = mockSetup();
+        Content classes      = mockTopic("Klassen & Vererbung");
+        Content polymorphism = mockTopic("Polymorphismus");
+
+        Module module1       = mockModule(1, welcome, pause, setup);
+        Module module2       = mockModule(2, classes, pause, polymorphism);
+
+        CourseDay courseDay  = mockCourseDay(1, module1, pause, module2);
 
         // when
-        course.setAgenda(agenda);
+        Duration duration = courseDay.getDuration();
 
         // then
-        AgendaPrinter.print(course.getAgenda());
+        assertEquals("PT3H15M", duration.toString());
+    }
+
+    /*
+     * -------------------------- Module Tests
+     */
+
+    @Test
+    @DisplayName("[Module] Modul ohne Agenda")
+    public void canCreateModuleWithoutAgenda() {
+        // given
+        Module module = mockModule(1);
+
+        // when
+        String directory = module.getDirectory();
+
+        // then
+        assertEquals("module-1", directory);
+
+        // print
+        PlanningPrinter.printSimple(module);
     }
 
     @Test
-    public void canSumDuration() {
+    @DisplayName("[Module] Modul mit Agenda")
+    public void canCreateModuleWithAgenda() {
         // given
+        Content welcome      = mockWelcome();
+        Content break1       = mockBreak(1);
+        Content setup        = mockSetup();
+        Content break2       = mockBreak(2);
+        Content polymorphism = mockTopic("Polymorphismus");
 
         // when
+        Module module = mockModule(1, welcome, break1, setup, break2, polymorphism);
 
         // then
+        assertEquals(5, module.getAgenda().getItems().size());
+
+        // print
+        PlanningPrinter.printSimple(module);
+    }
+
+    @Test
+    @DisplayName("[Module] Dauer eines Moduls")
+    public void canGetModuleDuration() {
+        // given
+        Content welcome      = mockWelcome();
+        Content break1       = mockBreak(1);
+        Content setup        = mockSetup();
+        Content break2       = mockBreak(2);
+        Content polymorphism = mockTopic("Polymorphismus");
+
+        // when
+        Module module = mockModule(1, welcome, break1, setup, break2, polymorphism);
+
+        // then
+        assertEquals("PT2H15M", module.getDuration().toString());
+    }
+
+    /*
+     * -------------------------- Content Tests
+     */
+
+    @Test
+    @DisplayName("[Content] Inhaltselement (Default)")
+    public void canCreateContent() {
+        // given
+        Content content = mockContent(1);
+
+        // when
+        ContentType contentType = content.getType();
+
+        // then
+        assertEquals(ContentType.Unknown, contentType);
+
+        // print
+        PlanningPrinter.printSimple(content);
+    }
+
+    @Test
+    @DisplayName("[Content] Dauer eines Inhaltselements (Default)")
+    public void canGetContentDuration() {
+        // given
+        Content content = mockContent(1);
+
+        // when
+        Duration duration = content.getDuration();
+
+        // then
+        assertEquals("PT0S", duration.toString());
     }
 
 }

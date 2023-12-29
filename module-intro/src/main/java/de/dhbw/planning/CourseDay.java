@@ -27,17 +27,14 @@ public class CourseDay implements Item {
 
     @Override
     public Duration getDuration() {
-        return sum(agenda);
+        return Item.calculateTotalDuration(agenda, this.getClass());
     }
 
-    private Duration sum(Agenda agenda) {
-        if (agenda == null) {
-            throw new IllegalArgumentException("Can't calculate duration from specified agenda, because it is null!");
-        }
-        Duration sum = Duration.ZERO;
-        for (Item item : agenda.getItems()) {
-            sum = sum.plus(item.getDuration());
-        }
-        return sum;
+    @Override
+    public String toString() {
+        return "CourseDay{" +
+                "title='" + title + '\'' +
+                ", agenda=" + agenda +
+                '}';
     }
 }

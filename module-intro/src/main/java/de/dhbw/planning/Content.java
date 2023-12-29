@@ -1,7 +1,7 @@
 package de.dhbw.planning;
 
 import java.time.Duration;
-import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 public class Content implements Item {
 
@@ -12,24 +12,33 @@ public class Content implements Item {
     private Duration duration;
 
     // Typ
-    private ContentType contentType;
+    private ContentType type;
 
     // Inhaltsbeschreibung, Kommentar
     private String description;
 
-    private Content(ContentType contentType, Duration duration, String description, boolean completed) {
-        this.contentType = contentType;
+    private Content(ContentType type, Duration duration, String description, boolean completed) {
+        this.type = type;
         this.duration = duration;
         this.description = description;
         this.completed = completed;
     }
 
-    public static Content of(ContentType contentType, Duration duration, String description, boolean completed) {
+    public static Content of(ContentType type, Duration duration, String description, boolean completed) {
         return new Content(
-                contentType,
+                type,
                 duration,
                 description,
                 completed
+        );
+    }
+
+    public static Content of(ContentType type, Duration duration, String description) {
+        return Content.of(
+                type,
+                duration,
+                description,
+                false
         );
     }
 
@@ -49,12 +58,12 @@ public class Content implements Item {
         this.duration = duration;
     }
 
-    public ContentType getContentType() {
-        return contentType;
+    public ContentType getType() {
+        return type;
     }
 
-    public void setContentType(ContentType contentType) {
-        this.contentType = contentType;
+    public void setType(ContentType type) {
+        this.type = type;
     }
 
     public String getDescription() {
@@ -64,4 +73,28 @@ public class Content implements Item {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Content{" +
+                "type=" + type +
+                ", duration=" + duration +
+                ", description='" + description + '\'' +
+                ", completed=" + completed +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Content content = (Content) o;
+        return completed == content.completed && Objects.equals(duration, content.duration) && type == content.type && Objects.equals(description, content.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(completed, duration, type, description);
+    }
+
 }

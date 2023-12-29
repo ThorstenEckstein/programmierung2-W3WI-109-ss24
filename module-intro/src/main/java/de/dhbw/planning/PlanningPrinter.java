@@ -1,15 +1,39 @@
 package de.dhbw.planning;
 
-public class AgendaPrinter {
+public class PlanningPrinter {
 
-    public static void print(Agenda agenda) {
-        if(agenda == null) { throw new IllegalArgumentException("Agenda could not be printed (null)!"); }
+    private static void _printSimple(Object object) {
+        System.out.println(object);
+    }
+
+    public static void printSimple(Course course) {
+        if(course == null) { throw new IllegalArgumentException("Course could not be printed, it is null!"); }
+        _printSimple(course);
+    }
+
+    public static void printSimple(CourseDay courseDay) {
+        if(courseDay == null) { throw new IllegalArgumentException("CourseDay could not be printed, it is null!"); }
+        _printSimple(courseDay);
+    }
+
+    public static void printSimple(Module module) {
+        if(module == null) { throw new IllegalArgumentException("Module could not be printed, it is null!"); }
+        _printSimple(module);
+    }
+
+    public static void printSimple(Content content) {
+        if(content == null) { throw new IllegalArgumentException("Content could not be printed, it is null!"); }
+        _printSimple(content);
+    }
+
+    public static void printSimple(Agenda agenda) {
+        if(agenda == null) { throw new IllegalArgumentException("Agenda could not be printed, it is null!"); }
         String _agenda = toString(agenda);
-        System.out.println(_agenda);
+        _printSimple(_agenda);
     }
 
     private static String toString(Agenda agenda) {
-        StringBuffer _agenda = new StringBuffer();
+        StringBuilder _agenda = new StringBuilder();
 
         for (Item item : agenda.getItems()) {
             String _item = "n/a";
@@ -25,7 +49,7 @@ public class AgendaPrinter {
                 _item = String.format(
                         "\n[%s|%s] %s, %s (completed=%s)",
                         Content.class.getSimpleName(),
-                        content.getContentType(),
+                        content.getType(),
                         content.getDuration(),
                         content.getDescription(),
                         content.isCompleted()

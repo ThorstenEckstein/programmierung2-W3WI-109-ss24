@@ -11,6 +11,7 @@ public enum ContentType {
     ,Topic        ("book",                "gray")
     ,UpdateProject("arrow-circle-o-down", "red")
     ,Welcome      ("heart",               "red")
+    ,Unknown      (null,                  null)
     ;
 
     private final String icon;

@@ -1,7 +1,11 @@
 package de.dhbw.planning;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
 import java.time.Duration;
 
+@JsonPropertyOrder({ "itemType", "index", "title", "directory" })
 public class Module implements Item {
 
     private int index;
@@ -57,6 +61,13 @@ public class Module implements Item {
         this.agenda = agenda;
     }
 
+    @Override
+    public String getItemType() {
+        return Module.class.getSimpleName();
+    }
+
+    @Override
+    @JsonIgnore
     public Duration getDuration() {
         return Item.calculateTotalDuration(agenda, this.getClass());
     }

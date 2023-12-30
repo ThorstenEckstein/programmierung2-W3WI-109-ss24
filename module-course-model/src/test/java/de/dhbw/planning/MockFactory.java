@@ -1,9 +1,10 @@
 package de.dhbw.planning;
 
 import java.time.Duration;
+import java.time.LocalDate;
 
 import static de.dhbw.planning.ContentType.*;
-import static de.dhbw.planning.PlanningUtil.*;
+import static de.dhbw.planning.Constants.*;
 
 public class MockFactory {
 
@@ -37,6 +38,7 @@ public class MockFactory {
     public static CourseDay mockCourseDay(int counter) {
         CourseDay courseDay = new CourseDay();
         courseDay.setTitle("Day " + counter);
+        courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
 
         return courseDay;
     }
@@ -44,6 +46,7 @@ public class MockFactory {
     public static CourseDay mockCourseDay(int counter, Item... agendaItems) {
         CourseDay courseDay = new CourseDay();
         courseDay.setTitle("Day " + counter);
+        courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
         Agenda agenda = new Agenda();
 
         for (Item item : agendaItems) {

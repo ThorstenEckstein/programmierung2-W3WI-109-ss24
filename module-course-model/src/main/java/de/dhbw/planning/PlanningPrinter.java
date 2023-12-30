@@ -49,7 +49,7 @@ public class PlanningPrinter {
                 _item = String.format(
                         "\n[%s|%s] %s, %s (completed=%s)",
                         Content.class.getSimpleName(),
-                        content.getType(),
+                        content.getContentType(),
                         content.getDuration(),
                         content.getDescription(),
                         content.isCompleted()

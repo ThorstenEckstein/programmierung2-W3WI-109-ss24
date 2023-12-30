@@ -4,16 +4,19 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static de.dhbw.planning.MockFactory.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PlanningTest {
 
+    private ResourceManager resourceManager;
+
     @BeforeEach
     void setUp() {
-        // nothing yet
+        this.resourceManager = new ResourceManager();
     }
 
     /*
@@ -38,7 +41,7 @@ public class PlanningTest {
 
     @Test
     @DisplayName("[Course] Dauer einer LV")
-    public void canGetCourseDuration() {
+    public void canGetCourseDuration() throws IOException {
         // given
 
         // day 1
@@ -76,6 +79,9 @@ public class PlanningTest {
 
         // print
         PlanningPrinter.printSimple(course);
+
+        // dump to yaml
+        resourceManager.write(course);
     }
 
     /*
@@ -213,7 +219,7 @@ public class PlanningTest {
         Content content = mockContent(1);
 
         // when
-        ContentType contentType = content.getType();
+        ContentType contentType = content.getContentType();
 
         // then
         assertEquals(ContentType.Unknown, contentType);

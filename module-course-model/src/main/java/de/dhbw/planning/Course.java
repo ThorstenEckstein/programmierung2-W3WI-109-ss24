@@ -1,5 +1,7 @@
 package de.dhbw.planning;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.Duration;
 
 public class Course {
@@ -40,6 +42,7 @@ public class Course {
         this.agenda = agenda;
     }
 
+    @JsonIgnore
     public Duration getDuration() {
         return Item.calculateTotalDuration(agenda, this.getClass());
     }

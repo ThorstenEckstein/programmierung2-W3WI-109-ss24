@@ -2,9 +2,11 @@ package de.dhbw.planning;
 
 import java.time.Duration;
 
-import static de.dhbw.planning.PlanningUtil.DURATION_DEFAULT;
+import static de.dhbw.planning.Constants.DURATION_DEFAULT;
 
 public interface Item {
+
+    String getItemType();
 
     Duration getDuration();
 

@@ -1,0 +1,8 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+
+// table of contents
+:toc:
+

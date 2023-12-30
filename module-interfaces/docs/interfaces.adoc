@@ -210,37 +210,6 @@ Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klass
 Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
 
 
-== Sichtbarkeiten & Scopes: Access Modifier
-
-Die Standard *Access Modifier* sind `default`, `public`, `protected` sowie `private`. Sie bedeuten:
-
-`default`::
-
-Wenn kein Schlüsselwort explizit verwendet wird, legt Java einen Standardzugriff auf eine bestimmte Klasse, Methode oder Eigenschaft fest. Der *Standardzugriffs*-Modifikator wird auch `package-private` genannt, was bedeutet, dass alle Mitglieder innerhalb desselben Pakets sichtbar sind, aber von anderen Paketen aus nicht darauf zugegriffen werden kann:
-
-`public`::
-
-Wenn einer Klasse, Methode oder Eigenschaft das Schlüsselwort `public` hinzufügt wird, wird es auf der "ganzen Welt" verfügbar/sichtbar, d.h. alle anderen Klassen in allen Paketen können es verwenden. Dies ist der am wenigsten restriktive Zugriffsmodifikator.
-
-`protected`::
-
-Wenn eine Methode, Eigenschaft oder einen Konstruktor mit dem Schlüsselwort `protected` deklariert wird, kann auf das Mitglied aus demselben Paket zugegriffen werden (wie bei der Zugriffsebene Paket-Private) und zusätzlich aus allen Unterklassen dieser Klasse, auch wenn diese in anderen Paketen liegen.
-
-`private`::
-
-Auf jede Methode, Eigenschaft oder jeden Konstruktor mit dem Schlüsselwort `private` kann nur von derselben Klasse, also von "innen", aus zugegriffen werden. Dies ist der restriktivste Zugriffsmodifikator und bildet den Kern des Konzepts der Kapselung. Alle Daten werden vor der Außenwelt verborgen.
-
-*Demo:*
-
-[subs=normal]
- -> {mod-ref-test}/demo/VisibilityDemoTest.java
-
-[source,java]
-----
-include::{mod-lnk-test}/demo/VisibilityDemoTest.java[tags="visibility"]
-----
-
-[[exercises_visibility]]
 *Übungen*:
 
 [subs=normal]

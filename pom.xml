@@ -25,6 +25,7 @@
         <module>module-classes</module>
         <module>module-statics</module>
         <module>module-interfaces</module>
+        <module>module-visibility</module>
         <module>module-operators</module>
         <module>module-databases</module>
         <module>module-enums</module>

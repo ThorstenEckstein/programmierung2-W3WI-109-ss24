@@ -1,0 +1,21 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+Übersicht:
+
+[cols="1h,2", grid="none"]
+|===
+
+| Modultitel       | {module-title}
+| Modulverzeichnis | {icon-dir} `{module-name}`
+|===
+
+Modulstruktur:
+
+ifeval::[{show-timeslots} == true]
+
+endif::[]
+
+ifeval::[{show-timeslots} == false]
+
+endif::[]

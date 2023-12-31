@@ -1,37 +1,11 @@
 package de.dhbw.planning;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ResourceManager {
-
-    public enum FileResource {
-        MockModel(
-                "LV mit Mockdaten aus Tests",
-                "src/test/resources/mock-data.json"),
-        Prog2WithJava(
-                "Programmierung II mit Java",
-                "src/test/resources/programming-2-with-java.json")
-        ;
-
-        private final String courseFile;
-        private final String courseTitle;
-
-        FileResource(String courseTitle, String courseFile) {
-            this.courseTitle = courseTitle;
-            this.courseFile = courseFile;
-        }
-
-        public File getResourceFile() {
-            return new File(courseFile);
-        }
-
-        public String getCourseTitle() {
-            return courseTitle;
-        }
-    }
 
     private final ObjectMapper mapper;
 
@@ -43,8 +17,11 @@ public class ResourceManager {
         ObjectMapper mapper = new ObjectMapper();
         mapper.findAndRegisterModules();
 
-        // add more configuration options here
-        // ...
+        //SimpleModule module = new SimpleModule();
+        //module.addDeserializer(Agenda.class, new AgendaDeserializer());
+        //mapper.registerModule(module);
+
+        // add more configuration options here...
 
         return mapper;
     }

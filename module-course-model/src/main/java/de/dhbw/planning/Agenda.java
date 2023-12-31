@@ -1,5 +1,7 @@
 package de.dhbw.planning;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -23,6 +25,7 @@ public class Agenda {
         this.items.add(item);
     }
 
+    @JsonDeserialize(as=LinkedHashSet.class)
     public void setItems(Set<Item> items) {
         this.items = items;
     }

@@ -9,7 +9,6 @@ import java.time.Duration;
 
 import static de.dhbw.planning.MockFactory.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static de.dhbw.planning.ResourceManager.FileResource;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class PlanningTest {
@@ -42,19 +41,45 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Einlesen von Daten einer LV in das Objektmodell")
+    @DisplayName("[Course] Einlesen von Daten einer (Beispiel-) LV in das Objektmodell")
     public void canReadCourseJson() throws IOException {
         // given
-        Course course = null;
+        Course course;
 
         // when
-        course = resourceManager.readCourse(FileResource.Prog2WithJava);
+        course = resourceManager.readCourse(FileResource.Prog2WithJava_Input);
+
+        // then
+        assertNotNull(course);
+    }
+
+    @Test
+    @DisplayName("[Course] Einlesen der echten LV-Daten für WS 24")
+    public void canReadRealCourseJson() throws IOException {
+        // given
+        Course course;
+
+        // when
+        course = resourceManager.readCourse(FileResource.Prog2WithJava_Input_JustCourseDay);
+
+        // then
+        assertNotNull(course);
+    }
+
+    @Test
+    @DisplayName("[Course] Einlesen und direkt wieder Schreiben einer LV")
+    public void canReadAndWriteCourseJson() throws IOException {
+        // given
+        Course course;
+
+        // when
+        course = resourceManager.readCourse(FileResource.Prog2WithJava_Input);
 
         // then
         assertNotNull(course);
 
-        // print
-        PlanningPrinter.printSimple(course);
+        // write again
+        resourceManager.writeCourse(FileResource.Prog2WithJava_Output, course);
     }
 
     @Test
@@ -96,7 +121,7 @@ public class PlanningTest {
         Course course = mockCourse("Programmierung II mit Java", Semester.WS24, day1);
 
         // then - dump to json
-        resourceManager.writeCourse(FileResource.MockModel, course);
+        resourceManager.writeCourse(FileResource.MockModel_Input, course);
     }
 
     @Test

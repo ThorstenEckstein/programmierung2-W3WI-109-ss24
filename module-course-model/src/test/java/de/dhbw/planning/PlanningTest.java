@@ -55,12 +55,28 @@ public class PlanningTest {
 
     @Test
     @DisplayName("[Course] Einlesen der echten LV-Daten für WS 24")
-    public void canReadRealCourseJson() throws IOException {
+    public void canReadRealCourseWithDaysJson() throws IOException {
         // given
         Course course;
 
         // when
         course = resourceManager.readCourse(FileResource.Prog2WithJava_Input_JustCourseDay);
+
+        // then
+        assertNotNull(course);
+
+        // pretty print for adoc
+        PlanningPrinter.prettyPrint(course);
+    }
+
+    @Test
+    @DisplayName("[Course] Einlesen der echten LV-Daten für WS 24")
+    public void canReadRealCourseWithDaysAndModulesJson() throws IOException {
+        // given
+        Course course;
+
+        // when
+        course = resourceManager.readCourse(FileResource.Prog2WithJava_Input_Modules);
 
         // then
         assertNotNull(course);

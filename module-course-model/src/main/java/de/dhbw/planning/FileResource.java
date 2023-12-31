@@ -23,6 +23,10 @@ public enum FileResource {
             "Programmierung II mit Java",
             "src/test/resources/input/programming-2-with-java-coursedays.json"),
 
+    Prog2WithJava_Input_Modules(
+            "Programmierung II mit Java",
+            "src/test/resources/input/programming-2-with-java-modules.json"),
+
     Prog2WithJava_Output(
             "Programmierung II mit Java",
             "src/test/resources/output/programming-2-with-java.json")

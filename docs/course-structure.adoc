@@ -17,6 +17,7 @@ include::settings.adoc[]
   (2) Modul "Datenbanken" einbauen
 ////
 
+////
 LV Planung:
 
 |===
@@ -32,7 +33,6 @@ LV Planung:
 | module-classes
 | -
 |===
-
 ////
 
 // Tag 1 - VOR der Pause

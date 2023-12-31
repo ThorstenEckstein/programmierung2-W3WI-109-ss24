@@ -1,18 +1,16 @@
 package de.dhbw.planning;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.format.DateTimeFormatter;
 
 public class ResourceManager {
 
-    public enum CourseFile {
+    public enum FileResource {
+        MockModel(
+                "LV mit Mockdaten aus Tests",
+                "src/test/resources/mock-data.json"),
         Prog2WithJava(
                 "Programmierung II mit Java",
                 "src/test/resources/programming-2-with-java.json")
@@ -21,7 +19,7 @@ public class ResourceManager {
         private final String courseFile;
         private final String courseTitle;
 
-        CourseFile(String courseTitle, String courseFile) {
+        FileResource(String courseTitle, String courseFile) {
             this.courseTitle = courseTitle;
             this.courseFile = courseFile;
         }
@@ -51,8 +49,12 @@ public class ResourceManager {
         return mapper;
     }
 
-    public void write(Course course) throws IOException {
-        mapper.writeValue(CourseFile.Prog2WithJava.getResourceFile(), course);
+    public Course readCourse(FileResource resource) throws IOException {
+        return mapper.readValue(resource.getResourceFile(), Course.class);
+    }
+
+    public void writeCourse(FileResource resource, Course course) throws IOException {
+        mapper.writeValue(resource.getResourceFile(), course);
     }
 
 }

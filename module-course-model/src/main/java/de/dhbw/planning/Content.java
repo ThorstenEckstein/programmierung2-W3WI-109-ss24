@@ -22,29 +22,20 @@ public class Content implements Item {
     // Done
     private boolean completed;
 
-    private Content(ContentType contentType, Duration duration, String description, boolean completed) {
+    public Content() {}
+
+    public Content(ContentType contentType, Duration duration, String description) {
+        this.contentType = contentType;
+        this.duration = duration;
+        this.description = description;
+        this.completed = false;
+    }
+
+    public Content(ContentType contentType, Duration duration, String description, boolean completed) {
         this.contentType = contentType;
         this.duration = duration;
         this.description = description;
         this.completed = completed;
-    }
-
-    public static Content of(ContentType type, Duration duration, String description, boolean completed) {
-        return new Content(
-                type,
-                duration,
-                description,
-                completed
-        );
-    }
-
-    public static Content of(ContentType type, Duration duration, String description) {
-        return Content.of(
-                type,
-                duration,
-                description,
-                false
-        );
     }
 
     public boolean isCompleted() {
@@ -77,11 +68,6 @@ public class Content implements Item {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    @Override
-    public String getItemType() {
-        return Content.class.getSimpleName();
     }
 
     @Override

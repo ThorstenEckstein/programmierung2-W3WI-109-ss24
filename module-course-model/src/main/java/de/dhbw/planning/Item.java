@@ -1,12 +1,21 @@
 package de.dhbw.planning;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+
 import java.time.Duration;
 
 import static de.dhbw.planning.Constants.DURATION_DEFAULT;
 
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = CourseDay.class, name = "courseDay"),
+        @JsonSubTypes.Type(value = Module.class, name = "module"),
+        @JsonSubTypes.Type(value = Content.class, name = "content")
+})
 public interface Item {
-
-    String getItemType();
 
     Duration getDuration();
 

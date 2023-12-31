@@ -18,6 +18,8 @@ public class CourseDay implements Item {
     // Set of 'Module or Content' instances
     private Agenda agenda;
 
+    public CourseDay() {}
+
     public String getTitle() {
         return title;
     }
@@ -40,11 +42,6 @@ public class CourseDay implements Item {
 
     public void setAgenda(Agenda agenda) {
         this.agenda = agenda;
-    }
-
-    @Override
-    public String getItemType() {
-        return CourseDay.class.getSimpleName();
     }
 
     @Override

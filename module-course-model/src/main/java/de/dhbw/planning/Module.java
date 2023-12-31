@@ -15,18 +15,12 @@ public class Module implements Item {
     // Set of 'Content' instances
     private Agenda agenda;
 
-    private Module(
-            int index,
-            String title,
-            String directory
-    ) {
+    public Module() {}
+
+    public Module(int index, String title, String directory) {
         this.index = index;
         this.title = title;
         this.directory = directory;
-    }
-
-    public static Module of(int index, String title, String directory) {
-        return new Module(index, title, directory);
     }
 
     public int getIndex() {
@@ -59,11 +53,6 @@ public class Module implements Item {
 
     public void setAgenda(Agenda agenda) {
         this.agenda = agenda;
-    }
-
-    @Override
-    public String getItemType() {
-        return Module.class.getSimpleName();
     }
 
     @Override

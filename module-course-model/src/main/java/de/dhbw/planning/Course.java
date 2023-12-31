@@ -7,24 +7,25 @@ import java.time.Duration;
 public class Course {
 
     private String title;
-    private final Semester semester;
+    private Semester semester;
 
     // Set of 'CourseDay' instances
     private Agenda agenda;
 
-    private Course(String title, Semester semester) {
+    public Course() {}
+
+    public Course(String title, Semester semester) {
         this.title = title;
         this.semester = semester;
-    }
-
-    public static Course of(String title, Semester semester) {
-        return new Course(title, semester);
     }
 
     public Semester getSemester() {
         return semester;
     }
 
+    public void setSemester(Semester semester) {
+        this.semester = semester;
+    }
 
     public String getTitle() {
         return title;

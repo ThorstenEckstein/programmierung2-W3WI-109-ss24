@@ -66,7 +66,7 @@ public class PlanningTest {
         assertNotNull(course);
 
         // pretty print for adoc
-        PlanningPrinter.prettyPrint(course);
+        PlanningPrinter.printPretty(course);
     }
 
     @Test

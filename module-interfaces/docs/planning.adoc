@@ -1,6 +1,15 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
+{module-name}:
+----
+1. Implementierung mit Interfaces
+1.1. Erzeugungsregeln
+1.2. Was kann mit Interfaces eigentlich erreicht werden?
+2. Abstrakte Klassen
+----
+
+////
 Übersicht:
 
 [cols="1h,2", grid="none"]
@@ -54,3 +63,4 @@ ifeval::[{show-timeslots} == false]
 
 |===
 endif::[]
+////

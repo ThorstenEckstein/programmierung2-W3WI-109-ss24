@@ -1,4 +1,4 @@
-include::settings.adoc[]
+include::../settings.adoc[]
 
 == Verbesserungsvorschläge & Ideen für den nächsten Kurs
 

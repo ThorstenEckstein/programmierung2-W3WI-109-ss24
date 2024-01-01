@@ -37,7 +37,31 @@
         "type": "courseDay",
         "title": "LV-Tag 2",
         "date": "05.03.2024",
-        "agenda": null
+        "agenda": {
+          "items": [
+            {
+              "type": "module",
+              "index": 1,
+              "title": "Interfaces, abstrakte Klassen",
+              "directory": "module-interfaces",
+              "agenda": null
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "completed": false
+            },
+            {
+              "type": "module",
+              "index": 2,
+              "title": "Sichtbarkeiten & Scopes, Access Modifier",
+              "directory": "module-visibility",
+              "agenda": null
+            }
+          ]
+        }
       },
       {
         "type": "courseDay",

@@ -1,6 +1,22 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
+*{module-name}*
+
+Tag 1, 10:45 - 12:15:
+
+----
+1. Klassen & Objekte (Instanzen)
+2. Test-Driven-Development (TDD)
+3. Code Generierung mit der IDE (Autocompletion, Vorschlagswesen)
+3.1. Generierung von Quellcode
+3.2. Autocompletion
+3.3. IDE-Symbolik
+4. Vererbung & Polymorphismus
+5. Referenzen
+----
+
+////
 Übersicht:
 
 [cols="1h,2", grid="none"]
@@ -37,3 +53,5 @@ ifeval::[{show-timeslots} == false]
 | * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Vererbung
 |===
 endif::[]
+////
+

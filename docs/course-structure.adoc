@@ -38,10 +38,13 @@ LV Planung:
 // Tag 1 - VOR der Pause
 include::../module-intro/docs/planning.adoc[]
 
+
 // Tag 1 - NACH der Pause
 include::../module-classes/docs/planning.adoc[]
 
 include::../module-interfaces/docs/planning.adoc[]
+
+////
 
 include::../module-operators/docs/planning.adoc[]
 

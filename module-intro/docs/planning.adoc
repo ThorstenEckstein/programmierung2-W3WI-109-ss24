@@ -1,6 +1,25 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
+*{module-name}*
+
+Tag 1, 09:15 - 10:30:
+
+----
+1. Welcome
+2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
+2.1. Kontext
+2.2. Klassenmodell
+3. IDE Setup
+3.1. Einrichtung eines lokalen Workspaces
+3.2. Java
+3.3. IDE IntelliJ
+4. Projektverwaltung mit Maven & Projektstruktur
+5. Organisation & Importierung von Java Klassen
+6. Quellcodeverwaltung mit Git und Github
+----
+
+////
 Übersicht:
 
 [cols="1h,2", grid="none"]
@@ -56,3 +75,4 @@ Herzlich willkommen!
 | * [ ] {nbsp} | {icon-theory}   | Quellcodeverwaltung mit `Git`
 |===
 endif::[]
+////

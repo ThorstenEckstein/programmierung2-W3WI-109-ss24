@@ -14,9 +14,6 @@ Tag 1, 09:15 - 10:30:
 3.1. Einrichtung eines lokalen Workspaces
 3.2. Java
 3.3. IDE IntelliJ
-4. Projektverwaltung mit Maven & Projektstruktur
-5. Organisation & Importierung von Java Klassen
-6. Quellcodeverwaltung mit Git und Github
 ----
 
 ////

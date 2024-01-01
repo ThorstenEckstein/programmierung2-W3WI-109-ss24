@@ -1,8 +1,6 @@
 package de.dhbw.demo.tdd;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 
 @SuppressWarnings("ALL")
 public class TrainObserverSecondRefactoring {

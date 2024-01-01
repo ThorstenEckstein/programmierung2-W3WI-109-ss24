@@ -3,17 +3,13 @@ include::module-settings.adoc[]
 
 *{module-name}*
 
-Tag 1, 10:45 - 12:15:
+Tag 2, 09:15 - 10:30:
 
 ----
-1. Klassen & Objekte (Instanzen)
-2. Test-Driven-Development (TDD)
-3. Code Generierung mit der IDE (Autocompletion, Vorschlagswesen)
-3.1. Generierung von Quellcode
-3.2. Autocompletion
-3.3. IDE-Symbolik
-4. Vererbung & Polymorphismus
-5. Referenzen
+1. Organisation & Importierung von Java Klassen
+2. Klassen & Objekte (Instanzen)
+3. Vererbung
+4. Polymorphismus
 ----
 
 ////

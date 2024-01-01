@@ -22,6 +22,7 @@
         <module>docs</module>
         <!-- modules -->
         <module>module-intro</module>
+        <module>module-tools-n-help</module>
         <module>module-classes</module>
         <module>module-statics</module>
         <module>module-interfaces</module>

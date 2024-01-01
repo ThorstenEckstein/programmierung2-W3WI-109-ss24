@@ -1,7 +1,10 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
-{module-name}:
+*{module-name}*
+
+Tag 2, 10:45 - 12:15:
+
 ----
 1. Implementierung mit Interfaces
 1.1. Erzeugungsregeln

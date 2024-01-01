@@ -35,14 +35,15 @@ LV Planung:
 |===
 ////
 
-// Tag 1 - VOR der Pause
+// Tag 1
 include::../module-intro/docs/planning.adoc[]
+include::../module-tools-n-help/docs/planning.adoc[]
 
-
-// Tag 1 - NACH der Pause
+// Tag 2
 include::../module-classes/docs/planning.adoc[]
-
 include::../module-interfaces/docs/planning.adoc[]
+
+// Tag 3
 
 ////
 

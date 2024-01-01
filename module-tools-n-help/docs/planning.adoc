@@ -1,0 +1,16 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+*{module-name}*
+
+Tag 1, 10:45 - 12:15:
+
+----
+1. Projektverwaltung mit Maven & Projektstruktur
+2. Quellcodeverwaltung mit Git und Github
+3. Test-Driven-Development (TDD)
+4. Generierung von Quellcode mit der IDE
+5. Autocompletion
+6. Icons & Symbole in der IDE
+7. Tipps, Tricks, Probleme & Lösungen
+----

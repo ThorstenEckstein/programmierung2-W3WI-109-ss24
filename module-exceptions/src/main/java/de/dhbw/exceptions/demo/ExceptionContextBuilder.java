@@ -5,8 +5,8 @@ import java.util.UUID;
 /**
  * This class acts like a helper class for building an exception context using predefined or convenience methods.
  * All severity levels are expressed as methods: fatal, error, warn, info, debug and trace, each for plain messages
- * or message formats with arguments to be injected into this messages (see also String.format(...) contract).
- * Additionally, clients can use the generic build() methods, with the above mentioned methods being just prefilled
+ * or message formats with arguments to be injected into these messages (see also String.format(...) contract).
+ * Additionally, clients can use the generic build() methods, with the above-mentioned methods being just prefilled
  * ones that delegate internally to these build() methods.
  */
 public class ExceptionContextBuilder {
@@ -40,7 +40,7 @@ public class ExceptionContextBuilder {
      * <li>message   : the (formatted) specified fatal error message</li>
      * </ul>
      *
-     * @param format the message format (according to String.format conventions)
+     * @param format the message format (according to String.format() conventions)
      * @param args   the message arguments
      * @return a new instance of exception context
      */
@@ -75,7 +75,7 @@ public class ExceptionContextBuilder {
      * <li>message   : the (formatted) specified error message</li>
      * </ul>
      *
-     * @param format the message format (according to String.format conventions)
+     * @param format the message format (according to String.format() conventions)
      * @param args   the message arguments
      * @return a new instance of exception context
      */
@@ -97,7 +97,7 @@ public class ExceptionContextBuilder {
      * @return a new instance of exception context
      */
     public static ExceptionContext warn(String message) {
-        return info(message, null);
+        return info(message, (Object) null);
     }
 
     /**
@@ -110,7 +110,7 @@ public class ExceptionContextBuilder {
      * <li>message   : the (formatted) specified warning message</li>
      * </ul>
      *
-     * @param format the message format (according to String.format conventions)
+     * @param format the message format (according to String.format() conventions)
      * @param args   the message arguments
      * @return a new instance of exception context
      */
@@ -132,7 +132,7 @@ public class ExceptionContextBuilder {
      * @return a new instance of exception context
      */
     public static ExceptionContext info(String message) {
-        return info(message, null);
+        return info(message, (Object) null);
     }
 
     /**
@@ -145,7 +145,7 @@ public class ExceptionContextBuilder {
      * <li>message   : the (formatted) specified info message</li>
      * </ul>
      *
-     * @param format the message format (according to String.format conventions)
+     * @param format the message format (according to String.format() conventions)
      * @param args   the message arguments
      * @return a new instance of exception context
      */
@@ -167,7 +167,7 @@ public class ExceptionContextBuilder {
      * @return a new instance of exception context
      */
     public static ExceptionContext debug(String message) {
-        return debug(message, null);
+        return debug(message, (Object) null);
     }
 
     /**
@@ -202,7 +202,7 @@ public class ExceptionContextBuilder {
      * @return a new instance of exception context
      */
     public static ExceptionContext trace(String message) {
-        return trace(message, null);
+        return trace(message, (Object) null);
     }
 
     /**
@@ -224,7 +224,7 @@ public class ExceptionContextBuilder {
     }
 
     public static ExceptionContext build(Severity severity, int code, String message) {
-        return build(severity, code, message, null);
+        return build(severity, code, message, (Object) null);
     }
 
     /**

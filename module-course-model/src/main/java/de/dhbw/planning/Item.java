@@ -23,7 +23,8 @@ public interface Item {
         Duration sum = Duration.ZERO;
         if (agenda == null) {
             System.err.printf(
-                    "WARNING: Specified agenda for '%s' is 'null', using default '%s' to calculate total duration!",
+                    "WARNING: Specified agenda for '%s' is 'null', \n"+
+                    "         Using default '%s' to calculate total duration!",
                     clazz != null ? clazz.getSimpleName() : "unknown",
                     DURATION_DEFAULT
             );

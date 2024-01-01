@@ -1,10 +1,13 @@
-package de.dhbw.planning;
+package de.dhbw.planning.print;
+
+import de.dhbw.planning.*;
+import de.dhbw.planning.Module;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.Locale;
 
-public class PlanningPrinter {
+public class SimplePrinter {
 
     private static void systemOutPrintln(Object object) {
         System.out.println(object);
@@ -108,14 +111,14 @@ public class PlanningPrinter {
         for (Item item : agenda.getItems()) {
             String _item = "n/a";
 
-            if (item instanceof Module module) {
+            if (item instanceof CourseDay courseDay) {
+                _item = toString(courseDay);
+            }
+            else if (item instanceof Module module) {
                 _item = toString(module);
             }
             else if (item instanceof Content content) {
                 _item = toString(content);
-            }
-            else if (item instanceof CourseDay courseDay) {
-                _item = toString(courseDay);
             }
             else {
                 throw new IllegalArgumentException(

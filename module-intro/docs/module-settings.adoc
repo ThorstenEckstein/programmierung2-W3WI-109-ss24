@@ -1,6 +1,6 @@
 // --- Name
 :module-name:  module-intro
-:module-title: Welcome & Setup
+:module-title: Willkommen, Einführung & Setup
 
 // --- References
 :mod-ref-src:  src/main/java/de/dhbw

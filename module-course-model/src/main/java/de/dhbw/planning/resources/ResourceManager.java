@@ -1,7 +1,7 @@
-package de.dhbw.planning;
+package de.dhbw.planning.resources;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
+import de.dhbw.planning.Course;
 
 import java.io.IOException;
 

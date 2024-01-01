@@ -1,5 +1,6 @@
 package de.dhbw.planning;
 
+import de.dhbw.planning.resources.ResourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

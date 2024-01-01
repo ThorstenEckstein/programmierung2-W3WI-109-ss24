@@ -1,4 +1,4 @@
-package de.dhbw.planning;
+package de.dhbw.planning.resources;
 
 import java.io.File;
 

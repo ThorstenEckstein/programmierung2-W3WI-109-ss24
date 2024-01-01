@@ -26,8 +26,8 @@
             {
               "type": "module",
               "index": 2,
-              "title": "Klassen, Vererbung & Polymorphismus",
-              "directory": "module-classes",
+              "title": "Tools, Themen & Hilfen",
+              "directory": "module-tools-n-help",
               "agenda": null
             }
           ]
@@ -42,8 +42,8 @@
             {
               "type": "module",
               "index": 1,
-              "title": "Interfaces, abstrakte Klassen",
-              "directory": "module-interfaces",
+              "title": "Klassen, Vererbung & Polymorphismus",
+              "directory": "module-classes",
               "agenda": null
             },
             {
@@ -56,8 +56,8 @@
             {
               "type": "module",
               "index": 2,
-              "title": "Sichtbarkeiten & Scopes, Access Modifier",
-              "directory": "module-visibility",
+              "title": "Interfaces, abstrakte Klassen",
+              "directory": "module-interfaces",
               "agenda": null
             }
           ]

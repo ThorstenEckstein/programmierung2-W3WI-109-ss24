@@ -1,5 +1,9 @@
 package de.dhbw.planning;
 
+import de.dhbw.planning.print.DeepPrinter;
+import de.dhbw.planning.print.SimplePrinter;
+import de.dhbw.planning.resources.FileResource;
+import de.dhbw.planning.resources.ResourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,7 +41,7 @@ public class PlanningTest {
         assertEquals("Programmierung II mit Java", title);
 
         // print
-        PlanningPrinter.printSimple(course);
+        SimplePrinter.printSimple(course);
     }
 
     @Test
@@ -66,7 +70,7 @@ public class PlanningTest {
         assertNotNull(course);
 
         // pretty print for adoc
-        PlanningPrinter.printPretty(course);
+        SimplePrinter.printPretty(course);
     }
 
     @Test
@@ -80,6 +84,9 @@ public class PlanningTest {
 
         // then
         assertNotNull(course);
+
+        // pretty print for adoc
+        DeepPrinter.printPretty(course);
     }
 
     @Test
@@ -179,7 +186,7 @@ public class PlanningTest {
         assertEquals("PT6H", duration.toString());
 
         // print
-        PlanningPrinter.printSimple(course);
+        SimplePrinter.printSimple(course);
     }
 
     /*
@@ -199,7 +206,7 @@ public class PlanningTest {
         assertEquals("Day 1", title);
 
         // print
-        PlanningPrinter.printSimple(courseDay);
+        SimplePrinter.printSimple(courseDay);
     }
 
     @Test
@@ -224,7 +231,7 @@ public class PlanningTest {
         assertEquals("Day 1", title);
 
         // print
-        PlanningPrinter.printSimple(courseDay);
+        SimplePrinter.printSimple(courseDay);
     }
 
     @Test
@@ -266,7 +273,7 @@ public class PlanningTest {
         assertEquals("module-1", directory);
 
         // print
-        PlanningPrinter.printSimple(module);
+        SimplePrinter.printSimple(module);
     }
 
     @Test
@@ -286,7 +293,7 @@ public class PlanningTest {
         assertEquals(5, module.getAgenda().getItems().size());
 
         // print
-        PlanningPrinter.printSimple(module);
+        SimplePrinter.printSimple(module);
     }
 
     @Test
@@ -323,7 +330,7 @@ public class PlanningTest {
         assertEquals(ContentType.Unknown, contentType);
 
         // print
-        PlanningPrinter.printSimple(content);
+        SimplePrinter.printSimple(content);
     }
 
     @Test

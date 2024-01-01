@@ -1,1 +1,74 @@
-{"title":"Programmierung II mit Java","semester":"WS24","agenda":{"items":[{"type":"courseDay","title":"Day 1","date":"07.02.2024","agenda":{"items":[{"type":"module","index":1,"title":"Modul 1","directory":"module-1","agenda":{"items":[{"type":"content","contentType":"Welcome","description":"Herzlich Willkommen!","duration":"PT30M","completed":false},{"type":"content","contentType":"Setup","description":"Technisches IDE Setup","duration":"PT30M","completed":false}]}},{"type":"content","contentType":"Break","description":"Pause 1","duration":"PT15M","completed":false},{"type":"module","index":2,"title":"Modul 2","directory":"module-2","agenda":{"items":[{"type":"content","contentType":"Topic","description":"Thema/Inhalt 'Klassen & Vererbung'","duration":"PT45M","completed":false},{"type":"content","contentType":"Topic","description":"Thema/Inhalt 'Polymorphismus'","duration":"PT45M","completed":false}]}}]}}]}}
+{
+  "title": "Programmierung II mit Java",
+  "semester": "WS24",
+  "agenda": {
+    "items": [
+      {
+        "type": "courseDay",
+        "title": "Day 1",
+        "date": "07.02.2024",
+        "agenda": {
+          "items": [
+            {
+              "type": "module",
+              "index": 1,
+              "title": "Modul 1",
+              "directory": "module-1",
+              "duration": "PT1H",
+              "agenda": {
+                "items": [
+                  {
+                    "type": "content",
+                    "contentType": "Welcome",
+                    "description": "Herzlich Willkommen!",
+                    "duration": "PT30M",
+                    "completed": false
+                  },
+                  {
+                    "type": "content",
+                    "contentType": "Setup",
+                    "description": "Technisches IDE Setup",
+                    "duration": "PT30M",
+                    "completed": false
+                  }
+                ]
+              }
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause 1",
+              "duration": "PT15M",
+              "completed": false
+            },
+            {
+              "type": "module",
+              "index": 2,
+              "title": "Modul 2",
+              "directory": "module-2",
+              "duration": "PT1H30M",
+              "agenda": {
+                "items": [
+                  {
+                    "type": "content",
+                    "contentType": "Topic",
+                    "description": "Thema/Inhalt 'Klassen & Vererbung'",
+                    "duration": "PT45M",
+                    "completed": false
+                  },
+                  {
+                    "type": "content",
+                    "contentType": "Topic",
+                    "description": "Thema/Inhalt 'Polymorphismus'",
+                    "duration": "PT45M",
+                    "completed": false
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -65,7 +65,9 @@ public class MockFactory {
         return new Module(
                 counter,
                 "Modul " + counter,
-                "module-" + counter);
+                "module-" + counter,
+                null
+        );
     }
 
     public static Module mockModule(int counter, Content... agendaItems) {

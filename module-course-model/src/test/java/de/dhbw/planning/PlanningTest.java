@@ -137,7 +137,7 @@ public class PlanningTest {
         Course course = mockCourse("Programmierung II mit Java", Semester.WS24, day1);
 
         // then - dump to json
-        resourceManager.writeCourse(FileResource.MockModel_Input, course);
+        resourceManager.writeCourse(FileResource.MockModel_Output, course);
     }
 
     @Test

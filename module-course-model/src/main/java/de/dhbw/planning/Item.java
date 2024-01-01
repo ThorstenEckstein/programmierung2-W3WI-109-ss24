@@ -20,7 +20,7 @@ public interface Item {
     Duration getDuration();
 
     static Duration calculateTotalDuration(Agenda agenda, Class<?> clazz) {
-        Duration sum = Duration.ZERO;
+        Duration total = Duration.ZERO;
         if (agenda == null) {
             System.err.printf(
                     "WARNING: Specified agenda for '%s' is 'null', \n"+
@@ -28,12 +28,13 @@ public interface Item {
                     clazz != null ? clazz.getSimpleName() : "unknown",
                     DURATION_DEFAULT
             );
-            return sum;
+            return total;
         }
         for (Item item : agenda.getItems()) {
-            sum = sum.plus(item.getDuration());
+            Duration itemDuration = item.getDuration();
+            total = total.plus(itemDuration);
         }
-        return sum;
+        return total;
     }
 
 

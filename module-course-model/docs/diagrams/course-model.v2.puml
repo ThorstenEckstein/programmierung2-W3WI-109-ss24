@@ -3,13 +3,13 @@
 
 skinparam groupInheritance 1
 
-scale 0.8
+scale 1.0
 
 class Course {
-  Agenda agenda
+  Agenda agenda;
 }
 class Agenda {
-  LinkedHashSet<Item> items
+  LinkedHashSet<Item> items;
 }
 interface Item {
   Duration calculateDuration();
@@ -20,7 +20,9 @@ abstract class BaseItem {
 class CourseDay {
   LocalDate date
 }
-class Module {}
+class Module {
+  LocalDate date
+}
 class Content {
   enum ContentType type
 }

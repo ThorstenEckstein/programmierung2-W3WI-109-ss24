@@ -1,0 +1,4 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+*{module-name}*

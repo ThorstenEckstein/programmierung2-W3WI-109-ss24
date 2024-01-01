@@ -36,6 +36,8 @@
         <module>module-loops</module>
         <module>module-semantics</module>
         <module>module-course-model</module>
+
+        <module>module-archive</module>
     </modules>
 
     <!--

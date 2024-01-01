@@ -25,7 +25,7 @@ public class PlanningTest {
      */
 
     @Test
-    @DisplayName("[Course] LV ohne Agenda")
+    @DisplayName("[Course] Create Mock-Course without agenda")
     public void canCreateCourseWithAgenda() {
         // given
         Course course = mockCourse("Programmierung II mit Java", Semester.WS24);
@@ -41,7 +41,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Einlesen von Daten einer (Beispiel-) LV in das Objektmodell")
+    @DisplayName("[Course] Read Example-Course + Days + Modules + Contents")
     public void canReadCourseJson() throws IOException {
         // given
         Course course;
@@ -54,7 +54,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Einlesen der echten LV-Daten für WS 24")
+    @DisplayName("[Course] Read Course + CourseDays")
     public void canReadRealCourseWithDaysJson() throws IOException {
         // given
         Course course;
@@ -70,7 +70,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Einlesen der echten LV-Daten für WS 24")
+    @DisplayName("[Course] Read Course + Days + Modules")
     public void canReadRealCourseWithDaysAndModulesJson() throws IOException {
         // given
         Course course;
@@ -83,7 +83,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Einlesen und direkt wieder Schreiben einer LV")
+    @DisplayName("[Course] Read + Write Complete Course")
     public void canReadAndWriteCourseJson() throws IOException {
         // given
         Course course;
@@ -99,7 +99,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Schreiben einer LV in eine json Datei")
+    @DisplayName("[Course] Write Mocked Course (1 Day)")
     public void canWriteCourseJson() throws IOException {
         // given
 
@@ -141,7 +141,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Course] Dauer einer LV")
+    @DisplayName("[Course] Calculate Mocked Course Duration")
     public void canGetCourseDuration() throws IOException {
         // given
 
@@ -187,7 +187,7 @@ public class PlanningTest {
      */
 
     @Test
-    @DisplayName("[CourseDay] LV-Tag ohne Agenda")
+    @DisplayName("[CourseDay] Mock CourseDay without agenda")
     public void canCreateCourseDayWithoutAgenda() {
         // given
         CourseDay courseDay = mockCourseDay(1);
@@ -203,7 +203,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[CourseDay] LV-Tag mit Agenda")
+    @DisplayName("[CourseDay] Mock CourseDay with module agenda")
     public void canCreateCourseDayWithAgenda() {
         // given
         Content welcome      = mockWelcome();
@@ -228,7 +228,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[CourseDay] Dauer eines LV-Tages")
+    @DisplayName("[CourseDay] Calculate Mocked CourseDay Duration")
     public void canGetCourseDayDuration() {
         // given
         Content welcome      = mockWelcome();
@@ -254,7 +254,7 @@ public class PlanningTest {
      */
 
     @Test
-    @DisplayName("[Module] Modul ohne Agenda")
+    @DisplayName("[Module] Create Mocked Module without agenda")
     public void canCreateModuleWithoutAgenda() {
         // given
         Module module = mockModule(1);
@@ -270,7 +270,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Module] Modul mit Agenda")
+    @DisplayName("[Module] Create Mocked Module with agenda")
     public void canCreateModuleWithAgenda() {
         // given
         Content welcome      = mockWelcome();
@@ -290,7 +290,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Module] Dauer eines Moduls")
+    @DisplayName("[Module] Calculate Mocked Module Duration")
     public void canGetModuleDuration() {
         // given
         Content welcome      = mockWelcome();
@@ -311,7 +311,7 @@ public class PlanningTest {
      */
 
     @Test
-    @DisplayName("[Content] Inhaltselement (Default)")
+    @DisplayName("[Content] Create Mocked Content (Default)")
     public void canCreateContent() {
         // given
         Content content = mockContent(1);
@@ -327,7 +327,7 @@ public class PlanningTest {
     }
 
     @Test
-    @DisplayName("[Content] Dauer eines Inhaltselements (Default)")
+    @DisplayName("[Content] Calculate Mocked Content Duration (Default)")
     public void canGetContentDuration() {
         // given
         Content content = mockContent(1);

@@ -1,0 +1,13 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+*{module-name}*
+
+Tag 3, 09:15 - 10:30:
+
+----
+1. Datentypen
+2. Typumwandlungen
+2.1. Implizite Typumwandlung
+2.2. Explizite Typumwandlung (Casting)
+----

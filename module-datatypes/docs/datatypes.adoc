@@ -1,0 +1,79 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+
+// table of contents
+:toc:
+
+
+// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
+ifeval::[{show-structure} == true]
+include::planning.adoc[]
+endif::[]
+//
+
+
+== Datentypen
+
+Übersicht über die Datentypen in Java:
+
+image::images/datentypen.png[width="75%", align="center"]
+
+Quelle: -> https://de.wikibooks.org/wiki/Java_Standard:_Primitive_Datentypen[Wikibooks: Datatypes]
+
+Quelle: -> https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html[Oracle: Datatypes]
+
+
+== Typumwandlungen
+
+*Type-Casting* mit primitiven Datentypen
+
+Man unterscheidet zwischen einer *expliziten* und einer *impliziten* Typumwandlung.
+
+image::images/type-casting.png[width="75%", align="center", title="Widening & Narrowing"]
+
+CAUTION: _Bei der Umwandlung in "kleinere" Datentypen können Fehler auftreten (Informationsverlust), es findet das sogenannte "Narrowing" automatisch statt. Es entsteht zwar kein Compiler-Fehler, aber z.B. die Zahl wird verfälscht (-> https://docs.oracle.com/javase/specs/jls/se17/html/jls-5.html#jls-5.1.3[Narrowing])_
+
+
+=== Implizite Typumwandlung
+
+Die implizite Typumwandlung findet automatisch bei der Zuweisung statt. Dies geht jedoch nur, wenn ein niederwertiger Datentyp in einen höher wertigeren Datentypen umgewandelt wird, also z.B. vom Datentyp `int` in den Datentyp `long`:
+
+[, java]
+----
+int wert1 = 10;
+long wert2 = 30;
+wert2 = wert1; // automatische Umwandlung
+----
+
+=== Explizite Typumwandlung (Casting)
+
+Die explizite Umwandlung erfolgt durch den sogenannten `cast`-Operator mit runden Klammern. Hier wird von einem höher wertigeren Datentyp in einen nieder wertigen Datentypen umgewandelt. In welchen Datentyp umgewandelt werden soll, muss bei dem cast Operator explizit angegeben werden.
+
+[, java]
+----
+int wert1 = 10;
+float wert2 = 30.5f;
+wert1 = (int) wert2; // Umwandlung per 'cast'
+----
+
+*Demo/Beispiele*:
+
+ -> src/test/java/de/dhbw/demo/datatypes/DatatypesDemoTest.java
+
+*Übungen*:
+
+*Übung 1* zu *Typumwandlung* in
+
+[subs=normal]
+ -> src/test/java/de/dhbw/exercise/datatypes/DatatypesExerciseTest.java
+
+Schreibe je einen Test für
+
+a. Gegeben `char c = '1'` -> Umwandlung in `int`
+b. Gegeben `int i = 127` -> Umwandlung in `byte`
+
+und prüfe das Ergebnis, also den erwarteten Wert, jeweils mithilfe der Assertions-Methode `assertEquals(<expected>, <actual>)`.
+
+

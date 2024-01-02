@@ -1,21 +1,10 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
-Übersicht:
+*{module-name}*
 
-[cols="1h,2", grid="none"]
-|===
+Tag 3, 10:45 - 12:15:
 
-| Modultitel       | {module-title}
-| Modulverzeichnis | {icon-dir} `{module-name}`
-|===
-
-Modulstruktur:
-
-ifeval::[{show-timeslots} == true]
-
-endif::[]
-
-ifeval::[{show-timeslots} == false]
-
-endif::[]
+----
+1. Sichtbarkeiten & Scopes: Access Modifier
+----

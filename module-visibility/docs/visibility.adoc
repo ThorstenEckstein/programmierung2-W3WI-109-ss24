@@ -58,5 +58,3 @@ include::{mod-lnk-test}/demo/VisibilityDemoTest.java[tags="visibility"]
 to be specified 
 
 
-== Referenzen
-

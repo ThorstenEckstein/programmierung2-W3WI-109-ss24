@@ -6,10 +6,11 @@ include::module-settings.adoc[]
 Tag 2, 09:15 - 10:30:
 
 ----
-1. Organisation & Importierung von Java Klassen
-2. Klassen & Objekte (Instanzen)
+1. Organisation & Nutzung von Java Klassen
+2. Klassen & Instanzen
 3. Vererbung
-4. Polymorphismus
+4. Überladen & Übersteuern (Überschreiben)
+5. Polymorphismus
 ----
 
 ////

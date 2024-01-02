@@ -44,6 +44,9 @@ include::../module-classes/docs/planning.adoc[]
 include::../module-interfaces/docs/planning.adoc[]
 
 // Tag 3
+include::../module-datatypes/docs/planning.adoc[]
+include::../module-visibility/docs/planning.adoc[]
+
 
 ////
 

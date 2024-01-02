@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+scale 0.6
+
+interface Display {
+  update(index, row)
+}
+class DefaultDisplay {
+  update(index, row)
+}
+class PlatformDisplay {
+  update(index, row)
+}
+
+Display         <..   DefaultDisplay
+DefaultDisplay  <--   PlatformDisplay
+
+@enduml

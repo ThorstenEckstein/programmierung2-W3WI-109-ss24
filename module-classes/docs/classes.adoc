@@ -209,6 +209,38 @@ include::diagrams/inheritance.puml[]
  -> {mod-ref-test}/demo/inheritance/InheritanceTest.java
 
 
+== Überladen & Übersteuern (Überschreiben)
+
+[source,java,title="Beispiel Überladen von Methoden"]
+----
+include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
+----
+
+[plantuml, "overrides", png, float="left"]
+....
+include::diagrams/override.puml[]
+....
+
+[source,java,title="Beispiel Übersteuern von Methoden"]
+----
+include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
+----
+
+{nl}
+{nl}
+{nl}
+
+Die zugehörige Annotation im Code ist
+
+ @Override
+
+Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
+
+Die zugehörigen *Unit-Tests* finden sich hier:
+
+ -> src/test/java/de/dhbw/demo/OverloadAndOverrideTest.java
+
+
 == Polymorphismus
 
 Die Methoden einer Klasse können der sogenannten *Polymorphie* unterliegen. Polymorphie ist griechisch und bedeutet Vielgestaltigkeit. Von Polymorphie spricht man in Java beispielsweise, wenn zwei Klassen denselben Methodennamen verwenden, aber die Implementierung der Methoden sich unterscheidet.

@@ -9,62 +9,112 @@ import java.util.Locale;
 
 public class DeepPrinter {
 
-    private static void systemOutPrintln(Object object) {
+    private static final String I3 = "   ";
+    private static final String I6 = "      ";
+    private static final String I9 = "         ";
+
+    private static void print(Object object) {
         System.out.println(object);
     }
 
     public static void printPretty(Course course) {
-        if(course == null) { throw new IllegalArgumentException("Course could not be printed, it is null!"); }
-        String _course = toString(course);
-        systemOutPrintln(_course);
+        // print base data about LV
+        print(toString(course));
+
+        // course agenda
+        Agenda courseAgenda = course.getAgenda();
+        if (courseAgenda != null) {
+
+            for(Item courseAgendaItem: courseAgenda.getItems()) {
+                CourseDay courseDay = (CourseDay) courseAgendaItem;
+
+                // print course day
+                print(toString(courseDay));
+
+                // course day agenda
+                Agenda courseDayAgenda = courseDay.getAgenda();
+                if (courseDayAgenda != null) {
+                    int courseDayItemIndex = 1;
+
+                    for(Item courseDayAgendaItem : courseDayAgenda.getItems()) {
+                        String _courseDayAgendaItem = null;
+
+                        // course day agenda item is one of 2 types
+
+                        // module
+                        if (courseDayAgendaItem instanceof Module module) {
+                            _courseDayAgendaItem = toString(courseDayItemIndex, module);
+
+                            // module agenda
+                            Agenda moduleAgenda = module.getAgenda();
+                            if (moduleAgenda != null) {
+                                int contentIndex = 1;
+
+                                for (Item moduleAgendaItem : moduleAgenda.getItems()) {
+                                    Content content = (Content) moduleAgendaItem;
+
+                                    // print content
+                                    print(toString(contentIndex, I9, content));
+                                }
+                            }
+
+                        }
+
+                        // content
+                        if (courseDayAgendaItem instanceof Content content) {
+                            _courseDayAgendaItem = toString(courseDayItemIndex, I6, content);
+                        }
+
+                        // print course day
+                        print(_courseDayAgendaItem);
+                        // increase index
+                        courseDayItemIndex++;
+                    }
+                }
+            }
+        }
     }
 
     private static String toString(Course course) {
         return """
-                LV             : %s
-                Semester       : %s
-                Agenda         :
-                %s
-                """.formatted(
+                LV       : %s
+                Semester : %s
+                
+                Agenda:"""
+                .formatted(
                 course.getTitle(),
-                course.getSemester(),
-                toString(course.getAgenda())
+                course.getSemester()
         );
     }
 
     private static String toString(CourseDay courseDay) {
-        return """
-                [%s] %s: %s"
-                %s
-                """.formatted(
+        return String.format(
+                "\n%s[%s] %s: %s",
+                I3,
                 CourseDay.class.getSimpleName(),
                 toString(courseDay.getDate()),
-                courseDay.getTitle(),
-                toString(courseDay.getAgenda())
+                courseDay.getTitle()
         );
     }
 
-    private static String toString(Module module) {
-        return """
-                [%s] %s. %s (%s)
-                %s
-                """.formatted(
-                Module.class.getSimpleName(),
-                module.getIndex(),
-                module.getTitle(),
-                module.getDirectory(),
-                toString(module.getAgenda())
-        );
-    }
-
-    private static String toString(Content content) {
+    private static String toString(int index, Module module) {
         return String.format(
-                "\n[%s|%s] %s, %s (completed=%s)",
-                Content.class.getSimpleName(),
+                "      %s. [%s] %s (%s)",
+                index,
+                Module.class.getSimpleName(),
+                module.getTitle(),
+                module.getDirectory()
+        );
+    }
+
+    private static String toString(int index, String indention, Content content) {
+        return String.format(
+                "%s%s. [%s ] %s, %s",
+                indention,
+                index,
                 content.getContentType(),
                 content.getDuration(),
-                content.getDescription(),
-                content.isCompleted()
+                content.getDescription()
         );
     }
 
@@ -74,34 +124,5 @@ public class DeepPrinter {
                 Constants.DEFAULT_DATE_FORMATTER.format(date),
                 "09:15-12:15"
         );
-    }
-
-    private static String toString(Agenda agenda) {
-        if (agenda != null) {
-            StringBuilder _agenda = new StringBuilder();
-
-            for (Item item : agenda.getItems()) {
-                String _item = "n/a";
-
-                if (item instanceof CourseDay courseDay) {
-                    _item = toString(courseDay);
-                }
-                else if (item instanceof Module module) {
-                    _item = toString(module);
-                }
-                else if (item instanceof Content content) {
-                    _item = toString(content);
-                }
-                else {
-                    throw new IllegalArgumentException(
-                            "Agenda items of type '"+item.getClass().getSimpleName()+"' not yet supported!");
-                }
-                _agenda.append(_item);
-            }
-            return _agenda.toString();
-        }
-        else {
-            return "WARNING: Agenda is null!";
-        }
     }
 }

@@ -14,30 +14,36 @@
 
     <name>AdvancedProgrammingII</name>
     <description>DHBW Mannheim :: LV Advanced Programming in Java (II)</description>
-    <url>https://github.com/ThorstenEckstein/dhbw-advanced-programming</url>
+    <url>https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24</url>
 
     <modules>
+
         <!-- shared parts of this project -->
         <module>commons</module>
         <module>docs</module>
-        <!-- modules -->
+
+        <!-- mandatory modules in order -->
         <module>module-intro</module>
         <module>module-tools-n-help</module>
         <module>module-classes</module>
-        <module>module-statics</module>
         <module>module-interfaces</module>
+        <module>module-datatypes</module>
         <module>module-visibility</module>
         <module>module-operators</module>
-        <module>module-databases</module>
+        <module>module-loops</module>
         <module>module-enums</module>
         <module>module-exceptions</module>
         <module>module-funcprogramming</module>
         <module>module-generics</module>
         <module>module-javadoc</module>
-        <module>module-loops</module>
         <module>module-semantics</module>
+
+        <!-- candidates for optional modules -->
+        <module>module-statics</module>
+        <module>module-databases</module>
         <module>module-course-model</module>
 
+        <!-- module to take backup stuff, maybe used later -->
         <module>module-archive</module>
     </modules>
 

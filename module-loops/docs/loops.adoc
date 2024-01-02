@@ -11,7 +11,7 @@ include::../../docs/settings.adoc[]
 
 :module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
 :module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------
 
 :toc:
 
@@ -34,7 +34,7 @@ Before the first iteration, the loop counter gets initialized, then the conditio
 
 The *syntax* of the for loop is:
 
-[source, java]
+[, java]
 ----
 for (Initialization; Boolean-Expression; Step) {
    statement;
@@ -43,7 +43,7 @@ for (Initialization; Boolean-Expression; Step) {
 
 Let's see a simple example:
 
-[source, java]
+[, java]
 ----
 for (int i = 0; i < 5; i++) {
    System.out.println("simple for loop: i = " + i);
@@ -52,7 +52,7 @@ for (int i = 0; i < 5; i++) {
 
 The initialization, Boolean-expression, and step used in for statements are optional. Here's an example of an infinite for loop:
 
-[source, java]
+[, java]
 ----
 for ( ; ; ) {
     // infinite for loop
@@ -65,7 +65,7 @@ Since Java 5, there is a second kind of for loop called the *enhanced for* which
 
 The syntax of the enhanced for loop is:
 
-[source, java]
+[, java]
 ----
 for(Type item : items) {
     statement;
@@ -81,7 +81,7 @@ That means, for each element in items, assign the element to the item variable a
 
 _Enhanced Loop_ example:
 
-[source, java]
+[, java]
 ----
 int[] intArr = { 0,1,2,3,4 };
 
@@ -95,7 +95,7 @@ We can use it to iterate over various Java data structures:
 
 Given a `List<String> list` object – we can iterate by:
 
-[source, java]
+[, java]
 ----
 for (String item : list) {
     System.out.println(item);
@@ -104,7 +104,7 @@ for (String item : list) {
 
 *Loop with Lamdba* (functional interface)
 
-[source, java]
+[, java]
 ----
 List<String> letters = new ArrayList<>();
 
@@ -124,7 +124,7 @@ The while loop is one of Java's fundamental loop statements. It repeats a statem
 
 The *syntax* of the while loop is:
 
-[source, java]
+[, java]
 ----
 while (Boolean-expression) {
     statement;
@@ -135,7 +135,7 @@ The loop's Boolean-expression is evaluated before the first iteration of the loo
 
 A simple example:
 
-[source, java]
+[, java]
 ----
 int i = 0;
 while (i < 5) {
@@ -147,7 +147,7 @@ while (i < 5) {
 
 The do-while loop works just like the while loop except for the fact that the first condition evaluation happens after the first iteration of the loop:
 
-[source, java]
+[, java]
 ----
 do {
    statement;
@@ -156,7 +156,7 @@ do {
 
 A simple example:
 
-[source, java]
+[, java]
 ----
 int i = 0;
 do {

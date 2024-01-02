@@ -1,0 +1,10 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+
+*{module-name}*
+
+Tag ?, hh:mm - hh:mm:
+
+----
+...
+----

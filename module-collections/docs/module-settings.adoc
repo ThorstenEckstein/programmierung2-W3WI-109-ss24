@@ -1,5 +1,6 @@
 // --- Name
-:module-name:        module-operators
+:module-name:  module-collections
+:module-title: Collections Framework & API
 
 // --- References
 :mod-ref-src:  src/main/java/de/dhbw

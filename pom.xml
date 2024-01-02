@@ -25,12 +25,15 @@
         <!-- mandatory modules in order -->
         <module>module-intro</module>
         <module>module-tools-n-help</module>
+
         <module>module-classes</module>
         <module>module-interfaces</module>
+
         <module>module-datatypes</module>
         <module>module-visibility</module>
-        <module>module-operators</module>
+
         <module>module-loops</module>
+        <module>module-collections</module>
         <module>module-enums</module>
         <module>module-exceptions</module>
         <module>module-funcprogramming</module>

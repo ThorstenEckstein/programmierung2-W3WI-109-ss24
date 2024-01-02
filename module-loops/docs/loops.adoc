@@ -1,32 +1,32 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: loops
 
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// -------------------------------------------------------------------
-
+// table of contents
 :toc:
 
-== Java Loops
+
+// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
+ifeval::[{show-structure} == true]
+include::planning.adoc[]
+endif::[]
+//
 
 
-=== Preparation
+== Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
 
-include::../../docs/includes/update-project.adoc[]
+=== `if - else-if - else`
+
+todo
 
 
-=== Theorie & Einführung
+=== `switch case`
+
+todo
 
 
-==== `for (each)`
+=== `for (each)`
 
 A for loop is a control structure that allows to repeat certain operations by incrementing and evaluating a loop counter.
 
@@ -116,7 +116,7 @@ letters.forEach(letter -> System.out.println(letter));
 ----
 
 
-==== `(do) while`
+=== `(do) while`
 
 *while*
 
@@ -165,48 +165,29 @@ do {
 ----
 
 
-
-=== Demonstrationen
+*Demo*:
 
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
-[subs="normal"]
- {module-demo-path-tests}/LoopTests.java
-
-Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
-
-[subs="normal"]
- {module-demo-path-sources}/*.java
+[subs=normal]
+ -> {mod-ref-test}/loops/demo/LoopTests.java
 
 
-=== Exercises
+*Übungen*:
 
-Nutze folgendes Package für deine *Unit-Tests*:
-
-[subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
-
-Die im Test benutzten *Implementierungen* gehören in das Package:
-
-[subs="normal"]
- {module-exercises-path-sources}/*.java
-
-
-[[loop-exercise-1]]
-*Übung 1:*
+*Übung 1*:
 
 Gegeben eine Liste mit Zahlen.
 Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` (IntelliJ `fori`) Schleife und teste das Ergebnis mithilfe von `assertEquals`.
 
 _Optional_: Wandele die for Schleife in eine "enhanced for" Schleife um.
 
-[[loop-exercise-2]]
-*Übung 2:*
+*Übung 2*:
 
 Gegeben ein Startwert von `10`. Implementiere einen _CountDown_ mithilfe einer `while` Schleife, die den CountDown solange runterzählt, bis die `0` erreicht ist und dann abbricht.
 
 
-=== References
+== References
 
 See also:
 

@@ -1,10 +1,6 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
-*{module-name}*
-
-Tag 2, 09:15 - 10:30:
-
 ----
 1. Organisation & Nutzung von Java Klassen
 2. Klassen & Instanzen
@@ -12,43 +8,3 @@ Tag 2, 09:15 - 10:30:
 4. Überladen & Übersteuern (Überschreiben)
 5. Polymorphismus
 ----
-
-////
-Übersicht:
-
-[cols="1h,2", grid="none"]
-|===
-
-| Modultitel       | {module-title}
-| Modulverzeichnis | {icon-dir} `{module-name}`
-|===
-
-Modulstruktur:
-
-ifeval::[{show-timeslots} == true]
-[cols="^1a,<2,^1,<6a", grid=rows]
-|===
-| Done         | Zeit          | Typ             | Inhalt, Kommentar
-
-| * [ ] {nbsp} | 10:45 - 11:15 | {icon-topic}    | *Klassen & Objekte* (Instanzen)
-| * [ ] {nbsp} | 11:15 - 11:30 | {icon-theory}   | Test-Driven-Development (TDD)
-| * [ ] {nbsp} | 11:30 - 11:45 | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
-| * [ ] {nbsp} | 11:45 - 12:00 | {icon-topic}    | *Vererbung* & Polymorphismus
-| * [ ] {nbsp} | 12:00 - 12:15 | {icon-exercise} | _Übung 2_: Vererbung
-|===
-endif::[]
-
-ifeval::[{show-timeslots} == false]
-[cols="^1a,^1,<8a", grid=rows]
-|===
-| Done         | Typ             | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {icon-topic}    | *Klassen & Objekte* (Instanzen)
-| * [ ] {nbsp} | {icon-theory}   | Test-Driven-Development (TDD)
-| * [ ] {nbsp} | {icon-exercise} | _Übung 1_: Klassen, Instanzen, Felder & Methoden
-| * [ ] {nbsp} | {icon-topic}    | *Vererbung* in Klassenhierarchien
-| * [ ] {nbsp} | {icon-exercise} | _Übung 2_: Vererbung
-|===
-endif::[]
-////
-

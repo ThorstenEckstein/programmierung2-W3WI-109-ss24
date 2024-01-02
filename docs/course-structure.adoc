@@ -1,51 +1,67 @@
 include::settings.adoc[]
 
-:toc:
-
 = Programmierung II mit Java
 
 ////
- LV-Tag: 09:15 - 12:15 (3h)
-
- LV-Tag  Datum       Tagesordnung    Modul
- 1       19.02.24    Vor der Pause   module-intro
- 1       19.02.24    Nach der Pause  module-classes
-
-
  TODO:
   (1) Element "Zwischenprüfung" einbauen
   (2) Modul "Datenbanken" einbauen
 ////
 
-////
-LV Planung:
-
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| LV | Plandatum | Modul | Optionale Module
-
-| 1
-| Di., 19.02.24
-| module-intro
-| -
-
-| 2
-| Di., 26.02.24
-| module-classes
-| -
+| Tag #1# | 09:15 - 10:30 | *module-intro*
 |===
-////
 
-// Tag 1
 include::../module-intro/docs/planning.adoc[]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #1# | 10:45 - 12:15 | *module-tools-n-help*
+|===
+
 include::../module-tools-n-help/docs/planning.adoc[]
 
-// Tag 2
+{nl}
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #2# | 09:15 - 10:30 | *module-classes*
+|===
+
 include::../module-classes/docs/planning.adoc[]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #2# | 10:45 - 12:15 | *module-interfaces*
+|===
+
 include::../module-interfaces/docs/planning.adoc[]
 
-// Tag 3
+{nl}
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #3# | 09:15 - 10:05 | *module-datatypes*
+|===
+
 include::../module-datatypes/docs/planning.adoc[]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #3# | 10:15 - 11:05 | *module-loops*
+|===
+
+include::../module-loops/docs/planning.adoc[]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #3# | 11:15 - 12:15 | *module-visibility*
+|===
+
 include::../module-visibility/docs/planning.adoc[]
+
+{nl}
 
 
 ////
@@ -172,4 +188,22 @@ include::../module-operators/docs/planning.adoc[]
 | * [ ] {nbsp} | Informationen zur Abschlussprüfung
 |===
 
+////
+
+////
+LV Planung:
+
+|===
+| LV | Plandatum | Modul | Optionale Module
+
+| 1
+| Di., 19.02.24
+| module-intro
+| -
+
+| 2
+| Di., 26.02.24
+| module-classes
+| -
+|===
 ////

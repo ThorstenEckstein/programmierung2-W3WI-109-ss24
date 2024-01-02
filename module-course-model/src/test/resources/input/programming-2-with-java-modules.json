@@ -67,7 +67,45 @@
         "type": "courseDay",
         "title": "LV-Tag 3",
         "date": "12.03.2024",
-        "agenda": null
+        "agenda": {
+          "items": [
+            {
+              "type": "module",
+              "index": 1,
+              "title": "Datentypen & Typumwandlung",
+              "directory": "module-datatypes",
+              "agenda": null
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause 1",
+              "duration": "PT10M",
+              "completed": false
+            },
+            {
+              "type": "module",
+              "index": 2,
+              "title": "Sichtbarkeiten & Scopes: Access Modifier",
+              "directory": "module-visibility",
+              "agenda": null
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause 2",
+              "duration": "PT10M",
+              "completed": false
+            },
+            {
+              "type": "module",
+              "index": 3,
+              "title": "Schleifen, Kontrollstrukturen",
+              "directory": "module-loops",
+              "agenda": null
+            }
+          ]
+        }
       },
       {
         "type": "courseDay",

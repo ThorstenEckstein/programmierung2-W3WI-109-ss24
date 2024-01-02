@@ -1,10 +1,6 @@
 include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 
-*{module-name}*
-
-Tag 3, 10:45 - 12:15:
-
 ----
 1. Sichtbarkeiten & Scopes: Access Modifier
 ----

@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalTime;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -150,12 +151,30 @@ public class PlanningWithContentsTest {
     public void canScheduleCourseDayEndTime() throws IOException {
         // given
         Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
-        List<Item> items = course.getAgenda().getItems();
+        CourseDay courseDay = (CourseDay) course.getAgenda().getItems().stream().findFirst().get();
+        List<Item> items = courseDay.getAgenda().getItems();
+
         AgendaScheduler scheduler = new AgendaScheduler(course.getAgenda());
+
         LocalTime startTime = LocalTime.of(9,15);
+        LocalTime endTime = null;
+        ((Content)items.get(0)).setStartTime(startTime);
 
         // when
-        LocalTime endTime = scheduler.calculateEndTime(startTime, items);
+        for (int i = 0; i < items.size(); i++) {
+
+            Content content = (Content)items.get(i);
+            Content next = (Content)items.get(i+1);
+            endTime = content.getEndTime();
+            next.setStartTime(endTime);
+
+            System.out.printf(
+                    "\n[%s] %s + %s = %s",
+                    content.getContentType(),
+                    content.getStartTime(),
+                    content.getDuration(),
+                    endTime);
+        }
 
         // then
         assertEquals("12:00", endTime.toString());

@@ -1,9 +1,11 @@
 package de.dhbw.planning;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Objects;
 
 @JsonPropertyOrder({ "itemType", "contentType", "description", "duration", "module", "completed" })
@@ -14,6 +16,8 @@ public class Content implements Item {
 
     // Inhaltsbeschreibung, Kommentar
     private String description;
+
+    private LocalTime startTime;
 
     // Zeitraum, Dauer
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -34,12 +38,17 @@ public class Content implements Item {
         this.completed = completed;
     }
 
-    public boolean isCompleted() {
-        return completed;
+    public LocalTime getStartTime() {
+        return startTime;
     }
 
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    @JsonIgnore
+    public LocalTime getEndTime() {
+        return this.getStartTime().plus(this.getDuration());
     }
 
     public Duration getDuration() {
@@ -74,11 +83,20 @@ public class Content implements Item {
         this.description = description;
     }
 
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
     @Override
     public String toString() {
         return "Content{" +
                 "contentType=" + contentType +
                 ", description='" + description + '\'' +
+                ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", module=" + module +
                 ", completed=" + completed +
@@ -90,11 +108,12 @@ public class Content implements Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Content content = (Content) o;
-        return contentType == content.contentType && Objects.equals(description, content.description) && Objects.equals(duration, content.duration) && module == content.module;
+        return contentType == content.contentType && Objects.equals(description, content.description) && Objects.equals(startTime, content.startTime) && Objects.equals(duration, content.duration) && module == content.module;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(contentType, description, duration, module);
+        return Objects.hash(contentType, description, startTime, duration, module);
     }
+
 }

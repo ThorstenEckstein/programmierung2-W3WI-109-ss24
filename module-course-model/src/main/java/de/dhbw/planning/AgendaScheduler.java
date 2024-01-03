@@ -30,13 +30,6 @@ public class AgendaScheduler {
 
     // ------------------ public utilities
 
-    public LocalTime calculateEndTime(LocalTime startTime, List<Item> items) {
-
-        // code to determine end time here ...
-
-        return LocalTime.NOON;
-    }
-
     public List<List<Item>> splitAgendaBy(ContentType contentType, CourseDay courseDay) {
         List<List<Item>> itemLists = new LinkedList<>();
 

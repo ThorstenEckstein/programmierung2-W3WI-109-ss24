@@ -26,11 +26,11 @@ public class ResourceManager {
         return mapper;
     }
 
-    public Course readCourse(FileResource resource) throws IOException {
+    public Course readCourse(FileResource.Input resource) throws IOException {
         return mapper.readValue(resource.getResourceFile(), Course.class);
     }
 
-    public void writeCourse(FileResource resource, Course course) throws IOException {
+    public void writeCourse(FileResource.Output resource, Course course) throws IOException {
         mapper.writeValue(resource.getResourceFile(), course);
     }
 

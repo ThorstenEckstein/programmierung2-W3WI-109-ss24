@@ -91,14 +91,16 @@ public class MockFactory {
                 Unknown,
                 Duration.ZERO,
                 "Content description " + counter,
+                Modules.Unknown,
                 false);
     }
 
-    public static Content mockContent(ContentType contentType, Duration duration, String description) {
+    public static Content mockContent(ContentType contentType, Duration duration, Modules module, String description) {
         return new Content(
                 contentType,
                 duration,
                 description,
+                module,
                 false);
     }
 
@@ -107,6 +109,7 @@ public class MockFactory {
                 Welcome,
                 DURATION_30_MIN,
                 "Herzlich Willkommen!",
+                Modules.WelcomeIntroAndSetup,
                 false);
     }
 
@@ -115,6 +118,7 @@ public class MockFactory {
                 Setup,
                 DURATION_30_MIN,
                 "Technisches IDE Setup",
+                Modules.WelcomeIntroAndSetup,
                 false);
     }
 
@@ -123,6 +127,7 @@ public class MockFactory {
                 Domain,
                 DURATION_15_MIN,
                 "Fachliche Einführung",
+                Modules.WelcomeIntroAndSetup,
                 false);
     }
 
@@ -131,6 +136,7 @@ public class MockFactory {
                 Topic,
                 DURATION_45_MIN,
                 "Thema/Inhalt '" + about + "'",
+                Modules.Unknown,
                 false);
     }
 
@@ -139,6 +145,7 @@ public class MockFactory {
                 Demo,
                 DURATION_15_MIN,
                 "Demo zum Thema/Inhalt '" + about + "'",
+                Modules.Unknown,
                 false);
     }
 
@@ -147,6 +154,7 @@ public class MockFactory {
                 Exercise,
                 DURATION_30_MIN,
                 "Demo zum Thema/Inhalt '" + about + "'",
+                Modules.Unknown,
                 false);
     }
 
@@ -155,6 +163,7 @@ public class MockFactory {
                 Break,
                 DURATION_15_MIN,
                 "Pause " + number,
+                Modules.Miscellaneous,
                 false);
     }
 

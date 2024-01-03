@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import java.time.Duration;
 import java.util.Objects;
 
-@JsonPropertyOrder({ "itemType", "contentType", "description", "duration", "completed" })
+@JsonPropertyOrder({ "itemType", "contentType", "description", "duration", "module", "completed" })
 public class Content implements Item {
 
     // Inhaltstyp
@@ -19,22 +19,18 @@ public class Content implements Item {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Duration duration;
 
+    private Modules module;
+
     // Done
     private boolean completed;
 
     public Content() {}
 
-    public Content(ContentType contentType, Duration duration, String description) {
+    public Content(ContentType contentType, Duration duration, String description, Modules module, boolean completed) {
         this.contentType = contentType;
         this.duration = duration;
         this.description = description;
-        this.completed = false;
-    }
-
-    public Content(ContentType contentType, Duration duration, String description, boolean completed) {
-        this.contentType = contentType;
-        this.duration = duration;
-        this.description = description;
+        this.module = module;
         this.completed = completed;
     }
 
@@ -62,6 +58,14 @@ public class Content implements Item {
         this.contentType = contentType;
     }
 
+    public Modules getModule() {
+        return module;
+    }
+
+    public void setModule(Modules module) {
+        this.module = module;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -73,9 +77,10 @@ public class Content implements Item {
     @Override
     public String toString() {
         return "Content{" +
-                "type=" + contentType +
-                ", duration=" + duration +
+                "contentType=" + contentType +
                 ", description='" + description + '\'' +
+                ", duration=" + duration +
+                ", module=" + module +
                 ", completed=" + completed +
                 '}';
     }
@@ -85,12 +90,11 @@ public class Content implements Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Content content = (Content) o;
-        return completed == content.completed && Objects.equals(duration, content.duration) && contentType == content.contentType && Objects.equals(description, content.description);
+        return contentType == content.contentType && Objects.equals(description, content.description) && Objects.equals(duration, content.duration) && module == content.module;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(completed, duration, contentType, description);
+        return Objects.hash(contentType, description, duration, module);
     }
-
 }

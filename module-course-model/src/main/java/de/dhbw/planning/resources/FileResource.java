@@ -2,49 +2,79 @@ package de.dhbw.planning.resources;
 
 import java.io.File;
 
-public enum FileResource {
+public class FileResource {
 
-    // mock data
+    public enum Input {
+        MockModel(
+                "LV mit Mockdaten",
+                "src/test/resources/input/_mock/mock-data.json"),
 
-    MockModel_Input(
-            "LV mit Mockdaten aus Tests",
-            "src/test/resources/input/mock-data.json"),
-    MockModel_Output(
-            "LV mit Mockdaten aus Tests",
-            "src/test/resources/output/mock-data.json"),
+        Course_n_CourseDays(
+                "1 Course + n CourseDays",
+                "src/test/resources/input/coursedays/course-n-coursedays.json"),
 
-    // real data for LV
+        Course_n_CourseDays_n_Modules(
+                "1 Course + n CourseDays + n Modules",
+                "src/test/resources/input/modules/course-n-coursedays-n-modules.json"),
 
-    Prog2WithJava_Input(
-            "Programmierung II mit Java",
-            "src/test/resources/input/programming-2-with-java.json"),
+        Course_1_CourseDay_n_Contents(
+                "1 Course + 1 CourseDays + n Contents",
+                "src/test/resources/input/contents/course-1-courseday-n-contents.json"),
+        ;
 
-    Prog2WithJava_Input_JustCourseDay(
-            "Programmierung II mit Java",
-            "src/test/resources/input/programming-2-with-java-coursedays.json"),
+        private final String courseFile;
+        private final String courseTitle;
 
-    Prog2WithJava_Input_Modules(
-            "Programmierung II mit Java",
-            "src/test/resources/input/programming-2-with-java-modules.json"),
+        Input(String courseTitle, String courseFile) {
+            this.courseTitle = courseTitle;
+            this.courseFile = courseFile;
+        }
 
-    Prog2WithJava_Output(
-            "Programmierung II mit Java",
-            "src/test/resources/output/programming-2-with-java.json")
-    ;
+        public File getResourceFile() {
+            return new File(courseFile);
+        }
 
-    private final String courseFile;
-    private final String courseTitle;
-
-    FileResource(String courseTitle, String courseFile) {
-        this.courseTitle = courseTitle;
-        this.courseFile = courseFile;
+        public String getCourseTitle() {
+            return courseTitle;
+        }
     }
 
-    public File getResourceFile() {
-        return new File(courseFile);
+    public enum Output {
+        MockModel(
+                "LV mit Mockdaten",
+                "src/test/resources/output/_mock/mock-data.json"),
+
+        Course_n_CourseDays(
+                "1 Course + n CourseDays",
+                "src/test/resources/output/coursedays/course-n-coursedays.json"),
+
+        Course_n_CourseDays_n_Modules(
+                "1 Course + n CourseDays + n Modules",
+                "src/test/resources/output/modules/course-n-coursedays-n-modules.json"),
+
+        Course_1_CourseDay_n_Contents(
+                "1 Course + 1 CourseDays + n Contents",
+                "src/test/resources/output/contents/course-1-courseday-n-contents.json"),
+
+        ;
+
+        private final String courseFile;
+        private final String courseTitle;
+
+        Output(String courseTitle, String courseFile) {
+            this.courseTitle = courseTitle;
+            this.courseFile = courseFile;
+        }
+
+        public File getResourceFile() {
+            return new File(courseFile);
+        }
+
+        public String getCourseTitle() {
+            return courseTitle;
+        }
+
     }
 
-    public String getCourseTitle() {
-        return courseTitle;
-    }
+
 }

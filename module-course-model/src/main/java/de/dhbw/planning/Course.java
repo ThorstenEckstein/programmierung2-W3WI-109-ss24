@@ -45,7 +45,7 @@ public class Course {
 
     @JsonIgnore
     public Duration getDuration() {
-        return Item.calculateTotalDuration(agenda, this.getClass());
+        return AgendaInspector.calculateTotalDuration(agenda, this.getClass());
     }
 
     @Override

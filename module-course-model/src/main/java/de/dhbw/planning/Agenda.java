@@ -3,21 +3,15 @@ package de.dhbw.planning;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
 import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
-/**
- * <pre>
- * Agenda Example:
- *   1. Module
- *   2. Pause
- *   3. Module
- * </pre>
- */
 public class Agenda {
 
-    private Set<Item> items = new LinkedHashSet<>();
+    private List<Item> items = new LinkedList<>();
 
-    public Set<Item> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
@@ -25,8 +19,8 @@ public class Agenda {
         this.items.add(item);
     }
 
-    @JsonDeserialize(as=LinkedHashSet.class)
-    public void setItems(Set<Item> items) {
+    @JsonDeserialize(as=LinkedList.class)
+    public void setItems(List<Item> items) {
         this.items = items;
     }
 

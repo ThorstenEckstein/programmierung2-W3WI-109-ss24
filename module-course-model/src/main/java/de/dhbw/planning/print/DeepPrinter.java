@@ -109,7 +109,7 @@ public class DeepPrinter {
 
     private static String toString(int index, String indention, Content content) {
         return String.format(
-                "%s%s. [%s ] %s, %s",
+                "%s%s. [%s] %s, %s",
                 indention,
                 index,
                 content.getContentType(),

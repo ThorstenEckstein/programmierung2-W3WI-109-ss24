@@ -4,10 +4,5 @@ include::module-settings.adoc[]
 ----
 1. Welcome
 2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-2.1. Kontext
-2.2. Klassenmodell
 3. IDE Setup
-3.1. Einrichtung eines lokalen Workspaces
-3.2. Java
-3.3. IDE IntelliJ
 ----

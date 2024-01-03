@@ -6,7 +6,7 @@
       {
         "type": "courseDay",
         "title": "Day 1",
-        "date": "19.02.2024",
+        "date": "27.02.2024",
         "agenda": {
           "items": [
             {
@@ -30,6 +30,15 @@
               "contentType": "Setup",
               "description": "Technisches IDE Setup",
               "duration": "PT30M",
+              "module": "WelcomeIntroAndSetup",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "module": "Miscellaneous",
               "completed": false
             },
             {
@@ -43,7 +52,64 @@
             {
               "type": "content",
               "contentType": "Topic",
-              "description": "Organisation & Importierung von Java Klassen",
+              "description": "Quellcodeverwaltung mit Git und Github",
+              "duration": "PT10M",
+              "module": "ToolsAndHelp",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Test-Driven-Development (TDD)",
+              "duration": "PT10M",
+              "module": "ToolsAndHelp",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT5M",
+              "module": "Miscellaneous",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Generierung von Quellcode mit der IDE",
+              "duration": "PT10M",
+              "module": "ToolsAndHelp",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Autocompletion",
+              "duration": "PT10M",
+              "module": "ToolsAndHelp",
+              "completed": false
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Icons & Symbole in der IDE",
+              "duration": "PT10M",
+              "module": "ToolsAndHelp",
+              "completed": false
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Day 2",
+        "date": "05.03.2024",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Projektverwaltung mit Maven, Projektstruktur",
               "duration": "PT10M",
               "module": "ToolsAndHelp",
               "completed": false
@@ -61,14 +127,6 @@
               "description": "Klassen & Instanzen",
               "duration": "PT30M",
               "module": "ClassesAndObjects",
-              "completed": false
-            },
-            {
-              "type": "content",
-              "contentType": "Topic",
-              "description": "Test Driven Development (TDD)",
-              "duration": "PT15M",
-              "module": "ToolsAndHelp",
               "completed": false
             },
             {

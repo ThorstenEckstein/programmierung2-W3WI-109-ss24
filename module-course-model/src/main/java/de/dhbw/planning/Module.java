@@ -1,7 +1,6 @@
 package de.dhbw.planning;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.time.Duration;
@@ -67,7 +66,7 @@ public class Module implements Item {
         }
         // agenda exists, so use this to calculate total duration of modules' contents
         else if (agenda != null && !agenda.getItems().isEmpty()) {
-            return AgendaInspector.calculateTotalDuration(agenda, this.getClass());
+            return AgendaScheduler.calculateTotalDuration(agenda, this.getClass());
         }
         // neither duration nor agenda manually specified, simply return a default value
         else {

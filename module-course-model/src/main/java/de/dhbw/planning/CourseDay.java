@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 @JsonPropertyOrder({"itemType", "title", "date", "agenda"})
 public class CourseDay implements Item {
@@ -47,7 +48,7 @@ public class CourseDay implements Item {
     @Override
     @JsonIgnore
     public Duration getDuration() {
-        return AgendaInspector.calculateTotalDuration(agenda, this.getClass());
+        return AgendaScheduler.calculateTotalDuration(agenda, this.getClass());
     }
 
     @Override

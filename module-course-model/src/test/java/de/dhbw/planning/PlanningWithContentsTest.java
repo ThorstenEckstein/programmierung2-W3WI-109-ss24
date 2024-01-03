@@ -9,11 +9,12 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalTime;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static de.dhbw.planning.AgendaInspector.calculateDuration;
+import static de.dhbw.planning.AgendaScheduler.calculateDuration;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -112,10 +113,10 @@ public class PlanningWithContentsTest {
         // given
         Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
         CourseDay courseDay = (CourseDay) course.getAgenda().getItems().stream().findFirst().get();
-        AgendaInspector inspector = new AgendaInspector(course.getAgenda());
+        AgendaScheduler scheduler = new AgendaScheduler(course.getAgenda());
 
         // when
-        List<List<Item>> subLists = inspector.splitAgendaBy(ContentType.Break, courseDay);
+        List<List<Item>> subLists = scheduler.splitAgendaBy(ContentType.Break, courseDay);
 
         // then
         assertEquals(3, subLists.size());
@@ -144,4 +145,19 @@ public class PlanningWithContentsTest {
         assertEquals("PT2H35M", totalDuration.toString());
     }
 
+    @Test
+    @DisplayName("[Content] Calculate Duration Of Agenda Items")
+    public void canScheduleCourseDayEndTime() throws IOException {
+        // given
+        Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
+        List<Item> items = course.getAgenda().getItems();
+        AgendaScheduler scheduler = new AgendaScheduler(course.getAgenda());
+        LocalTime startTime = LocalTime.of(9,15);
+
+        // when
+        LocalTime endTime = scheduler.calculateEndTime(startTime, items);
+
+        // then
+        assertEquals("12:00", endTime.toString());
+    }
 }

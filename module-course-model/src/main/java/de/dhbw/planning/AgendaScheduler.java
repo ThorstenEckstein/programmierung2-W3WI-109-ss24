@@ -1,6 +1,7 @@
 package de.dhbw.planning;
 
 import java.time.Duration;
+import java.time.LocalTime;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,13 +10,13 @@ import java.util.stream.Collectors;
 import static de.dhbw.planning.Constants.DURATION_DEFAULT;
 
 @SuppressWarnings("all")
-public class AgendaInspector {
+public class AgendaScheduler {
 
     private Agenda agenda;
 
-    public AgendaInspector() { }
+    public AgendaScheduler() { }
 
-    public AgendaInspector(Agenda agenda) {
+    public AgendaScheduler(Agenda agenda) {
         this.agenda = agenda;
     }
 
@@ -28,6 +29,13 @@ public class AgendaInspector {
     }
 
     // ------------------ public utilities
+
+    public LocalTime calculateEndTime(LocalTime startTime, List<Item> items) {
+
+        // code to determine end time here ...
+
+        return LocalTime.NOON;
+    }
 
     public List<List<Item>> splitAgendaBy(ContentType contentType, CourseDay courseDay) {
         List<List<Item>> itemLists = new LinkedList<>();

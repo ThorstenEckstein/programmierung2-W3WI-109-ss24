@@ -117,6 +117,7 @@
               "contentType": "Break",
               "description": "Pause",
               "duration": "PT15M",
+              "module": "Miscellaneous",
               "completed": false
             },
             {

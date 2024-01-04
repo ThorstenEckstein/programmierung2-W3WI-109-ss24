@@ -7,6 +7,7 @@ import de.dhbw.planning.model.Item;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -41,13 +42,20 @@ public class CourseDayScheduler {
 
         // course day items
         List<Item> items = agenda.getItems();
+        int size = items.size();
 
         List<CourseDaySchedule> courseDaySchedules = new LinkedList<>();
 
-        for (Item item : items) {
-            CourseDay courseDay = (CourseDay) item;
+        for (int currentIndex = 0; currentIndex < size; currentIndex++) {
+            CourseDay courseDay = (CourseDay)items.get(currentIndex);
             CourseDaySchedule courseDaySchedule = schedule(courseDay);
-            courseDaySchedule.setDate(this.startDate); // todo calculate correct date (+7) with fori loop
+            if (isFirstItem(currentIndex)) {
+                courseDaySchedule.setDate(this.startDate);
+            } else {
+                CourseDaySchedule predecessor = courseDaySchedules.get(currentIndex - 1);
+                LocalDate date = predecessor.getDate().plusDays(7);
+                courseDaySchedule.setDate(date);
+            }
             courseDaySchedules.add(courseDaySchedule);
         }
 

@@ -142,7 +142,7 @@ public class DeepPrinter {
 
     private static String toString(CourseDaySchedule courseDaySchedule) {
         return """
-                %s: %s, %s - %s"""
+                \n%s: %s, %s - %s"""
                 .formatted(
                         courseDaySchedule.getDate(),
                         courseDaySchedule.getCourseDay().getTitle(),
@@ -152,14 +152,16 @@ public class DeepPrinter {
     }
 
     private static String toString(ContentSchedule contentSchedule) {
+        Content content = contentSchedule.getContent();
         return """
-                %s%s - %s [%s] %s"""
+                %s%s - %s [%s:%s] %s"""
                 .formatted(
                         I3,
                         contentSchedule.getStartTime(),
                         contentSchedule.getEndTime(),
-                        contentSchedule.getContent().getContentType(),
-                        contentSchedule.getContent().getDescription()
+                        content.getModule().getAcronym(),
+                        content.getContentType(),
+                        content.getDescription()
                 );
     }
 

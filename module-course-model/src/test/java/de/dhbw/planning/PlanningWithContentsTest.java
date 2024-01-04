@@ -150,8 +150,8 @@ public class PlanningWithContentsTest {
     }
 
     @Test
-    @DisplayName("[CourseDay] Schedule 1 Course Day")
-    public void canScheduleCourseDayEndTime() throws IOException {
+    @DisplayName("[CourseDay] Schedule Course Days")
+    public void canScheduleCourseDays() throws IOException {
         // given
 
         // load data and get first course day (as example)

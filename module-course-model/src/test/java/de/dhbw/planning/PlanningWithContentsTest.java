@@ -174,44 +174,4 @@ public class PlanningWithContentsTest {
         DeepPrinter.printPretty(courseDaySchedules);
     }
 
-    /*
-    @Test
-    @DisplayName("[Content] Calculate Duration Of Agenda Items")
-    public void canScheduleCourseDayEndTime() throws IOException {
-        // given
-        Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
-        CourseDay courseDay = (CourseDay) course.getAgenda().getItems().stream().findFirst().get();
-        List<Item> items = courseDay.getAgenda().getItems();
-
-        AgendaUtil scheduler = new AgendaUtil(course.getAgenda());
-
-        LocalTime startTime = LocalTime.of(9,15);
-        LocalTime endTime = null;
-        ((Content)items.get(0)).setStartTime(startTime);
-
-        // when
-        for (int itemIndex = 0; itemIndex < items.size(); itemIndex++) {
-            Content content = (Content)items.get(itemIndex);
-
-            int nextItemIndex = itemIndex+1;
-            if (nextItemIndex == items.size()) {
-                break;
-            } else {
-                Content next = (Content)items.get(nextItemIndex);
-                endTime = content.getEndTime();
-                next.setStartTime(endTime);
-            }
-
-            System.out.printf(
-                    "\n[%s] %s + %s = %s",
-                    content.getContentType(),
-                    content.getStartTime(),
-                    content.getDuration(),
-                    endTime);
-        }
-
-        // then
-        assertEquals("11:40", endTime.toString());
-    }
-    */
 }

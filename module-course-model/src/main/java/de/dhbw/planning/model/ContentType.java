@@ -1,17 +1,19 @@
 package de.dhbw.planning.model;
 
 public enum ContentType {
-    Break         (null,                  null)
+    Break         ("pause",               "green")
     ,Demo         ("eye",                 "gray")
     ,Domain       ("train",               "red")
     ,Exam         ("graduation-cap",      "green")
     ,Exercise     ("flask",               "red")
     ,Setup        ("gear",                "blue")
-    ,Theory       (null,                  null)
+    ,Theory       ("book",                "gray")
     ,Topic        ("book",                "gray")
     ,UpdateProject("arrow-circle-o-down", "red")
     ,Welcome      ("heart",               "red")
-    ,Unknown      (null,                  null)
+    ,Unknown      ("question",            "black")
+
+    ,Buffer       ("clock-o",             "gray")
     ;
 
     private final String icon;

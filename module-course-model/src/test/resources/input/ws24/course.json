@@ -1,0 +1,193 @@
+{
+  "title": "Programmierung II mit Java",
+  "semester": "WS24",
+  "agenda": {
+    "items": [
+      {
+        "type": "courseDay",
+        "title": "Day 1",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Welcome",
+              "description": "Herzlich Willkommen!",
+              "duration": "PT30M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Domain",
+              "description": "Fachlicher Schwerpunkt der Lehrveranstaltung",
+              "duration": "PT15M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Technisches IDE Setup",
+              "duration": "PT30M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Projektverwaltung mit Maven, Projektstruktur",
+              "duration": "PT15M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Quellcodeverwaltung mit Git und Github",
+              "duration": "PT15M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Test-Driven-Development (TDD)",
+              "duration": "PT15M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Generierung von Quellcode mit der IDE",
+              "duration": "PT15M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Autocompletion",
+              "duration": "PT15M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Icons & Symbole in der IDE",
+              "duration": "PT5M",
+              "module": "ToolsAndHelp"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT10M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Day 2",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Organisation & Nutzung von Java Klassen",
+              "duration": "PT10M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Klassen & Instanzen",
+              "duration": "PT15M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Vererbung",
+              "duration": "PT15M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Überladen & Übersteuern (Überschreiben)",
+              "duration": "PT10M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Klassen, Instanzen, Vererbung & Override",
+              "duration": "PT10M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Klassen, Instanzen, Vererbung & Override",
+              "duration": "PT15M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Polymorphismus",
+              "duration": "PT15M",
+              "module": "ClassesAndObjects"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Implementierung mit Interfaces",
+              "duration": "PT15M",
+              "module": "InterfacesAndAbstractClasses"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Abstrakte Klassen",
+              "duration": "PT15M",
+              "module": "InterfacesAndAbstractClasses"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Interfaces & abstrakte Klassen",
+              "duration": "PT15M",
+              "module": "InterfacesAndAbstractClasses"
+            }
+          ,
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Interfaces & abstrakte Klassen",
+              "duration": "PT15M",
+              "module": "InterfacesAndAbstractClasses"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

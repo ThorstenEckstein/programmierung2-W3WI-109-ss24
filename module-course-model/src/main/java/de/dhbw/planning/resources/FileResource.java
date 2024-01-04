@@ -20,6 +20,9 @@ public class FileResource {
         Course_1_CourseDay_n_Contents(
                 "1 Course + 1 CourseDays + n Contents",
                 "src/test/resources/input/contents/course-1-courseday-n-contents.json"),
+        CourseWs24(
+                "Programmierung II mit Java",
+                "src/test/resources/input/ws24/course.json"),
         ;
 
         private final String courseFile;
@@ -56,6 +59,9 @@ public class FileResource {
                 "1 Course + 1 CourseDays + n Contents",
                 "src/test/resources/output/contents/course-1-courseday-n-contents.json"),
 
+        CourseWs24(
+                "Programmierung II mit Java",
+                "src/test/resources/output/ws24/course.json"),
         ;
 
         private final String courseFile;

@@ -32,4 +32,8 @@ public enum ContentType {
         return role;
     }
 
+    public static boolean isBreak(ContentType contentType) {
+        return ContentType.Break.equals(contentType);
+    }
+
 }

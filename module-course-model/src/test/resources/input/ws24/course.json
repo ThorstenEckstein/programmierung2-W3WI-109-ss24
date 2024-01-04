@@ -5,7 +5,7 @@
     "items": [
       {
         "type": "courseDay",
-        "title": "Day 1",
+        "title": "Tag 1",
         "agenda": {
           "items": [
             {
@@ -90,14 +90,28 @@
       },
       {
         "type": "courseDay",
-        "title": "Day 2",
+        "title": "Tag 2",
         "agenda": {
           "items": [
             {
               "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
               "contentType": "Demo",
               "description": "Organisation & Nutzung von Java Klassen",
-              "duration": "PT10M",
+              "duration": "PT5M",
               "module": "ClassesAndObjects"
             },
             {
@@ -111,7 +125,7 @@
               "type": "content",
               "contentType": "Topic",
               "description": "Vererbung",
-              "duration": "PT15M",
+              "duration": "PT10M",
               "module": "ClassesAndObjects"
             },
             {
@@ -169,14 +183,155 @@
               "description": "Interfaces & abstrakte Klassen",
               "duration": "PT15M",
               "module": "InterfacesAndAbstractClasses"
-            }
-          ,
+            },
             {
               "type": "content",
               "contentType": "Exercise",
               "description": "Interfaces & abstrakte Klassen",
               "duration": "PT15M",
               "module": "InterfacesAndAbstractClasses"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 3",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Datentypen",
+              "duration": "PT15M",
+              "module": "DatatypesAndCasting"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Typumwandlung (Casting)",
+              "duration": "PT15M",
+              "module": "DatatypesAndCasting"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zu Datentypen & Typumwandlung",
+              "duration": "PT10M",
+              "module": "DatatypesAndCasting"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übung zu Datentypen & Typumwandlung",
+              "duration": "PT15M",
+              "module": "DatatypesAndCasting"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT10M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Kontrollstrukturen - Schleifen & Konditional-Ausdrücke",
+              "duration": "PT15M",
+              "module": "LoopsAndConditions"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zu Kontrollstrukturen",
+              "duration": "PT10M",
+              "module": "LoopsAndConditions"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übung zu Kontrollstrukturen",
+              "duration": "PT15M",
+              "module": "LoopsAndConditions"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT10M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Sichtbarkeiten & Scopes: Access Modifier",
+              "duration": "PT15M",
+              "module": "VisibilityAndAccessModifier"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zum Thema Access Modifier",
+              "duration": "PT10M",
+              "module": "VisibilityAndAccessModifier"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übung zum Thema Access Modifier",
+              "duration": "PT15M",
+              "module": "VisibilityAndAccessModifier"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag ",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
             },
             {
               "type": "content",

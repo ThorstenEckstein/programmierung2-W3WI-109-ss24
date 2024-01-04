@@ -1,15 +1,16 @@
 package de.dhbw.planning.print;
 
-import de.dhbw.planning.model.*;
 import de.dhbw.planning.model.Module;
+import de.dhbw.planning.model.*;
 import de.dhbw.planning.scheduling.ContentSchedule;
 import de.dhbw.planning.scheduling.CourseDaySchedule;
-import de.dhbw.planning.scheduling.CourseDayScheduler;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;
 import java.util.List;
 import java.util.Locale;
+
+import static de.dhbw.planning.model.ContentType.isBreak;
 
 public class DeepPrinter {
 
@@ -153,16 +154,44 @@ public class DeepPrinter {
 
     private static String toString(ContentSchedule contentSchedule) {
         Content content = contentSchedule.getContent();
-        return """
-                %s%s - %s [%s:%s] %s"""
-                .formatted(
-                        I3,
-                        contentSchedule.getStartTime(),
-                        contentSchedule.getEndTime(),
-                        content.getModule().getAcronym(),
-                        content.getContentType(),
-                        content.getDescription()
-                );
+
+        String format;
+        if (isBreak(content.getContentType())) {
+            format = "%s%s - %s [%-5s: %-8s]  --------------- %s ---------------";
+        } else {
+            format = "%s%s - %s [%-5s: %-8s]  %s";
+        }
+
+        //String padding = calculatePadding(contentSchedule);
+
+        return String.format(format,
+                I3,
+                contentSchedule.getStartTime(),
+                contentSchedule.getEndTime(),
+                content.getModule().getAcronym(),
+                content.getContentType(),
+                //padding,
+                content.getDescription()
+        );
     }
+
+    /*
+    private static String calculatePadding(ContentSchedule contentSchedule) {
+        // length of current indention
+        int l1 = I3.length();
+        // length of "StartTime - EndTime ", in any case 13
+        int l2 = 13;
+        // length of module acronym
+        int l3 = contentSchedule.getContent().getModule().getAcronym().length();
+        // length of content type term
+        int l4 = contentSchedule.getContent().getContentType().toString().length();
+        // plus layout chars (square brackets) or whitespaces, 2 brackets, 2 whitespaces
+        int l5 = 4;
+
+        int nTimes = 32 - (l1 + l2 + l3 + l4 + l5);
+
+        return " ".repeat(nTimes);
+    }
+    */
 
 }

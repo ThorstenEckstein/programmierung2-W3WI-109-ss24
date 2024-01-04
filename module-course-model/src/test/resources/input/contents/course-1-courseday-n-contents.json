@@ -6,7 +6,6 @@
       {
         "type": "courseDay",
         "title": "Day 1",
-        "date": "27.02.2024",
         "agenda": {
           "items": [
             {
@@ -103,7 +102,6 @@
       {
         "type": "courseDay",
         "title": "Day 2",
-        "date": "05.03.2024",
         "agenda": {
           "items": [
             {

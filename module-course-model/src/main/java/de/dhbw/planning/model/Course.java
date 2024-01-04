@@ -1,6 +1,7 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import de.dhbw.planning.scheduling.DurationCalculator;
 
 import java.time.Duration;
 
@@ -45,7 +46,7 @@ public class Course {
 
     @JsonIgnore
     public Duration getDuration() {
-        return AgendaScheduler.calculateTotalDuration(agenda, this.getClass());
+        return DurationCalculator.calculateTotalDuration(agenda, this.getClass());
     }
 
     @Override

@@ -1,11 +1,9 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 
 public class Agenda {
 

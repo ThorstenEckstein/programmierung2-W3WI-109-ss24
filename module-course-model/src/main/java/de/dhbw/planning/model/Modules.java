@@ -1,6 +1,4 @@
-package de.dhbw.planning;
-
-import com.fasterxml.jackson.annotation.JsonValue;
+package de.dhbw.planning.model;
 
 import java.util.Arrays;
 

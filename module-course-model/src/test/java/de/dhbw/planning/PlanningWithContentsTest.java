@@ -1,23 +1,26 @@
 package de.dhbw.planning;
 
+import de.dhbw.planning.model.*;
 import de.dhbw.planning.print.DeepPrinter;
 import de.dhbw.planning.resources.FileResource;
 import de.dhbw.planning.resources.ResourceManager;
+import de.dhbw.planning.scheduling.CourseDaySchedule;
+import de.dhbw.planning.scheduling.CourseDayScheduler;
+import de.dhbw.planning.util.AgendaUtil;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static de.dhbw.planning.AgendaScheduler.calculateDuration;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static de.dhbw.planning.scheduling.DurationCalculator.calculateDuration;
+import static org.junit.jupiter.api.Assertions.*;
 
 @SuppressWarnings("all")
 public class PlanningWithContentsTest {
@@ -114,7 +117,7 @@ public class PlanningWithContentsTest {
         // given
         Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
         CourseDay courseDay = (CourseDay) course.getAgenda().getItems().stream().findFirst().get();
-        AgendaScheduler scheduler = new AgendaScheduler(course.getAgenda());
+        AgendaUtil scheduler = new AgendaUtil(course.getAgenda());
 
         // when
         List<List<Item>> subLists = scheduler.splitAgendaBy(ContentType.Break, courseDay);
@@ -147,6 +150,32 @@ public class PlanningWithContentsTest {
     }
 
     @Test
+    @DisplayName("[CourseDay] Schedule 1 Course Day")
+    public void canScheduleCourseDayEndTime() throws IOException {
+        // given
+
+        // load data and get first course day (as example)
+        Course course = resourceManager.readCourse(FileResource.Input.Course_1_CourseDay_n_Contents);
+
+        // course day shall start at 09:15
+        LocalDate startDate = LocalDate.of(2024, 2, 27);
+        LocalTime startTime = LocalTime.of(9,15);
+
+        // provide scheduler with start time, which is the base of time calculations for content
+        CourseDayScheduler scheduler = new CourseDayScheduler(startDate, startTime);
+
+        // when
+        List<CourseDaySchedule> courseDaySchedules = scheduler.schedule(course.getAgenda());
+
+        // then
+        assertFalse(courseDaySchedules.isEmpty());
+
+        // print
+        DeepPrinter.printPretty(courseDaySchedules);
+    }
+
+    /*
+    @Test
     @DisplayName("[Content] Calculate Duration Of Agenda Items")
     public void canScheduleCourseDayEndTime() throws IOException {
         // given
@@ -154,19 +183,24 @@ public class PlanningWithContentsTest {
         CourseDay courseDay = (CourseDay) course.getAgenda().getItems().stream().findFirst().get();
         List<Item> items = courseDay.getAgenda().getItems();
 
-        AgendaScheduler scheduler = new AgendaScheduler(course.getAgenda());
+        AgendaUtil scheduler = new AgendaUtil(course.getAgenda());
 
         LocalTime startTime = LocalTime.of(9,15);
         LocalTime endTime = null;
         ((Content)items.get(0)).setStartTime(startTime);
 
         // when
-        for (int i = 0; i < items.size(); i++) {
+        for (int itemIndex = 0; itemIndex < items.size(); itemIndex++) {
+            Content content = (Content)items.get(itemIndex);
 
-            Content content = (Content)items.get(i);
-            Content next = (Content)items.get(i+1);
-            endTime = content.getEndTime();
-            next.setStartTime(endTime);
+            int nextItemIndex = itemIndex+1;
+            if (nextItemIndex == items.size()) {
+                break;
+            } else {
+                Content next = (Content)items.get(nextItemIndex);
+                endTime = content.getEndTime();
+                next.setStartTime(endTime);
+            }
 
             System.out.printf(
                     "\n[%s] %s + %s = %s",
@@ -177,6 +211,7 @@ public class PlanningWithContentsTest {
         }
 
         // then
-        assertEquals("12:00", endTime.toString());
+        assertEquals("11:40", endTime.toString());
     }
+    */
 }

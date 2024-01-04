@@ -1,10 +1,14 @@
 package de.dhbw.planning.print;
 
-import de.dhbw.planning.*;
-import de.dhbw.planning.Module;
+import de.dhbw.planning.model.*;
+import de.dhbw.planning.model.Module;
+import de.dhbw.planning.scheduling.ContentSchedule;
+import de.dhbw.planning.scheduling.CourseDaySchedule;
+import de.dhbw.planning.scheduling.CourseDayScheduler;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;
+import java.util.List;
 import java.util.Locale;
 
 public class DeepPrinter {
@@ -15,6 +19,16 @@ public class DeepPrinter {
 
     private static void print(Object object) {
         System.out.println(object);
+    }
+
+    public static void printPretty(List<CourseDaySchedule> courseDaySchedules) {
+        for (CourseDaySchedule courseDaySchedule : courseDaySchedules) {
+            print(toString(courseDaySchedule));
+            List<ContentSchedule> contentSchedules = courseDaySchedule.getContentSchedules();
+            for (ContentSchedule contentSchedule : contentSchedules) {
+                print(toString(contentSchedule));
+            }
+        }
     }
 
     public static void printPretty(Course course) {
@@ -89,10 +103,10 @@ public class DeepPrinter {
 
     private static String toString(CourseDay courseDay) {
         return String.format(
-                "\n%s[%s] %s: %s",
+                "\n%s[%s] %s",
                 I3,
                 CourseDay.class.getSimpleName(),
-                toString(courseDay.getDate()),
+                //toString(courseDay.getDate()),
                 courseDay.getTitle()
         );
     }
@@ -125,4 +139,28 @@ public class DeepPrinter {
                 "09:15-12:15"
         );
     }
+
+    private static String toString(CourseDaySchedule courseDaySchedule) {
+        return """
+                %s: %s, %s - %s"""
+                .formatted(
+                        courseDaySchedule.getDate(),
+                        courseDaySchedule.getCourseDay().getTitle(),
+                        courseDaySchedule.getStartTime(),
+                        courseDaySchedule.getEndTime()
+                );
+    }
+
+    private static String toString(ContentSchedule contentSchedule) {
+        return """
+                %s%s - %s [%s] %s"""
+                .formatted(
+                        I3,
+                        contentSchedule.getStartTime(),
+                        contentSchedule.getEndTime(),
+                        contentSchedule.getContent().getContentType(),
+                        contentSchedule.getContent().getDescription()
+                );
+    }
+
 }

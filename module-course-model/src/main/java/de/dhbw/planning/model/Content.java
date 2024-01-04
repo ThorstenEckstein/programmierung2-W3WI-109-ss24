@@ -1,4 +1,4 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -17,8 +17,6 @@ public class Content implements Item {
     // Inhaltsbeschreibung, Kommentar
     private String description;
 
-    private LocalTime startTime;
-
     // Zeitraum, Dauer
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Duration duration;
@@ -36,19 +34,6 @@ public class Content implements Item {
         this.description = description;
         this.module = module;
         this.completed = completed;
-    }
-
-    public LocalTime getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(LocalTime startTime) {
-        this.startTime = startTime;
-    }
-
-    @JsonIgnore
-    public LocalTime getEndTime() {
-        return this.getStartTime().plus(this.getDuration());
     }
 
     public Duration getDuration() {
@@ -96,7 +81,6 @@ public class Content implements Item {
         return "Content{" +
                 "contentType=" + contentType +
                 ", description='" + description + '\'' +
-                ", startTime=" + startTime +
                 ", duration=" + duration +
                 ", module=" + module +
                 ", completed=" + completed +
@@ -108,12 +92,15 @@ public class Content implements Item {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Content content = (Content) o;
-        return contentType == content.contentType && Objects.equals(description, content.description) && Objects.equals(startTime, content.startTime) && Objects.equals(duration, content.duration) && module == content.module;
+        return contentType == content.contentType
+                && Objects.equals(description, content.description)
+                && Objects.equals(duration, content.duration)
+                && module == content.module;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(contentType, description, startTime, duration, module);
+        return Objects.hash(contentType, description, duration, module);
     }
 
 }

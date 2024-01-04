@@ -1,20 +1,20 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import de.dhbw.planning.scheduling.DurationCalculator;
 
 import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 @JsonPropertyOrder({"itemType", "title", "date", "agenda"})
 public class CourseDay implements Item {
 
     private String title;
 
-    @JsonFormat(pattern = "dd.MM.yyyy")
-    private LocalDate date;
+    //@JsonFormat(pattern = "dd.MM.yyyy")
+    //private LocalDate date;
 
     // Set of 'Module or Content' instances
     private Agenda agenda;
@@ -29,6 +29,7 @@ public class CourseDay implements Item {
         this.title = title;
     }
 
+    /*
     public LocalDate getDate() {
         return date;
     }
@@ -36,6 +37,7 @@ public class CourseDay implements Item {
     public void setDate(LocalDate date) {
         this.date = date;
     }
+    */
 
     public Agenda getAgenda() {
         return agenda;
@@ -48,14 +50,13 @@ public class CourseDay implements Item {
     @Override
     @JsonIgnore
     public Duration getDuration() {
-        return AgendaScheduler.calculateTotalDuration(agenda, this.getClass());
+        return DurationCalculator.calculateTotalDuration(agenda, this.getClass());
     }
 
     @Override
     public String toString() {
         return "CourseDay{" +
                 "title='" + title + '\'' +
-                ", date=" + date +
                 ", agenda=" + agenda +
                 '}';
     }

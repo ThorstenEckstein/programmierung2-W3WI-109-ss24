@@ -1,4 +1,4 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

@@ -1,15 +1,11 @@
 package de.dhbw.planning;
 
-import de.dhbw.planning.print.DeepPrinter;
+import de.dhbw.planning.model.Course;
+import de.dhbw.planning.model.Semester;
 import de.dhbw.planning.print.SimplePrinter;
-import de.dhbw.planning.resources.FileResource;
-import de.dhbw.planning.resources.ResourceManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.io.IOException;
-import java.time.Duration;
 
 import static de.dhbw.planning.MockFactory.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,7 +1,7 @@
 package de.dhbw.planning.print;
 
-import de.dhbw.planning.*;
-import de.dhbw.planning.Module;
+import de.dhbw.planning.model.*;
+import de.dhbw.planning.model.Module;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;
@@ -69,9 +69,9 @@ public class SimplePrinter {
 
     private static String toString(CourseDay courseDay) {
         return String.format(
-                "\n[%s] %s: %s",
+                "\n[%s] %s",
                 CourseDay.class.getSimpleName(),
-                toString(courseDay.getDate()),
+                //toString(courseDay.getDate()),
                 courseDay.getTitle()
         );
     }

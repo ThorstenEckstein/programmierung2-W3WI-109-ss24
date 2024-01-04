@@ -1,5 +1,7 @@
 package de.dhbw.planning;
 
+import de.dhbw.planning.model.*;
+import de.dhbw.planning.model.Module;
 import de.dhbw.planning.print.DeepPrinter;
 import de.dhbw.planning.print.SimplePrinter;
 import de.dhbw.planning.resources.FileResource;

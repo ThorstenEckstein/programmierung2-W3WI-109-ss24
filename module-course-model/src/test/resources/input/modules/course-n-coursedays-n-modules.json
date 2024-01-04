@@ -6,7 +6,6 @@
       {
         "type": "courseDay",
         "title": "LV-Tag 1",
-        "date": "27.02.2024",
         "agenda": {
           "items": [
             {
@@ -29,7 +28,6 @@
       {
         "type": "courseDay",
         "title": "LV-Tag 2",
-        "date": "05.03.2024",
         "agenda": {
           "items": [
             {
@@ -52,7 +50,6 @@
       {
         "type": "courseDay",
         "title": "LV-Tag 3",
-        "date": "12.03.2024",
         "agenda": {
           "items": [
             {
@@ -82,37 +79,31 @@
       {
         "type": "courseDay",
         "title": "LV-Tag 4",
-        "date": "19.03.2024",
         "agenda": null
       },
       {
         "type": "courseDay",
         "title": "LV-Tag 5",
-        "date": "26.03.2024",
         "agenda": null
       },
       {
         "type": "courseDay",
         "title": "LV-Tag 6",
-        "date": "02.04.2024",
         "agenda": null
       },
       {
         "type": "courseDay",
         "title": "LV-Tag 7",
-        "date": "09.04.2024",
         "agenda": null
       },
       {
         "type": "courseDay",
         "title": "LV-Tag 8",
-        "date": "16.04.2024",
         "agenda": null
       },
       {
         "type": "courseDay",
         "title": "LV-Tag 9",
-        "date": "23.04.2024",
         "agenda": null
       }
     ]

@@ -1,22 +1,21 @@
-package de.dhbw.planning;
+package de.dhbw.planning.util;
 
-import java.time.Duration;
-import java.time.LocalTime;
+import de.dhbw.planning.model.Module;
+import de.dhbw.planning.model.*;
+
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static de.dhbw.planning.Constants.DURATION_DEFAULT;
-
 @SuppressWarnings("all")
-public class AgendaScheduler {
+public class AgendaUtil {
 
     private Agenda agenda;
 
-    public AgendaScheduler() { }
+    public AgendaUtil() { }
 
-    public AgendaScheduler(Agenda agenda) {
+    public AgendaUtil(Agenda agenda) {
         this.agenda = agenda;
     }
 
@@ -68,34 +67,6 @@ public class AgendaScheduler {
         }
 
         return itemLists;
-    }
-
-    public static Duration calculateTotalDuration(Agenda agenda, Class<?> clazz) {
-        Duration total = Duration.ZERO;
-        if (agenda == null) {
-            System.err.printf(
-                    "WARNING: Specified agenda for '%s' is 'null', \n"+
-                    "         Using default '%s' to calculate total duration!",
-                    clazz != null ? clazz.getSimpleName() : "unknown",
-                    DURATION_DEFAULT
-            );
-            return total;
-        }
-        for (Item item : agenda.getItems()) {
-            Duration itemDuration = item.getDuration();
-            total = total.plus(itemDuration);
-        }
-        return total;
-    }
-
-    public static Duration calculateDuration(List<Item> items) {
-        if (items == null) { return Duration.ZERO; }
-        Duration sum = Duration.ZERO;
-        for (Item item : items) {
-            Duration itemDuration = item.getDuration();
-            sum = sum.plus(itemDuration);
-        }
-        return sum;
     }
 
     // ------------------ private methods

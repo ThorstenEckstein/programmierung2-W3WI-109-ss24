@@ -1,10 +1,13 @@
 package de.dhbw.planning;
 
+import de.dhbw.planning.model.*;
+import de.dhbw.planning.model.Module;
+
 import java.time.Duration;
 import java.time.LocalDate;
 
-import static de.dhbw.planning.ContentType.*;
-import static de.dhbw.planning.Constants.*;
+import static de.dhbw.planning.model.ContentType.*;
+import static de.dhbw.planning.model.Constants.*;
 
 public class MockFactory {
 
@@ -38,7 +41,7 @@ public class MockFactory {
     public static CourseDay mockCourseDay(int counter) {
         CourseDay courseDay = new CourseDay();
         courseDay.setTitle("Day " + counter);
-        courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
+        //courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
 
         return courseDay;
     }
@@ -46,7 +49,7 @@ public class MockFactory {
     public static CourseDay mockCourseDay(int counter, Item... agendaItems) {
         CourseDay courseDay = new CourseDay();
         courseDay.setTitle("Day " + counter);
-        courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
+        //courseDay.setDate(LocalDate.of(2024, 2, counter * 7));
         Agenda agenda = new Agenda();
 
         for (Item item : agendaItems) {
@@ -61,8 +64,8 @@ public class MockFactory {
      * ----------------------- Module
      */
 
-    public static Module mockModule(int counter) {
-        return new Module(
+    public static de.dhbw.planning.model.Module mockModule(int counter) {
+        return new de.dhbw.planning.model.Module(
                 counter,
                 "Modul " + counter,
                 "module-" + counter,
@@ -70,7 +73,7 @@ public class MockFactory {
         );
     }
 
-    public static Module mockModule(int counter, Content... agendaItems) {
+    public static de.dhbw.planning.model.Module mockModule(int counter, Content... agendaItems) {
         Module module = mockModule(counter);
         Agenda agenda = new Agenda();
 

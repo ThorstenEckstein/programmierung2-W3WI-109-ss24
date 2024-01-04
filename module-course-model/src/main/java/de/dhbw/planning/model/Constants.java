@@ -1,4 +1,4 @@
-package de.dhbw.planning;
+package de.dhbw.planning.model;
 
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;

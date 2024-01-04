@@ -1,12 +1,14 @@
 package de.dhbw.demo.datatypes;
 
+import de.dhbw.demo.RegionalTrain;
+import de.dhbw.demo.Train;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class DatatypesDemoTest {
 
     @Test
-    @DisplayName("DEMO : Datentypen & Umwandlung")
+    @DisplayName("Demo : Datentypen & Umwandlung von primitiven Typen")
     public void demo1() {
         // given
         String   s = null;
@@ -44,6 +46,24 @@ public class DatatypesDemoTest {
         //bl = Boolean.valueOf(s);
         System.err.println("string  -> boolean : " + bl);
 
+    }
+
+    @Test
+    @DisplayName("Demo : Down-Casting von Objekttypen")
+    public void demo2() {
+        // given
+        Train train = new RegionalTrain("RB 21", "Baureihe 123");
+        //Train train = new Train("RB 21");
+
+        // when
+        String trainNumber = train.getNumber();
+
+        // when: down-casting
+        RegionalTrain regionalTrain = (RegionalTrain) train;
+        String regionalTrainNumber = regionalTrain.getNumber();
+
+        System.out.println(trainNumber);
+        System.out.println(regionalTrainNumber);
     }
 
 }

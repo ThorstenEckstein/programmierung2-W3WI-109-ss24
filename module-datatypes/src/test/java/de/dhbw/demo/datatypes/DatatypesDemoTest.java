@@ -6,11 +6,8 @@ import org.junit.jupiter.api.Test;
 public class DatatypesDemoTest {
 
     @Test
-    @DisplayName(
-            """
-            DEMO : Datentypen & Umwandlung
-            """)
-    public void exercise2() {
+    @DisplayName("DEMO : Datentypen & Umwandlung")
+    public void demo1() {
         // given
         String   s = null;
         char     c = 'A';

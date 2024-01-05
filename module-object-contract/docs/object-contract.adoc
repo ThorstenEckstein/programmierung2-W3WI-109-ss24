@@ -1,0 +1,74 @@
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
+
+// table of contents
+:toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Der Objektvertrag
+1.1. Objektidentität mit hashCode
+1.2. Objektgleichheit mit equals()
+----
+end::content[]
+////
+
+== Der Objektvertrag
+
+In Java erben alle Objekte von der Klasse `Object`, denn ... alle Klassen in Java _sind_ Objekte:
+
+-> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html[https://docs.oracle.com/.../java/lang/Object.html]
+
+Die Klasse stellt den *Grundvertrag* (_Object Contract_) für alle Java Klassen dar, die folgenden zwei sollen dabei näher betrachtet werden, da sie eine besondere Bedeutung haben:
+
+* `equals()`
+* `hashCode()`
+
+Die Object-Klasse definiert sowohl die Methoden `equals()` als auch `hashCode()`, was bedeutet, dass diese beiden Methoden implizit in jede Java-Klasse vererbt werden, auch wenn sie nicht explizit implementiert sind.
+
+=== Objektidentität mit `hashCode`
+
+Instanzen von Klassen - also Objekte - besitzen eine implizite *Identität*, eine Zahl.
+
+_Was bedeutet diese *Objektidentität*?_
+
+Einfach ausgedrückt, gibt `hashCode()` einen *ganzzahligen Wert* zurück, der von einem _Hashing-Algorithmus_ generiert wird. Anhand dieser Zahl wird standardmäßig entscheiden, ob Instanzen _identisch_ sind oder nicht.
+
+Beim Vergleich von Objekten/Instanzen ist aber die _Gleichheit_ von der _Identität_ zu unterscheiden!
+
+Etwas "ungenau" formuliert kann man sagen:
+
+. *Identität* zweier Instanzen bedeutet i.d.R. _technisch_ gleich
+. *Gleichheit* zweier Instanzen bedeutet i.d.R. _fachlich_ gleich
+
+Der allgemeine *Vertrag* von `hashCode()` besagt:
+
+* Immer wenn `hashCode()` während der Ausführung einer Java-Anwendung mehr als einmal für dasselbe Objekt aufgerufen wird, muss es konsistent *denselben* Wert zurückgeben. Vorausgesetzt, dass keine Informationen geändert werden, die in Gleichheitsvergleichen für das Objekt verwendet werden. Dieser Wert muss nicht von einer Ausführung einer Anwendung zur anderen Ausführung derselben Anwendung konsistent bleiben.
+* Wenn zwei Objekte gemäß der Methode `equals(Object)` *gleich* sind, muss der Aufruf der Methode `hashCode()` für jedes der beiden Objekte denselben Wert erzeugen.
+* Wenn zwei Objekte gemäß der Methode `equals(Object)` *ungleich* sind, muss der Aufruf der Methode `hashCode()` für jedes der beiden Objekte nicht zwingend zu unterschiedlichen ganzzahligen Ergebnissen führen. Man sollte sich jedoch darüber im Klaren sein, dass die Leistung von Hash-Tabellen durch die Erzeugung unterschiedlicher ganzzahliger Ergebnisse für ungleiche Objekte verbessert wird.
+* „Soweit es einigermaßen praktikabel ist, gibt die von der Klasse `Object` definierte Methode `hashCode()` eindeutige Ganzzahlen für verschiedene Objekte zurück.“
+
+Viele "interne" Methoden und/oder Prozesse, die von der Java API angeboten werden, nutzen im Hintergrund die hier diskutierten Prinzipien, z.B. bei `HashMaps`, bei der der Begriff `hash schon im Namen genutzt wird.
+
+
+=== Objektgleichheit mit `equals()`
+
+Die Standardimplementierung von `equals()`, d.h. wenn sie "nur" von Object geerbt wird und _nicht_ in der (neuen) Klasse implementiert wird, besagt, dass *Objekt-Gleichheit* dasselbe ist wie *Objekt-Identität*.
+
+Das lässt sich besser am Code erläutern:
+
+[source, java, linenums, title="Gleich oder Identisch?", indent=0]
+----
+include::{mod-lnk-test}/demo/ObjectContractDemoTest.java[tag="object-contract-1"]
+----
+
+[source, java, linenums, title="Gleich oder Identisch?", indent=0]
+----
+include::{mod-lnk-test}/demo/ObjectContractDemoTest.java[tag="object-contract-2"]
+----
+

@@ -138,6 +138,13 @@ include::../module-databases/docs/databases.adoc[tag="content"]
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-object-contract*
+|===
+
+include::../module-object-contract/docs/object-contract.adoc[tag="content"]
+
 ////
 
 {continue-here}

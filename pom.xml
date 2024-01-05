@@ -40,14 +40,15 @@
         <module>module-generics</module>
         <module>module-javadoc</module>
         <module>module-semantics</module>
+        <module>module-statics</module>
 
         <!-- candidates for optional modules -->
-        <module>module-statics</module>
         <module>module-databases</module>
         <module>module-course-model</module>
 
         <!-- module to take backup stuff, maybe used later -->
         <module>module-archive</module>
+        <module>module-template</module>
     </modules>
 
     <!--

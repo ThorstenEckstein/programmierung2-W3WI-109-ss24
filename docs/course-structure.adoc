@@ -13,14 +13,14 @@ include::settings.adoc[]
 | Tag #1# | 09:15 - 10:30 | *module-intro*
 |===
 
-include::../module-intro/docs/planning.adoc[]
+include::../module-intro/docs/intro.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #1# | 10:45 - 12:15 | *module-tools-n-help*
 |===
 
-include::../module-tools-n-help/docs/planning.adoc[]
+include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 {nl}
 
@@ -29,14 +29,14 @@ include::../module-tools-n-help/docs/planning.adoc[]
 | Tag #2# | 09:15 - 10:30 | *module-classes*
 |===
 
-include::../module-classes/docs/planning.adoc[]
+include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #2# | 10:45 - 12:15 | *module-interfaces*
 |===
 
-include::../module-interfaces/docs/planning.adoc[]
+include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 {nl}
 
@@ -45,31 +45,102 @@ include::../module-interfaces/docs/planning.adoc[]
 | Tag #3# | 09:15 - 10:05 | *module-datatypes*
 |===
 
-include::../module-datatypes/docs/planning.adoc[]
+include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #3# | 10:15 - 11:05 | *module-loops*
 |===
 
-include::../module-loops/docs/planning.adoc[]
+include::../module-loops/docs/loops.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #3# | 11:15 - 12:15 | *module-visibility*
 |===
 
-include::../module-visibility/docs/planning.adoc[]
+include::../module-visibility/docs/visibility.adoc[tag="content"]
 
 {nl}
+{nl}
+{nl}
+{nl}
+{nl}
+{nl}
+{nl}
 
+'''
+
+====
+[red]#*Noch nicht integriert*#
+====
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-statics*
+|===
+
+include::../module-statics/docs/statics.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-collections*
+|===
+
+include::../module-collections/docs/collections.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-enums*
+|===
+
+include::../module-enums/docs/enums.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-exceptions*
+|===
+
+include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-funcprogramming*
+|===
+
+include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-generics*
+|===
+
+include::../module-generics/docs/generics.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-javadoc*
+|===
+
+include::../module-javadoc/docs/javadoc.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-databases*
+|===
+
+include::../module-databases/docs/databases.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-semantics*
+|===
+
+include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
 ////
 
-include::../module-operators/docs/planning.adoc[]
-
 {continue-here}
-
 
 == {module}: Polymorphismus & Kontrollstrukturen
 

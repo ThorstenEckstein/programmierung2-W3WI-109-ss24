@@ -2,17 +2,21 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
-
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-//
-
+tag::content[]
+----
+1. Welcome
+2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
+3. IDE Setup
+----
+end::content[]
+////
 
 == Welcome
 

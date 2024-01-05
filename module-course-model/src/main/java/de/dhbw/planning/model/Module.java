@@ -3,6 +3,7 @@ package de.dhbw.planning.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import de.dhbw.planning.scheduling.DurationCalculator;
+import de.dhbw.planning.util.Constants;
 
 import java.time.Duration;
 

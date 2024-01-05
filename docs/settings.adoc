@@ -34,22 +34,23 @@
 :show-timeslots:      true
 
 // #
-// # Icons
+// # Icons & Symbols
 // #
 
-:icon-welcome:        icon:heart[role=red]
-:icon-update-project: icon:arrow-circle-o-down[role=red]
-:icon-dir:            icon:folder[role=yellow]
-:icon-dir-src:        icon:folder[role=yellow]
-:icon-dir-test:       icon:folder[role=yellow]
-:icon-exercise:       icon:flask[role=red]
-:icon-topic:          icon:book[role=gray]
+:icon-welcome:          icon:heart[role=red]
+:icon-update-project:   icon:arrow-circle-o-down[role=red]
+:icon-dir:              icon:folder[role=yellow]
+:icon-dir-src:          icon:folder[role=yellow]
+:icon-dir-test:         icon:folder[role=yellow]
+:icon-exercise:         icon:flask[role=red]
+:icon-topic:            icon:book[role=gray]
 :icon-theory:
-:icon-award:          icon:trophy[role=yellow]
-:icon-demo:           icon:eye[role=gray]
-:icon-setup:          icon:gear[role=blue]
-:icon-exam:           icon:graduation-cap[role=black]
-:icon-domain:         icon:train[role=red]
+:icon-award:            icon:trophy[role=yellow]
+:icon-demo:             icon:eye[role=gray]
+:icon-setup:            icon:gear[role=blue]
+:icon-exam:             icon:graduation-cap[role=black]
+:icon-domain:           icon:train[role=red]
+:symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 
 // #
 // # Titles
@@ -80,10 +81,10 @@
 :package-solution: solution
 
 // display global variables, set to 'true' to display in module docs!
-:show-variables: true
+:show-variables: false
 :show-structure: false
 
-ifeval::[{show-variables} == false]
+ifeval::[{show-variables} == true]
 [big]#*Global Settings*#
 
 *About:*

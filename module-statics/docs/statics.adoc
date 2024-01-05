@@ -2,8 +2,19 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
+// table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Statische Klassen und Variablen
+----
+end::content[]
+////
 
 == Statische Klassen und Variablen
 

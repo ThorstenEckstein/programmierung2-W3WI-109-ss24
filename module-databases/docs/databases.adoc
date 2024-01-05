@@ -1,26 +1,37 @@
-include::../../docs/asciidoc/settings.adoc[]
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: databases
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Datenbank Programmierung
+1.1. Preparation
+1.2. Setup H2 Database
+1.3. Theorie & Einführung
+1.3.1. SQL-Datenbanken
+1.3.2. Structured Query Language (SQL)
+1.3.3. NoSQL-Datenbanken
+1.3.4. SQL oder NoSQL?
+1.3.5. ORM Objektrelationales Mapping
+1.3.6. JPA - Jakarta Persistence API
+----
+end::content[]
+////
+
 
 == Datenbank Programmierung
 
 
 === Preparation
 
-include::../../docs/asciidoc/includes/update-project.adoc[]
+include::../../docs/includes/update-project.adoc[]
 
 
 [[SETUP_H2_DATABASE]]
@@ -47,17 +58,6 @@ Im unteren Bereich von IntelliJ gibt es neues Icon image:images/database-console
 
 
 === Theorie & Einführung
-
-*Allgemeine Inhalte*
-
-//tag::content[]
-* [ ] SQL-Datenbanken
-* [ ] NoSQL-Datenbanken
-* [ ] SQL
-* [ ] ORM Objektrelationales Mapping
-* [ ] JDBC, JPA
-* [ ] Unit-Tests gegen In-Memory-Datenbank (H2)
-//end::content[]
 
 ==== SQL-Datenbanken
 
@@ -209,7 +209,7 @@ Die `Java/Jakarta Persistence API` ist eine Spezifikation von Java. Sie wird ben
 
 Dabei ist sie "nur" eine Spezifikation, sie führt selbst keine Datenbankoperationen aus. Daher ist immer eine Implementierung der API erforderlich, ORM Tools wie `Hibernate` oder `EclipseLink` implementieren die JPA Spezifikation für die Datenpersistenz.
 
-[source, java, lines]
+[, java, lines]
 ----
 @Entity <1>
 @Table(name="Stations") <2>
@@ -247,7 +247,7 @@ public class Station {
 <5> wird nicht in der Tabelle gespeichert
 <6> "One-To-Many" Relation als Liste (`Set`)
 
-[source, java, lines]
+[, java, lines]
 ----
 @Entity
 @Table(name="Platforms")

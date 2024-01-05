@@ -1,19 +1,23 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: generics
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Java Generics
+1.1. Basics & Einführung
+1.2. Bounded Generics
+1.3. Wildcards
+----
+end::content[]
+////
 
 == Java Generics
 
@@ -24,12 +28,10 @@ include::../../docs/settings.adoc[]
 ----
 
 
-=== Preparation
-
 include::../../docs/includes/update-project.adoc[]
 
 
-=== Theorie & Einführung
+=== Basics & Einführung
 
 *Generische Programmierung* in Java ist durch `Generics` seit langem möglich. Der Begriff steht synonym für "parametrisierte Typen". Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Dazu wird der sogenannte *Diamond-Operator* `<>` bei Klasse oder Methode genutzt:
 
@@ -58,7 +60,7 @@ Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method"]
 ----
 
-*Bounded Generics*
+=== Bounded Generics
 
 Oft kommen sogenannte *bounded generics* zum Einsatz.
 Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der generische Typ erben muss. Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
@@ -68,7 +70,7 @@ Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der
  public <T extends Number> add(T first, T second) { ... }
 ----
 
-*Wildcards*
+=== Wildcards
 
 Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durchaus auch die sogenannte *Wildcard* `?` nutzen. Das schafft Flexibilität hinsichtlich der spezifizierbaren Typen, verhindert aber die Nutzung der Typvariable selbst innerhalb der Klasse.
 

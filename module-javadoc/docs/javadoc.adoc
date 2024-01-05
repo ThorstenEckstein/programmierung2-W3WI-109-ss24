@@ -1,19 +1,22 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: javadoc
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Javadoc
+1.2. Theorie & Einführung
+1.3. Erzeugen von Javadoc
+----
+end::content[]
+////
 
 == Javadoc
 
@@ -61,7 +64,7 @@ Ein paar Beispiele:
 *Javadoc einer Klasse:*
 
 [source, java, indent=0]
-include::{module-sources}/demo/DateTimeHelper.java[tags=javadoc-class]
+include::{mod-lnk-src}/javadoc/demo/DateTimeHelper.java[tags=javadoc-class]
 
 In HTML umgewandelt:
 
@@ -71,12 +74,12 @@ image::images/javadoc-class.png[align="center"]
 *Javadoc eines Feldes:*
 
 [source, java, indent=0]
-include::{module-sources}/demo/DateTimeHelper.java[tags=javadoc-field]
+include::{mod-lnk-src}/javadoc/demo/DateTimeHelper.java[tags=javadoc-field]
 
 *Javadoc einer Methode:*
 
 [source, java, indent=0]
-include::{module-sources}/demo/DateTimeHelper.java[tags=javadoc-method]
+include::{mod-lnk-src}/javadoc/demo/DateTimeHelper.java[tags=javadoc-method]
 
 In HTML umgewandelt:
 
@@ -121,12 +124,7 @@ c) java -version
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {module-demo-path-tests}/JavadocTests.java
-
-Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
-
-[subs="normal"]
- {module-demo-path-sources}/*.java
+ {mod-ref-test}/javadoc/JavadocTests.java
 
 
 === Exercises
@@ -134,14 +132,12 @@ Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 Nutze folgendes Package für deine *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/javadoc/ExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
-
-{nl}
+ {mod-ref-src}/javadoc/exercises/*.java
 
 
 [[javadoc-exercise-1]]

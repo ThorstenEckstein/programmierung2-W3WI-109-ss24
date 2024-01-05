@@ -1,24 +1,26 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: funcprog
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
 
-== Functional Programming in Java
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
+tag::content[]
+----
+1. Funktionale Programmierung in Java
+1.1. Einführung
+1.2. Lambda Ausdrücke
+1.3. Streaming (API)
+----
+end::content[]
+////
 
-=== Preparation
+== Funktionale Programmierung in Java
+
 
 ._"Project Update" Details ..._
 [%collapsible]
@@ -26,9 +28,11 @@ include::../../docs/settings.adoc[]
 include::../../docs/includes/update-project.adoc[]
 ====
 
-=== Theorie & Einführung
+=== Einführung
 
-==== Lambda Ausdrücke
+to be done
+
+=== Lambda Ausdrücke
 
 Funktionale Programmierung ist ein *Programmierparadigma*, in dem *Funktionen* im Mittelpunkt stehen, sie werden nicht nur
 
@@ -70,7 +74,7 @@ Zu beachten ist, dass der `{ code block }` ein return statement enthalten muss.
 
 Ein paar einfache Beispiele:
 
-[source, java]
+[, java]
 ----
 (int x, int y) -> { return x + y; }
 (long x) -> { return x + 2; }
@@ -87,7 +91,7 @@ zugewiesen. Diese sind eine Art von Typ und sind ein (normales) Interface, aber 
 
 Konkrete Implementierungen dieser funktionalen Interfaces gibt es recht viele neue im Bereich der Lambdas, aber bereits vorher gab es solche auch schon, z.B. im Collections Framework mit dem Interface `Comparator<T>`.
 
-[source, java]
+[, java]
 ----
 @FunctionalInterface
 public interface BinaryOperator<T> {
@@ -109,7 +113,7 @@ Zu jedem dieser functionalen Interfaces gibt es einen Unit-Test zur *Demonstrati
  /test/de/dhbw/{module-package}/LambdaTests.java
 
 
-==== Streaming (API)
+=== Streaming (API)
 
 Das Streaming API stellt im Wesentlichen Methoden zur _schnellen, leicht lesbaren und bequemen_ Verarbeitung von Daten im Sinne einer *Mehrfach-* oder auch *Batch*-Verarbeitung bereit, und zwar in Form sogenannter *Streams*.
 
@@ -129,7 +133,7 @@ Ein ausführliches Beispiel für den Gebrauch in *Listen*:
 
 [source,java,title="Lamdba + Streaming"]
 ----
-include::{module-tests}/LambdaTests.java[tag="lambda-example-1"]
+include::{mod-lnk-test}/funcprog/LambdaTests.java[tag="lambda-example-1"]
 ----
 
 Im Detail:
@@ -138,7 +142,7 @@ Im Detail:
 
 Filter werden durch die oben bereits genannten `Predicates` implementiert und in eine Methode namens `filter()` als _funktionales Argument_ übergeben.
 
-_? Welchen Datentyp geben die Predicates zurück ?_
+-> _Welchen Datentyp geben die Predicates zurück?_
 
 Bei der Anwendung mehrerer oder komplexer Filteroperationen sollte allerdings die Performanz beachtet werden. Eine Einschätzung:
 
@@ -171,14 +175,14 @@ Dazu ein Beispiel:
 
 [source,java,title="Beispiel einer reduce() Operation"]
 ----
-include::{module-tests}/StreamingTests.java[tag="reduce-example1"]
+include::{mod-lnk-test}/funcprog/StreamingTests.java[tag="reduce-example1"]
 ----
 
 sowie als Beispiel für einen *fachlichen* Nutzen, der "Erkenntnisse" aus den fachlichen Daten ermittelt:
 
 [source,java,title="Fachliches Beispiel (good code?, bad code?)", indent="0"]
 ----
-include::{module-tests}/LambdaTests.java[tag="lambda-example-2"]
+include::{mod-lnk-test}/funcprog/LambdaTests.java[tag="lambda-example-2"]
 ----
 
 
@@ -187,12 +191,12 @@ include::{module-tests}/LambdaTests.java[tag="lambda-example-2"]
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {module-demo-path-tests}/LambdaTests.java & StreamingTests.java
+ {mod-ref-test}/funcprog/LambdaTests.java & StreamingTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs="normal"]
- {module-demo-path-sources}/*.java
+ {mod-ref-src}/funcprog/demo/*.java
 
 
 === Exercises
@@ -200,12 +204,12 @@ Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 Nutze folgendes Package für deine *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/funcprog/ExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
+ {mod-ref-src}/funcprog/exercises/*.java
 
 {nl}
 
@@ -225,7 +229,7 @@ Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 
 [source, java, indent="0"]
 ----
-include::../src/test/java/de/dhbw/funcprog/ExerciseTests.java[tags="old-fashioned-reduce"]
+include::{mod-lnk-test}/funcprog/ExerciseTests.java[tags="old-fashioned-reduce"]
 ----
 
 
@@ -236,7 +240,7 @@ Implementiere die Übung 2a mit modernen Mitteln, d.h. ersetze die "alte" `for-e
 
 [source, java, indent="0"]
 ----
-include::../src/test/java/de/dhbw/funcprog/ExerciseTests.java[tags="modern-reduce"]
+include::{mod-lnk-test}/funcprog/ExerciseTests.java[tags="modern-reduce"]
 ----
 
 

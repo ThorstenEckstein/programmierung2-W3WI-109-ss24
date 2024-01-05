@@ -1,9 +1,0 @@
-include::../../docs/settings.adoc[]
-include::module-settings.adoc[]
-
-----
-1. Datentypen
-2. Typumwandlungen
-2.1. Implizite Typumwandlung
-2.2. Explizite Typumwandlung (Casting)
-----

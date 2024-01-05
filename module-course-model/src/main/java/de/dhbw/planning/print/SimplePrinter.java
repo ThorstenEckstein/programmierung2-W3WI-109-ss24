@@ -2,6 +2,7 @@ package de.dhbw.planning.print;
 
 import de.dhbw.planning.model.*;
 import de.dhbw.planning.model.Module;
+import de.dhbw.planning.util.Constants;
 
 import java.time.LocalDate;
 import java.time.format.TextStyle;

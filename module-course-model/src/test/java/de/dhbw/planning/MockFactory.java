@@ -4,10 +4,9 @@ import de.dhbw.planning.model.*;
 import de.dhbw.planning.model.Module;
 
 import java.time.Duration;
-import java.time.LocalDate;
 
 import static de.dhbw.planning.model.ContentType.*;
-import static de.dhbw.planning.model.Constants.*;
+import static de.dhbw.planning.util.Constants.*;
 
 public class MockFactory {
 

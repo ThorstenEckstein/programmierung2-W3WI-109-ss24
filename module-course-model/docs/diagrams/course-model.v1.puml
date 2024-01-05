@@ -9,7 +9,7 @@ class Course {
   Agenda agenda;
 }
 class Agenda {
-  LinkedHashSet<Item> items;
+  LinkedList<Item> items;
 }
 interface Item {
   Duration calculateDuration();

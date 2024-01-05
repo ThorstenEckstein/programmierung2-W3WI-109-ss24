@@ -2,17 +2,25 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
-
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-//
-
+tag::content[]
+----
+1. Kontrollstrukturen
+1.1. Konditionalsausdrücke
+1.1.1. if - else-if - else
+1.1.2. switch case
+1.2. Schleifen
+1.2.1. for (each)
+1.2.2. (do) while
+----
+end::content[]
+////
 
 == Kontrollstrukturen
 

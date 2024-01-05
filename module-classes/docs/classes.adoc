@@ -2,17 +2,23 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
-
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-//
-
+tag::content[]
+----
+1. Organisation & Nutzung von Java Klassen
+2. Klassen & Instanzen
+3. Vererbung
+4. Überladen & Übersteuern (Überschreiben)
+5. Polymorphismus
+----
+end::content[]
+////
 
 == Organisation & Nutzung von Java Klassen
 
@@ -269,13 +275,25 @@ In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Be
 [[exercises_inheritance]]
 *Übungen*:
 
+====
+TIP: Nutze, wann immer möglich, `Code Generierung` für die Schritte, am besten mithilfe der Tastenkombination. Siehe ->
+====
+
+
+[%collapsible, title="_Zur Erinnerung > Auszug aus 'Tools & Help...'_"]
+====
+include::../../module-tools-n-help/docs/tools-and-help.adoc[tag="code-generation-keys"]
+====
+
+_Testklasse_, in der die Übungen implementiert werden können:
+
 [subs=normal]
  -> {mod-ref-test}/exercise/inheritance/InheritanceExerciseTest.java
 
 
 Übung 1::
 
-Erzeuge folgende *Klassen*:
+Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
 * Eine Klasse `Zug` mit
 ** einem String Feld `number` und
@@ -283,6 +301,19 @@ Erzeuge folgende *Klassen*:
 * Eine Klasse `Fernzug`, die von der Klasse `Zug` erbt
 * Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
 * Teste, welchen Wert das Feld `number` hat
+
+
+Übung 2 (optional)::
+
+Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
+
+Erzeuge eine
+
+. konkrete Klasse `Person`
+. mit einem Attribut `name`, erstelle dann
+. die zum Attribut gehörende `get` und `set` Methode,
+. erstelle außerdem die `equals()` und `hashCode()` Methoden,
+. zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
 
 
 == Referenzen

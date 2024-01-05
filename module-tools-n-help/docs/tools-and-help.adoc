@@ -2,17 +2,25 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
-
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-//
-
+tag::content[]
+----
+1. Projektverwaltung mit Maven & Projektstruktur
+2. Quellcodeverwaltung mit Git und Github
+3. Test-Driven-Development (TDD)
+4. Generierung von Quellcode mit der IDE
+5. Autocompletion
+6. Icons & Symbole in der IDE
+7. Tipps, Tricks, Probleme & Lösungen
+----
+end::content[]
+////
 
 == Projektverwaltung mit `Maven` & Projektstruktur
 
@@ -235,12 +243,14 @@ In aller Regel ist es sehr sinnvoll, die Entwicklungsumgebung (IDE) weitreichend
 
 Ein paar *Tipps* dazu:
 
+//tag::code-generation-keys[]
 *Generierung von Quellcode (Klassen, Methoden, etc.)*
 
 . mithilfe einer *Tastenkombination*
 .. unter MacOS: `Command + N`
 .. unter Windows: `Alt + Einfg` (ggf. auch `Fn + Alt + Einfg`) oder
 . mithilfe der *Maus*
+//end::code-generation-keys[]
 
 // grid="none", frame="none"
 [cols="^1,^1", grid="none", frame="none"]

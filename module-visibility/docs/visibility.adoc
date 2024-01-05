@@ -5,12 +5,20 @@ include::module-settings.adoc[]
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-
+tag::content[]
+----
+1. Access Modifier (Sichtbarkeit)
+1.1. default
+1.2. public
+1.3. protected
+1.4. private
+----
+end::content[]
+////
 
 == Access Modifier (Sichtbarkeit)
 

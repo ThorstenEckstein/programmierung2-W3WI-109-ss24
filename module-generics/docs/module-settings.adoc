@@ -1,6 +1,6 @@
 // --- Name
-:module-name:  module-archive
-:module-title: Archiv, Ablage, Datensicherung
+:module-name:  module-generics
+:module-title: Java Generics
 
 // --- References
 :mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]

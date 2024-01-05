@@ -1,6 +1,6 @@
 // --- Name
-:module-name:  module-archive
-:module-title: Archiv, Ablage, Datensicherung
+:module-name:  module-enums
+:module-title: Enumerations (Aufzählungen)
 
 // --- References
 :mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]

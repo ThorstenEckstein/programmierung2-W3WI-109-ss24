@@ -4,8 +4,10 @@ import de.dhbw.planning.model.Module;
 import de.dhbw.planning.model.*;
 import de.dhbw.planning.scheduling.ContentSchedule;
 import de.dhbw.planning.scheduling.CourseDaySchedule;
+import de.dhbw.planning.util.Constants;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -166,17 +168,25 @@ public class DeepPrinter {
         //  a) custom formatter  (such as 'DateTimeFormatter.ofPattern("E dd.MM.yyyy")')
         //  b) default formatter (such as 'DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)');
 
-        return String.format("%s",Constants.DEFAULT_DATE_DISPLAY_FORMATTER.format(date));
+        return String.format("%s", Constants.DEFAULT_DATE_DISPLAY_FORMATTER.format(date));
     }
 
     private static String toString(CourseDaySchedule courseDaySchedule) {
+        LocalTime endTime = courseDaySchedule.getEndTime();
+
+        String warning = "";
+        if (!Constants.DEFAULT_TIME_END.equals(endTime)) {
+            warning = " >>>>>>>>>> ACHTUNG: Ende der LV ist nicht " + Constants.DEFAULT_TIME_END + "!";
+        }
+
         return """
-                \n%s, %s - %s: %s"""
+                \n%s, %s - %s: %s %s"""
                 .formatted(
                         toString(courseDaySchedule.getDate()),
                         courseDaySchedule.getStartTime(),
                         courseDaySchedule.getEndTime(),
-                        courseDaySchedule.getCourseDay().getTitle()
+                        courseDaySchedule.getCourseDay().getTitle(),
+                        warning
                 );
     }
 

@@ -1,19 +1,27 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: enums
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Java Enums
+1.1. Preparation
+1.2. Theorie & Einführung
+1.2.1. Zusätzliche Methoden
+1.2.2. Enums in Switch-Ausdrücken
+1.2.3. Zusätzliche Datenfelder
+1.3. Logische Operatoren
+----
+end::content[]
+////
+
 
 == Java Enums
 

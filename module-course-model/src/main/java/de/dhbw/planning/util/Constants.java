@@ -1,6 +1,7 @@
-package de.dhbw.planning.model;
+package de.dhbw.planning.util;
 
 import java.time.Duration;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
@@ -16,6 +17,15 @@ public class Constants {
     public static final Duration DURATION_45_MIN = Duration.of(45, ChronoUnit.MINUTES);
     public static final Duration DURATION_60_MIN = Duration.of(60, ChronoUnit.MINUTES);
     public static final Duration DURATION_DEFAULT = Duration.ZERO;
+
+    //
+    // Time Defaults
+    //
+
+    public static final LocalTime TIME_09_15 = LocalTime.of(9,15);
+    public static final LocalTime TIME_12_15 = LocalTime.of(12,15);
+    public static final LocalTime DEFAULT_TIME_START = TIME_09_15;
+    public static final LocalTime DEFAULT_TIME_END = TIME_12_15;
 
     //
     // Date & Time Formatting

@@ -6,7 +6,7 @@ import de.dhbw.planning.model.Item;
 import java.time.Duration;
 import java.util.List;
 
-import static de.dhbw.planning.model.Constants.DURATION_DEFAULT;
+import static de.dhbw.planning.util.Constants.DURATION_DEFAULT;
 
 @SuppressWarnings("all")
 public class DurationCalculator {

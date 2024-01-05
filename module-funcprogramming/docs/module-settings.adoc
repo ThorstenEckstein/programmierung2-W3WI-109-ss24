@@ -1,6 +1,6 @@
 // --- Name
-:module-name:  module-archive
-:module-title: Archiv, Ablage, Datensicherung
+:module-name:  module-funcprogramming
+:module-title: Funktionale Programmierung in Java
 
 // --- References
 :mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]

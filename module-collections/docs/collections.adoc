@@ -6,12 +6,16 @@ include::module-settings.adoc[]
 // table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// Set 'show-structure' in settings.adoc to 'true' to display explicitly here
-ifeval::[{show-structure} == true]
-include::planning.adoc[]
-endif::[]
-//
+tag::content[]
+----
+... to be done ...
+----
+end::content[]
+////
 
 
 == Collections

@@ -1,20 +1,23 @@
 include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
+// table of contents
 :toc:
 
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
 
-// local document variables ---------------------------------------------------------------------
-:module-package: semantics
+tag::content[]
+----
+1. Referenzsemantik
+1.1. Wertsemantik - pass by value
+1.2. Referenzsemantik - pass reference
+----
+end::content[]
+////
 
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
 
 === Referenzsemantik
 
@@ -26,7 +29,7 @@ A small unit test example (*Demo 1*):
 
 [source, java, linenums]
 ----
-include::{module-tests}/SemanticTests.java[tags="ref-semantics-prim"]
+include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-prim"]
 ----
 
 Graphical explanation:
@@ -41,9 +44,9 @@ Although the argument variable is passed in a method, the *reference* itself is 
 
 A Unit Test example (*Demo 2*):
 
-[source, java, linenums]
+[source, java, linenums, indent=0]
 ----
-include::{module-tests}/SemanticTests.java[tags="ref-semantics-obj"]
+include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-obj"]
 ----
 
 Graphical explanation:

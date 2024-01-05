@@ -1,39 +1,35 @@
-include::../../docs/asciidoc/settings.adoc[]
+include::../../docs/settings.adoc[]
+include::module-settings.adoc[]
+:author: Thorsten Eckstein
 
-// local document variables ---------------------------------------------------------------------
-:module-package: exceptions
-
-:module-sources: ../src/main/java/de/dhbw/{module-package}
-:module-tests: ../src/test/java/de/dhbw/{module-package}
-
-:module-demo-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/demo]
-:module-demo-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-
-:module-exercises-path-sources: pass:n[src/[red]#*main*#/java/de/dhbw/{module-package}/exercises]
-:module-exercises-path-tests: pass:n[src/[red]#*test*#/java/de/dhbw/{module-package}]
-// ----------------------------------------------------------------------------------------------
-
+// table of contents
 :toc:
+
+////
+  Folgendes wird in "course-structure.adoc"
+  aus jedem Modul zusammengeführt:
+
+tag::content[]
+----
+1. Exception Handling
+1.1. Exceptions Hierarchie
+1.2. Exception Handling
+1.3. Mehrere Exceptions
+1.4. Der finally Block
+1.5. throws und throw
+----
+end::content[]
+////
 
 == Exception Handling
 
+[%collapsible, title="Update Project ..."]
+====
+include::../../docs/includes/update-project.adoc[]
+====
 
-=== Preparation
 
-include::../../docs/asciidoc/includes/update-project.adoc[]
-
-
-=== Theorie & Einführung
-
-==== Exceptions Hierarchie
-
-*Allgemein:*
-
-//tag::content[]
-* [ ] Checked vs. Runtime (unchecked) exceptions
-* [ ] Technische vsw. Fachliche Exceptions
-* [ ] Exception Handling - was ist zu tun?
-//end::content[]
+=== Exceptions Hierarchie
 
 *Fachlicher Kontext*
 ----
@@ -53,7 +49,7 @@ Gleichermaßen können nur diese oder ihre Subklassen als Argumenttyp im `catch`
 
 Die wichtigsten Codefragmente:
 
-[source, java, lines]
+[, java, lines]
 ----
  public void process() throws ValidationException {
     // code that may throw an exception
@@ -88,12 +84,12 @@ include::diagrams/exceptions-model.puml[]
 ....
 
 
-==== Exception Handling
+=== Exception Handling
 
 Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden, aber *NICHT* so:
 
 [source, java, indent="0"]
-include::{module-sources}/demo/DataLoader.java[tags=exception-handling-1]
+include::{mod-lnk-src}/exceptions/demo/DataLoader.java[tags=exception-handling-1]
 
 Besser ist eine echte Verarbeitung des Fehlers. Hier sind sehr verschiedene Prozesse möglich, anhängig vom eingetretenen Fehler. In vielen Fällen sind bei Fehlern sowohl ...
 
@@ -102,7 +98,7 @@ Besser ist eine echte Verarbeitung des Fehlers. Hier sind sehr verschiedene Proz
 
 Dinge zu tun. Dazu kann z.B. ein eigener, applikationsspezifischer `ExceptionHandler` eingesetzt werden, der die Behandlung an eine andere Komponente _delegiert_:
 
-[source, java]
+[, java]
 ----
 try {
     risky();
@@ -118,16 +114,16 @@ try {
 oder
 
 [source, java, indent="0"]
-include::{module-sources}/demo/DataLoader.java[tags=exception-handling-2]
+include::{mod-lnk-src}/exceptions/demo/DataLoader.java[tags=exception-handling-2]
 
 
-==== Mehrere Exceptions
+=== Mehrere Exceptions
 
 In manchen Fällen gibt es Methoden oder Codeabschnitte, die gleich mehrere Fehler verursachen können. Sind dies `checked` Exceptions, so müssen sie alle mittels `catch` erfasst und behandelt werden. Dazu gibt es 3 Optionen:
 
 . Fangen der *allgemeinsten Exception* als derjenigen, von denen alle anderen vorkommenden Exceptions abgeleitet sind
 
-[source, java]
+[, java]
 ----
 try {
     risky();
@@ -141,7 +137,7 @@ CAUTION: -> _<<Anti-Pattern-GenExcHdl, Anti-Pattern: Generische Exception Handle
 [start=2]
 . *Mehrere* `catch` Abschnitte
 
-[source, java]
+[, java]
 ----
 try {
     risky();
@@ -155,7 +151,7 @@ try {
 [start=3]
 . Ein *Multi-Catch* Block
 
-[source, java]
+[, java]
 ----
 try {
     risky();
@@ -166,7 +162,7 @@ try {
 
 CAUTION: _-> <<Anti-Pattern-ThrRethr, Anti Pattern "Throw-Rethrow">>_
 
-[source, java]
+[, java]
 ----
 try {
     risky();
@@ -175,11 +171,11 @@ try {
 }
 ----
 
-==== Der `finally` Block
+=== Der `finally` Block
 
 Der `finally` Block, der grundsätzlich zum Konstrukt `try-catch-finally` gehört, wird _immer_ ausgeführt, wenn der `try` Block beendet wird. Dies stellt sicher, dass der `finally` Block auch dann ausgeführt wird, wenn eine unerwartete Exception aufgetreten ist. Darüber hinaus ist der `finally` Block auch über das reine Exception Handling hinaus nützlich, er erlaubt dem Entwickler insbesondere ein _clean up_ durchzuführen, d.h. allokierte Ressourcen wie z.B. geöffnete Dateien oder Speicherbereiche wieder freizugeben:
 
-[source, java]
+[, java]
 ----
 String data = "data-to-save-to-file";
 try {
@@ -200,13 +196,13 @@ try {
 Vor allem bei der Verarbeitung von Dateien bei sogenannten `IO` (kurz für Input-Output) Operationen - siehe Beispiel-Code - ist das _CleanUp_ sehr wichtig und eine gute Praxis!
 
 
-==== `throws` und `throw`
+=== `throws` und `throw`
 
 Das `throws` *Schlüsselwort* zeigt im Rahmen einer Methodensignatur an, dass diese Methode eine Ausnahme werfen könnte.
 
 Das Schlüsselwort `throw` dagegen wirft eine tatsächliche, konkrete Exception.
 
-[source, java]
+[, java]
 ----
 public void vote(int ageOfVoter) throws TooYoungToVoteException {
   if (ageOfVoter < 18) {

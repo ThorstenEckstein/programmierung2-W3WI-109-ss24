@@ -171,7 +171,7 @@ public class PlanningWithContentsTest {
         assertFalse(courseDaySchedules.isEmpty());
 
         // print
-        DeepPrinter.printPretty(courseDaySchedules);
+        DeepPrinter.printPretty("all", courseDaySchedules);
     }
 
 }

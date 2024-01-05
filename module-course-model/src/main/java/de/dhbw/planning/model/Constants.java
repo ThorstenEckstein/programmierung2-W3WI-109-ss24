@@ -26,4 +26,11 @@ public class Constants {
     public static final String DEFAULT_DATETIME_FORMAT = "dd.MM.yyyy HH:mm:ss";
     public static final DateTimeFormatter DEFAULT_DATETIME_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATETIME_FORMAT);
 
+    //
+    // Date & Time Display
+    //
+
+    public static final String DEFAULT_DATE_DISPLAY_FORMAT = "E dd.MM.yyyy";
+    public static final DateTimeFormatter DEFAULT_DATE_DISPLAY_FORMATTER = DateTimeFormatter.ofPattern(DEFAULT_DATE_DISPLAY_FORMAT);
+
 }

@@ -4,17 +4,14 @@ import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
-public class ExerciseSolutions {
+public class LoopsSolutionsTest {
 
-    private final Logger logger = new Logger(ExerciseSolutions.class);
+    private final Logger logger = new Logger(LoopsSolutionsTest.class);
 
     @Test
     @DisplayName("Solution for Exercise 1: Eine for Schleife, größte Zahl")

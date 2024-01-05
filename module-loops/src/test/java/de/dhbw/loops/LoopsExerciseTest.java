@@ -4,15 +4,14 @@ import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Iterator;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class ExerciseTests {
+public class LoopsExerciseTest {
 
-    private final Logger logger = new Logger(ExerciseTests.class);
+    private final Logger logger = new Logger(LoopsExerciseTest.class);
 
     @Test
     @DisplayName("Exercise 1: Finde die größte Zahl in der Liste mithilfe einer for Schleife")

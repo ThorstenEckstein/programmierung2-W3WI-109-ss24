@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
@@ -28,11 +30,9 @@ public class CourseWs24Test {
     }
 
     @Test
-    @DisplayName("[Course] Schedule Course WS24")
-    public void canScheduleCourse() throws IOException {
-        // given
-
-        // load data and get first course day (as example)
+    @DisplayName("[Course] Schedule Complete Course WS24")
+    public void canScheduleAndPrintCourse() throws IOException {
+        // given - load data and get first course day (as example)
         Course course = resourceManager.readCourse(FileResource.Input.CourseWs24);
 
         // course day shall start at 09:15
@@ -48,8 +48,8 @@ public class CourseWs24Test {
         // then
         assertFalse(courseDaySchedules.isEmpty());
 
-        // print
-        DeepPrinter.printPretty(courseDaySchedules);
+        // print - "Tag 1" or "all"
+        DeepPrinter.printPretty("Tag 3", courseDaySchedules);
     }
 
 }

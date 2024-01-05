@@ -4,14 +4,12 @@ import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
-public class LoopTests {
+public class LoopsDemoTest {
 
-    private final Logger logger = new Logger(LoopTests.class);
+    private final Logger logger = new Logger(LoopsDemoTest.class);
 
     @Test
     @DisplayName("Demo 1: for loop")
@@ -20,7 +18,7 @@ public class LoopTests {
 
         // when
         for (int i = 0; i < 5; i++) {
-            System.out.println("loop i = " + i);
+            System.out.println("For-Loop: i = " + i);
         }
 
         // then
@@ -34,7 +32,7 @@ public class LoopTests {
 
         // when ( mind. 1 Ausführung von do {...} )
         do {
-            System.out.println("Do-While loop: i = " + i++);
+            System.out.println("Do-While-Loop: i = " + i++);
         } while (i < 5);
 
         // then

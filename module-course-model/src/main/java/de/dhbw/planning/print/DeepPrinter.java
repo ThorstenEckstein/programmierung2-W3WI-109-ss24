@@ -6,9 +6,9 @@ import de.dhbw.planning.scheduling.ContentSchedule;
 import de.dhbw.planning.scheduling.CourseDaySchedule;
 
 import java.time.LocalDate;
-import java.time.format.TextStyle;
 import java.util.List;
-import java.util.Locale;
+import java.util.NoSuchElementException;
+import java.util.Optional;
 
 import static de.dhbw.planning.model.ContentType.isBreak;
 
@@ -22,13 +22,40 @@ public class DeepPrinter {
         System.out.println(object);
     }
 
-    public static void printPretty(List<CourseDaySchedule> courseDaySchedules) {
+    /**
+     * <pre>
+     * Specify course day title like
+     *  - "Tag 1" (can also be "Day 1") or
+     *  - "all" to print all
+     * </pre>
+     *
+     * <p>
+     * IMPORTANT: <strong>See also underlying json data, loaded in many unit tests!</strong>
+     * </p>
+     *
+     * @param printThis "Tag 1" ... or "all"
+     * @param courseDaySchedules the list of course day schedules
+     */
+    public static void printPretty(String printThis, List<CourseDaySchedule> courseDaySchedules) {
+        if ("all".equals(printThis)) {
+            printPretty(courseDaySchedules);
+        } else {
+            CourseDaySchedule courseDaySchedule = findByTitle(printThis, courseDaySchedules);
+            printPretty(courseDaySchedule);
+        }
+    }
+
+    private static void printPretty(List<CourseDaySchedule> courseDaySchedules) {
         for (CourseDaySchedule courseDaySchedule : courseDaySchedules) {
-            print(toString(courseDaySchedule));
-            List<ContentSchedule> contentSchedules = courseDaySchedule.getContentSchedules();
-            for (ContentSchedule contentSchedule : contentSchedules) {
-                print(toString(contentSchedule));
-            }
+            printPretty(courseDaySchedule);
+        }
+    }
+
+    private static void printPretty(CourseDaySchedule courseDaySchedule) {
+        print(toString(courseDaySchedule));
+        List<ContentSchedule> contentSchedules = courseDaySchedule.getContentSchedules();
+        for (ContentSchedule contentSchedule : contentSchedules) {
+            print(toString(contentSchedule));
         }
     }
 
@@ -134,21 +161,22 @@ public class DeepPrinter {
     }
 
     private static String toString(LocalDate date) {
-        return String.format("%s %s %s",
-                date.getDayOfWeek().getDisplayName(TextStyle.SHORT, Locale.GERMANY),
-                Constants.DEFAULT_DATE_FORMATTER.format(date),
-                "09:15-12:15"
-        );
+
+        // 2 variants to format date:
+        //  a) custom formatter  (such as 'DateTimeFormatter.ofPattern("E dd.MM.yyyy")')
+        //  b) default formatter (such as 'DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)');
+
+        return String.format("%s",Constants.DEFAULT_DATE_DISPLAY_FORMATTER.format(date));
     }
 
     private static String toString(CourseDaySchedule courseDaySchedule) {
         return """
-                \n%s: %s, %s - %s"""
+                \n%s, %s - %s: %s"""
                 .formatted(
-                        courseDaySchedule.getDate(),
-                        courseDaySchedule.getCourseDay().getTitle(),
+                        toString(courseDaySchedule.getDate()),
                         courseDaySchedule.getStartTime(),
-                        courseDaySchedule.getEndTime()
+                        courseDaySchedule.getEndTime(),
+                        courseDaySchedule.getCourseDay().getTitle()
                 );
     }
 
@@ -173,6 +201,18 @@ public class DeepPrinter {
                 //padding,
                 content.getDescription()
         );
+    }
+
+    private static CourseDaySchedule findByTitle(String title, List<CourseDaySchedule> courseDaySchedules) {
+        Optional<CourseDaySchedule> courseDaySchedule = courseDaySchedules
+                .stream()
+                .filter(cds -> cds.getCourseDay().getTitle().equalsIgnoreCase(title))
+                .findFirst();
+        if (courseDaySchedule.isPresent()) {
+            return courseDaySchedule.get();
+        } else {
+            throw new NoSuchElementException("A course day with title '" + title + "' could not be found!");
+        }
     }
 
     /*

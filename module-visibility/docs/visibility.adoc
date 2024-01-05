@@ -12,28 +12,28 @@ include::planning.adoc[]
 endif::[]
 
 
-== Sichtbarkeiten & Scopes: Access Modifier
+== Access Modifier (Sichtbarkeit)
 
 [ <<about_scopes,Inhalt>> | <<demos_scopes,Demo>> | <<exercises_scopes,Übungen>> ]
 
 [[about_scopes]]
 Die Standard *Access Modifier* sind `default`, `public`, `protected` sowie `private`. Sie bedeuten:
 
-`default`::
+=== `default`
 
 Wenn kein Schlüsselwort explizit verwendet wird, legt Java einen Standardzugriff auf eine bestimmte Klasse, Methode oder Eigenschaft fest. Der *Standardzugriffs*-Modifikator wird auch `package-private` genannt, was bedeutet, dass alle Mitglieder innerhalb desselben Pakets sichtbar sind, aber von anderen Paketen aus nicht darauf zugegriffen werden kann:
 
-`public`::
+=== `public`
 
-Wenn einer Klasse, Methode oder Eigenschaft das Schlüsselwort `public` hinzufügt wird, wird es auf der "ganzen Welt" verfügbar/sichtbar, d.h. alle anderen Klassen in allen Paketen können es verwenden. Dies ist der am wenigsten restriktive Zugriffsmodifikator.
+Wenn einer Klasse, Methode oder Eigenschaft das Schlüsselwort `public` hinzufügt wird, wird es auf der _"ganzen Welt"_ verfügbar/sichtbar, d.h. alle anderen Klassen in allen Paketen können es verwenden. Dies ist der am wenigsten restriktive Zugriffsmodifikator.
 
-`protected`::
+=== `protected`
 
-Wenn eine Methode, Eigenschaft oder einen Konstruktor mit dem Schlüsselwort `protected` deklariert wird, kann auf das Mitglied aus demselben Paket zugegriffen werden (wie bei der Zugriffsebene Paket-Private) und zusätzlich aus allen Unterklassen dieser Klasse, auch wenn diese in anderen Paketen liegen.
+Wenn eine Methode, Eigenschaft oder einen Konstruktor mit dem Schlüsselwort `protected` deklariert wird, kann auf das Mitglied aus demselben Paket zugegriffen werden (wie bei der Zugriffsebene _package-private_) und zusätzlich aus allen Unterklassen dieser Klasse, auch wenn diese in anderen Paketen liegen.
 
-`private`::
+=== `private`
 
-Auf jede Methode, Eigenschaft oder jeden Konstruktor mit dem Schlüsselwort `private` kann nur von derselben Klasse, also von "innen", aus zugegriffen werden. Dies ist der restriktivste Zugriffsmodifikator und bildet den Kern des Konzepts der Kapselung. Alle Daten werden vor der Außenwelt verborgen.
+Auf jede Methode, Eigenschaft oder jeden Konstruktor mit dem Schlüsselwort `private` kann nur von derselben Klasse, also von _"innen"_, zugegriffen werden. Dies ist der restriktivste Zugriffsmodifikator und bildet den Kern des Konzepts der Kapselung. Alle Daten werden vor der Außenwelt verborgen.
 
 
 [[demos_scopes]]
@@ -50,11 +50,13 @@ include::{mod-lnk-test}/demo/VisibilityDemoTest.java[tags="visibility"]
 [[exercises_scopes]]
 *Übungen*:
 
+keine
+
+////
 [subs=normal]
  -> {mod-ref-test}/exercise/VisibilityExerciseTest.java
 
 Übung 1::
-
-to be specified 
+////
 
 

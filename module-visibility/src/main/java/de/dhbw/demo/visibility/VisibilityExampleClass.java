@@ -4,13 +4,13 @@ public class VisibilityExampleClass {
 
     // what is the modifier here?
 
-    // default, package-private = accessible in this package (all classes in "visibility")
+    // default, package-private = accessible in this package (all classes in "/visibility")
     String fieldA;
 
     // public = accessible from "everywhere"
     public String fieldB;
 
-    // protected = accessible in this class and from subclasses
+    // protected = accessible in this class, this package and subclasses
     protected String fieldC;
 
     // private = accessible only in this class

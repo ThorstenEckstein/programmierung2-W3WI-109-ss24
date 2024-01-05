@@ -5,31 +5,31 @@ import java.util.Arrays;
 public enum Modules {
 
     WelcomeIntroAndSetup(
-            "WInS",
+            "WI+S",
             "module-intro",
             "Willkommen, Einführung & Setup"),
     ToolsAndHelp(
-            "TnH",
+            "T+H",
             "module-intro",
             "Werkzeuge, Hilfe, allgemeine Themen rund um die Softwareentwicklung"),
     ClassesAndObjects(
-            "CnO",
+            "C+O",
             "module-classes",
             "Klassen & Objekte (Instanzen)"),
     InterfacesAndAbstractClasses(
-            "InAC",
+            "I+AC",
             "module-interfaces",
             "Interfaces & abstrakte Klassen"),
     DatatypesAndCasting(
-            "DnC",
+            "D+C",
             "module-datatypes",
             "Datentypen & Typumwandlungen"),
     LoopsAndConditions(
-            "LnC",
+            "L+C",
             "module-loops",
             "Kontrollstrukturen, Schleifen & Konditionalausdrücke"),
     VisibilityAndAccessModifier(
-            "VnAM",
+            "V+AM",
             "module-visibility",
             "Scopes, Sichtbarkeiten, Access Modifier"),
     Miscellaneous(

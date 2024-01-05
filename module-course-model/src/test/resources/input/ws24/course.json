@@ -250,17 +250,17 @@
             },
             {
               "type": "content",
-              "contentType": "Break",
-              "description": "Pause",
-              "duration": "PT10M",
-              "module": "Miscellaneous"
+              "contentType": "Topic",
+              "description": "Kontrollstrukturen - Schleifen & Konditional-Ausdrücke",
+              "duration": "PT20M",
+              "module": "LoopsAndConditions"
             },
             {
               "type": "content",
-              "contentType": "Topic",
-              "description": "Kontrollstrukturen - Schleifen & Konditional-Ausdrücke",
+              "contentType": "Break",
+              "description": "Pause",
               "duration": "PT15M",
-              "module": "LoopsAndConditions"
+              "module": "Miscellaneous"
             },
             {
               "type": "content",
@@ -278,13 +278,6 @@
             },
             {
               "type": "content",
-              "contentType": "Break",
-              "description": "Pause",
-              "duration": "PT10M",
-              "module": "Miscellaneous"
-            },
-            {
-              "type": "content",
               "contentType": "Topic",
               "description": "Sichtbarkeiten & Scopes: Access Modifier",
               "duration": "PT15M",
@@ -299,10 +292,32 @@
             },
             {
               "type": "content",
-              "contentType": "Exercise",
-              "description": "Übung zum Thema Access Modifier",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
               "duration": "PT15M",
-              "module": "VisibilityAndAccessModifier"
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 4",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
             },
             {
               "type": "content",
@@ -316,7 +331,152 @@
       },
       {
         "type": "courseDay",
-        "title": "Tag ",
+        "title": "Tag 5",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 6",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 7",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 8",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 9",
+        "agenda": {
+          "items": [
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "FAQ, Wiederholung etc.",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Setup",
+              "description": "Update Project",
+              "duration": "PT5M",
+              "module": "WelcomeIntroAndSetup"
+            },
+            {
+              "type": "content",
+              "contentType": "Buffer",
+              "description": "Pufferzeit am Ende",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            }
+          ]
+        }
+      },
+      {
+        "type": "courseDay",
+        "title": "Tag 10",
         "agenda": {
           "items": [
             {

@@ -134,37 +134,6 @@ public class CourseDayScheduler {
         return size - 1;
     }
 
-    /*
-    private CourseDaySchedule from(CourseDay courseDay) {
-        assertNotNull(courseDay, CourseDay.class);
-
-        CourseDaySchedule courseDaySchedule = new CourseDaySchedule();
-        courseDaySchedule.setStartTime(this.startTime);
-
-        for(Item item : courseDay.getAgenda().getItems()) {
-            Content content = (Content) item;
-
-            ContentSchedule contentSchedule = from(content);
-            courseDaySchedule.addContentSchedule(contentSchedule);
-
-        }
-
-        LocalTime calculatedEndTime = LocalTime.MAX;
-        courseDaySchedule.setEndTime(calculatedEndTime);
-
-        return null;
-    }
-
-    private ContentSchedule from(Content content) {
-        assertNotNull(content, Content.class);
-
-        ContentSchedule contentSchedule = new ContentSchedule();
-        contentSchedule.setContent(content);
-
-        return null;
-    }
-    */
-
     public LocalDate getStartDate() {
         return startDate;
     }

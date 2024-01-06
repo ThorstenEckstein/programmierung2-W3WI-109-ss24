@@ -80,6 +80,15 @@
 :package-exercise: exercise
 :package-solution: solution
 
+// --- References: just to show i.e. paths to readers
+:mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]
+:mod-ref-test: pass:n[src/[green]#*test*#/java/de/dhbw]
+
+// --- Hyperlinking: for includes from adoc to sources/test packages
+:mod-lnk-docs: .
+:mod-lnk-src:  ../src/main/java/de/dhbw
+:mod-lnk-test: ../src/test/java/de/dhbw
+
 // display global variables, set to 'true' to display in module docs!
 :show-variables: false
 :show-structure: false

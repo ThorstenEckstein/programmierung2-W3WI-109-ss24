@@ -1,18 +1,11 @@
+include::../../docs/settings.adoc[]
+
 // --- Name
 :module-name:  module-classes
 :module-title: Klassen, Vererbung & Polymorphismus
 
-// --- References
-:mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]
-:mod-ref-test: pass:n[src/[green]#*test*#/java/de/dhbw]
-
-// --- Hyperlinking
-:mod-lnk-docs: .
-:mod-lnk-src:  ../src/main/java/de/dhbw
-:mod-lnk-test: ../src/test/java/de/dhbw
-
 // display variables, set to 'true' to display in module docs!
-:show-variables: false
+:show-variables: true
 
 ifeval::[{show-variables} == true]
 [big]#*Module Settings*#

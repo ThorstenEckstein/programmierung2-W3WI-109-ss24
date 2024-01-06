@@ -1,5 +1,5 @@
 include::../../docs/settings.adoc[]
-include::module-settings.adoc[]
+//include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
 // table of contents
@@ -107,7 +107,7 @@ In Java spielen die Konstruktoren eine wichtige Rolle bei der Erstellung und Ini
 public class MyClass {
 
     public MyClass() {
-
+        super();
     }
 
 }
@@ -276,7 +276,7 @@ In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Be
 *Übungen*:
 
 ====
-TIP: Nutze, wann immer möglich, `Code Generierung` für die Schritte, am besten mithilfe der Tastenkombination. Siehe ->
+TIP: Nutze, wann immer möglich, `Code Generierung` für die Schritte, am besten mithilfe der Tastenkombination.
 ====
 
 
@@ -293,6 +293,17 @@ _Testklasse_, in der die Übungen implementiert werden können:
 
 Übung 1::
 
+Erstelle *Klassen* im Paket
+
+ java/de/dhbw/exercise/classes
+
+ . Erstelle eine neue Klasse `Fernzug` mit einem parameterlosen Konstruktor
+ . Erstelle eine neue Klasse `Regionalzug` mit einem parameterlosen Konstruktor
+ . Teste, ob die Instanzen korrekt erzeugt wurden!
+
+
+Übung 2::
+
 Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
 * Eine Klasse `Zug` mit
@@ -303,7 +314,12 @@ _Testklasse_, in der die Übungen implementiert werden können:
 * Teste, welchen Wert das Feld `number` hat
 
 
-Übung 2 (optional)::
+Übung 3 _(optional_)::
+
+Nutze die Test-Klasse
+
+[subs=normal]
+ {mod-ref-test}/exercise/classes/ClassesExerciseTest.java -> exercise3()
 
 Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
@@ -312,7 +328,7 @@ Erzeuge eine
 . konkrete Klasse `Person`
 . mit einem Attribut `name`, erstelle dann
 . die zum Attribut gehörende `get` und `set` Methode,
-. erstelle außerdem die `equals()` und `hashCode()` Methoden,
+. erstelle außerdem die `equals()` und `hashCode()` Methoden durch Code Generierung,
 . zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
 
 

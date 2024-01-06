@@ -331,6 +331,12 @@ Erzeuge eine
 . erstelle außerdem die `equals()` und `hashCode()` Methoden durch Code Generierung,
 . zuletzt leite aus dieser konkreten Klasse ein Interface `Mensch` ab
 
+[%collapsible, title="_Hilfe zu 'Extract Interface ...'_"]
+====
+image::images/extract-interface-from-class.png[ailgn=center]
+====
+
+
 
 == Referenzen
 

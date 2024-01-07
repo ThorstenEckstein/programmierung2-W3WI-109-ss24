@@ -16,7 +16,7 @@ public enum Color {
 
         if (this == Color.Red) { // base color to mix with ...
 
-            if        (color == Color.Blue) {
+            if (color == Color.Blue) {
                 return Color.Lila;
             } else if (color == Color.Green) {
                 return Color.Brown;

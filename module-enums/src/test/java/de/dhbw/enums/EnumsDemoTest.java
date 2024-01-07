@@ -9,9 +9,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
-public class EnumsTest {
+public class EnumsDemoTest {
 
-    private final Logger logger = new Logger(EnumsTest.class);
+    private final Logger logger = new Logger(EnumsDemoTest.class);
 
     @Test
     @DisplayName("Demo 1: Simple enums methods")

@@ -6,15 +6,13 @@ import de.dhbw.enums.solution.RgbColor;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
-public class ExerciseSolutions {
+public class EnumsSolutionTest {
 
-    private final Logger logger = new Logger(ExerciseSolutions.class);
+    private final Logger logger = new Logger(EnumsSolutionTest.class);
 
     @Test
     @DisplayName("Exercise 1: 'Switch' anstelle von 'if-elseif-else'")

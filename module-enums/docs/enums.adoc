@@ -48,7 +48,7 @@ Die Aufzählungswerte haben einen *Index* (=Ordinal), beginnend mit `0`, und kö
 
 Ein einfaches Beispiel:
 
-[source, java]
+[, java]
 ----
 public enum Color {
     Red,   // ordinal 0
@@ -94,7 +94,7 @@ public enum Color {
 Ein weiterer Vorteil ist die bequeme Nutzung der enum Konstanten in `switch` Statements:
 
 .-> *Demo 2* in EnumsTest.java
-[source, java]
+[, java]
 ----
 public enum ColorPalette {
     RGB, CYMK;
@@ -167,7 +167,8 @@ Es gibt verschiedene *logische Operatoren*:
 
 Tests zur *Demonstration*:
 
- module-enums/src/test/java/de/dhbw/enums/OperatorTests.java
+[subs=normal]
+ {mod-ref-test}/enums/OperatorTests.java
 
 
 === Demonstrationen
@@ -175,12 +176,12 @@ Tests zur *Demonstration*:
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {module-demo-path-tests}/EnumTests.java
+ {mod-ref-test}/EnumsDemoTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs="normal"]
- {module-demo-path-sources}/*.java
+ {mod-ref-src}/exercises/*.java
 
 
 === Exercises
@@ -188,14 +189,12 @@ Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 Nutze folgendes Package für deine *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/EnumsExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
-
-{nl}
+ {mod-ref-src}/exercises/*.java
 
 
 [[enums-exercise-1]]
@@ -217,6 +216,4 @@ Nutze die Methode `getRGB()`, um die jeweils zugeordneten RGB-Werte in einem Uni
 
 Erstelle eine `boolean` Variable, _negiere_ diese und teste das Ergebnis in einem Unit-Test.
 
-
-=== Tipps, Patterns & Best Practices
 

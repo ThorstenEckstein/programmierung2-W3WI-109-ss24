@@ -27,7 +27,7 @@ Die gesamte Prüfungsleistung beinhaltet *drei Teile*. Diese sind:
 
 Jede *Prüfungsleistung* wird separat bewertet (benotet) und geht zu je *1/3* in die Gesamtnote ein.
 
-to be continued ...
+Weitere Information dazu folgen, sobald die Planung der Prüfungen festgelegt wurde.
 
 <!--
 

@@ -12,7 +12,7 @@
 :mod-lnk-test: ../src/test/java/de/dhbw
 
 // display variables, set to 'true' to display in module docs!
-:show-variables: false
+:show-variables: true
 
 ifeval::[{show-variables} == true]
 [big]#*Module Settings*#

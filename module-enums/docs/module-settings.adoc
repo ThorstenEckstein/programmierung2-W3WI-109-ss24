@@ -2,15 +2,6 @@
 :module-name:  module-enums
 :module-title: Enumerations (Aufzählungen)
 
-// --- References
-:mod-ref-src:  pass:n[src/[red]#*main*#/java/de/dhbw]
-:mod-ref-test: pass:n[src/[green]#*test*#/java/de/dhbw]
-
-// --- Hyperlinking
-:mod-lnk-docs: .
-:mod-lnk-src:  ../src/main/java/de/dhbw
-:mod-lnk-test: ../src/test/java/de/dhbw
-
 // display variables, set to 'true' to display in module docs!
 :show-variables: false
 

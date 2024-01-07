@@ -1,8 +1,0 @@
-include::../../docs/settings.adoc[]
-include::module-settings.adoc[]
-
-----
-1. Welcome
-2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
-3. IDE Setup
-----

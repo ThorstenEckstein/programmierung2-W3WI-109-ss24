@@ -27,6 +27,12 @@ enum ContentType {
   Welcome, Break, Topic, ...
 }
 
+class CourseDaySchedule {}
+class ContentSchedule {}
+class CourseDayScheduler {
+  schedule(Course);
+}
+
 Course      ..>     Agenda       : "contains one"
 CourseDay   ..>     Agenda
 Module      ..>     Agenda
@@ -35,5 +41,8 @@ Item        <|--    CourseDay    : "realizes"
 Item        <|--    Module       : "realizes"
 Item        <|--    Content      : "realizes"
 Content     ..>     ContentType  : " has type"
+
+CourseDayScheduler ..> CourseDay         : "use"
+CourseDayScheduler ..> CourseDaySchedule : "use"
 
 @enduml

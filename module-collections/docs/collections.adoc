@@ -42,7 +42,7 @@ image::images/collections-api.png["Collections API",width="100%",align="center"]
 ==== Java Collections API Interfaces
 
 Java collection interfaces are the foundation of the Java Collections Framework. All core collection interfaces are generic.
-For example `public interface Collection<E>`. The <E> syntax is for Generics and when we declare Collection (_später mehr zum Thema `Generics`_)
+For example `public interface Collection<E>`. The <E> syntax is for Generics and when we declare Collection (_später mehr zum Thema_ `Generics`)
 
 . *Collection interface*.
 This is the root of the collection hierarchy. A collection represents a group of objects known as its elements. Some basic operations are provided.
@@ -101,48 +101,54 @@ Each of the six core collection interfaces - Collection, Set, List, Map, SortedS
 === Unmodifiable Wrappers
 
 *Unmodifiable* wrappers take away the ability to modify the collection by intercepting all the operations that would modify the collection
-and throwing an UnsupportedOperationException.
+and throwing an `UnsupportedOperationException`.
 
 Its main usage are;
 
 - To make a collection immutable once it has been built
 - To allow certain clients read-only access to data structures (keep a reference to the backing collection but hand out a reference to the wrapper)
-- To avoid ConcurrentModificationException
+- To avoid `ConcurrentModificationException`
 
 
-== Übungen
+*Demos*:
+
+Zu finden in:
+
+[subs=normal]
+ {mod-ref-test}/demo/CollectionsDemoTest.java
+
+* Demo 1: Eine einfache Liste mit 'primitiven' Werten
+* Demo 2: Eine einfache Liste mit 'komplexen' Werten (Objektinstanzen)
+* Demo 3: Key-Value-Paare mit Maps
+* Demo 4: Un-/Sortierte Map
+* Demo 5a: Un-/Modifiable Lists
+* Demo 5b: Un-/Modifiable Lists (alternative Implementierung)
+
+
+*Übungen*:
 
 Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
 
 [subs=normal]
- src/[red]#*test*#/java/de/dhbw/course2/exercises/ExerciseTests.java
+ {mod-ref-test}/exercises/CollectionsExerciseTests.java
 
-Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
+Die *Testobjekte*, also die zu bearbeitenden Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
 
 [subs=normal]
- src/[red]#*main*#/java/de/dhbw/course2/exercises
+ {mod-ref-src}/exercises
 
 Übung 1::
 
-a. *Listen*: Schreibe einen Test, in dem eine konkrete Implementierung von `List` und den Datentyp `Integer` benutzt wird. Befülle diese mit beliebig vielen Einträgen. _Optional: ... und summiere alle Listeneinträge mithilfe einer `for-each` Schleife_.
-
-b. *Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `SortedMap` benutzt wird. Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Überprüfe die Haupt-Charakteristik _"natürliche Sortierung"_ dieses Map-Typs.
+*Listen*: Schreibe einen Test, in dem eine konkrete Implementierung von `List` und den Datentyp `Integer` benutzt wird. Befülle diese mit beliebig vielen Einträgen. Summiere alle Listeneinträge mithilfe einer `for-each` Schleife und teste das Ergebnis.
 
 Übung 2::
 
-Erstelle zwei Klassen
+*Maps*: Schreibe einen Test, in dem eine konkrete Implementierung von `SortedMap` benutzt wird. Befülle diese mit mindestens 5 Einträgen, nutze dazu `String` sowohl für den Schlüssel (K) also auch für den Wert (V). Überprüfe die Haupt-Charakteristik _"natürliche Sortierung"_ dieses Map-Typs.
 
-* `Course` und
-* `Student`
-
-Der Kurs kann von *mehreren* Student:innen besucht werden. Setze diese Beziehung zwischen den beiden Klassen in der Klasse `Course` um.
-
-Überlege hier auch, welcher *Listentyp* sich dafür am besten eignet.
-
-
+////
 Testfragen::
 Im Modul `/exam` finden sich weitere kleine Übungen für die Inhalte des Kurses 2, und zwar in der dortigen Testklasse:
 
 [subs=attributes]
  {course-2-exam}/ExamTest.java
-
+////

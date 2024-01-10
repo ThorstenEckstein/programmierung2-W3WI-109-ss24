@@ -1,12 +1,12 @@
 
-package de.dhbw.exercise;
+package de.dhbw.solution;
 
-import de.dhbw.demo.collections.nm.v1.Course;
-import de.dhbw.demo.collections.nm.v1.Student;
-import de.dhbw.demo.collections.nm.v2.Registration;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * einfach eigene Tests oder Experimente geschrieben werden.
  * ------------------------------------------------------------- */
 
-public class CollectionsExerciseTests {
+public class CollectionsSolutionTests {
 
     @Test
     @DisplayName("""
@@ -24,12 +24,22 @@ public class CollectionsExerciseTests {
             Datentyp `Integer` benutzt wird. Befülle diese mit beliebig vielen Einträgen. Summiere
             alle Listeneinträge mithilfe einer `for-each` Schleife.
             """)
-    public void exercise1() {
+    public void solution1() {
         // given
+        List<Integer> list = new ArrayList<>();
+        list.add(3);
+        list.add(1);
+        list.add(6);
 
         // when
+        Integer total = 0;
+        for (Integer i : list) {
+            total += i;
+        }
+        // total = list.stream().reduce(0, Integer::sum);
 
         // then
+        assertEquals(10, total);
     }
 
     @Test
@@ -40,12 +50,19 @@ public class CollectionsExerciseTests {
             
             Überprüfe die Haupt-Charakteristik "natürliche Sortierung" dieses Map-Typs mithilfe von 'assertEquals'.
             """)
-    public void exercise2() {
+    public void solution2() {
         // given
+        Map<String, String> map = new TreeMap<>();
 
         // when
+        map.put("K4","V4");
+        map.put("K1","V1");
+        map.put("K5","V5");
+        map.put("K3","V3");
+        map.put("K2","V2");
 
         // then
+        assertEquals("[K1, K2, K3, K4, K5]", map.keySet().toString());
     }
 
 }

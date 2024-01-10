@@ -4,23 +4,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-public class Student {
+public class Student /*extends Object*/ {
 
     Long id;
 
     String name;
-
-
-
-
-
-
-
-
-
-
-
-
 
     List<Course> courses;
 

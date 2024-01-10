@@ -1,10 +1,10 @@
-package de.dhbw.enums;
+package de.dhbw.operators;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 @SuppressWarnings("ConstantValue")
-public class OperatorTests {
+public class OperatorDemoTests {
 
     @Test
     @DisplayName("(1) Logischer Operator: &")

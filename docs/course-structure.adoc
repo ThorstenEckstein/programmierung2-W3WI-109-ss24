@@ -1,12 +1,18 @@
 include::settings.adoc[]
 
+:toc:
+:sectnums!:
+
 = Programmierung II mit Java
+
 
 ////
  TODO:
   (1) Element "Zwischenprüfung" einbauen
   (2) Modul "Datenbanken" einbauen
 ////
+
+== Tag 1 - Willkommen, Setup & Einführung
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
@@ -22,7 +28,7 @@ include::../module-intro/docs/intro.adoc[tag="content"]
 
 include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
-{nl}
+== Tag 2 - Klassen & Interfaces
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
@@ -38,7 +44,7 @@ include::../module-classes/docs/classes.adoc[tag="content"]
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
-{nl}
+== Tag 3 - Datentypen, Access Modifier & Kontrollstrukturen
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
@@ -61,40 +67,29 @@ include::../module-loops/docs/loops.adoc[tag="content"]
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
-{nl}
-{nl}
-{nl}
-{nl}
-{nl}
-{nl}
-{nl}
-
-'''
-
-====
-[red]#*Noch nicht integriert*#
-====
+== Tag 4 - Collections & Enums
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #?# | hh:mm - hh:mm | *module-statics*
-|===
-
-include::../module-statics/docs/statics.adoc[tag="content"]
-
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-collections*
+| Tag #4# | hh:mm - hh:mm | *module-collections*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #?# | hh:mm - hh:mm | *module-enums*
+| Tag #4# | hh:mm - hh:mm | *module-enums*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
+
+
+
+====
+[red]#*Folgendes ist noch nicht geplant/integriert!*#
+====
+
+
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
@@ -131,10 +126,26 @@ include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
 include::../module-databases/docs/databases.adoc[tag="content"]
 
+
+== Optionale Module
+
+=== Statische Elemente
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #?# | hh:mm - hh:mm | *module-statics*
+|===
+
+include::../module-statics/docs/statics.adoc[tag="content"]
+
+=== Referenzsemantik
+
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-semantics*
 |===
+
+=== Der Objektvertrag
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 

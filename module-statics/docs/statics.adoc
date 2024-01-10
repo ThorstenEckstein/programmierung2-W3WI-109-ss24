@@ -20,7 +20,6 @@ end::content[]
 
 [ <<about_statics,Inhalt>> | <<demos_statics,Demo>> | <<exercises_statics,Übungen>> ]
 
-// /////////////////////////////////////////////////////////////////////////////////
 [[about_statics]]
 Das Schlüsselwort
 

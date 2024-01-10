@@ -1,6 +1,5 @@
 package de.dhbw.enums;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.enums.demo.Color;
 import de.dhbw.enums.demo.FoodGroup;
 import org.junit.jupiter.api.DisplayName;
@@ -11,11 +10,28 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SuppressWarnings("unused")
 public class EnumsDemoTest {
 
-    private final Logger logger = new Logger(EnumsDemoTest.class);
+    @Test
+    @DisplayName("Demo 1: Standardfunktionalitäten von enums")
+    public void demo1() {
+        // given
+        Color color = Color.Green;
+
+        // when
+        String name = color.name();
+        int ordinal = color.ordinal();
+        Color[] values = Color.values();
+        Color red = Color.valueOf("Red");
+
+        // then
+        assertEquals("Green", name);
+        assertEquals(1, ordinal);
+        assertEquals(8, values.length);
+        assertEquals(Color.Red, red);
+    }
 
     @Test
-    @DisplayName("Demo 1: Simple enums methods")
-    public void demo1() {
+    @DisplayName("Demo 2: Zusätzliche enum Methode")
+    public void demo2() {
         // given
         Color red = Color.Unknown;
 
@@ -27,8 +43,8 @@ public class EnumsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2: Using switch statements, but ...")
-    public void demo2() {
+    @DisplayName("Demo 3: Using switch statements, but ...")
+    public void demo3() {
         // given
         Color red = Color.Red;
 
@@ -40,8 +56,8 @@ public class EnumsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 3: Enhanced enums")
-    public void demo3() {
+    @DisplayName("Demo 4: Enhanced enums")
+    public void demo4() {
         // given
         FoodGroup foodGroup; // = FoodGroup.Sonstiges;
 

@@ -2,7 +2,6 @@ include::../../docs/settings.adoc[]
 include::module-settings.adoc[]
 :author: Thorsten Eckstein
 
-// table of contents
 :toc:
 
 ////
@@ -12,12 +11,9 @@ include::module-settings.adoc[]
 tag::content[]
 ----
 1. Java Enums
-1.1. Preparation
-1.2. Theorie & Einführung
-1.2.1. Zusätzliche Methoden
-1.2.2. Enums in Switch-Ausdrücken
-1.2.3. Zusätzliche Datenfelder
-1.3. Logische Operatoren
+1.1. Zusätzliche Methoden
+1.2. Enums in Switch-Ausdrücken
+1.3. Zusätzliche Datenfelder
 ----
 end::content[]
 ////
@@ -25,19 +21,11 @@ end::content[]
 
 == Java Enums
 
-
-=== Preparation
-
-include::../../docs/includes/update-project.adoc[]
-
-
-=== Theorie & Einführung
-
 `Enumerations` (Aufzählungen) sind vordefinierte *Wertelisten* und können typsicher genutzt werden.
 
-Java 5 hat das Schlüsselwort `enum` eingeführt. Es bezeichnet einen speziellen Typ einer Klasse und erbt immer (implizit) von `java.lang.Enum`. Die offizielle Dokumentation findet sich hier: -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html[Enum.html]
+Java 5 hat das Schlüsselwort `enum` eingeführt. Es bezeichnet einen speziellen Typ einer Klasse und erbt immer (implizit) von `java.lang.Enum`. Die offizielle Dokumentation findet sich hier -> https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Enum.html[Enums in Java 17]
 
-Konstanten, die mithilfe von Enums definiert werden,
+Konstanten, die mithilfe von *Enums* definiert werden,
 
 * machen den Code besser lesbar,
 * erlauben typ-sichere Nutzung zur Compile-Time,
@@ -134,64 +122,22 @@ public enum FoodGroup {
 ----
 
 
-=== Logische Operatoren
-
-Die *logischen Operatoren* dienen zum Vergleich von Wahrheitswerten und werden z. B. für Bedingungen von `if` Anweisungen oder Schleifen verwendet.
-
-Durch die logischen Operatoren können einzelne Wahrheitswerte negiert oder verknüpft werden, wobei das Ergebnis immer ein `boolean` ist.
-
-Es gibt verschiedene *logische Operatoren*:
-
-[cols="^1m,9e"]
-|===
-| Operator | Erläuterung/Bedeutung
-
-| &&
-| Doppeltes UND ist eine logische UND-Verknüpfung, bei der wir nur ein wahres Ergebnis erhalten, wenn beide Werte wahr sind. Ist an dieser Stelle bereits der erste Operator falsch (false) so wird der zweite Operand nicht mehr ausgewertet, da false und irgendwas bei einer logischen UND-Verknüpfung als Resultat immer false hat.
-
-| &
-| Einfaches UND ist eine logische UND-Verknüpfung. Bei dieser logischen UND-Verknüpfung werden beide Operanden ausgewertet.
-
-| &vert;&vert;
-| Doppeltes ODER ist eine logische ODER-Verknüpfung, bei der wir nur ein falsches Ergebnis erhalten, wenn beide Werte falsch sind. Ist an dieser Stelle bereits der erste Operator wahr (true) so wird der zweite Operand nicht mehr ausgewertet, da true und irgendwas bei einer logischen ODER-Verknüpfung als Resultat immer true hat.
-
-| &vert;
-| Einfaches ODER ist eine logische ODER-Verknüpfung. Bei dieser logischen ODER-Verknüpfung werden beide Operanden ausgewertet.
-
-| !
-| Das Ausrufezeichen ist der Negierungsoperator in der booleschen Logik. Aus wahr (true) wird falsch (false) und umgekehrt.
-
-| ^
-| Das "Dach" wird als Exklusiv-Oder bezeichnet. Entweder der erste oder der zweite Ausdruck muss wahr sein. Es dürfen aber nicht beide Ausdrücke gleich sein, damit das Ergebnis wahr wird.
-|===
-
-Tests zur *Demonstration*:
-
-[subs=normal]
- {mod-ref-test}/enums/OperatorTests.java
-
-
-=== Demonstrationen
+*Demo*:
 
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
  {mod-ref-test}/EnumsDemoTests.java
 
-Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
-[subs="normal"]
- {mod-ref-src}/exercises/*.java
+*Übungen*:
 
-
-=== Exercises
-
-Nutze folgendes Package für deine *Unit-Tests*:
+Nutze folgendes Package für die *Unit-Tests*:
 
 [subs="normal"]
  {mod-ref-test}/EnumsExerciseTests.java
 
-Die im Test benutzten *Implementierungen* gehören in das Package:
+Die im Test benutzten *Implementierungen* sind im Package:
 
 [subs="normal"]
  {mod-ref-src}/exercises/*.java
@@ -209,11 +155,3 @@ Die im Test benutzten *Implementierungen* gehören in das Package:
 Erweitere die vorbereitete Enumeration `de.dhbw.enums.exercises.RgbColor` mit drei Attributen `r` (red), `g` (green) und `b` (blue), jeweils mit Datentyp `int`, sodass jede Enum-Konstante direkt den RGB-Wert erhält.
 
 Nutze die Methode `getRGB()`, um die jeweils zugeordneten RGB-Werte in einem Unit-Test zu prüfen.
-
-
-[[enums-exercise-3]]
-*Übung 3:*
-
-Erstelle eine `boolean` Variable, _negiere_ diese und teste das Ergebnis in einem Unit-Test.
-
-

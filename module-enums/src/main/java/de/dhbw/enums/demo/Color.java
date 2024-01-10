@@ -15,13 +15,12 @@ public enum Color {
     }
 
     /*
-     * Ergänzung zum 'logischen UND':
+     * Info zum 'logischen UND':
      *
-     *  &  -> Wertet immer beide Operanden aus
-     *  && -> Wertet den ersten Operanden aus, und ist dieser 'false', wird der
+     *  &  : Wertet immer beide Operanden aus
+     *  && : Wertet den ersten Operanden aus, und ist dieser 'false', wird der
      *        zweite nicht ausgewertet, und das Gesamtergebnis wird 'false'
      *
-     *  Unit-Tests -> siehe src/test/java/de/dhbw/enums/OperatorTests.java
      */
 
     public Color mix(Color color) {

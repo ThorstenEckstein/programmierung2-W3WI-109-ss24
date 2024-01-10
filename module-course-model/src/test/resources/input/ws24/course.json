@@ -353,8 +353,7 @@
               "description": "Assoziationen zwischen Klassen",
               "duration": "PT30M",
               "module": "Associations"
-            },
-            {
+            }, {
               "type": "content",
               "contentType": "Demo",
               "description": "Demo zum Thema Assoziationen zwischen Klassen",
@@ -399,9 +398,58 @@
             },
             {
               "type": "content",
+              "contentType": "Topic",
+              "description": "Enums",
+              "duration": "PT10M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zum Thema Enums",
+              "duration": "PT5M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übungen zum Thema Enums",
+              "duration": "PT15M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Java Generics",
+              "duration": "PT35M",
+              "module": "Generics"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Demos zu Java Generics",
+              "duration": "PT30M",
+              "module": "Generics"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Übungen zu Java Generics",
+              "duration": "PT30M",
+              "module": "Generics"
+            },
+            {
+              "type": "content",
               "contentType": "Buffer",
               "description": "Pufferzeit am Ende",
-              "duration": "PT15M",
+              "duration": "PT30M",
               "module": "Miscellaneous"
             }
           ]

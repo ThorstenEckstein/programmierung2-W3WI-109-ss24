@@ -67,28 +67,39 @@ include::../module-loops/docs/loops.adoc[tag="content"]
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
-== Tag 4 - Collections, Assoziationen & Enums
+== Tag 4 - Collections, Assoziationen
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #4# | hh:mm - hh:mm | *module-collections*
+| Tag #4# | 09:15 - 10:30 | *module-collections*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #4# | hh:mm - hh:mm | *module-associations*
+| Tag #4# | 10:45 - 12:15 | *module-associations*
 |===
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
+== Tag 5 - Java Generics
+
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #4# | hh:mm - hh:mm | *module-enums*
+| Tag #5# | hh:mm - hh:mm | *module-enums*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #5# | hh:mm - hh:mm | *module-generics*
+|===
+
+include::../module-generics/docs/generics.adoc[tag="content"]
+
+
 
 
 
@@ -111,13 +122,6 @@ include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
 |===
 
 include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
-
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-generics*
-|===
-
-include::../module-generics/docs/generics.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===

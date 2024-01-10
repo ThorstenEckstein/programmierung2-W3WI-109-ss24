@@ -40,6 +40,10 @@ public enum Modules {
             "A",
             "module-associations",
             "Assoziationen zwischen Klassen"),
+    Generics(
+            "Gen",
+            "module-generics",
+            "Java Generics"),
     Miscellaneous(
             "Misc",
             "miscellaneous",

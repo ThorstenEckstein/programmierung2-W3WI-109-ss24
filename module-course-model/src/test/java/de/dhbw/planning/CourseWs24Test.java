@@ -49,7 +49,7 @@ public class CourseWs24Test {
         assertFalse(courseDaySchedules.isEmpty());
 
         // print - "Tag 1" or "all"
-        DeepPrinter.printPretty("Tag 4", courseDaySchedules);
+        DeepPrinter.printPretty("all", courseDaySchedules);
     }
 
 }

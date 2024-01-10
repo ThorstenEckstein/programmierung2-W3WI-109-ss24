@@ -1,6 +1,5 @@
 package de.dhbw.generics;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.generics.solution.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,13 +7,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class ExerciseSolutions {
-
-    private final Logger logger = new Logger(ExerciseSolutions.class);
+public class GenericsSolutionTests {
 
     @Test
-    @DisplayName("Exercise 1 - Calculator")
-    public void exercise1Solution() {
+    @DisplayName("Übung 1: Calculator")
+    public void solution1() {
         // given
         Calculator<Integer> integerCalculator = new IntegerCalculator();
 
@@ -26,8 +23,8 @@ public class ExerciseSolutions {
     }
 
     @Test
-    @DisplayName("Exercise 2 - Workflow")
-    public void exercise2Solution() {
+    @DisplayName("Übung 2: Workflow")
+    public void solution2() {
         // given
         Step step1 = new Start();
         Step step2 = new Choice();

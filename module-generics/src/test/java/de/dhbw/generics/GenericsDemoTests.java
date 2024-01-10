@@ -5,6 +5,7 @@ import de.dhbw.generics.demo.Joiner;
 import de.dhbw.generics.demo.NaturalPerson;
 import de.dhbw.generics.demo.Person;
 import de.dhbw.generics.demo.Printer;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -15,12 +16,13 @@ import java.util.Vector;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
-public class GenericsTests {
+public class GenericsDemoTests {
 
-    private final Logger logger = new Logger(GenericsTests.class);
+    private final Logger logger = new Logger(GenericsDemoTests.class);
 
     @Test
-    public void canUseGenericClassWithString() {
+    @DisplayName("Demo 1: Joiner mit Strings")
+    public void demo1() {
         // given
         Joiner<String> joiner = new Joiner<>();
 
@@ -37,7 +39,8 @@ public class GenericsTests {
     }
 
     @Test
-    public void canUseGenericClassWithBooleans() {
+    @DisplayName("Demo 2: Joiner mit Booleans")
+    public void demo2() {
         // given
         Joiner<Boolean> joiner = new Joiner<>();
 
@@ -54,7 +57,8 @@ public class GenericsTests {
     }
 
     @Test
-    public void canUseGenericClassWithObject() {
+    @DisplayName("Demo 3: Joiner mit Objects")
+    public void demo3() {
         // given
         Joiner<Person> joiner = new Joiner<>();
 
@@ -71,7 +75,8 @@ public class GenericsTests {
     }
 
     @Test
-    public void canUseGenericMethod() {
+    @DisplayName("Demo 4: Printer Methode (unbounded)")
+    public void demo4() {
         // given
         Printer printer = new Printer();
 
@@ -87,7 +92,8 @@ public class GenericsTests {
     }
 
     @Test
-    public void canUseBoundedGenericMethod() {
+    @DisplayName("Demo 5: Printer Methode (bounded)")
+    public void demo5() {
         // given
         Printer printer = new Printer();
 

@@ -1,6 +1,5 @@
 package de.dhbw.exercise;
 
-import de.dhbw.demo.associations.n.*;
 import de.dhbw.demo.associations.nm.v2.Course;
 import de.dhbw.demo.associations.nm.v2.Registration;
 import de.dhbw.demo.associations.nm.v2.Student;
@@ -15,8 +14,18 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 public class AssociationsExerciseTest {
 
     @Test
-    @DisplayName("Übung 1: getter und setter anstelle direktem Feld-Zugriff")
+    @DisplayName("Übung 1: n:m zwischen Course & Student")
     public void exercise1() {
+        // given
+
+        // when
+
+        // then
+    }
+
+    @Test
+    @DisplayName("Übung 2: 'getter' und 'setter' anstelle direktem Feld-Zugriff")
+    public void exercise2() {
         // given
         Course course = new Course();
         course.id = 2023001L;

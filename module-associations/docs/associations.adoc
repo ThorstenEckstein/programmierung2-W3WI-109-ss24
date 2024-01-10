@@ -81,12 +81,11 @@ public class Locomotive {   |
 ----
 
 
-
 === One-to-One-Assoziation
 
 Siehe Unit-Test:
-
- de.dhbw.course2.relations.RelationsTest.oneToOne()
+[subs=normal]
+ {mod-ref-test}/demo/AssociationsDemoTest.demo1()
 
 Ein Beispiel::
 _Jede natürliche Person besitzt (genau) einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann müsste auch der Personalausweis vernichtet werden._
@@ -107,15 +106,16 @@ TIP: _Man beachte immer auch die Richtung der Pfeile, die in aller Regel etwas �
 
 Zugehörige Unit-Tests zur *Demonstration*:
 
- de.dhbw.course2.relations.RelationsTest.oneToMany1()
- de.dhbw.course2.relations.RelationsTest.oneToMany2()
+[subs=normal]
+ {mod-ref-test}/demo/AssociationsDemoTest.demo2a()
+ {mod-ref-test}/demo/AssociationsDemoTest.demo2b()
 
 sowie Implementierungen für V1 und V2:
 
 [subs=normal]
-de.dhbw.course2.basics.collections.[red]#*n*#
+ {mod-ref-src}/demo/associations.[red]#*n*#.*.java
 
--> <<Course_2_Exercise_5, Übung 5>>
+-> Übung 1
 
 
 === Many-to-Many-Assoziation
@@ -127,29 +127,33 @@ Die folgenden zwei Varianten kommen am häufigsten vor:
 include::diagrams/many-to-many-example-2.puml[]
 ....
 
-Implementierungsbeispiele:
+////
+Gegenstand der Übungen!
 
- de.dhbw.course2.basics.collections.n
- de.dhbw.course2.basics.collections.nm
+Implementierungsbeispiele:
+[subs=normal]
+ {mod-ref-src}/demo/associations.n
+ {mod-ref-src}/demo/associations.nm
 
 Zugehörige Unit-Tests:
+[subs=normal]
+ {mod-ref-test}/demo/AssociationsDemoTest.demo3()
+////
 
- de.dhbw.course2.relations.RelationsTest.manyToMany()
-
-Eine weitere Perspektive auf Relationen kommt oft im Umfeld Datenbanken & SQL vor, dazu mehr erst später, am -> `Kurstag 7`.
+Assoziationen zwischen Java Klassen werden manchmal auch als *Relationen* bezeichnet. Dieser Begriff stammt aus dem Umfeld der *Datenbanken*, meint aber das Gleiche. Dies ist ein optionales Thema und kann bei Gelegenheit eingeschoben werden.
 
 
-== Übungen
+*Übungen*:
 
 Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
 
 [subs=normal]
- src/[red]#*test*#/java/de/dhbw/course2/exercises/ExerciseTests.java
+ {mod-ref-test}/exercises/AssociationsExerciseTest.java
 
-Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
+Die *Testobjekte*, also die _echten_ Klassen, Interfaces oder anderer Sourcecode wie zuvor auch in:
 
 [subs=normal]
- src/[red]#*main*#/java/de/dhbw/course2/exercises
+ {mod-ref-src}/exercises
 
 Übung 1::
 
@@ -169,19 +173,20 @@ Umsetzung des Prinzips *Information Hiding*
 In dem folgenden Paket finden sich die Klassen aus der Demonstration:
 
 [subs=normal]
-{mod-ref-test}/demo/collections.[red]#*nm*#.v2
+ {mod-ref-test}/demo/associations.nm.v2
 
 Diese Klassen enthalten aber noch keine Methoden!
 
 Füge die zu den Attributen gehörenden `getter` und `setter` Methoden hinzu und passe auch den zugehörigen Unit-Test entsprechend an. Der findet sich hier:
 
 [subs=normal]
- {mod-ref-test}/demo/RelationsDemoTest.manyToMany()
+ {mod-ref-test}/demo/AssociationsExerciseTest.exercise2()
 
-
+////
 Testfragen::
 Im Modul `/exam` finden sich weitere kleine Übungen für die Inhalte des Kurses 2, und zwar in der dortigen Testklasse:
 
 [subs=attributes]
  {course-2-exam}/ExamTest.java
+////
 

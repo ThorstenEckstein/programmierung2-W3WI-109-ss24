@@ -321,9 +321,58 @@
             },
             {
               "type": "content",
+              "contentType": "Topic",
+              "description": "Java Collections API Interfaces",
+              "duration": "PT30M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zum Thema Java Collections API Interfaces",
+              "duration": "PT20M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übungen zum Thema Java Collections API Interfaces",
+              "duration": "PT15M",
+              "module": "Collections"
+            },
+            {
+              "type": "content",
+              "contentType": "Break",
+              "description": "Pause",
+              "duration": "PT15M",
+              "module": "Miscellaneous"
+            },
+            {
+              "type": "content",
+              "contentType": "Topic",
+              "description": "Assoziationen zwischen Klassen",
+              "duration": "PT30M",
+              "module": "Associations"
+            },
+            {
+              "type": "content",
+              "contentType": "Demo",
+              "description": "Demo zum Thema Assoziationen zwischen Klassen",
+              "duration": "PT20M",
+              "module": "Associations"
+            },
+            {
+              "type": "content",
+              "contentType": "Exercise",
+              "description": "Übungen zum Thema Assoziationen zwischen Klassen",
+              "duration": "PT20M",
+              "module": "Associations"
+            },
+            {
+              "type": "content",
               "contentType": "Buffer",
               "description": "Pufferzeit am Ende",
-              "duration": "PT15M",
+              "duration": "PT20M",
               "module": "Miscellaneous"
             }
           ]

@@ -103,7 +103,7 @@ Each of the six core collection interfaces - Collection, Set, List, Map, SortedS
 *Unmodifiable* wrappers take away the ability to modify the collection by intercepting all the operations that would modify the collection
 and throwing an `UnsupportedOperationException`.
 
-Its main usage are;
+Its main usage is:
 
 - To make a collection immutable once it has been built
 - To allow certain clients read-only access to data structures (keep a reference to the backing collection but hand out a reference to the wrapper)

@@ -32,10 +32,22 @@ public enum Modules {
             "V+AM",
             "module-visibility",
             "Scopes, Sichtbarkeiten, Access Modifier"),
+    Collections(
+            "C",
+            "module-collections",
+            "Collections Framework"),
+    Associations(
+            "A",
+            "module-associations",
+            "Assoziationen zwischen Klassen"),
     Miscellaneous(
             "Misc",
             "miscellaneous",
             "Verschiedenen, Container für nicht zuordbare Inhalte"),
+    Optional(
+            "Opt",
+            null,
+            "Module, die speziell als 'optional' gekennzeichnet"),
     Unknown(
             "Unk",
             "unknown",

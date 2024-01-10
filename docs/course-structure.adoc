@@ -67,7 +67,7 @@ include::../module-loops/docs/loops.adoc[tag="content"]
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
-== Tag 4 - Collections & Enums
+== Tag 4 - Collections, Assoziationen & Enums
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
@@ -75,6 +75,13 @@ include::../module-visibility/docs/visibility.adoc[tag="content"]
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
+
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+| Tag #4# | hh:mm - hh:mm | *module-associations*
+|===
+
+include::../module-associations/docs/associations.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===

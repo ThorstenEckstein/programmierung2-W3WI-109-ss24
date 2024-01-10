@@ -43,6 +43,7 @@
         <module>module-statics</module>
         <module>module-object-contract</module>
         <module>module-operators</module>
+        <module>module-associations</module>
 
         <!-- candidates for optional modules -->
         <module>module-databases</module>

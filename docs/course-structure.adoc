@@ -16,14 +16,14 @@ include::settings.adoc[]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #1# | 09:15 - 10:30 | *module-intro*
+|   | 09:15 - 10:30 | *module-intro*
 |===
 
 include::../module-intro/docs/intro.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #1# | 10:45 - 12:15 | *module-tools-n-help*
+|   | 10:45 - 12:15 | *module-tools-n-help*
 |===
 
 include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
@@ -32,14 +32,14 @@ include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #2# | 09:15 - 10:30 | *module-classes*
+|   | 09:15 - 10:30 | *module-classes*
 |===
 
 include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #2# | 10:45 - 12:15 | *module-interfaces*
+|   | 10:45 - 12:15 | *module-interfaces*
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
@@ -48,21 +48,21 @@ include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #3# | 09:15 - 10:40 | *module-datatypes*
+|   | 09:15 - 10:40 | *module-datatypes*
 |===
 
 include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #3# | 10:40 - 11:20 | *module-loops*
+|   | 10:40 - 11:20 | *module-loops*
 |===
 
 include::../module-loops/docs/loops.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #3# | 11:20 - 12:15 | *module-visibility*
+|   | 11:20 - 12:15 | *module-visibility*
 |===
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
@@ -71,35 +71,42 @@ include::../module-visibility/docs/visibility.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #4# | 09:15 - 10:30 | *module-collections*
+|   | 09:15 - 10:30 | *module-collections*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #4# | 10:45 - 12:15 | *module-associations*
+|   | 10:45 - 12:15 | *module-associations*
 |===
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
-== Tag 5 - Java Generics
+== Tag 5 - Enums & Java Generics
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #5# | hh:mm - hh:mm | *module-enums*
+|   | hh:mm - hh:mm | *module-enums*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===
-| Tag #5# | hh:mm - hh:mm | *module-generics*
+|   | hh:mm - hh:mm | *module-generics*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
 
+== Tag 6 - Funktionale Programmierung
 
+[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+|===
+|   | 09:15 - 12:15 | *module-funcprogramming*
+|===
+
+include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
 
 
 
@@ -115,13 +122,6 @@ include::../module-generics/docs/generics.adoc[tag="content"]
 |===
 
 include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
-
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-funcprogramming*
-|===
-
-include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
 
 [cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
 |===

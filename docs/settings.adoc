@@ -35,6 +35,9 @@
 
 // #
 // # Icons & Symbols
+// # See also:
+// #  a) https://fontawesome.com/v4/icons/
+// #  b) https://www.w3schools.com/charsets/ref_utf_symbols.asp
 // #
 
 :icon-welcome:          icon:heart[role=red]
@@ -50,6 +53,7 @@
 :icon-setup:            icon:gear[role=blue]
 :icon-exam:             icon:graduation-cap[role=black]
 :icon-domain:           icon:train[role=red]
+:icon-one:
 :symbol-update-project: pass:n[[blue]#*&#x2199;*#]
 
 // #

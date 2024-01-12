@@ -57,7 +57,7 @@ Color blue = Color.valueOf("Blue");
 Der Aufruf der von `enum` zur Verfügung gestellten Methode `ordinal()` gibt entsprechend die *Ordnungszahl* bzw. den *Positionsindex* des jeweiligen Enum-Wertes zurück.
 
 
-==== Zusätzliche Methoden
+=== Zusätzliche Methoden
 
 `Enums` erlauben darüber hinaus die Implementierung von *zusätzlichen Methoden* in der Enum-Klasse.
 
@@ -77,7 +77,7 @@ public enum Color {
 ----
 
 
-==== Enums in Switch-Ausdrücken
+=== Enums in Switch-Ausdrücken
 
 Ein weiterer Vorteil ist die bequeme Nutzung der enum Konstanten in `switch` Statements:
 
@@ -94,10 +94,10 @@ switch (color) {
 }
 ----
 
-TIP: Ergänzung zur Nutzung vom *logischen UND* in den Unit-Tests -> siehe `src/test/java/de/dhbw/enums/OperatorTests.java`
+TIP: Ergänzung zur Nutzung vom *logischen UND* in den Unit-Tests -> siehe `module-operators`
 
 
-==== Zusätzliche Datenfelder
+=== Zusätzliche Datenfelder
 
 Das Enums "normale" Klassen sind, lassen sie sich mit *instanz-spezifischen Datenfeldern* (_Instanzvariablen_) erweitern. Dazu müssen lediglich die Datenfelder selbst sowie ein oder mehrere *Konstruktoren* erzeugt werden, um die (ebenfalls konstanten) Werte für die Enum-Konstanten zu definieren.
 
@@ -106,7 +106,6 @@ Dazu ein Beispiel:
 .-> *Demo 3* in EnumsTest.java
 [source, java]
 ----
-
 public enum FoodGroup {
 
   Fruchtsaefte("Fruchtsäfte"),

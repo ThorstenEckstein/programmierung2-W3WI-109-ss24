@@ -1,18 +1,9 @@
 package de.dhbw.generics;
 
-import de.dhbw.commons.Logger;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class ExerciseTests {
-
-    private final Logger logger = new Logger(ExerciseTests.class);
-
-    @BeforeEach
-    public void beforeEach() {
-        // implement a shopping cart with 4 products (having 'name', 'category' and 'price')
-    }
+public class GenericsExerciseTests {
 
     @Test
     @DisplayName("Übung 1: Taschenrechner mit Grundrechenarten")

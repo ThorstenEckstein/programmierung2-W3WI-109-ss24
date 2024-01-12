@@ -21,23 +21,14 @@ end::content[]
 
 == Java Generics
 
-*Fachlicher Kontext*
-----
- + eher Theorie
- + Standard-Beispiele/-Übungsaufgaben
-----
-
-
-include::../../docs/includes/update-project.adoc[]
-
-
-=== Basics & Einführung
-
 *Generische Programmierung* in Java ist durch `Generics` seit langem möglich. Der Begriff steht synonym für "parametrisierte Typen". Die Idee ist, zusätzliche Variablen für Typen einzuführen. Diese Typ-Variablen repräsentieren zum Zeitpunkt der Implementierung unbekannte Typen. Dazu wird der sogenannte *Diamond-Operator* `<>` bei Klasse oder Methode genutzt:
 
-[source, java]
- List<T> list; // 'T' oft als Kürzel für 'Type'
+[, java]
+----
+ List<T> list; <1>
  public Printer<T> { ...}
+----
+<1> `T` oft als Kürzel für `Type`
 
 Erst bei der Verwendung der Klassen, Schnittstellen und Methoden im Code werden diese Typ-Variablen durch konkrete Typen durch den Entwickler ersetzt.
 
@@ -55,7 +46,16 @@ include::../src/main/java/de/dhbw/generics/demo/Joiner.java[tag="generic-class"]
 
 Zeile 1 macht die Klasse generisch, in Zeile 9 wird der unbekannte Typ genutzt.
 
-[source,java,title="Beispiel einer generischen Methode"]
+DIe Nutzung einer generischen Klasse sind entsprechend so aus, der Typ `T` wird konkret angegeben:
+
+[,java]
+----
+Joiner<String> joiner = new Joiner<>();
+----
+
+Auch Methoden können generisch sein, sie werden ähnlich wie Klassen definiert:
+
+[source,java,title="Beispiel einer generischen Methode", indent=0]
 ----
 include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method"]
 ----
@@ -65,10 +65,12 @@ include::../src/main/java/de/dhbw/generics/demo/Printer.java[tag="generic-method
 Oft kommen sogenannte *bounded generics* zum Einsatz.
 Dabei wird bei der Definition einfach die Superklasse angegeben, von welcher der generische Typ erben muss. Auf diese Weise wird der ansonsten _beliebige_ Typ eingeschränkt, sodass der generische Typ zwar immer noch unbekannt ist, aber nicht von _jedem_ Typ sein kann, sondern nur entsprechend der Einschränkung, z.B.
 
-[source, java]
+[, java]
 ----
  public <T extends Number> add(T first, T second) { ... }
 ----
+
+Hier kann z.B. der genutzte Datentyp ausschließlich ein Zahlen-Datentyp sein, der von `Number` erbt.
 
 === Wildcards
 
@@ -80,31 +82,29 @@ Im Rahmen der Generics kann man anstelle der Typvariable - oben z.B. `T` - durch
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {module-demo-path-tests}/GenericsTests.java
+ {mod-ref-test}/generics/GenericsTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs="normal"]
- {module-demo-path-sources}/*.java
+ {mod-ref-src}/generics/demo/*.java
 
 
-=== Exercises
+=== Übungen
 
-Nutze folgendes Package für deine *Unit-Tests*:
+Nutze folgendes Package für die *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/generics/ExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
-
-{nl}
+ {mod-ref-src}/exercises/*.java
 
 
 [[generics-exercise-1]]
-*Übung 1:*
+*Übung 1*::
 
 Erstelle ein Interface für einen Taschenrechner, der die vier Grundrechenarten in Form von Methoden zur Verfügung stellt, also für...
 
@@ -121,7 +121,7 @@ _Optional: Realisiere auch einen konkreten Taschenrechner, der das Interface imp
 
 
 [[generics-exercise-2]]
-*Übung 2:*
+*Übung 2*::
 
 Implementiere eine konkrete Klasse `Workflow`.
 
@@ -131,13 +131,13 @@ Die Workflow-Schritte sollen von einer Eltern-Klasse namens `Step` erben. Implem
 
 Realisiere für die "Ausführung" der `execute` Methode einfach eine Konsolenausgabe, z.B. des Names des konkreten Workflow-Schrittes (d.h. der Klassenname).
 
-
+////
 Übungsfragen::
 In der nachstehenden Testklasse finden sich kleine "Quizfragen" für die Inhalte des Kurses 3:
 
 [subs=attributes]
  {course-3-exam}/ExamTest.java
-
+////
 
 === Tipps, Patterns & Best Practices
 

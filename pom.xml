@@ -47,7 +47,6 @@
 
         <!-- candidates for optional modules -->
         <module>module-databases</module>
-        <module>module-course-model</module>
 
         <!-- module to take backup stuff, maybe used later -->
         <module>module-archive</module>

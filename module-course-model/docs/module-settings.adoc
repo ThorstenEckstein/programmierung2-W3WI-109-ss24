@@ -1,3 +1,0 @@
-// --- Name
-:module-name:  module-course-model
-:module-title: Klassenmodell der Lehrveranstaltung

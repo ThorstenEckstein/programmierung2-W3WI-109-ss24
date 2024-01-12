@@ -21,22 +21,35 @@ tag::content[]
 end::content[]
 ////
 
-== Exception Handling
+== Exceptions & Exception-Handling
 
-[%collapsible, title="Update Project ..."]
-====
-include::../../docs/includes/update-project.adoc[]
-====
+Beim Ausführen von Anweisungen in Java Programmen kann es (immer) zu *Fehlern* im Code kommen. Eine gute Ausnahmebehandlung kann Fehler behandeln und das Programm ordnungsgemäß umleiten, um Benutzern - trotz Fehler - ein positives Erlebnis zu bieten.
 
+Normalerweise wird Code in einer idealisierten Umgebung geschrieben: Das Dateisystem enthält immer unsere Dateien, das Netzwerk ist fehlerfrei und die JVM verfügt immer über genügend Speicher. Manchmal wird dies auch als *"happy path"* bezeichnet.
+
+In der Produktion können jedoch Dateisysteme beschädigt werden, Netzwerke zusammenbrechen und JVMs nicht mehr über genügend Speicher verfügen. Das Funktionieren des Codes hängt von vielen Aspekten ab, die während der Programmierung nicht beachtet werden oder bekannt sind.
+
+Die Software muss mit diesen Bedingungen umgehen können, da sie den Ablauf der Anwendung negativ beeinflussen und Fehlersituationen bilden:
+
+[,java]
+----
+public static List<Player> getPlayers() throws IOException {
+
+    Path path = Paths.get("players.dat");
+    List<String> players = Files.readAllLines(path);
+    ...
+}
+----
+
+Dieser Code ist so (mangelhaft) geschrieben, die möglicherweise auftretende Exception nicht zu behandeln, sondern sie stattdessen einfach zu *"werfen"*. In einer idealisierten, kontrollierten Umgebung wird der Code in aller Regel aber einwandfrei funktionieren.
+
+Aber was könnte in der Produktion passieren, wenn die Datei `players.dat` fehlt?
+
+Ohne die *Behandlung* dieser Ausnahme kann es sein, dass ein ansonsten fehlerfreies Programm überhaupt nicht mehr ausgeführt wird! Es muss sichergestellt werden, dass der Code einen Plan für den Fall hat, dass etwas schiefgeht.
 
 === Exceptions Hierarchie
 
-*Fachlicher Kontext*
-----
- + Fach-Exceptions (z.B. InvalidTrainNumberException, DelayedDepartureWarning)
- + Dokumentation des fachlichen Klassenmodells aus den vorangegangenen Beispielen
-----
-
+Der Java Standard bietet eine API zum *"Fangen"* und zur Behandlung von Fehlern:
 
 [plantuml, title="Exceptions Hierarchie", png, align="center"]
 ....
@@ -107,7 +120,7 @@ try {
     this.getLogger().error(ex);
     this.rollback();
     this.clearCache();
-    this.sendEmailToVIP();
+    this.sendAlarmTo(vip);
 }
 ----
 

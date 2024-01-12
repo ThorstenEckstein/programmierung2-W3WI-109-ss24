@@ -12,39 +12,72 @@ include::module-settings.adoc[]
 tag::content[]
 ----
 1. Funktionale Programmierung in Java
-1.1. Einführung
-1.2. Lambda Ausdrücke
-1.3. Streaming (API)
+1.1. Imperative Programmierung
+1.2. Deklarative Programmierung
+1.3. Lambda Ausdrücke
+1.4. Streaming (API)
 ----
 end::content[]
 ////
 
 == Funktionale Programmierung in Java
 
+Im Wesentlichen stehen sich 2 *Programmierparadigmen* gegenüber:
 
-._"Project Update" Details ..._
-[%collapsible]
-====
-include::../../docs/includes/update-project.adoc[]
-====
+* das *imperative* Paradigma, aus dem sich OOP (objektorientierte Programmierung) entwickelte, und
+* das *deklarative* Paradigma, das die Grundlage für die _funktionale Programmierung_ bildet.
 
-=== Einführung
+In der Übersicht:
 
-to be done
+[plantuml, title="Paradigmen", png, align="center"]
+....
+include::diagrams/paradigms.puml[]
+....
+
+
+=== Imperative Programmierung
+
+Bei einem *imperativen* Ansatz ist ein Programm eine _Abfolge von Schritten_, die ihren Zustand ändern, bis das Zielergebnis erreicht wird. Dieser Ansatz steht in engem Zusammenhang mit der Computerarchitektur (Neumann), bei der Anweisungen im Maschinencode einen globalen Zustand ändern. Der Maschinenzustand besteht aus Speicherinhalten und Prozessorregistern. Die meisten Computer verwenden dieses Modell.
+
+Imperative *Programme* funktionieren ähnlich. Zuweisungsanweisungen werden verwendet, um im Speicher gespeicherte Daten zu manipulieren. Anweisungen werden in einer bestimmten Reihenfolge ausgeführt und verwenden diese Daten, um das gewünschte Ergebnis zu berechnen. Imperative Sprachen verwenden häufig Elemente wie Variablen, Schleifen und bedingte Anweisungen.
+
+Zusammenfassend sind die wichtigsten Eigenschaften imperativer Programmierungen:
+
+* veränderlicher Zustand
+* Schritt-für-Schritt-Ausführung von Anweisungen und
+* die Reihenfolge der Anweisungen ist wichtig
+
+
+=== Deklarative Programmierung
+
+Der *deklarative* Ansatz konzentriert sich auf die Endbedingungen eines gewünschten Ergebnisses und nicht auf die Abfolge von Schritten, die erforderlich sind, um dieses zu erreichen. Ein deklarativ geschriebenes *Programm* ist also keine Folge von Anweisungen, sondern eine Reihe von Eigenschaftsdeklarationen, die das resultierende Objekt haben sollte.
+
+Die Charakteristiken von deklarativer Software sind:
+
+* Das Endergebnis hängt nicht von einem externen Zustand ab
+* Fehlen eines inneren Zustands zwischen den Hinrichtungen
+* Determinismus – für die gleichen Eingabeargumente liefert das Programm immer das gleiche Ergebnis
+* Die Ausführungsreihenfolge ist nicht immer wichtig – sie kann asynchron sein
+
+Die *funktionale Programmierung* ist eine _Teilmenge_ der deklarativen Programmierung. Sie stellt ein _eigenständiges Programmierparadigma_ dar.
+
 
 === Lambda Ausdrücke
 
-Funktionale Programmierung ist ein *Programmierparadigma*, in dem *Funktionen* im Mittelpunkt stehen, sie werden nicht nur
+Bei der *funktionalen Programmierung* stehen Funktionen im Mittelpunkt, sie werden nicht nur
 
 * definiert und
-* angewendet, sondern auch
+* angewendet
+
+sondern auch
+
 * wie Daten miteinander verknüpft,
 * als Parameter eingesetzt verwendet oder als
 * Funktionsergebnisse genutzt.
 
 Mit *Lambda Ausdrücken* wurde ein lang gefordertes Sprachkonstrukt in Java eingeführt, dass es in ähnlicher Form in anderen Programmiersprachen bereits gibt, z.B. in `C#`.
 
-Der Einsatz von Lambdas erfordert zum Teil eine andere Denkweise und führt zu einem anderen Programmierstil, die dem Paradigma der *funktionalen Programmierung* folgt.
+Der Einsatz von Lambdas erfordert zum Teil eine andere Denkweise und führt zu einem anderen Programmierstil, die wie oben gesagt dem Paradigma der _funktionalen Programmierung_ folgt.
 
 Insbesondere in den Bereichen der Parallelverarbeitung von Daten sowie im Bereich der Frameworks finden sich viele Implementierungen, ebenso im Bereich des - bereits bekannten - *Collection* Frameworks.
 
@@ -105,12 +138,12 @@ Die *wichtigsten* funktionalen interfaces sind:
 . `Predicate<T>` - definiert eine Methode `boolean test(T)`. Sie berechnet für einen Eingabewert T ein bool'sches Ergebnis. Das lässt sich sehr gut für Filterbedingungen ausnutzen.
 . `Function<T,R>` - Definiert eine Abbildungsmethode durch `R apply(T)`, wodurch Transformationen gut ausgedrückt werden können, gebräuchlich besonders für die Extraktion eines Attributes aus einem komplexen Typ
 . `Supplier<T>` - Stellt ein Ergebnis vom Typ `T` bereit. Im Gegensatz zu `Function<T,R>` erhält ein Supplier keinen Eingabewert mit der Methode `T get()`
-. `BiFunction<T,U,R>` und `BiConsumer<T,U>` - Wie `Function`, nur mit zwei Eingabewerte `T` und `U`
+. `BiFunction<T,U,R>` und `BiConsumer<T,U>` - wie `Function`, nur mit zwei Eingabewerte `T` und `U`
 
-Zu jedem dieser functionalen Interfaces gibt es einen Unit-Test zur *Demonstration* hier:
+Zu jedem dieser funktionalen Interfaces gibt es einen Unit-Test zur *Demonstration* hier:
 
 [subs="normal"]
- /test/de/dhbw/{module-package}/LambdaTests.java
+ {mod-ref-test}/funcprog/LambdaDemoTests.java
 
 
 === Streaming (API)
@@ -133,7 +166,7 @@ Ein ausführliches Beispiel für den Gebrauch in *Listen*:
 
 [source,java,title="Lamdba + Streaming"]
 ----
-include::{mod-lnk-test}/funcprog/LambdaTests.java[tag="lambda-example-1"]
+include::{mod-lnk-test}/funcprog/LambdaDemoTests.java[tag="lambda-example-1"]
 ----
 
 Im Detail:
@@ -175,14 +208,14 @@ Dazu ein Beispiel:
 
 [source,java,title="Beispiel einer reduce() Operation"]
 ----
-include::{mod-lnk-test}/funcprog/StreamingTests.java[tag="reduce-example1"]
+include::{mod-lnk-test}/funcprog/StreamingDemoTests.java[tag="reduce-example1"]
 ----
 
 sowie als Beispiel für einen *fachlichen* Nutzen, der "Erkenntnisse" aus den fachlichen Daten ermittelt:
 
 [source,java,title="Fachliches Beispiel (good code?, bad code?)", indent="0"]
 ----
-include::{mod-lnk-test}/funcprog/LambdaTests.java[tag="lambda-example-2"]
+include::{mod-lnk-test}/funcprog/LambdaDemoTests.java[tag="lambda-example-2"]
 ----
 
 
@@ -191,27 +224,21 @@ include::{mod-lnk-test}/funcprog/LambdaTests.java[tag="lambda-example-2"]
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {mod-ref-test}/funcprog/LambdaTests.java & StreamingTests.java
-
-Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
-
-[subs="normal"]
- {mod-ref-src}/funcprog/demo/*.java
+ {mod-ref-test}/funcprog/LambdaDemoTests.java
+ {mod-ref-test}/funcprog/StreamingDemoTests.java
 
 
-=== Exercises
+=== Übungen
 
-Nutze folgendes Package für deine *Unit-Tests*:
+Nutzt folgendes Package für die *Unit-Tests*:
 
 [subs="normal"]
- {mod-ref-test}/funcprog/ExerciseTests.java
+ {mod-ref-test}/funcprog/FuncProgExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
  {mod-ref-src}/funcprog/exercises/*.java
-
-{nl}
 
 
 [[funcprog-exercise-1]]
@@ -229,7 +256,7 @@ Implementiere den _"old fashioned way"_ für die Berechnung einer Summe:
 
 [source, java, indent="0"]
 ----
-include::{mod-lnk-test}/funcprog/ExerciseTests.java[tags="old-fashioned-reduce"]
+include::{mod-lnk-test}/funcprog/FuncProgExerciseTests.java[tags="old-fashioned-reduce"]
 ----
 
 
@@ -240,7 +267,7 @@ Implementiere die Übung 2a mit modernen Mitteln, d.h. ersetze die "alte" `for-e
 
 [source, java, indent="0"]
 ----
-include::{mod-lnk-test}/funcprog/ExerciseTests.java[tags="modern-reduce"]
+include::{mod-lnk-test}/funcprog/FuncProgExerciseTests.java[tags="modern-reduce"]
 ----
 
 

@@ -1,7 +1,6 @@
 package de.dhbw.funcprog;
 
 import de.dhbw.commons.DateTimeUtil;
-import de.dhbw.commons.Logger;
 import de.dhbw.funcprog.demo.Schedule;
 import de.dhbw.funcprog.demo.Timetable;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,9 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StreamingTests {
-
-    private final Logger logger = new Logger(StreamingTests.class);
+public class StreamingDemoTests {
 
     private Timetable timetable;
 
@@ -59,8 +56,8 @@ public class StreamingTests {
         // .toList();
 
         // then
-        logger.log("Full timetable     : " + timetable.getSchedules());
-        logger.log("Filtered timetable : " + filtered);
+        System.out.println("Full timetable     : " + timetable.getSchedules());
+        System.out.println("Filtered timetable : " + filtered);
 
         assertEquals(2, filtered.size());
     }
@@ -69,7 +66,7 @@ public class StreamingTests {
     public void canMapTimetable() {
         // given - preparation see beforeEach() above
 
-        logger.log("Original timetable : " + timetable.getSchedules());
+        System.out.println("Original timetable : " + timetable.getSchedules());
 
         //List<Schedule> mapped = timetable.getSchedules().stream().map(s -> {
         //    s.setFrom(s.getFrom().toLowerCase());
@@ -84,7 +81,7 @@ public class StreamingTests {
         }).toList();
 
         // then
-        logger.log("Mapped timetable : " + mapped);
+        System.out.println("Mapped timetable : " + mapped);
 
         assertEquals(4, mapped.size());
     }
@@ -93,11 +90,12 @@ public class StreamingTests {
     public void canReduceTimetable() {
         // given - preparation see beforeEach() above
 
-        // when - peek is a 'named' map operation
+        // when
+        //long nSchedules = timetable.getSchedules().size();
         long nSchedules = timetable.getSchedules().stream().count();
 
         // then
-        logger.log("Reduced timetable : " + nSchedules);
+        System.out.println("Reduced timetable : " + nSchedules);
 
         assertEquals(4, nSchedules);
     }
@@ -157,8 +155,7 @@ public class StreamingTests {
                 .reduce(Duration.ZERO, Duration::plus);
 
         // then
-        logger.log("Total journey duration: " +
-                reduced.toMinutes() + " [min]: ");
+        System.out.println("Total journey duration: " + reduced.toMinutes() + " [min]: ");
         assertEquals(120, reduced.toMinutes());
     }
     //end::reduce-example2[]

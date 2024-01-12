@@ -15,9 +15,9 @@ import static de.dhbw.funcprog.demo.Validator.isScheduledFor2023;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-public class LambdaTests {
+public class LambdaDemoTests {
 
-    private final Logger logger = new Logger(LambdaTests.class);
+    private final Logger logger = new Logger(LambdaDemoTests.class);
 
     @Test
     public void consumer() {

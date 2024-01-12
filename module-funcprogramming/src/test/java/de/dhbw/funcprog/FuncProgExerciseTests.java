@@ -1,22 +1,17 @@
 package de.dhbw.funcprog;
 
-import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
-public class ExerciseTests {
-
-    private final Logger logger = new Logger(ExerciseTests.class);
+public class FuncProgExerciseTests {
 
     @BeforeEach
     public void beforeEach() { }
 
     @Test
     @DisplayName("Exercise 1: Loop with Streams & Lambda")
-    public void exercise2Solution() {
+    public void exercise1() {
         // given - some list with boolean values
 
         // when - use list.stream() and some lambda expression

@@ -1,18 +1,18 @@
 package de.dhbw.exceptions;
 
 import de.dhbw.commons.Colourizer;
-import de.dhbw.commons.Logger;
 import de.dhbw.exceptions.demo.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ExceptionTests {
-
-    private final Logger logger = new Logger(ExceptionTests.class);
+@SuppressWarnings({"ConstantValue", "CallToPrintStackTrace"})
+public class ExceptionsDemoTests {
 
     @Test()
-    public void howToDoNot() {
+    @DisplayName("Demo 1: Do not print stack trace without any exception handle!")
+    public void demo1() {
         // given
         boolean exceptionCondition = true;
 
@@ -30,7 +30,8 @@ public class ExceptionTests {
 
 
     @Test()
-    public void testExpectedException() {
+    @DisplayName("Demo 2: How to test an expected exception")
+    public void demo2() {
         // given
         TrainObservationMonitor model = new TrainObservationMonitor();
 
@@ -45,7 +46,8 @@ public class ExceptionTests {
     }
 
     @Test()
-    public void testExpectedExceptionWithContext() {
+    @DisplayName("Demo 3: How to test an expected exception with details/context")
+    public void demo3() {
         // given
         TrainObservationMonitor model = new TrainObservationMonitor();
 
@@ -61,11 +63,12 @@ public class ExceptionTests {
         assertEquals(Severity.WARN, thrown.getContext().getSeverity());
         assertTrue((int)passengersCount > 80);
 
-        logger.log(Colourizer.red(thrown.getContext().getMessage()));
+        System.out.println(Colourizer.red(thrown.getContext().getMessage()));
     }
 
     @Test()
-    public void testHandleException() {
+    @DisplayName("Demo 4: How to handle an exception simple")
+    public void demo4() {
         // given
         DataLoader loader = new DataLoader();
 
@@ -77,7 +80,8 @@ public class ExceptionTests {
     }
 
     @Test()
-    public void testHandleExceptionWithSpecificHandler() {
+    @DisplayName("Demo 5: How to handle an exception in a more appropriate way")
+    public void demo5() {
         // given
         DataLoader loader = new DataLoader();
 

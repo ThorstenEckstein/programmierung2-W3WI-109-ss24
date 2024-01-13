@@ -1,6 +1,5 @@
 package de.dhbw.exceptions;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.exceptions.solution.CheckedException;
 import de.dhbw.exceptions.solution.Executable;
 import de.dhbw.exceptions.solution.InterruptedException;
@@ -12,13 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public class ExerciseSolutions {
-
-    private final Logger logger = new Logger(ExerciseSolutions.class);
+@SuppressWarnings({"CallToPrintStackTrace", "Convert2MethodRef"})
+public class ExceptionsSolutionTests {
 
     @Test
-    @DisplayName("Exercise 1: Exception werfen und fangen")
-    public void exercise1Solution() {
+    @DisplayName("Solution 1: Exception werfen und fangen (Basis-Implementierung)")
+    public void solution1_1() {
         // given
         Executable task = new Task();
 
@@ -33,8 +31,8 @@ public class ExerciseSolutions {
     }
 
     @Test
-    @DisplayName("Exercise 1: V2 Exception werfen und fangen")
-    public void exercise1Solution_v2() {
+    @DisplayName("Solution 1: Exception werfen und fangen (Volle Implementierung")
+    public void solution1_2() {
         // given
         Executable task = new Task();
 

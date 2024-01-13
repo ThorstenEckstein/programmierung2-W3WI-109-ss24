@@ -40,11 +40,11 @@ RuntimeException     <|--   ApplicationRuntimeException
 ContextAware         <|..   ApplicationRuntimeException
 ContextAware         <|..   CheckedException
 
-ApplicationRuntimeException <|--  ValidationException
-ApplicationRuntimeException <|--  ProductNotUnique\nException
-ApplicationRuntimeException <|--- NullPointerException
+ApplicationRuntimeException <|-- ValidationException
+ApplicationRuntimeException <|-- ProductNotUnique\nException
+RuntimeException            <|-- NullPointerException
 
 CheckedException     <|--  PassengerLimitPerWagon\nExceededException
-CheckedException     <|--- TrainTooLateException
+CheckedException     <|-- TrainTooLateException
 
 @enduml

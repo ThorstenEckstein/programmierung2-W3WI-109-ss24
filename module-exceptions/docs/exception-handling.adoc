@@ -64,7 +64,7 @@ Die wichtigsten Codefragmente:
 
 [, java, lines]
 ----
- public void process() throws ValidationException {
+ public void process() throws ValidationException { <1>
     // code that may throw an exception
  }
 
@@ -72,7 +72,7 @@ Die wichtigsten Codefragmente:
    // code that may throw an exception in
    // a specific situation
    if (!condition) {
-     throw new ValidationException();
+     throw new ValidationException(); <2>
    }
  }
 
@@ -82,6 +82,11 @@ Die wichtigsten Codefragmente:
      // ...
  }
 ----
+
+<1> [small]#Die Methode zeigt an, dass sie diese `Exception` werfen kann#
+<2> [small]#Hier wird eine spezielle `Exception` tatsächlich geworfen#
+
+{nl}
 
 Error::
 Die `Error` Subklasse zeigt ein "ernstes" Problem an, das eine Applikation nicht "fangen" oder "behandeln" sollte. Die meisten solcher Fehler bilden außergewöhnliche Fehlerbedingungen oder -zustände ab, die (in aller Regel) nicht _zur Laufzeit_ gehoben werden können.
@@ -95,6 +100,9 @@ Ein *Beispiel*-Klassenmodell:
 ....
 include::diagrams/exceptions-model.puml[]
 ....
+
+* _gelbe Klassen sind eigenen Implementierungen, also anwendungsspezifische Erweiterungen der allgemeinen Java Exceptions API_
+* _graue Klassen werden von Java zur Verfügung gestellt und sind Teil der API_
 
 
 === Exception Handling
@@ -232,12 +240,12 @@ public void vote(int ageOfVoter) throws TooYoungToVoteException {
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs="normal"]
- {module-demo-path-tests}/ExceptionTests.java
+ {mod-ref-test}/exceptions/ExceptionsDemoTests.java
 
 Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 
 [subs="normal"]
- {module-demo-path-sources}/*.java
+ {mod-ref-src}/exceptions/demo/*.java
 
 
 === Exercises
@@ -257,10 +265,10 @@ Die im Test benutzten *Implementierungen* gehören in das Package:
 [[exception-exercise-1]]
 *Übung 1:*
 
-. *Implementiere* das Interface `Executable` sowie eine Methode `void execute()`.
-. *Implementiere* dazu auch eine neue _echte, eigene_ Exception, die von `CheckedException` abgeleitet werden soll.
-. *Wirf* diese neue Exception einfach mittels `throws` in der Methode `execute()`.
-. Schreibe nun einen Unit-Test, der die Methode `execute()` aufruft und die geworfene Exception *abfängt* und *behandelt*.
+. *Implementiere* das Interface `Executable` mit einer Methode `void execute()`, dazu eine Klasse Task, die das Interface implementiert
+. *Implementiere* dazu auch eine neue _konkrete, eigene_ Exception, die von `CheckedException` abgeleitet werden soll und von `execute()` geworfen werden kann.
+. *Wirf* diese neue Exception einfach mittels `throws` in der konkreten Methode `execute()` deiner konkreten Klasse.
+. Schreibe nun einen Unit-Test, der die Methode `execute()` aufruft und die geworfene Exception *fängt* und *behandelt*.
 
 {nl}
 

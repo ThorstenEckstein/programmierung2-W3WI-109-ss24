@@ -14,139 +14,143 @@ include::settings.adoc[]
 
 == Tag 1 - Willkommen, Setup & Einführung
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 09:15 - 10:30 | *module-intro*
+| {icon-topic}  | 09:15 - 10:30 | *module-intro*
 |===
 
 include::../module-intro/docs/intro.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 10:45 - 12:15 | *module-tools-n-help*
+| {icon-topic}  | 10:45 - 12:15 | *module-tools-n-help*
 |===
 
 include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 == Tag 2 - Klassen & Interfaces
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 09:15 - 10:30 | *module-classes*
+| {icon-topic}  | 09:15 - 10:30 | *module-classes*
 |===
 
 include::../module-classes/docs/classes.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 10:45 - 12:15 | *module-interfaces*
+| {icon-topic}  | 10:45 - 12:15 | *module-interfaces*
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 == Tag 3 - Datentypen, Access Modifier & Kontrollstrukturen
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 09:15 - 10:40 | *module-datatypes*
+| {icon-topic}  | 09:15 - 10:40 | *module-datatypes*
 |===
 
 include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 10:40 - 11:20 | *module-loops*
+| {icon-topic}  | 10:40 - 11:20 | *module-loops*
 |===
 
 include::../module-loops/docs/loops.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 11:20 - 12:15 | *module-visibility*
+| {icon-topic}  | 11:20 - 12:15 | *module-visibility*
 |===
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
 == Tag 4 - Collections, Assoziationen
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 09:15 - 10:30 | *module-collections*
+| {icon-topic}  | 09:15 - 10:30 | *module-collections*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 10:45 - 12:15 | *module-associations*
+| {icon-topic}  | 10:45 - 12:15 | *module-associations*
 |===
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
 == Tag 5 - Enums & Java Generics
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | hh:mm - hh:mm | *module-enums*
+| {icon-topic}  | hh:mm - hh:mm | *module-enums*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | hh:mm - hh:mm | *module-generics*
+| {icon-topic}  | hh:mm - hh:mm | *module-generics*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
 
 == Tag 6 - Funktionale Programmierung
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | 09:15 - 12:15 | *module-funcprogramming*
+| {icon-topic}  | 09:15 - 12:15 | *module-funcprogramming*
 |===
 
 include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
 
-== Tag 7 - Ausnahmen & Fehlerbehandlung
+== Tag 7 - Ausnahmen, Fehlerbehandlung & Records
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-|   | hh:mm - hh:mm | *module-exceptions*
+| {icon-topic}  | hh:mm - hh:mm | *module-exceptions*
 |===
 
 include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
 
+== Tag 8 - ???
 
 
 
+////
 ====
 [red]#*Folgendes ist noch nicht geplant/integriert!*#
 ====
+////
 
 
+== Optionale Module
 
+=== Javadoc, Dokumentation von Quellcode
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-javadoc*
 |===
 
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+=== Datenbankprogrammierung mit Java
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-databases*
 |===
 
 include::../module-databases/docs/databases.adoc[tag="content"]
 
-
-== Optionale Module
-
 === Statische Elemente
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-statics*
 |===
@@ -155,7 +159,7 @@ include::../module-statics/docs/statics.adoc[tag="content"]
 
 === Referenzsemantik
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-semantics*
 |===
@@ -164,150 +168,19 @@ include::../module-statics/docs/statics.adoc[tag="content"]
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
-[cols="1m,2m,7m", grid="none", width="100%", stripes="odd"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-object-contract*
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]
 
-////
+=== Records
 
-{continue-here}
-
-== {module}: Polymorphismus & Kontrollstrukturen
-
-[cols="^1a,<9a"]
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {exercise} 1: Wiederholung Klassenmodell implementieren und "generate code" nutzen
-| * [ ] {nbsp} | {theory} Methoden überladen, überschreiben/übersteuern
-| * [ ] {nbsp} | {demo} Overload, Override am Beispiel
-| * [ ] {nbsp} | {exercise} 1: Override
-| * [ ] {nbsp} | Schleifen
-| * [ ] {nbsp} | {exercise} 2: Verschiedene Loops
+| Tag #?# | hh:mm - hh:mm | *module-records*
 |===
 
+include::../module-records/docs/records.adoc[tag="content"]
 
-== {module}: Collections Framework & Objektvertrag
-
-[cols="^1a,<9a"]
-|===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Collections Framework Einführung
-| * [ ] {nbsp} | {exercise} Übung 1: Eine Liste implementieren und die "for-each-loop" zur Summierung nutzen
-| * [ ] {nbsp} | {exercise} 2: Eine sortierte `Map` implementieren und die Sortierung prüfen
-| * [ ] {nbsp} | {theory} Der Objektvertrag
-| * [ ] {nbsp} | {demo} `equals()` und `hashCode()`
-|===
-
-
-== {module}: Beziehungen & Relationen
-
-[cols="^1a,<9a"]
-|===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | Beziehungsarten (vs. Relationen)
-| * [ ] {nbsp} | Aggregation und Komposition
-| * [ ] {nbsp} | {demo} One-To-One, One-To-Many
-| * [ ] {nbsp} | {exercise} 1: Assoziation mit Kurs und Student:innen
-| * [ ] {nbsp} | Many-To-Many
-| * [ ] {nbsp} | {demo} Many-To-Many am Beispiel der n:m Relation
-| * [ ] {nbsp} | {exercise} 2: ManyToMany
-|===
-
-
-== {module}: Generische Programmierung & Enums
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Java Generics
-| * [ ] {nbsp} | {demo} in `GenericsTest`
-| * [ ] {nbsp} | {exercise} 1: Calculator
-//| * [ ] {nbsp} | {exercise} 2: Workflow mit Steps
-| * [ ] {nbsp} | {theory} Enumerations
-| * [ ] {nbsp} | {demo} EnumTests
-| * [ ] {nbsp} | {exercise} 2: 'Switch' anstelle von 'if-elseif-else'
-| * [ ] {nbsp} | {exercise} 3: Enum mit r,g,b Datenfeldern
-|===
-
-
-== {module}: Funktionale Programmierung & Streaming API
-
-[cols="^1a,<9a"]
-|===
-| Done          | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Funktionale Programmierung
-| * [ ] {nbsp} | {demo} Klasse LambdaTest
-| * [ ] {nbsp} | {theory} Streaming API
-| * [ ] {nbsp} | {demo} Klasse StreamingTests
-| * [ ] {nbsp} | {exercise} 1: Loop über bool'sche Liste mit Ausgabe
-| * [ ] {nbsp} | {exercise} 2 (a+b): "Summe berechnen" früher + heute
-
-// | * [ ] {nbsp} | {exercise} 3: _(optional) Warenkorb, Gesamtpreis-Kalkulation mit filter-map-reduce Algorithmen_
-
-| * [ ] {nbsp} | Ausgabe Übungsklausur, Erläuterungen
-|===
-
-
-== {module}: Exceptions, Enums & Records
-
-[cols="^1a,<9a"]
-|===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {update}
-| * [ ] {nbsp} | {theory} Gemeinsame Besprechung der Übungsklausur
-| * [ ] {nbsp} | {theory} Records
-| * [ ] {nbsp} | {demo} Records
-| * [ ] {nbsp} | {theory} Exceptions & Exception Handling
-| * [ ] {nbsp} | {demo} mit/ohne Context, mit/ohne Handler
-| * [ ] {nbsp} | {exercise} 3: Neue Exception bauen, werfen und behandeln
-|===
-
-
-== {module}: Optionale Themen, Semesterabschluss
-
-[cols="^1a,<9a"]
-|===
-| Done         | Inhalt, Kommentar
-
-| * [ ] {nbsp} | {theory} _Option 1: Referenz-Semantik (Test, Grafische Erläuterung)_
-| * [ ] {nbsp} | {theory} _Option 2: Code-Qualität_
-| * [ ] {nbsp} | Projekt-Beispiele (Doremar, RBLTNG, ISTP)
-| * [ ] {nbsp} | Bewerbungsgespräch (Softwareentwickler)
-| * [ ] {nbsp} | Literaturempfehlungen -> docs/asciidoc/references.pdf
-| * [ ] {nbsp} | Fragen, Wiederholungen, FAQ zu den Kursinhalten
-| * [ ] {nbsp} | Informationen zur Abschlussprüfung
-|===
-
-////
-
-////
-LV Planung:
-
-|===
-| LV | Plandatum | Modul | Optionale Module
-
-| 1
-| Di., 19.02.24
-| module-intro
-| -
-
-| 2
-| Di., 26.02.24
-| module-classes
-| -
-|===
-////

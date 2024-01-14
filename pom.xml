@@ -44,6 +44,7 @@
         <module>module-object-contract</module>
         <module>module-operators</module>
         <module>module-associations</module>
+        <module>module-records</module>
 
         <!-- candidates for optional modules -->
         <module>module-databases</module>

@@ -14,17 +14,20 @@ class Agenda {
 interface Item {
   Duration calculateDuration();
 }
-class CourseDay {
+class CourseDay implements Item {
   LocalDate date
 }
-class Module {
+class Module implements Item {
   LocalDate date
 }
-class Content {
+class Content implements Item {
   enum ContentType type
 }
 enum ContentType {
   Welcome, Break, Topic, ...
+}
+enum Modules {
+  WelcomeAndSetup, Break, Generics, ...
 }
 
 class CourseDaySchedule {}
@@ -33,14 +36,16 @@ class CourseDayScheduler {
   schedule(Course);
 }
 
-Course      ..>     Agenda       : "contains one"
-CourseDay   ..>     Agenda
-Module      ..>     Agenda
-Agenda      o--     Item         : " contains many"
-Item        <|--    CourseDay    : "realizes"
-Item        <|--    Module       : "realizes"
-Item        <|--    Content      : "realizes"
-Content     ..>     ContentType  : " has type"
+Course      ..>        Agenda       : "contains one"
+CourseDay   ..>        Agenda
+Module      ..>        Agenda
+'Content     ..>        Agenda
+Agenda      o--        Item         : " contains many"
+'Item        <|..       CourseDay    : "realizes"
+'Item        <|.[#red]. Module       : "realizes" <<deprecated>>
+'Item        <|..       Content      : "realizes"
+Content     ..>        ContentType  : " has type"
+Content     ..>        Modules      : " has module"
 
 CourseDayScheduler ..> CourseDay         : "use"
 CourseDayScheduler ..> CourseDaySchedule : "use"

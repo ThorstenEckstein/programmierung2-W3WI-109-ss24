@@ -87,14 +87,14 @@ include::../module-associations/docs/associations.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *module-enums*
+| {icon-topic}  | 09:15 - 10:00 | *module-enums*
 |===
 
 include::../module-enums/docs/enums.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *module-generics*
+| {icon-topic}  | 10:00 - 12:15 | *module-generics*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
@@ -112,12 +112,19 @@ include::../module-funcprogramming/docs/functional-programming.adoc[tag="content
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *module-exceptions*
+| {icon-topic}  | 09:15 - 11:25 | *module-exceptions*
 |===
 
 include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
 
-== Tag 8 - ???
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:25 - 12:15 | *module-records*
+|===
+
+include::../module-records/docs/records.adoc[tag="content"]
+
+== Tag 8 - Kurzprüfung, Organisation und Wiederholung
 
 
 
@@ -174,13 +181,4 @@ include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]
-
-=== Records
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-records*
-|===
-
-include::../module-records/docs/records.adoc[tag="content"]
 

@@ -333,7 +333,7 @@ Erzeuge eine
 
 [%collapsible, title="_Hilfe zu 'Extract Interface ...'_"]
 ====
-image::images/extract-interface-from-class.png[ailgn=center]
+image::images/extract-interface-from-class.png[align=center]
 ====
 
 

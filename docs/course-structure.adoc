@@ -126,6 +126,12 @@ include::../module-records/docs/records.adoc[tag="content"]
 
 == Tag 8 - Kurzprüfung, Organisation und Wiederholung
 
+----
+1. Schriftliche Kurzprüfung
+2. Organisation der Hauptprüfung
+3. Zeit für Fragen
+4. Wiederholungen
+----
 
 
 ////
@@ -135,9 +141,7 @@ include::../module-records/docs/records.adoc[tag="content"]
 ////
 
 
-== Optionale Module
-
-=== Javadoc, Dokumentation von Quellcode
+== Option 1 - Javadoc, Dokumentation von Quellcode
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -146,7 +150,7 @@ include::../module-records/docs/records.adoc[tag="content"]
 
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
-=== Datenbankprogrammierung mit Java
+== Option 2 - Datenbankprogrammierung mit Java
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -155,7 +159,7 @@ include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
 include::../module-databases/docs/databases.adoc[tag="content"]
 
-=== Statische Elemente
+== Option 3 - statische Elemente
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -164,14 +168,14 @@ include::../module-databases/docs/databases.adoc[tag="content"]
 
 include::../module-statics/docs/statics.adoc[tag="content"]
 
-=== Referenzsemantik
+== Option 4 - Referenzsemantik
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | Tag #?# | hh:mm - hh:mm | *module-semantics*
 |===
 
-=== Der Objektvertrag
+== Option 5 - Der Objektvertrag
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
@@ -181,4 +185,3 @@ include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]
-

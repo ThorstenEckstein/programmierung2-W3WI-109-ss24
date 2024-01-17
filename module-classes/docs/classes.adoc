@@ -209,9 +209,10 @@ include::diagrams/inheritance.puml[]
 ....
 
 
-== Everything extends Object
-
-An dieser Stelle ggf. Referenz auf `module-object-contract`
+====
+WARNING: An dieser Stelle "Der Objektvertrag" -> ggf. Referenz auf `module-object-contract`
+====
+//include::../../module-object-contract/docs/object-contract.adoc[]
 
 
 [[demos_inheritance]]

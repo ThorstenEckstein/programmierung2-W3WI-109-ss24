@@ -1,14 +1,40 @@
 package de.dhbw.demo;
 
+import de.dhbw.demo.objectcontract.MyOwnClass;
 import de.dhbw.demo.objectcontract.Passenger;
 import de.dhbw.demo.objectcontract.Train;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ObjectContractDemoTest {
+
+    @Test
+    @DisplayName("Object Contract")
+    //tag::object-contract[]
+    public void objectContract() {
+        // given
+        Object obj1 = new Object();
+        Object obj2 = new Object();
+
+        // when
+        int hashCode1       = obj1.hashCode();
+        int hashCode2       = obj1.hashCode();
+        boolean areEqual    = obj1.equals(obj2);
+        String obj1AsString = obj1.toString();
+        String obj1Name     = obj1.getClass().getName();
+
+        // then
+        assertEquals(hashCode1, hashCode2);
+        assertFalse(areEqual);
+        assertTrue(obj1AsString.startsWith("java.lang.Object@")); System.out.println("obj1.toString() => "+obj1AsString);
+        assertEquals("java.lang.Object", obj1Name);
+
+        MyOwnClass myOwnClass = new MyOwnClass();
+        assertNotNull(myOwnClass);
+    }
+    //end::object-contract[]
 
     //tag::object-contract-1[]
     @Test
@@ -24,7 +50,7 @@ public class ObjectContractDemoTest {
         // then
         assertFalse(areEqual);
         System.out.printf(
-                "%s != %s%n",
+                "%s != %s  %n",
                 passenger1.hashCode(),
                 passenger2.hashCode());
     }
@@ -44,7 +70,7 @@ public class ObjectContractDemoTest {
         // then
         assertTrue(areEqual);
         System.out.printf(
-                "%s == %s%n",
+                "%s == %s  %n",
                 train1.hashCode(),
                 train2.hashCode());
     }

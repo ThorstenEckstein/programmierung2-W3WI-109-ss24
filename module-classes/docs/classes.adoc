@@ -208,6 +208,12 @@ Die _grafische_ Darstellung der Vererbung sieht folgendermaßen aus:
 include::diagrams/inheritance.puml[]
 ....
 
+
+== Everything extends Object
+
+An dieser Stelle ggf. Referenz auf `module-object-contract`
+
+
 [[demos_inheritance]]
 *Demo*:
 

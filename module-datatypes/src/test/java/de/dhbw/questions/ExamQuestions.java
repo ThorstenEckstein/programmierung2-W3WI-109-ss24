@@ -1,7 +1,6 @@
 package de.dhbw.questions;
 
 import de.dhbw.commons.Answer;
-import de.dhbw.commons.Logger;
 import de.dhbw.solution.ExamAnswers;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -13,11 +12,11 @@ import static de.dhbw.commons.Answers.*;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Disabled
-@DisplayName("Questions for module \"datatypes\"")
-@SuppressWarnings("NewClassNamingConvention")
+@SuppressWarnings({"NewClassNamingConvention", "ConstantValue"})
+@DisplayName(
+        "Questions for module data types"
+)
 public class ExamQuestions {
-
-    private final Logger logger = new Logger(ExamQuestions.class);
 
     private final ExamAnswers correctAnswers = new ExamAnswers();
 
@@ -40,7 +39,7 @@ public class ExamQuestions {
                 """;
 
         // then
-        logger.log(commonExplanation.face(studentExplanation));
+        System.out.println(commonExplanation.face(studentExplanation));
     }
 
     @DisplayName(

@@ -20,11 +20,11 @@ tag::content[]
 end::content[]
 ////
 
-== Datentypen
+== (Primitive) Datentypen
 
 Übersicht über die Datentypen in Java:
 
-image::images/datentypen.png[width="75%", align="center"]
+image::images/datentypen.png[width="100%", align="center"]
 
 Quelle: -> https://de.wikibooks.org/wiki/Java_Standard:_Primitive_Datentypen[Wikibooks: Datatypes]
 
@@ -64,16 +64,20 @@ float wert2 = 30.5f;
 wert1 = (int) wert2; // Umwandlung per 'cast'
 ----
 
+Auch *komplexe Datentypen* - also Instanzen von Java *Klassen* - können den Typen wechseln. Das ist natürlich ebenso klaren Regeln unterworfen. So z.B. kann eine Klasse `Regionalzug` den Datentypen `Zug` bekommen, wenn die Klassen in einer Vererbungshierarchie stehen, ähnlich bei `Interfaces`. Das haben wir insb. schon im vorigen Modul `module-classes` gesehen und genutzt.
+
+
 *Demo/Beispiele*:
 
- -> src/test/java/de/dhbw/demo/datatypes/DatatypesDemoTest.java
+[subs=normal]
+ -> {mod-ref-test}/demo/DatatypesDemoTest.java
 
 *Übungen*:
 
 *Übung 1* zu *Typumwandlung* in
 
 [subs=normal]
- -> src/test/java/de/dhbw/exercise/datatypes/DatatypesExerciseTest.java
+ -> {mod-ref-test}/exercise/DatatypesExerciseTest.java
 
 Schreibe je einen Test für
 

@@ -93,6 +93,11 @@
 :mod-lnk-src:  ../src/main/java/de/dhbw
 :mod-lnk-test: ../src/test/java/de/dhbw
 
+// #
+// # Exam, Questions and Answers
+// #
+// # - https://www.tutorialspoint.com/java/java_interview_questions.htm
+
 // display global variables, set to 'true' to display in module docs!
 :show-variables: false
 :show-structure: false

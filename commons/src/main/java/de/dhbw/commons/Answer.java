@@ -31,9 +31,12 @@ public class Answer {
         return new Answer(Arrays.asList(letters), null);
     }
 
-    public static Answer from(String letter, String format, Object... args) {
-        String detail = String.format(format, args);
-        return new Answer(letter, detail);
+    public static Answer from(String letter, String detail, Object... args) {
+        if (args == null || args.length == 0) {
+            return new Answer(letter, detail);
+        } else {
+            return new Answer(letter, String.format(detail, args));
+        }
     }
 
     public static Answer fromExplanation(String detail) {

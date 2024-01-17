@@ -1,4 +1,4 @@
-package de.dhbw.demo.datatypes;
+package de.dhbw.demo;
 
 import de.dhbw.demo.RegionalTrain;
 import de.dhbw.demo.Train;

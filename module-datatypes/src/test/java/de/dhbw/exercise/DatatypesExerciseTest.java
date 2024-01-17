@@ -1,4 +1,4 @@
-package de.dhbw.exercise.datatypes;
+package de.dhbw.exercise;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

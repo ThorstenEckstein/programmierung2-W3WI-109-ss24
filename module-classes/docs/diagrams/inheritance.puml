@@ -3,13 +3,13 @@
 
 scale 1.0
 
-class Superclass {
-  public String aField
-  void aMethod()
-}
+abstract class AbstractSuperClass {}
+class ConcreteSuperClass {}
+class "       SubClass1        " as SubClass1
+class "       SubClass2        " as SubClass2
 
-abstract class Superclass
+AbstractSuperClass <|-- SubClass1    : \tinherits (extends)
 
-Superclass <|-- Subclass    : inherits\n(extends)
+ConcreteSuperClass <|-- SubClass2
 
 @enduml

@@ -39,6 +39,13 @@ include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
+| {icon-topic} | hh:mm - hh:mm | *module-object-contract*
+|===
+
+include::../module-object-contract/docs/object-contract.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
 | {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
 |===
 
@@ -175,9 +182,9 @@ include::../module-statics/docs/statics.adoc[tag="content"]
 | Tag #?# | hh:mm - hh:mm | *module-semantics*
 |===
 
-== Option 5 - Der Objektvertrag
-
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+
+== Option 5 - Der Objektvertrag
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===

@@ -5,12 +5,10 @@ include::settings.adoc[]
 
 = Programmierung II mit Java
 
-
-////
- TODO:
-  (1) Element "Zwischenprüfung" einbauen
-  (2) Modul "Datenbanken" einbauen
-////
+:show-scheduled-course-days: false
+ifeval::[{show-scheduled-course-days} == true]
+include::includes/course-day-schedules.adoc[]
+endif::[]
 
 == Tag 1 - Willkommen, Setup & Einführung
 

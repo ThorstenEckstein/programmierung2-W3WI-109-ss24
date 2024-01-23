@@ -1,0 +1,115 @@
+include::../settings.adoc[]
+
+*Stand der Planung*: `[red]#23.01.2024#`
+
+[subs=normal]
+----
+Di. 27.02.2024, 09:15 - 12:15 ::::: "Tag 1" :::::
+09:15 - 09:45 (30') [WI+S : Welcome ]  Herzlich Willkommen!
+09:45 - 10:00 (15') [WI+S : Domain  ]  Fachlicher Schwerpunkt der Lehrveranstaltung
+10:00 - 10:30 (30') [WI+S : Setup   ]  Technisches Setup (Workspace, Java, IntelliJ, Git)
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 11:00 (15') [T+H  : Topic   ]  Projektverwaltung mit Maven, Projektstruktur
+11:00 - 11:15 (15') [T+H  : Topic   ]  Test-Driven-Development (TDD)
+11:15 - 11:45 (30') [T+H  : Topic   ]  Hilfreiches: Quellcodegenerierung, Autocompletion, Icons & Symbole
+11:45 - 11:55 (10') [C+O  : Demo    ]  Organisation & Nutzung von Java Klassen
+11:55 - 12:15 (20') [C+O  : Topic   ]  Klassen & Instanzen
+
+Di. 05.03.2024, 09:15 - 12:15 ::::: "Tag 2" :::::
+09:15 - 09:20 ( 5') [WI+S : Setup   ]  Welcome & Update Project
+09:20 - 09:30 (10') [C+O  : Topic   ]  Klassen & Instanzen (Wiederh., Forts.)
+09:30 - 09:45 (15') [C+O  : Topic   ]  Der Objektvertrag: hashCode(), equals() und toString()
+09:45 - 10:00 (15') [C+O  : Demo    ]  Demos zu hashCode(), equals() und toString()
+10:00 - 10:10 (10') [C+O  : Topic   ]  Vererbung
+10:10 - 10:20 (10') [C+O  : Demo    ]  Demo zum Thema Klassen & Vererbung
+10:20 - 10:30 (10') [C+O  : Exercise]  Übung zum Thema Klassen & Vererbung
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 10:55 (10') [C+O  : Topic   ]  Polymorphismus
+10:55 - 11:05 (10') [C+O  : Demo    ]  Demo zum Thema Polymorphismus
+11:05 - 11:15 (10') [C+O  : Topic   ]  Überladen & Übersteuern
+11:15 - 11:30 (15') [I+AC : Topic   ]  Implementierung mit Interfaces
+11:30 - 11:45 (15') [I+AC : Demo    ]  Demo zu Interfaces
+11:45 - 12:00 (15') [I+AC : Exercise]  Übung zu Interfaces
+12:00 - 12:00 ( 0') [Opt  : Topic   ]  [Optional] Abstrakte Klassen ... ODER ...
+12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 12.03.2024, 09:15 - 12:15 ::::: "Tag 3" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 09:40 (15') [D+C  : Topic   ]  Datentypen
+09:40 - 09:55 (15') [D+C  : Topic   ]  Typumwandlung (Casting)
+09:55 - 10:10 (15') [D+C  : Demo    ]  Demo zu Datentypen & Typumwandlung
+10:10 - 10:30 (20') [D+C  : Exercise]  Übung zu Datentypen & Typumwandlung
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 11:05 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
+11:05 - 11:15 (10') [L+C  : Demo    ]  Demo zu Kontrollstrukturen
+11:15 - 11:35 (20') [L+C  : Exercise]  Übung zu Kontrollstrukturen
+11:35 - 11:50 (15') [V+AM : Topic   ]  Sichtbarkeiten & Scopes: Access Modifier
+11:50 - 12:00 (10') [V+AM : Demo    ]  Demo zum Thema Access Modifier
+12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 19.03.2024, 09:15 - 12:15 ::::: "Tag 4" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 09:55 (30') [C+E  : Topic   ]  Java Collections API Interfaces
+09:55 - 10:15 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API Interfaces
+10:15 - 10:30 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 11:15 (30') [A    : Topic   ]  Assoziationen zwischen Klassen
+11:15 - 11:35 (20') [A    : Demo    ]  Demo zum Thema Assoziationen zwischen Klassen
+11:35 - 11:55 (20') [A    : Exercise]  Übungen zum Thema Assoziationen zwischen Klassen
+11:55 - 12:15 (20') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 26.03.2024, 09:15 - 12:15 ::::: "Tag 5" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 09:35 (10') [C+E  : Topic   ]  Enums
+09:35 - 09:45 (10') [C+E  : Demo    ]  Demo zu Enums
+09:45 - 10:00 (15') [C+E  : Exercise]  Übung zu Enums
+10:00 - 10:30 (30') [Gen  : Topic   ]  Java Generics
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 10:55 (10') [Gen  : Topic   ]  Java Generics (Forts.)
+10:55 - 11:25 (30') [Gen  : Demo    ]  Demos zu Java Generics
+11:25 - 12:00 (35') [Gen  : Exercise]  Übungen zu Java Generics
+12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 02.04.2024, 09:15 - 12:15 ::::: "Tag 6" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 10:10 (45') [Func : Topic   ]  Funktionale Programmierung in Java
+10:10 - 10:30 (20') [Func : Demo    ]  Demos zu funktionaler Programmierung
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 11:05 (20') [Func : Topic   ]  Funktionale Programmierung in Java (Forts.)
+11:05 - 11:15 (10') [Func : Demo    ]  Demos zu funktionaler Programmierung (Forts.)
+11:15 - 11:45 (30') [Func : Exercise]  Übungen zu funktionaler Programmierung
+11:45 - 12:00 (15') [Exm  : Exam    ]  Austeilung & Erläuterungen zur Übungsklausur
+12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 09.04.2024, 09:15 - 12:15 ::::: "Tag 7" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 09:40 (15') [Exm  : Exam    ]  FAQ zur Übungsklausur
+09:40 - 10:10 (30') [Exc  : Topic   ]  Exceptions & Exception Handling
+10:10 - 10:30 (20') [Exc  : Demo    ]  Demo zu Exceptions & Exception Handling
+10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+10:45 - 10:55 (10') [Exc  : Demo    ]  Demo zu Exceptions & Exception Handling (Forts.)
+10:55 - 11:25 (30') [Exc  : Exercise]  Übungen zu Exceptions & Exception Handling
+11:25 - 11:45 (20') [Rec  : Topic   ]  Java Records
+11:45 - 12:00 (15') [Rec  : Demo    ]  Demo zu Java Records
+12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 16.04.2024, 09:15 - 12:15 ::::: "Tag 8" :::::
+09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
+09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+09:25 - 09:55 (30') [Exm  : Exam    ]  Prüfung, Schriftliche Kurzprüfung
+09:55 - 10:05 (10') [Misc : Break   ]  --------------- Pause ---------------
+10:05 - 10:35 (30') [Misc : Exam    ]  Organisation der Prüfungen
+10:35 - 12:05 (90') [Misc : Unknown ]  Prüfungsvorbereitung, Wiederholungen, FAQ
+12:05 - 12:15 (10') [Misc : Buffer  ]  Pufferzeit am Ende
+
+Di. 23.04.2024, 09:15 - 12:15 ::::: "Tag 9" :::::
+09:15 - 12:15 (180') [Exm  : Exam    ]  Platzhalter Prüfungstag bzw -woche
+
+Di. 30.04.2024, 09:15 - 12:15 ::::: "Tag 10" :::::
+09:15 - 12:15 (180') [Exm  : Exam    ]  Platzhalter Prüfungstag bzw -woche
+----

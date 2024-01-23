@@ -13,7 +13,14 @@ tag::content[]
 ----
 1. Welcome
 2. Fachlicher Schwerpunkt des Kurses (Zugdisposition)
+2.1. Kontext
+2.2. Klassenmodell
 3. IDE Setup
+3.1. Lokales Arbeitsverzeichnis: Der Workspace
+3.2. Programmiersprache Java
+3.3. IDE IntelliJ
+3.4. Quellcodeverwaltung: Git
+3.5. Herunterladen der Kursinhalte (Git mit IntelliJ)
 ----
 end::content[]
 ////
@@ -26,8 +33,12 @@ end::content[]
 [cols="2h,8", grid="none"]
 |===
 
-| image:images/portrait.png[] | Thorsten Eckstein
-| Unternehmen     | DB Systel GmbH, Frankfurt a.M., ca. 7.000 Mitarbeiter, interner IT-Dienstleister der Deutschen Bahn
+| image:images/portrait.png[] | *Thorsten Eckstein*
+
+| Konzern         | Deutsche Bahn, ca. 335.000 Mitarbeiter
+
+|                 | DB Systel GmbH, Frankfurt a.M., ca. 7.000 Mitarbeiter,  IT-Dienstleister der Deutschen Bahn
+
 | Qualifikationen | Dipl. Geo-Informatik, zertifizierter Softwareentwickler, zertifizierter Softwarearchitekt
 |===
 
@@ -80,25 +91,26 @@ include::diagrams/business-model-soll.puml[]
 
 == IDE Setup
 
-=== Einrichtung eines lokalen _Workspaces_
+=== Lokales Arbeitsverzeichnis: Der `Workspace`
 
-TIP: Zuerst wird ein lokaler _Workspace_ eingerichtet, d.h. ein Wurzelverzeichnis, in das das SourceCode-Repository bzw. die Kursinhalte "geklont/gespeichert" werden kann.
+Zuerst wird ein *lokaler _Workspace_* eingerichtet, d.h. ein (separates) Wurzelverzeichnis, in das im Anschluss das die *Inhalte des Kurses*, d.h. SourceCode-Repository *gespeichert* werden können.
 
-_(Natürlich kann man hier immer den persönlichen Präferenzen für dieses Wurzelverzeichnis folgen, für die Einrichtung des Kurses ist es aber besser, den Empfehlungen zu folgen ...)_
+NOTE: _Natürlich kann man hier immer den persönlichen Präferenzen für dieses Wurzelverzeichnis folgen, für die Einrichtung des Kurses ist es aber besser, den Empfehlungen zu folgen ..._
 
-Man kann alles Folgende auf unterschiedliche Arten erledigen, vor allem mit dem Unterschied
+Der Workspace - das *lokale Arbeitsverzeichnis*:
 
-* Über die GUIs bzw. Menüs der Tools, z.B. bei `IntelliJ` oder
-* Über die Kommandozeilen Tools, z.B. `CMD`, `PowerShell` oder die `bash`
+Zur Einrichtung eines Workspace unter *Windows* (11) nutzt man am besten einfach den `Explorer` und erzeugt ein neues Verzeichnis, zum Beispiel (_wird auch in späteren Beispielen genutzt_) das folgende:
 
-_(Ich persönlich richte meine lokale Arbeitsumgebung (den Workspace) wann immer möglich, etwa für ein Projekt, mit exakt der gleichen Struktur wie die des (Online/Remote-) Repositories ein, dazu später mehr)_
+ D:\Projekte
 
-Wir verfolgen hier für bestimmte Schritte des Setups die Kommandozeilen Tools, insbesondere für die initiale Nutzung von `git`. Zunächst aber der Workspace:
+Wie gesagt, hierin werden die Kursinhalte in den nächsten Schritten dann lokal gespeichert und verwaltet (-> mittels `git`, siehe zugehöriges Kapitel).
 
-.Einrichtung Workspace unter *Windows* (11) am Beispiel
+
+////
+.Einrichtung Workspace unter *Windows* (11)
 [%collapsible]
 ====
-- Terminal (oder auch `CMD` - "Command Line Prompt", könnte PowerShell sein) öffnen (z.B. mit "Suche" nach dem Begriff "Terminal")
+*b)* mithilfe eines Terminals (oder auch `CMD` - "Command Line Prompt", könnte PowerShell sein), zum Starten z.B. einfach mit "Suche" nach dem Begriff "Terminal"
 
 - Den aktuellen Pfad im Terminal prüfen
 
@@ -131,9 +143,10 @@ Wir verfolgen hier für bestimmte Schritte des Setups die Kommandozeilen Tools, 
 
  /Users/<your-name>/Projekte
 ====
+////
 
 
-=== `Java`
+=== Programmiersprache `Java`
 
 *Empfehlung*: Im Kurs soll folgende Java Version verwendet werden:
 
@@ -207,4 +220,127 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 [small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns recht zeitnah._#
 
 
+=== Quellcodeverwaltung: `Git`
 
+Web: https://de.wikipedia.org/wiki/Git
+
+*Git* ist ein verteiltes Versionsverwaltungssystem für Quellcode und setzt folgenden *Workflow* um:
+
+image::images/git-workflow.png[]
+
+Allerdings kommt im Kurs nur ein kleiner Teil hiervon zum Einsatz, lediglich das erstmalige *Downloaden* (`clone`) & die *Aktualisierung* (`pull`) der lokalen Dateien wird benötigt:
+
+image::images/git-workflow-clone-pull.png[width=100%, align=center]
+
+Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien abgelegt, also z.B. ein Windows-Verzeichnis, in das der Quellcode heruntergeladen wird:
+
+[Beispiel]
+ D:/Projekte
+
+
+=== Herunterladen der Kursinhalte (Git mit IntelliJ)
+
+[start=1]
+. Nach dem Start von IntelliJ die Menüoption `Git > clone ...` aufrufen:
+
+image::images/intellij-git-menu-clone.png[width="25%", align="center"]
+
+[start=2]
+. Dann erscheint der folgende `clone`-*Dialog*:
+
+Nutze dazu die folgenden Angaben:
+
+[subs=normal]
+----
+*URL*       : https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git
+*Workspace* : <dein-lokales-Arbeitsverzeichnis>
+----
+
+image::images/intellij-git-clone-dialog.png[width="75%", align="center"]
+
+[start=3]
+. Dann kommt (wahrscheinlich) eine Abfrage zur *"Vertrauenswürdigkeit"* -> `[Trust Project]`:
+
+image::images/intellij-git-trust-project.png[width="50%", align="center"]
+
+[start=4]
+. Dann fehlt nur noch das *Öffnen in einem separaten* Fenster -> `[New Window]`:
+
+image::images/intellij-git-new-window.png[width="50%", align="center"]
+
+Nun sollte das heruntergeladene Projekt in Intellij vorhanden sein.
+
+IMPORTANT: _Falls irgendetwas am Ende nicht so ist wie gedacht, kann das lokale Arbeitsverzeichnis einfach lokal gelöscht werden. Dann führt man die Schritte einfach nochmal durch._
+
+Zur Überprüfung einmal (in der IDE) schauen, ob der richtige *Branch* namens
+
+ hands-on
+
+heruntergeladen wurde. Dies ist sozusagen eine spezielle Variante (oder auch Version), die im Semester genutzt wird.
+
+image::images/intellij-git-cloned-branch.png[width="50%", align="center"]
+
+Es kann auch die _Kommandozeile_ genutzt werden, um das Repository zu klonen, dazu gibt es ein paar Tipps im folgenden Abschnitt, kann aber für den Moment ignoriert werden, es sei denn, das der Weg über IntelliJ nicht funktionieren sollte.
+
+''''
+
+[%collapsible, title="Aufklappen für _Git mit der Kommandozeile ..._"]
+====
+* Zuerst prüfen, ob `git` installiert ist. In der Kommandozeile geht dies durch
+
+ git --version
+
+* was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
+
+* Dann in das lokale Arbeitsverzeichnis *wechseln* (oder neu anlegen), d.h. in den Workspace, z.B. nach ...
+
+ cd D:/Projekte
+
+* Innerhalb dieses Verzeichnisses wird das Repository *geklont*, d.h. heruntergeladen. Das Repository lautet:
+
+ https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24
+
+Dieses Repository wird geklont und damit zu einer lokalen Kopie im *Workspace* mit:
+
+ git clone https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git -b hands-on <1>
+
+<1> Der Branch-Name `hands-on` ist hier wichtig, das ist der exakte "Ort" in der Online-Quellcodeverwaltung (Repository), von dem aus heruntergeladen wird!
+
+//Dann bitte direkt auf den Branch `hands-on` durch
+// git checkout -b hands-on
+// wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
+
+* Zur Prüfung, auf welchem Branch man sich aktuell befindet, gibt man ein:
+
+ git branch
+
+* Hier sollte jetzt etwas Ähnliches erscheinen. Das Sternchen `*` zeigt an, welcher Branch gerade benutzt wird, das _soll_ hier auch so sein:
+
+----
+ * hands-on
+----
+
+CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
+====
+
+////
+._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
+[%collapsible]
+====
+- *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ gci env:
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ $env:PATH
+
+- *CMD (Command Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
+
+ set
+
+- oder um nur eine einzelne - hier der PATH - anzuzeigen:
+
+ echo %Path%
+====
+////

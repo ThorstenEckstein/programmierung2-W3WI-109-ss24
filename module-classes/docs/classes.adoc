@@ -55,8 +55,8 @@ public class MyClass {
    // Inhalte der Klasse weggelassen ...
 }
 ----
-<1> Angabe des Speicherorts der Java Klasse
-<2> Importierung von anderen Java Klassen, häufig aus "Bibliotheken"
+<1> Angabe des Speicherorts - des Verzeichnispfades - der Java Klasse
+<2> Importierung von anderen Java Klassen, häufig aus separaten "Bibliotheken" (Dateien mit der Endung `.jar` -> *J* ava *Ar* chive)
 
 
 == Klassen & Instanzen
@@ -66,9 +66,9 @@ public class MyClass {
 [[about_classes]]
 Kurz etwas *Theorie* vorab bzw. zur Wiederholung:
 
-Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der objektorientierten Programmierung ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
+Unter einer *Klasse* (oder Objekttyp, -><<ref-1,Ref. 1>>) versteht man in der *objektorientierten Programmierung* ein abstraktes Modell bzw. einen Bauplan für eine Reihe von ähnlichen Objekten.
 
-Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt Attribute (Eigenschaften, Felder) und Methoden (Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
+Die Klasse dient als Bauplan für die Abbildung von realen Objekten in Softwareobjekte und beschreibt *Attribute* (auch Eigenschaften, Felder) und *Methoden* (bzw. Verhaltensweisen) der Objekte. Etwas allgemeiner kann auch gesagt werden, dass eine Klasse dem *Datentyp eines Objekts* entspricht.
 
 Eine Java Klasse hat in der Regel folgende Bestandteile:
 
@@ -145,12 +145,9 @@ public class MyClass {
 [subs=normal]
  -> {mod-ref-test}/demo/classes/ClassesDemoTest.java
 
-
-[IMPORTANT]
 ====
-Einschub: Zur Theorie des -> <<tdd,Test Driven Developments>>, dann kehren wir zur Übung zurück!
+IMPORTANT: Einschub: Zur *Theorie* des -> <<tdd,Test Driven Developments>>, dann wieder hierher zurück!
 ====
-
 
 [[exercises_classes]]
 *Übungen*:
@@ -162,6 +159,8 @@ Einschub: Zur Theorie des -> <<tdd,Test Driven Developments>>, dann kehren wir z
 Erzeuge ein erstes, kleines *Klassenmodell*:
 
 Übung 1::
+
+Folgendes soll implementiert werden:
 
 - Eine Klasse `Fernzug` mit einem parameterlosen Konstruktor
 - Eine Klasse `Regionalzug` mit einem parameterlosen Konstruktor
@@ -210,7 +209,7 @@ include::diagrams/inheritance.puml[]
 
 
 ====
-WARNING: An dieser Stelle "Der Objektvertrag" -> ggf. Referenz auf `module-object-contract`
+IMPORTANT: Einschub: "Der Objektvertrag" -> ggf. Referenz auf `module-object-contract`
 ====
 //include::../../module-object-contract/docs/object-contract.adoc[]
 
@@ -222,45 +221,13 @@ WARNING: An dieser Stelle "Der Objektvertrag" -> ggf. Referenz auf `module-objec
  -> {mod-ref-test}/demo/inheritance/InheritanceTest.java
 
 
-== Überladen & Übersteuern (Überschreiben)
-
-[source,java,title="Beispiel Überladen von Methoden"]
-----
-include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
-----
-
-[plantuml, "overrides", png, float="left"]
-....
-include::diagrams/override.puml[]
-....
-
-[source,java,title="Beispiel Übersteuern von Methoden"]
-----
-include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
-----
-
-{nl}
-{nl}
-{nl}
-
-Die zugehörige Annotation im Code ist
-
- @Override
-
-Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
-
-Die zugehörigen *Unit-Tests* finden sich hier:
-
- -> src/test/java/de/dhbw/demo/OverloadAndOverrideTest.java
-
-
 == Polymorphismus
 
-Die Methoden einer Klasse können der sogenannten *Polymorphie* unterliegen. Polymorphie ist griechisch und bedeutet Vielgestaltigkeit. Von Polymorphie spricht man in Java beispielsweise, wenn zwei Klassen denselben Methodennamen verwenden, aber die Implementierung der Methoden sich unterscheidet.
+Die Methoden einer Klasse können der sogenannten *Polymorphie* unterliegen. Polymorphie ist griechisch und bedeutet _Vielgestaltigkeit_. Von Polymorphie spricht man in Java beispielsweise, wenn zwei Klassen denselben Methodennamen verwenden, aber die Implementierung der Methoden sich unterscheidet.
 
-Häufig wird Polymorphie bei der Vererbung verwendet, d.h., dass einer Variablen nicht nur Objekte vom Typ der bei der Deklaration angegebenen Klasse zugewiesen werden können, sondern auch Objekte vom Typ der Kind-Klassen. Dies funktioniert nur, weil jede Kind-Klasse auch alle Methoden und Attribute ihrer Elternklassen implementieren muss.
+Häufig wird Polymorphie bei der *Vererbung* verwendet, d.h., dass einer Variablen nicht nur Objekte vom Typ der bei der Deklaration angegebenen Klasse zugewiesen werden können, sondern auch Objekte vom Typ der Kind-Klassen. Dies funktioniert nur, weil jede Kind-Klasse auch alle Methoden und Attribute ihrer Elternklassen implementieren muss.
 
-Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfügen wie die Elternklasse. Die Methoden können jedoch unterschiedlich implementiert werden, man spricht hier vom "Überschreiben" oder "Übersteuern" (engl. "*Override*") der Methode (mehr dazu folgt in einem späteren Modul).
+Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfügen wie die Elternklasse. Die Methoden können jedoch unterschiedlich implementiert werden, man spricht hier vom *"Überladen"* oder *"Übersteuern"* der Methode (-> mehr dazu siehe nachfolgender Abschnitt).
 
 [[demos_polymorphism]]
 *Demo*:
@@ -268,7 +235,7 @@ Damit ist gewährleistet, dass alle Kind-Klassen über dieselben Methoden verfü
 [subs=normal]
  -> {mod-ref-test}/demo/inheritance/InheritanceDemoTest.java
 
-In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Bedeutung:
+In diesem Zusammenhang sind die Schlüsselwörter `super` und `this` von besonderer Bedeutung:
 
 * `super`: Referenz für Felder oder Methoden der *Super-Klasse*
 * `this`: Referenz für Felder oder Methoden aus der *eigenen Klasse*
@@ -277,6 +244,53 @@ In diesem Zusammenhang sind auch die Schlüsselwörter `super` und `this` von Be
 
 . _Warum kann Vererbung sinnvoll sein?_
 . _Wozu kann Polymorphismus nützlich sein?_
+
+
+== Überladen & Übersteuern (Überschreiben)
+
+In einer Unterklasse können Methoden
+
+* *überladen* (engl. "overload") oder
+* *übersteuert* (engl. "override")
+
+werden.
+
+Von *Überladung* wird gesprochen, wenn eine Unterklasse neues Verhalten *hinzufügt*.
+
+Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
+
+[source,java,title="Beispiel Überladen von Methoden"]
+----
+include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
+----
+
+[plantuml, "overrides", png, float="left", width="100%"]
+....
+include::diagrams/override.puml[]
+....
+
+.Beispiel Übersteuern von Methoden
+[source,java]
+----
+include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
+----
+
+{nl}
+{nl}
+{nl}
+{nl}
+{nl}
+
+Die zugehörige *Annotation* (eine Art "Anzeiger") im Code ist
+
+ @Override
+
+Sie sollte in jedem Fall genutzt werden, zudem wird sie auch von der IDE vorgeschlagen
+
+Die zugehörigen *Unit-Tests* finden sich hier:
+
+[subs=normal]
+ -> src/test/java/de/dhbw/demo/OverloadAndOverrideTest.java
 
 
 [[exercises_inheritance]]
@@ -300,14 +314,16 @@ _Testklasse_, in der die Übungen implementiert werden können:
 
 Übung 1::
 
-Erstelle *Klassen* im Paket
+Erstelle *Klassen* im Verzeichnis
 
- java/de/dhbw/exercise/classes
+[subs=normal]
+ {mod-ref-src}/exercise/classes
 
- . Erstelle eine neue Klasse `Fernzug` mit einem parameterlosen Konstruktor
- . Erstelle eine neue Klasse `Regionalzug` mit einem parameterlosen Konstruktor
- . Teste, ob die Instanzen korrekt erzeugt wurden!
+1. Erstelle eine neue Klasse `Fernzug` mit einem parameterlosen Konstruktor
+2. Erstelle eine neue Klasse `Regionalzug` mit einem parameterlosen Konstruktor
+3. Teste, ob die Instanzen korrekt erzeugt wurden!
 
+{nl}
 
 Übung 2::
 
@@ -320,6 +336,7 @@ Erstelle *Klassen* im Paket
 * Ergänze die Klasse `Fernzug` mit einer beliebigen, deiner Meinung nach sinnvollen Spezialisierung
 * Teste, welchen Wert das Feld `number` hat
 
+{nl}
 
 Übung 3 _(optional_)::
 

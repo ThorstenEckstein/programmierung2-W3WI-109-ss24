@@ -12,15 +12,15 @@ include::module-settings.adoc[]
 tag::content[]
 ----
 1. Projektverwaltung mit Maven & Projektstruktur
-2. Quellcodeverwaltung mit Git und Github
-3. Test-Driven-Development (TDD)
-4. Generierung von Quellcode mit der IDE
-5. Autocompletion
-6. Icons & Symbole in der IDE
-7. Tipps, Tricks, Probleme & Lösungen
+2. Test-Driven-Development (TDD)
+3. Generierung von Quellcode mit der IDE
+4. Autocompletion
+5. Icons & Symbole in der IDE
+6. Tipps, Tricks, Probleme & Lösungen
 ----
 end::content[]
 ////
+
 
 == Projektverwaltung mit `Maven` & Projektstruktur
 
@@ -126,121 +126,6 @@ image::images/mvn-clean-compile-ui.png[]
 
 Das Projekt sollte jetzt insgesamt *"bauen"*, d.h. die Sourcen _kompilieren_ und _assembeln_ (`/target` Ordner, spiel hier aber keine Rolle). Im unteren Bereich von IntelliJ öffnet sich automatisch eine Console und das "Build" Ergebnis wird angezeigt ... hoffentlich [green]#*SUCCESS*# für alle Module ;-) ...
 
-
-== Quellcodeverwaltung mit `Git` und `Github`
-
-Web: https://de.wikipedia.org/wiki/Git
-
-*Git* ist ein verteiltes Versionsverwaltungssystem für Quellcode und setzt folgenden *Workflow* um:
-
-image::images/git-workflow.png[]
-
-Allerdings kommt im Kurs nur ein kleiner Teil hiervon zum Einsatz, lediglich das erstmalige *Downloaden* (`clone`) & die *Aktualisierung* (`pull`) der lokalen Dateien wird benötigt:
-
-image::images/git-workflow-clone-pull.png[width=100%, align=center]
-
-Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Quellcode-Dateien abgelegt, also z.B. ein Windows-Verzeichnis, in das der Quellcode heruntergeladen wird:
-
-[Beispiel]
- D:/Projekte/DHBW
-
-=== Git mit IntelliJ
-
-[start=1]
-. Nach dem Start von IntelliJ die Menüoption `Git > clone ...` aufrufen:
-
-image::images/intellij-git-menu-clone.png[width="25%", align="center"]
-
-[start=2]
-. Dann erscheint der folgende `clone`-*Dialog*:
-
-Nutze dazu die folgenden Angaben:
-
-[subs=normal]
-----
-*URL*       : https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git
-*Workspace* : <dein-lokales-Arbeitsverzeichnis>
-----
-
-image::images/intellij-git-clone-dialog.png[width="75%", align="center"]
-
-[start=3]
-. Dann kommt (wahrscheinlich) eine Abfrage zur *"Vertrauenswürdigkeit"* -> `[Trust Project]`:
-
-image::images/intellij-git-trust-project.png[width="50%", align="center"]
-
-[start=4]
-. Dann fehlt nur noch das *Öffnen in einem separaten* Fenster -> `[New Window]`:
-
-image::images/intellij-git-new-window.png[width="50%", align="center"]
-
-Nun sollte das heruntergeladene Projekt in Intellij vorhanden sein.
-
-IMPORTANT: _Falls irgendetwas am Ende nicht so ist wie gedacht, kann das lokale Arbeitsverzeichnis einfach lokal gelöscht werden. Dann führt man die Schritte einfach nochmal durch._
-
-
-=== Git mit der Kommandozeile
-
-[%collapsible, title="Aufklappen für die `git` Kommandos ..."]
-====
-* Zuerst prüfen, ob `git` installiert ist. In der Kommandozeile geht dies durch
-
- git --version
-
-* was zum Beispiel folgende Ausgabe ergibt: `git version 2.39.1`
-
-* Dann in das lokale Arbeitsverzeichnis *wechseln* (oder neu anlegen), d.h. in den Workspace, z.B. nach ...
-
- cd D:/Projekte/DHBW
-
-* Innerhalb dieses Verzeichnisses wird das Repository *geklont*, d.h. heruntergeladen. Das Repository lautet:
-
- https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24
-
-Dieses Repository wird geklont und damit zu einer lokalen Kopie im *Workspace* mit:
-
- git clone https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24.git -b hands-on <1>
-
-<1> Der Branch-Name `hands-on` ist hier wichtig, das ist der exakte "Ort" in der Online-Quellcodeverwaltung (Repository), von dem aus heruntergeladen wird!
-
-//Dann bitte direkt auf den Branch `hands-on` durch
-// git checkout -b hands-on
-// wechseln (kann man natürlich auch in der IDE/IntelliJ machen). In diesem Branch kann, sobald man ihn geklont hat, Code geschrieben werden, aber ...
-
-* Zur Prüfung, auf welchem Branch man sich aktuell befindet, gibt man ein:
-
- git branch
-
-* Hier sollte jetzt etwas Ähnliches erscheinen. Das Sternchen `*` zeigt an, welcher Branch gerade benutzt wird, das _soll_ hier auch so sein:
-
-----
- * hands-on
-----
-
-CAUTION: ... es soll kein Code in das `remote` Repository *gepushed* werden, da es sonst zu Konflikten bei möglicherweise erforderlichen Updates (durch _pullen_) kommen kann!
-====
-
-////
-._Hilfe zu bzw. Anzeige von Umgebungsvariablen_
-[%collapsible]
-====
-- *PowerShell*: Umgebungsvariablen prüfen, um alle anzuzeigen
-
- gci env:
-
-- oder um nur eine einzelne - hier der PATH - anzuzeigen:
-
- $env:PATH
-
-- *CMD (Command Line Tool)*: Umgebungsvariablen prüfen, um alle anzuzeigen
-
- set
-
-- oder um nur eine einzelne - hier der PATH - anzuzeigen:
-
- echo %Path%
-====
-////
 
 [[tdd]]
 == Test-Driven-Development (`TDD`)

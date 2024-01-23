@@ -23,23 +23,33 @@ include::../module-intro/docs/intro.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
+| {icon-topic}  | 10:45 - 11:45 | *link:../module-tools-n-help/docs/tools-and-help.adoc[module-tools-n-help]*
 |===
 
 include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:45 - 12:15 | *link:../module-classes/docs/classes.adoc[module-classes]*
+|===
+
+----
+1. Organisation & Nutzung von Java Klassen
+2. Klassen & Instanzen
+----
 
 == Tag 2 - Klassen & Interfaces
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-classes/docs/classes.adoc[module-classes]*
+| {icon-topic}  | 09:15 - 09:30 | *link:../module-classes/docs/classes.adoc[module-classes]*
 |===
 
 include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic} | hh:mm - hh:mm | *module-object-contract*
+| {icon-topic} | 09:30 - 10:30 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]

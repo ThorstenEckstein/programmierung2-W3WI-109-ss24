@@ -98,31 +98,48 @@ public class MyClass {
 }
 ----
 
-Eine Klasse mit (Default-) *Konstruktor*:
+Eine Klasse mit (Default-) *Konstruktor* (engl. _constructor_, oder abgekürzt oft einfach `c'tor`):
 
-In Java spielen die Konstruktoren eine wichtige Rolle bei der Erstellung und Initialisierung von Objekten. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
+In Java spielen die Konstruktoren eine wichtige Rolle bei der *Erzeugung von Objekten*. Sie sind spezielle Methoden, die aufgerufen werden, wenn ein neues Objekt erstellt wird, und ermöglichen es, das Objekt mit bestimmten Werten oder Eigenschaften zu initialisieren.
 
 [source,java]
 ----
 public class MyClass {
 
     public MyClass() {
-        super();
+        super(); // Aufruf des Default-C'tors der Elternklasse
+    }
+}
+----
+
+Eine Klasse mit einem *Konstruktor*, der ein Argument hat:
+
+[source,java]
+----
+public class MyClass {
+
+    public MyClass(String arg) {
+        // Verarbeitung des Arguments,
+        // z.B. mittels 'this' oder 'super'
     }
 
 }
 ----
 
-Die
 
-* *Initialisierung* eines Objektes bzw. die
-* *Instanziierung* einer Klasse
+Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte:
 
-erfolgt in Verbindung mit dem Schlüsselwort `new` wie folgt:
+. *Deklaration*: Die Variablendeklaration mit einem Variablennamen und einem Objekttyp
+. *Instanziierung*: Das Schlüsselwort `new` wird zum Erstellen des Objekts verwendet
+. *Initialization*: Auf das Schlüsselwort `new` folgt ein Aufruf eines Konstruktors. Dieser Aufruf initialisiert das neue Objekt.
 
-[source,java]
+[,java, subs=normal]
 ----
-MyClass myClazz = new MyClass();
+                *Instanzi-*  *Initiali-*
+*Deklaration*     *ierung*     *sierung*
+|---------|      |-|       |------|
+
+Train train  =   new       Train();
 ----
 
 Eine Klasse mit einer *Methode* bzw. einer Verhaltensweise:

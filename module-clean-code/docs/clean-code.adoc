@@ -11,7 +11,19 @@ include::module-settings.adoc[]
 
 tag::content[]
 ----
- !No content, module-archive servers as backup module to preserve code and doc!
+1. OOP Design Prinzipien
+1.1. Single Responsibility Principle
+1.2. Open/Closed Principle
+1.3. Liskov’s Substitution Principle
+1.4. Interface Segregation Principle
+1.5. Dependency Inversion Principle
+1.6. Don’t Repeat Yourself Principle (DRY)
+1.7. Keep it simple and stupid (KISS)
+1.8. Composition Over Inheritance Principle
+1.9. Loose coupling between components
+1.10. Immutability
+1.11. Document your public API
+2. OOP Best Practices & Code Smells
 ----
 end::content[]
 ////

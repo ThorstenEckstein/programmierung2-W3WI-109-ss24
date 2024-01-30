@@ -47,6 +47,7 @@
         <module>module-databases</module>
         <module>module-threads</module>
         <module>module-clean-code</module>
+        <module>module-patterns</module>
 
         <!-- module to prepare or backup stuff -->
         <module>module-archive</module>

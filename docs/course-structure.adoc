@@ -148,23 +148,38 @@ include::../module-records/docs/records.adoc[tag="content"]
 4. Wiederholungen
 ----
 
-== Tag 9 - Referenzsemantik, Javadoc
+== Tag 9 - Javadoc, Referenzsemantik
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 11:25 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
-|===
-
-include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:25 - 12:15 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
 |===
 
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
-== Tag 10 - ?
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+|===
+
+include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+
+
+== Tag 10 - Clean Code & Design Patterns
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+|===
+
+include::../module-clean-code/docs/clean-code.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
+|===
+
+include::../module-patterns/docs/patterns.adoc[tag="content"]
 
 
 == Optionale Themen

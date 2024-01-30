@@ -49,13 +49,13 @@ public class ExceptionsDemoTests {
     @DisplayName("Demo 3: How to test an expected exception with details/context")
     public void demo3() {
         // given
-        TrainObservationMonitor model = new TrainObservationMonitor();
+        TrainObservationMonitor monitor = new TrainObservationMonitor();
 
         // when
         PassengerLimitPerWagonExceededException thrown = assertThrows(
                 PassengerLimitPerWagonExceededException.class, () -> {
                     // Code under test that can throw an exception
-                    model.observeOperatingTrainWithContext("RB-21");
+                    monitor.observeOperatingTrainWithContext("RB-21");
                 });
         Object passengersCount = thrown.getContext().getItem("passengers");
 

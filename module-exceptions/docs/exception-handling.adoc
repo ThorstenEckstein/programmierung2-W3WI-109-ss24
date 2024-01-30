@@ -253,12 +253,12 @@ Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
 Nutze folgendes Package für deine *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/exceptions/ExceptionsExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
+ {mod-ref-src}/exceptions/exercises/*.java
 
 {nl}
 

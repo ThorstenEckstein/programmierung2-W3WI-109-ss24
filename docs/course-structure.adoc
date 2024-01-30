@@ -148,55 +148,56 @@ include::../module-records/docs/records.adoc[tag="content"]
 4. Wiederholungen
 ----
 
+== Tag 9 - Referenzsemantik, Javadoc
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:15 - 11:25 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+|===
+
+include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:25 - 12:15 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
+|===
+
+include::../module-javadoc/docs/javadoc.adoc[tag="content"]
+
+== Tag 10 - ?
+
+
+== Optionale Themen
+
+=== Statische Elemente
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-statics/docs/statics.adoc[module-statics]*
+|===
+
+include::../module-statics/docs/statics.adoc[tag="content"]
+
+=== Datenbankprogrammierung mit Java
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-databases/docs/databases.adoc[module-databases]*
+|===
+
+include::../module-databases/docs/databases.adoc[tag="content"]
+
+=== Parallele Programmierung mit Threads
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-threads/docs/threads.adoc[module-threads]*
+|===
+
+include::../module-threads/docs/threads.adoc[tag="content"]
 
 ////
 ====
 [red]#*Folgendes ist noch nicht geplant/integriert!*#
 ====
 ////
-
-
-== Option 1 - Javadoc, Dokumentation von Quellcode
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-javadoc*
-|===
-
-include::../module-javadoc/docs/javadoc.adoc[tag="content"]
-
-== Option 2 - Datenbankprogrammierung mit Java
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-databases*
-|===
-
-include::../module-databases/docs/databases.adoc[tag="content"]
-
-== Option 3 - statische Elemente
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-statics*
-|===
-
-include::../module-statics/docs/statics.adoc[tag="content"]
-
-== Option 4 - Referenzsemantik
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-semantics*
-|===
-
-include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
-
-== Option 5 - Der Objektvertrag
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| Tag #?# | hh:mm - hh:mm | *module-object-contract*
-|===
-
-include::../module-object-contract/docs/object-contract.adoc[tag="content"]

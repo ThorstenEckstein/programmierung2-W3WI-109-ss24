@@ -25,31 +25,29 @@
         <!-- mandatory modules in order -->
         <module>module-intro</module>
         <module>module-tools-n-help</module>
-
         <module>module-classes</module>
         <module>module-interfaces</module>
-
         <module>module-datatypes</module>
         <module>module-visibility</module>
-
-        <module>module-loops</module>
-        <module>module-collections</module>
-        <module>module-enums</module>
-        <module>module-exceptions</module>
-        <module>module-funcprogramming</module>
-        <module>module-generics</module>
-        <module>module-javadoc</module>
-        <module>module-semantics</module>
-        <module>module-statics</module>
         <module>module-object-contract</module>
         <module>module-operators</module>
         <module>module-associations</module>
+        <module>module-loops</module>
+        <module>module-collections</module>
+        <module>module-enums</module>
+        <module>module-funcprogramming</module>
+        <module>module-generics</module>
+        <module>module-exceptions</module>
         <module>module-records</module>
+        <module>module-javadoc</module>
+        <module>module-semantics</module>
 
-        <!-- candidates for optional modules -->
+        <!-- optional modules -->
+        <module>module-statics</module>
         <module>module-databases</module>
+        <module>module-threads</module>
 
-        <!-- module to take backup stuff, maybe used later -->
+        <!-- module to prepare or backup stuff -->
         <module>module-archive</module>
         <module>module-template</module>
     </modules>

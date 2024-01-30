@@ -17,41 +17,35 @@
     <url>https://github.com/ThorstenEckstein/programmierung2-W3WI-109-ss24</url>
 
     <modules>
-
-        <!-- shared parts of this project -->
         <module>commons</module>
         <module>docs</module>
 
-        <!-- mandatory modules in order -->
-        <module>module-intro</module>
-        <module>module-tools-n-help</module>
-        <module>module-classes</module>
-        <module>module-interfaces</module>
-        <module>module-datatypes</module>
-        <module>module-visibility</module>
-        <module>module-object-contract</module>
-        <module>module-operators</module>
         <module>module-associations</module>
-        <module>module-loops</module>
+        <module>module-archive</module>         <!-- backup -->
+        <module>module-classes</module>
+        <module>module-clean-code</module>      <!-- optional -->
         <module>module-collections</module>
+        <module>module-databases</module>       <!-- optional -->
+        <module>module-datatypes</module>
         <module>module-enums</module>
+        <module>module-exceptions</module>
         <module>module-funcprogramming</module>
         <module>module-generics</module>
-        <module>module-exceptions</module>
-        <module>module-records</module>
+        <module>module-integration</module>      <!-- optional -->
+        <module>module-interfaces</module>
+        <module>module-intro</module>
         <module>module-javadoc</module>
-        <module>module-semantics</module>
-
-        <!-- optional modules -->
+        <module>module-loops</module>
+        <module>module-object-contract</module>
+        <module>module-operators</module>
+        <module>module-patterns</module>         <!-- optional -->
+        <module>module-records</module>
+        <module>module-semantics</module>        <!-- optional -->
         <module>module-statics</module>
-        <module>module-databases</module>
-        <module>module-threads</module>
-        <module>module-clean-code</module>
-        <module>module-patterns</module>
-
-        <!-- module to prepare or backup stuff -->
-        <module>module-archive</module>
-        <module>module-template</module>
+        <module>module-template</module>         <!-- template -->
+        <module>module-threads</module>          <!-- optional -->
+        <module>module-tools-n-help</module>
+        <module>module-visibility</module>
     </modules>
 
     <!--

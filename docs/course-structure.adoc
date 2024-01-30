@@ -152,14 +152,14 @@ include::../module-records/docs/records.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
 |===
 
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+| {icon-topic}  | 10:45 - 12:15 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
 |===
 
 include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
@@ -169,14 +169,14 @@ include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
 |===
 
 include::../module-clean-code/docs/clean-code.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
+| {icon-topic}  | 10:45 - 12:15 | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
 |===
 
 include::../module-patterns/docs/patterns.adoc[tag="content"]

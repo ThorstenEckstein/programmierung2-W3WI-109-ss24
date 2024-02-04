@@ -10,7 +10,7 @@ ifeval::[{show-scheduled-course-days} == true]
 include::includes/course-day-schedules.adoc[]
 endif::[]
 
-== Tag 1 - Willkommen, Setup & Einführung
+== Tag 1 - Willkommen, Setup & Einführung in Klassen
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -123,75 +123,91 @@ include::../module-generics/docs/generics.adoc[tag="content"]
 
 include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
 
-== Tag 7 - Ausnahmen, Fehlerbehandlung & Records
+== Tag 7 - Ausnahmen, Fehlerbehandlung, Records & Statics
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 11:25 | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
+| {icon-topic}  | 09:15 - 11:00 | *link:../module-exceptions/docs/exception-handling.adoc[module-exceptions]*
 |===
 
 include::../module-exceptions/docs/exception-handling.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:25 - 12:15 | *link:../module-records/docs/records.adoc[module-records]*
+| {icon-topic}  | 11:00 - 11:30 | *link:../module-records/docs/records.adoc[module-records]*
 |===
 
 include::../module-records/docs/records.adoc[tag="content"]
 
-== Tag 8 - Kurzprüfung, Organisation und Wiederholung
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:30 - 12:15 | *link:../module-statics/docs/statics.adoc[module-statics]*
+|===
 
-----
-1. Schriftliche Kurzprüfung
-2. Organisation der Hauptprüfung
-3. Zeit für Fragen
-4. Wiederholungen
-----
+include::../module-statics/docs/statics.adoc[tag="content"]
 
-== Tag 9 - Javadoc, Referenzsemantik
+
+== Tag 8 - Referenzsemantik, Javadoc, Clean Code
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
+|===
+
+include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 11:15 | *link:../module-javadoc/docs/javadoc.adoc[module-javadoc]*
 |===
 
 include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-semantics/docs/reference-semantics.adoc[module-semantics]*
-|===
-
-include::../module-semantics/docs/reference-semantics.adoc[tag="content"]
-
-
-== Tag 10 - Clean Code & Design Patterns
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+| {icon-topic}  | 11:15 - 12:15 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
 |===
 
 include::../module-clean-code/docs/clean-code.adoc[tag="content"]
 
+
+== Tag 9 - Code-Qualität, Prüfungsvorbereitung
+
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-patterns/docs/patterns.adoc[module-patterns]*
 |===
 
 include::../module-patterns/docs/patterns.adoc[tag="content"]
 
-
-== Optionale Themen
-
-=== Statische Elemente
-
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | hh:mm - hh:mm | *link:../module-statics/docs/statics.adoc[module-statics]*
+| {icon-topic}  | 10:45 - 12:15 | Prüfungsvorbereitung & Prüfungsorganisation
 |===
 
-include::../module-statics/docs/statics.adoc[tag="content"]
+----
+1. Alle Themen im "Schnelldurchlauf"
+2. Organisation der Prüfung
+3. Zeit für Fragen
+----
+
+
+== Tag 10 - Prüfungstage/-block
+
+Ausgestaltung und Modi der Prüfungen aktuell noch nicht final festgelegt. Es gibt aber folgende *Idee*. Die *Prüfung* besteht insgesamt aus zwei Teilen:
+
+[subs=normal]
+ *Dauer*          : 1h
+ *Kandidat:Innen* : 3-4er Gruppen
+
+[arabic]
+. Prüfung der *Programmierkenntnisse*, entweder ...
+.. als 3-4er Gruppe am vorbereiteten Rechner gemeinsam & live Progemmieraufgaben lösen, mit Unit-Tests und Klassen in /src Paketen, oder ...
+.. manuell schriftlich auf Papier, individuell
+. Prüfung des *Grundverständnisses*: vorbereiteter Use-Case, konzeptionell mündliches Gespräch, Gruppenarbeit an der Tafel, Fragen und Antworten
+
+
+== Optionale Themen
 
 === Datenbankprogrammierung mit Java
 
@@ -210,6 +226,16 @@ include::../module-databases/docs/databases.adoc[tag="content"]
 |===
 
 include::../module-threads/docs/threads.adoc[tag="content"]
+
+
+=== Integration von Software/-komponenten
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | hh:mm - hh:mm | *link:../module-integration/docs/integration.adoc[module-integration]*
+|===
+
+include::../module-integration/docs/integration.adoc[tag="content"]
 
 ////
 ====

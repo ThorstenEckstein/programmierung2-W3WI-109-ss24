@@ -11,11 +11,11 @@ include::module-settings.adoc[]
 
 tag::content[]
 ----
-1. Was versteht man unter "Integration" ?
+1. Was versteht man unter "Integration"?
 2. Integrationskriterien
 3. Integrationsoptionen bzw. -muster
-4. RESTful WebServices
-5. Messaging
+4. Synchrone Integration mit (REST)
+5. Asynchrone Integration mit Nachrichten (Messaging)
 ----
 end::content[]
 ////
@@ -97,7 +97,7 @@ image::images/RemoteProcedureInvocation.png[width="40%"]
 image::images/Messaging.png[width="40%"]
 
 
-== RESTful WebServices
+== Synchrone Integration mit (REST)
 
 REST::
 `Representational State Transfer` (REST) ist eine Software-Architektur, die Bedingungen zur Funktionsweise einer API festlegt. Häufig wird eine REST-basierte Architektur verwendet, um leistungsstarke zuverlässige Kommunikation nach Maß umzusetzen. Die Komponenten sind grundsätzlich leicht implementierbar und modifizierbar. Dadurch wird jedem API-System Sichtbarkeit und plattformübergreifende Portierbarkeit verliehen.
@@ -229,7 +229,7 @@ public class SystemDataController extends AbstractController {
 ----
 
 
-== Messaging
+== Asynchrone Integration mit Nachrichten (Messaging)
 
 Ein weiterer wichtiger Integrationsstil ist `Messaging`. Durch Messaging können Applikationen (sehr) lose durch `asynchronene` Kommunikation gekoppelt werden. Die kommunizierenden Systeme müssen dabei nicht gleichzeitig laufen, wodurch die Integration insgesamt zuverlässiger wird. Beim Messaging ist die `Messaging Middleware` verantwortlich für den Transport von Daten in Form von Nachrichten zwischen den Applikationen, nicht mehr die beteiligten Systeme selbst.
 

@@ -19,60 +19,67 @@ end::content[]
 ////
 
 
-=== Referenzsemantik
+== Referenzsemantik
 
-==== Wertsemantik - `pass by value`
+Zu den grundlegenden Konzepten in jeder Programmiersprache gehören
 
-In the *pass by value* concept, the method is called by passing a value. The argument is a *copy* of the original one. This is called _pass by value_. It does not affect the original parameter.
+. *Werte* und
+. *Referenzen*.
 
-A small unit test example (*Demo 1*):
+In Java speichern *primitive* Variablen die tatsächlichen Werte, während *nicht-primitive* Variablen die Referenzen speichern, die auf die Adressen der Objekte verweisen.
+
+Argumente werden in Java immer als _Wert_ übergeben. Während des Methodenaufrufs wird im Speicher eine Kopie jedes Arguments erstellt, unabhängig davon, ob es sich um einen Wert oder eine Referenz handelt, die dann an die Methode übergeben wird.
+
+Bei Primitiven wird der Wert einfach in den Speicher kopiert und dann an die aufgerufene Methode übergeben, bei Nicht-Primitiven (komplexen) zeigt eine Referenz auf die tatsächlichen Daten (im Heap). Wenn ein Objekt übergeben wird, dann wird die Referenz kopiert und die neue Referenz an die Methode übergeben.
+
+Dies sind zugleich die beiden häufigsten Arten der Übergabe von Argument an Methoden, also "Wertübergabe" und "Referenzübergabe". Verschiedene Programmiersprachen verwenden diese Konzepte allerdings auf unterschiedliche Weise.
+
+Was Java betrifft, ist alles ausschließlich *Pass-by-Value* (auch wenn der _Wert_ eine Referenz ist).
+
+
+=== Wertsemantik
+
+[subs=normal]
+ _"Variablen speichern Werte"_
+
+Wenn es sich bei einem Parameter um eine Wertübergabe handelt, arbeiten die aufrufende und die aufgerufene Methode mit zwei verschiedenen Variablen, die Kopien voneinander sind. Jegliche Änderungen an einer Variablen verändern nicht die andere.
+
+Dies bedeutet, dass beim Aufrufen einer Methode die an die aufgerufene Methode übergebenen Parameter *Klone* der ursprünglichen Parameter sind. Jede in der aufgerufenen Methode vorgenommene Änderung hat keine Auswirkungen auf die ursprünglichen Parameter in der aufrufenden Methode.
+
+Ein Unit-Test Beispiel (*Demo 1*):
 
 [, java, linenums, indent=0]
 ----
-include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-prim"]
+include::{mod-lnk-test}/semantics/SemanticsDemoTests.java[tags="ref-semantics-prim"]
 ----
 
-Graphical explanation:
+Grafische Aufbereitung:
 
 image::diagrams/reference-semantics-prim.svg["RefSemPrim",width="50%",align="center"]
 
 {nl}
 
-==== Referenzsemantik - `pass reference`
+=== Referenzsemantik
 
-Although the argument variable is passed in a method, the *reference* itself is copied. The object that is really referenced is still the same and can thus be changed!
+[subs=normal]
+ _"Variablen speichern Referenzen"_
 
-A Unit Test example (*Demo 2*):
+Wenn ein Methoden-Parameter als (Objekt-)*Referenz* übergeben wird, bearbeiten der Aufrufer und der Angerufene dieselbe (Objekt-)*Instanz*.
+
+Dies bedeutet, dass bei der Übergabe einer Variablen als Referenz die eindeutige Kennung - quasi die "Adresse" des Objekts - an die Methode gesendet wird. Alle Änderungen an den Feldern des übergebenen Objektes führen dazu, dass diese Änderung am ursprünglichen Wert vorgenommen wird.
+
+Ein Unit-Test Beispiel (*Demo 2*):
 
 [, java, linenums, indent=0]
 ----
-include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-obj"]
+include::{mod-lnk-test}/semantics/SemanticsDemoTests.java[tags="ref-semantics-obj"]
 ----
 
-Graphical explanation:
+Grafische Aufbereitung:
 
 image::diagrams/reference-semantics-obj.svg["RefSemObj",width="50%",align="center"]
 
-
-// ---------------------- HIDDEN ----------------------
-.Click to reveal details for "_pass by reference_"
-[%collapsible]
-====
-"_pass by reference_"
-
-In the *pass by reference* concept, the method is called using an alias or reference of the actual parameter. This is called pass by reference. It forwards the unique identifier of the object to the method. If we make changes to the parameter's instance member, it would affect the original value.
-
-CAUTION: [red]#_Java does not support pass by reference concept!_#
-
-//[subs="normal"]
-//----
-//include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-2"]
-//----
-
-====
-// ---------------------- HIDDEN ----------------------
-
-Ein weiteres Beispiel für *Reference Semantics*:
+Un noch ein ausführliches Beispiel (*Demo 3*):
 
 image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
 
@@ -85,7 +92,6 @@ image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
 | [yellow]#(1)#
 | Erzeugung einer Variable `a1` vom Typ `Account` mit Zuweisung zur neuen Instanz sowie der Initialisierung des Attributes `amount` mit dem Wert `0`
 
-//include::{mod-lnk-test}/semantics/SemanticTests.java[lines="69"]
 [source,java,indent=0]
 ----
 Account a1 = new Account();
@@ -135,6 +141,22 @@ include::{mod-lnk-src}/semantics/demo/Account.java[lines="27"]
 
 === Übungen
 
-Übungsaufgabe 1::
-Erläutere Wertsemantik und Referenzsemantik anhand einer Grafik!
+Übungsaufgabe 2::
 
+Stelle das ausführliche Beispiel oben (*Demo 3*) in Form eines Unit-Tests nach.
+
+Übungsaufgabe 2::
+
+Was passiert, wenn ein Objekt an eine Methode übergeben wird, und welche Bedeutung hat dies im Sinne der Referenzsemantik?
+
+////
+Diese Frage testet das Verständnis dafür, wie Java mit Objektreferenzen umgeht. Wenn ein Objekt an eine Methode übergeben wird, wird tatsächlich die Referenz auf das Objekt übergeben, nicht das eigentliche Objekt selbst. Das heißt, wenn die Methode das Objekt über die Referenz ändert, werden die Änderungen außerhalb der Methode widergespiegelt, da sie dasselbe zugrunde liegende Objekt im Speicher ändern.
+////
+
+Übungsaufgabe 2::
+
+Stelle Wertsemantik und Referenzsemantik anhand einer Grafik gegenüber!
+
+Übungsaufgabe 3::
+
+Wie kann verhindert werden, dass Objekte (Objektinstanzen), die an Methoden übergeben werden, im Anschluss bzw. innerhalb der Methode verändert werden können?

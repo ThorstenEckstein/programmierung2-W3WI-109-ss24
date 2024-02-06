@@ -62,15 +62,16 @@
 
 :course-title-count: {counter:course-title-count}
 
-:module-1:  {module} 1 - Technisches Setup, Klassen & Variablen
-:module-2:  {module} 2 - Datentypen & Operatoren
-:module-3:  {module} 3 - Polymorphismus & Kontrollstrukturen
-:module-4:  {module} 4 - Collections Framework & Objektvertrag
-:module-5:  {module} 5 - Beziehungen & Relationen
-:module-6:  {module} 6 - Generische Programmierung & Enums
-:module-7:  {module} 7 - Funktionale Programmierung & Streaming API
-:module-8:  {module} 8 - Exceptions, Enums & Records
-:module-9:  {module} 9 - Optionale Themen, Semesterabschluss
+:day-1: Tag 1 - Willkommen, Setup & Einführung in Klassen
+:day-2: Tag 2 - Klassen & Interfaces
+:day-3: Tag 3 - Datentypen, Access Modifier & Kontrollstrukturen
+:day-4: Tag 4 - Collections, Assoziationen
+:day-5: Tag 5 - Enums & Java Generics
+:day-6: Tag 6 - Funktionale Programmierung
+:day-7: Tag 7 - Ausnahmen, Fehlerbehandlung, Records & Statics
+:day-8: Tag 8 - Referenzsemantik, Javadoc, Clean Code
+:day-9: Tag 9 - Code-Qualität, Prüfungsvorbereitung
+:day-10: Tag 10 - Prüfungstage/-block
 
 // For all modules apply ...
 :modules-root:     ..
@@ -103,25 +104,73 @@
 :show-structure: false
 
 ifeval::[{show-variables} == true]
-[big]#*Global Settings*#
+[big]#*Settings*#
 
 *About:*
 
-. variables having `modules` as prefix apply globally to all modules
-. variables having just `module` as prefix apply for each module
+//. variables having `modules` as prefix apply globally to all modules
+//. variables having just `module` as prefix apply for each module
 
-[cols="3m,7m"]
+[cols="3h,7m"]
 |===
 | Variable         | Value
 
-| modules-root     | {modules-root}
-| modules-prefix   | {modules-prefix}
-| module-docs      | {module-docs}
-| module-sources   | {module-sources}
-| module-tests     | {module-tests}
-| basic-package    | {basic-package}
-| package-demo     | {package-demo}
-| package-exercise | {package-exercise}
-| package-solution | {package-solution}
+| icons                 | {icons}
+| icon-set              | {icon-set}
+| sectnums              | {sectnums}
+| toc-title             | {toc-title}
+| toclevels             | {toclevels}
+| nl                    | {nl}
+| tbd                   | {tbd}
+| continue-here         | {continue-here}
+| module                | {module}
+| update                | {update}
+| demo                  | {demo}
+| pause                 | {pause}
+| indent-1              | {indent-1}
+| indent-2              | {indent-2}
+| indent-3              | {indent-3}
+| indent-4              | {indent-4}
+| show-timeslots        | {show-timeslots}
+| icon-welcome          | {icon-welcome}
+| icon-update-project   | {icon-update-project}
+| icon-dir              | {icon-dir}
+| icon-dir-src          | {icon-dir-src}
+| icon-dir-test         | {icon-dir-test}
+| icon-exercise         | {icon-exercise}
+| icon-topic            | {icon-topic}
+| icon-theory           | {icon-theory}
+| icon-award            | {icon-award}
+| icon-demo             | {icon-demo}
+| icon-setup            | {icon-setup}
+| icon-exam             | {icon-exam}
+| icon-domain           | {icon-domain}
+| icon-one              | {icon-one}
+| symbol-update-project | {symbol-update-project}
+| day-1                 | {day-1}
+| day-2                 | {day-2}
+| day-3                 | {day-3}
+| day-4                 | {day-4}
+| day-5                 | {day-5}
+| day-6                 | {day-6}
+| day-7                 | {day-7}
+| day-8                 | {day-8}
+| day-9                 | {day-9}
+| day-10                | {day-10}
+| modules-root          | {modules-root}
+| modules-prefix        | {modules-prefix}
+| module-docs           | {module-docs}
+| module-sources        | {module-sources}
+| module-tests          | {module-tests}
+| basic-package         | {basic-package}
+| package-demo          | {package-demo}
+| package-exercise      | {package-exercise}
+| package-solution      | {package-solution}
+| mod-ref-src           | {mod-ref-src}
+| mod-ref-test          | {mod-ref-test}
+| mod-lnk-docs          | {mod-lnk-docs}
+| mod-lnk-src           | {mod-lnk-src}
+| mod-lnk-test          | {mod-lnk-test}
 |===
 endif::[]
+

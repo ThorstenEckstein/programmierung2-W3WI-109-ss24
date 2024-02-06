@@ -1,13 +1,8 @@
-//tag::improve-javadoc[]
 package de.dhbw.javadoc.exercises;
 
+//tag::improve-javadoc[]
 public interface XmlAdapter {
 
-    /**
-     * Purpose: plain text (string) --> xml
-     * @param plainText the text
-     * @return String
-     */
     String toXml(String plainText);
 
     // Purpose: xml --> plain text (string)

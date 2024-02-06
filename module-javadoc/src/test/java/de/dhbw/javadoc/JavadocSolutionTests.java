@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class ExerciseSolutions {
+public class JavadocSolutionTests {
 
-    private final Logger logger = new Logger(ExerciseSolutions.class);
+    private final Logger logger = new Logger(JavadocSolutionTests.class);
 
     @Test
     @DisplayName("Exercise 1: ...")

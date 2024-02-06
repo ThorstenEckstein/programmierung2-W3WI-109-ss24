@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
-public class JavadocTests {
+public class JavadocDemoTests {
 
-    private final Logger logger = new Logger(JavadocTests.class);
+    private final Logger logger = new Logger(JavadocDemoTests.class);
 
     @Test
     @DisplayName("Demo 1: ...")

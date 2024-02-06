@@ -27,7 +27,7 @@ In the *pass by value* concept, the method is called by passing a value. The arg
 
 A small unit test example (*Demo 1*):
 
-[source, java, linenums]
+[, java, linenums, indent=0]
 ----
 include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-prim"]
 ----
@@ -44,7 +44,7 @@ Although the argument variable is passed in a method, the *reference* itself is 
 
 A Unit Test example (*Demo 2*):
 
-[source, java, linenums, indent=0]
+[, java, linenums, indent=0]
 ----
 include::{mod-lnk-test}/semantics/SemanticTests.java[tags="ref-semantics-obj"]
 ----
@@ -68,10 +68,10 @@ CAUTION: [red]#_Java does not support pass by reference concept!_#
 //----
 //include::{course-1-test}/basics/BasicsTest.java[tags="ref-semantics-2"]
 //----
+
 ====
 // ---------------------- HIDDEN ----------------------
 
-////
 Ein weiteres Beispiel für *Reference Semantics*:
 
 image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
@@ -85,9 +85,10 @@ image::diagrams/reference-semantics.svg["RefSem",width="100%",align="center"]
 | [yellow]#(1)#
 | Erzeugung einer Variable `a1` vom Typ `Account` mit Zuweisung zur neuen Instanz sowie der Initialisierung des Attributes `amount` mit dem Wert `0`
 
+//include::{mod-lnk-test}/semantics/SemanticTests.java[lines="69"]
 [source,java,indent=0]
 ----
-include::{course-10-test}/basics/refsemantics/RefSemanticsTest.java[lines="69"]
+Account a1 = new Account();
 ----
 
 | [yellow]#(2)#
@@ -95,16 +96,15 @@ include::{course-10-test}/basics/refsemantics/RefSemanticsTest.java[lines="69"]
 
 [source,java,indent=0]
 ----
-include::{course-10-src}/basics/refsemantics/Account.java[lines="22"]
+include::{mod-lnk-src}/semantics/demo/Account.java[lines="22"]
 ----
 
 | [yellow]#(3)#
 | Beim Aufruf der Methode `process(a1)` wird der Wert bzw. die "Adresse" der Variable `a1`  nach `acc` kopiert (_"copy-by-value"_)
 
-//include::{course-10-test}/basics/refsemantics/RefSemanticsTest.java[lines="73"]
-[source,java,indent=0]
+[,java]
 ----
-        Account.process(a1)
+Account.process(a1)
 ----
 
 | [yellow]#(4)#
@@ -112,7 +112,7 @@ include::{course-10-src}/basics/refsemantics/Account.java[lines="22"]
 
 [source,java,indent=0]
 ----
-include::{course-10-src}/basics/refsemantics/Account.java[lines="24"]
+include::{mod-lnk-src}/semantics/demo/Account.java[lines="24"]
 ----
 
 | [yellow]#(5)#
@@ -120,7 +120,7 @@ include::{course-10-src}/basics/refsemantics/Account.java[lines="24"]
 
 [source,java,indent=0]
 ----
-include::{course-10-src}/basics/refsemantics/Account.java[lines="25"]
+include::{mod-lnk-src}/semantics/demo/Account.java[lines="25"]
 ----
 
 | [yellow]#(6)#
@@ -128,10 +128,10 @@ include::{course-10-src}/basics/refsemantics/Account.java[lines="25"]
 
 [source,java,indent=0]
 ----
-include::{course-10-src}/basics/refsemantics/Account.java[lines="27"]
+include::{mod-lnk-src}/semantics/demo/Account.java[lines="27"]
 ----
 |===
-////
+
 
 === Übungen
 

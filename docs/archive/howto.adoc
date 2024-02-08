@@ -19,7 +19,7 @@ Adding project libraries/dependencies:
 . When finished, the libs shall contain those as shown in the figure below
 
 .Project Libraries (all loaded from "Maven Central")
-image:images/IntelliJ-Project-Structure.png[align="center"]
+image:../images/IntelliJ-Project-Structure.png[align="center"]
 
 
 === Duplicate a new IntelliJ module on the base of another module
@@ -143,7 +143,7 @@ Ein _eigener Branch_ kann hier helfen, damit man seine eigenen Experimente ohne 
 
 woraufhin der Name des neuen Branches angegeben werden muss:
 
-image::images/git-create-student-branch.png[width="50%", align="center"]
+image::../images/git-create-student-branch.png[width="50%", align="center"]
 
 Idealerweise nutzt man zur Benennung folgende Konvention, wie im Screenshot auch schon zu sehen ist:
 

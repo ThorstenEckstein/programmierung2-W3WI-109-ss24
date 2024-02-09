@@ -141,7 +141,7 @@ include::{mod-lnk-src}/semantics/demo/Account.java[lines="27"]
 
 === Übungen
 
-Übungsaufgabe 2::
+Übungsaufgabe 1::
 
 Stelle das ausführliche Beispiel oben (*Demo 3*) in Form eines Unit-Tests nach.
 
@@ -153,10 +153,10 @@ Was passiert, wenn ein Objekt an eine Methode übergeben wird, und welche Bedeut
 Diese Frage testet das Verständnis dafür, wie Java mit Objektreferenzen umgeht. Wenn ein Objekt an eine Methode übergeben wird, wird tatsächlich die Referenz auf das Objekt übergeben, nicht das eigentliche Objekt selbst. Das heißt, wenn die Methode das Objekt über die Referenz ändert, werden die Änderungen außerhalb der Methode widergespiegelt, da sie dasselbe zugrunde liegende Objekt im Speicher ändern.
 ////
 
-Übungsaufgabe 2::
+Übungsaufgabe 3::
 
 Stelle Wertsemantik und Referenzsemantik anhand einer Grafik gegenüber!
 
-Übungsaufgabe 3::
+Übungsaufgabe 4::
 
 Wie kann verhindert werden, dass Objekte (Objektinstanzen), die an Methoden übergeben werden, im Anschluss bzw. innerhalb der Methode verändert werden können?

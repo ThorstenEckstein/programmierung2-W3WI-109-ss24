@@ -44,20 +44,19 @@ public class Configuration {
 }
 ----
 
-// /////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////
 [[demos_statics]]
 Zum obigen Beispiel gibt's eine *Demo*:
 
 [subs=normal]
  {module-ref-tests}/demo/StaticsDemoTest.java (Test 3)
+/////////////////////////////
 
-
-// /////////////////////////////////////////////////////////////////////////////////
 [[exercises_statics]]
 *Übungen*:
 
 [subs=normal]
- {module-ref-tests}/exercise/statics/StaticsExerciseTest.java
+ {mod-ref-test}/exercise/StaticsExerciseTest.java
 
 *Übung 1*:
 
@@ -66,7 +65,4 @@ Erzeuge ...
 - eine Klasse `Car` mit einem Feld `Type` (String) und einem zugehörigen Konstruktor
 - eine Klasse `CarFactory` mit einer statischen Methode mit dem Parameter `Type`, die neue Car-Instanzen zurückgibt
 - einen Test, der die Factory benutzt und den/die Car-Type(s) testet
-
-
-
 

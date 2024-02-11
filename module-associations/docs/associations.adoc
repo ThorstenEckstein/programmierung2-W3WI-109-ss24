@@ -26,7 +26,7 @@ end::content[]
 
 == Assoziationen
 
-Klassen existieren quasi nie unabhängig, denn Software besteht immer auch vielen Klassen und weiteren Datenstrukturen, die nur gemeinsam funktionieren und somit die Software bilden.
+Klassen existieren fast nie unabhängig, denn Software besteht immer auch vielen Klassen und weiteren Datenstrukturen, die nur *gemeinsam* funktionieren und somit die ganze Software bilden.
 
 
 === Beziehungsarten
@@ -37,9 +37,41 @@ Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dab
 * *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
 * *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
 
-IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Beziehungen zwischen den Klassen einer Software wird unter dem Begriffspaar *Kopplung & Kohäsion* zusammengefasst ("loose coupling"). Ein allgemeines Qualitätsziel von Software ist bspw., einen niedrigen Grad von Kopplung der Komponenten zu erreichen. Je geringer die Kopplung ist, desto besser ist die Software änderbar!_
 
-=> [blue]#_Einfügen: Erläuterndes Bild von "Kopplung & Kohäsion"_#
+==== Kopplung
+
+====
+Art & Grad der Abhängigkeit *zwischen* (einzelnen) Softwaremodulen, insb. Klassen.
+====
+
+[plantuml, "coupling", png, align="center", title="Kopplung"]
+....
+include::diagrams/coupling.puml[]
+....
+
+Die *Kopplung* im obigen Diagramm ist die (Art und) *Anzahl der Pfeile* zwischen den Klassen. Sie gibt an, wie stark die einzelnen Programmmodule (hier Klassen) von den anderen abhängig sind. Wechselwirkungen zwischen zwei KLassen/Objekten treten auf, weil es eine Kopplung gibt. Lose gekoppelte Programme sind flexibel und erweiterbar, je stärker die Kopplung, desto schwieriger wird die Änderbarkeit der Klassen.
+
+==== Kohäsion
+
+====
+Grad des Zusammenhangs (z.B.) von Klassen *innerhalb* eines Moduls/Pakets.
+====
+
+[plantuml, "cohesion", png, align="center", title="Kohäsion (hier z.B. im rot hinterlegten Paket)"]
+....
+include::diagrams/cohesion.puml[]
+....
+
+*Kohäsion* misst, wie stark die einzelnen Klassen innerhalb eines Programmmoduls - z.B. eines Paketes - zusammenhängen, vor allem wie stark sie zu _einem/wenigen_ Aspekt oder auch Zusammenhang gehören. Gut *strukturierte* Software führen oft zu stark zusammenhängenden Anwendungen.
+
+IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Beziehungen zwischen den Klassen einer Software wird unter dem Begriffspaar *Kopplung & Kohäsion* zusammengefasst (*"loosely coupled along with high cohesion"*). Ein allgemeines Qualitätsziel von Software ist bspw., einen niedrigen Grad von Kopplung der Komponenten zu erreichen. Je geringer die Kopplung ist, desto besser ist die Software änderbar. Gleichzeitig sollen die KLassen innerhalb eines Paketes/Moduls zur gleichen Fachlichkeit gehören!_
+
+*Beispiel:*
+
+Die *Organisation dieser LV* ist so aufgebaut. Es gibt viele einzelne Module, in denen Klassen enthalten sind, die eben zu diesem Modul bzw. zu dem jeweiligen Thema gehören (_"hoch kohäsiv"_).
+
+Gleichzeitig haben die Module untereinander keine bzw. sehr wenige Abhängigkeiten (_"loose gekoppelt"_)
+
 
 === Aggregation & Komposition
 
@@ -88,7 +120,7 @@ Siehe Unit-Test:
  {mod-ref-test}/demo/AssociationsDemoTest.demo1()
 
 Ein Beispiel::
-_Jede natürliche Person besitzt (genau) einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann müsste auch der Personalausweis vernichtet werden._
+_Jede natürliche Person besitzt (genau) einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann müsste aber auch der Personalausweis vernichtet werden._
 
 Es geht hier also oft um die Überlegung zur *Semantik bzw. Qualität* einer Beziehung zwischen zwei abhängigen Objekten!
 

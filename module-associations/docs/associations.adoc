@@ -37,6 +37,13 @@ Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dab
 * *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
 * *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
 
+In der Übersicht:
+
+[plantuml, "coupling", png, align="center"]
+....
+include::diagrams/associations.puml[]
+....
+
 
 ==== Kopplung
 

@@ -1,8 +1,8 @@
 @startuml
-!pragma layout smetana
+'!pragma layout smetana
 'https://plantuml.com/class-diagram
 
-scale 0.8
+scale 1.0
 
 /'
  Systembeschreibung, z.B.:
@@ -29,6 +29,6 @@ class Journey     /' (Zug)Fahrt '/
 
 Route          "n" -    "m"   Train
 (Route,Train)      ..         Journey
-Journey        "n" --o  "1"   Timetable
+Journey        "n" ---o  "1"   Timetable
 
 @enduml

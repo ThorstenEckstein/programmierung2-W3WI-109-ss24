@@ -75,15 +75,45 @@ Gleichzeitig haben die Module untereinander keine bzw. sehr wenige Abhängigkeit
 
 === Aggregation & Komposition
 
-Assoziationen können auch qualitativ und semantisch recht unterschiedlich sein. In diesem Zusammenhang sind Aggregation und Komposition von Bedeutung.
+Assoziationen können auch *qualitativ und semantisch* recht unterschiedlich sein. In diesem Zusammenhang sind *Aggregation* und *Komposition* von Bedeutung.
+
+==== Aggregation
 
 Die Aggregation, sowie auch die Komposition, ist eine Assoziation von *Teilen zu einem Ganzen*. Jedes Teil ist zu dem Ganzen mit einer Assoziation "ist-teil-von" (part-of) verbunden.
 
-Der Unterschied einer Komposition zur Aggregation ist, dass die Teile, die ein Objekt enthält, von dem Ganzen *existentiell abhängig* sind (Beispiel _Gebäude_ und _Räume_).
+Ein paar Beispiele dazu:
+
+[plantuml, "aggregation", png, align="center"]
+....
+include::diagrams/aggregation.puml[]
+....
+
+Demo:
+[subs=normal]
+ {mod-ref-test}/demo/AssociationsDemoTest.demo1()
+
+
+==== Komposition
+
+Der Unterschied einer Komposition zur Aggregation ist, dass die Teile, die ein Objekt enthält, von dem Ganzen *existentiell abhängig* sind.
+
+Ein paar Beispiele dazu:
+
+[plantuml, "composition", png, align="center"]
+....
+include::diagrams/composition.puml[]
+....
+
+Die Unterschiede sind also fein, aber wichtig, daher bleibt die Frage ...
 
 ====
-_Frage: Wie könnte man "existentielle Abhängigkeit" im Code ausdrücken?_
+_... wie könnte man "existentielle Abhängigkeit" im Code ausdrücken?_
 ====
+
+Demo:
+[subs=normal]
+ {mod-ref-test}/demo/AssociationsDemoTest.demo2()
+
 
 === Navigierbarkeit
 
@@ -117,10 +147,10 @@ public class Locomotive {   |
 
 Siehe Unit-Test:
 [subs=normal]
- {mod-ref-test}/demo/AssociationsDemoTest.demo1()
+ {mod-ref-test}/demo/AssociationsDemoTest.demo3()
 
 Ein Beispiel::
-_Jede natürliche Person besitzt (genau) einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann müsste aber auch der Personalausweis vernichtet werden._
+_Jede natürliche Person besitzt *genau* einen Personalausweis, der Ausweis kann verloren gehen, die Person kann sterben, dann muss aber auch der Personalausweis vernichtet werden, das wurde oben bereits demonstriert._
 
 Es geht hier also oft um die Überlegung zur *Semantik bzw. Qualität* einer Beziehung zwischen zwei abhängigen Objekten!
 
@@ -139,8 +169,8 @@ TIP: _Man beachte immer auch die Richtung der Pfeile, die in aller Regel etwas �
 Zugehörige Unit-Tests zur *Demonstration*:
 
 [subs=normal]
- {mod-ref-test}/demo/AssociationsDemoTest.demo2a()
- {mod-ref-test}/demo/AssociationsDemoTest.demo2b()
+ {mod-ref-test}/demo/AssociationsDemoTest.demo4a()
+ {mod-ref-test}/demo/AssociationsDemoTest.demo4b()
 
 sowie Implementierungen für V1 und V2:
 

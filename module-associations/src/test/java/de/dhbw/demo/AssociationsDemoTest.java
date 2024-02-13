@@ -1,22 +1,67 @@
 package de.dhbw.demo;
 
+import de.dhbw.demo.aggregation.Product;
+import de.dhbw.demo.aggregation.ShoppingCart;
 import de.dhbw.demo.associations.n.*;
 import de.dhbw.demo.associations.nm.v2.Course;
 import de.dhbw.demo.associations.nm.v2.Registration;
 import de.dhbw.demo.associations.nm.v2.Student;
+import de.dhbw.demo.composition.Life;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AssociationsDemoTest {
 
     @Test
-    @DisplayName("Demo 1: 1:1 Assoziation")
+    @DisplayName("Demo 1: Aggregation")
     public void demo1() {
+        // given
+        ShoppingCart shoppingCart = new ShoppingCart("SC1234");
+        Product p1 = new Product("Book");
+        Product p2 = new Product("Shoes");
+
+        // when
+        shoppingCart.setProducts(List.of(p1,p2));
+
+        // then
+        assertEquals(2, shoppingCart.getProducts().size());
+
+        // when
+        shoppingCart.removeProducts();
+
+        // then
+        assertNotNull(shoppingCart);
+    }
+
+    @Test
+    @DisplayName("Demo 2: Komposition")
+    public void demo2() {
+        // given
+        de.dhbw.demo.composition.Person person;
+
+        person = Life.birth("Jonas");
+
+        // when
+        person.comeOfAge("38sh36sg");
+
+        // when
+        Life.death(person);
+
+        // then (Bemerkung: Warum kommt hier eigentlich keine NullPointerException? => siehe Modul 'Referenzsemantik')
+        assertNull(person.getPassport());
+
+        person = null;
+        assertNull(person);
+    }
+
+    @Test
+    @DisplayName("Demo 3: 1:1 Assoziation")
+    public void demo3() {
         // given
         Person person = new Person("Olaf");
         Passport passport = new Passport("sjw73h73hdkf8");
@@ -30,8 +75,8 @@ public class AssociationsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2a: 1:n Assoziation")
-    public void demo2a() {
+    @DisplayName("Demo 4a: 1:n Assoziation")
+    public void demo4a() {
         // given
         Train1 train1 = new Train1();
 
@@ -44,8 +89,8 @@ public class AssociationsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2b: 1:n Assoziation")
-    public void demo2b() {
+    @DisplayName("Demo 4b: 1:n Assoziation")
+    public void demo4b() {
         // given
         Train2 train2 = new Train2();
 
@@ -64,8 +109,8 @@ public class AssociationsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 3: n:m Assoziation")
-    public void demo3() {
+    @DisplayName("Demo 5: n:m Assoziation")
+    public void demo5() {
         // given
         Course course = new Course();
         course.id = 2024001L;

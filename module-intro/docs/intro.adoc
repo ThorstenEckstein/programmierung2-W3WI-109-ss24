@@ -148,9 +148,12 @@ Wie gesagt, hierin werden die Kursinhalte in den nächsten Schritten dann lokal 
 
 === Programmiersprache `Java`
 
-*Empfehlung*: Im Kurs soll folgende Java Version verwendet werden:
+*Empfehlung*: Im Kurs soll folgende *Java* Version verwendet werden:
 
- Java 19
+[indent=0]
+----
+include::../../pom.xml[tags="java-version"]
+----
 
 Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Minor") _hinter_ der Hauptversionsnummer 19 ("Major") nicht so wichtig sind.
 
@@ -168,13 +171,13 @@ Dann sollte eine Java Version angezeigt werden.
 
 === IDE `IntelliJ`
 
-*IDE*. Die empfohlene IDE ist `IntelliJ`. Die Seminarinhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
+Die empfohlene IDE ist `IntelliJ`. Die LV-Inhalte sollten sowohl in der _Community_ als auch in der _Enterprise_ Edition funktionieren.
 
 Der Code für den Kurs wurde mit folgender Version erstellt, die installiert sein muss (falls noch nicht vorhanden, bitte installieren):
 
  IntelliJ IDEA 2023.3.2 (Ultimate Edition; Community Ed. sollte auch funktionieren)
 
-TIP: [small]#Alternativ kann auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), die Lehrveranstaltung wurde für IntelliJ vorbereitet!#
+TIP: [small]#Alternativ könnte auch `MS Visual Studio Code` genutzt werden und diese Umgebung sollte auch bei der Einrichtung keine besonderen Probleme verursachen. Aber ... auf eigene Gefahr ;-), die Lehrveranstaltung wurde für IntelliJ vorbereitet!#
 
 IntelliJ bietet ein neben dem Standard-Layout auch ein experimentelles, das aktiviert werden kann.
 
@@ -206,15 +209,15 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 
 | image::images/asciidoc-plugin.png[]
 | Einheitliche Erstellung von Dokumentationen
-| > 0.41.x
+| >= 0.41.x
 
 | image::images/diagrams-net-plugin.png[]
 | Erstellung von beliebigen Diagrammtypen
-| > 0.2.4
+| >= 0.2.4
 
 | image::images/plantuml-plugin.png[]
 | Erstellung von UML-Diagrammen
-| > 7.3.0-IJ2023.2
+| >= 7.3.0-IJ2023.2
 
 |===
 [small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns recht zeitnah._#
@@ -241,6 +244,10 @@ Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Qu
 === Herunterladen der Kursinhalte (Git mit IntelliJ)
 
 [start=1]
+. In das eigene _Workspace_-Verzeichnis wechseln, z.B. `D:\Projekte`
+
+. IntelliJ starten
+
 . Nach dem Start von IntelliJ die Menüoption `Git > clone ...` aufrufen:
 
 image::images/intellij-git-menu-clone.png[width="25%", align="center"]

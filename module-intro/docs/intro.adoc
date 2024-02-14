@@ -246,16 +246,21 @@ Das lokale Arbeitsverzeichnis wird `workspace` genannt. In diesem werden alle Qu
 [start=1]
 . In das eigene _Workspace_-Verzeichnis wechseln, z.B. `D:\Projekte`
 
-. IntelliJ starten
+. IntelliJ starten. Wenn zuvor kein anderes Projekt geladen war, dann kommt ...
 
-. Nach dem Start von IntelliJ die Menüoption `Git > clone ...` aufrufen:
+image::images/intellij-start.png[width="75%", align="center"]
+
+[start=3]
+. Nun soll das Projekt von GtHub heruntergeladen werden, dazu gibt es 2 Varianten:
+
+.. `Get from VCS` anklicken (VCS = Version Control System, `Git`) image:images/intellij-start-get-from-vcs.png[ align="center"]
+
+.. oder über die Menüoption `Git > clone ...` aufrufen
 
 image::images/intellij-git-menu-clone.png[width="25%", align="center"]
 
-[start=2]
-. Dann erscheint der folgende `clone`-*Dialog*:
-
-Nutze dazu die folgenden Angaben:
+[start=4]
+. In beiden Fälle erscheint der gleiche `clone`-*Dialog*, in dem die folgenden Angaben eingegeben werden müssen:
 
 [subs=normal]
 ----
@@ -265,13 +270,13 @@ Nutze dazu die folgenden Angaben:
 
 image::images/intellij-git-clone-dialog.png[width="75%", align="center"]
 
-[start=3]
+[start=5]
 . Dann kommt (wahrscheinlich) eine Abfrage zur *"Vertrauenswürdigkeit"* -> `[Trust Project]`:
 
 image::images/intellij-git-trust-project.png[width="50%", align="center"]
 
-[start=4]
-. Dann fehlt nur noch das *Öffnen in einem separaten* Fenster -> `[New Window]`:
+[start=6]
+. Im Falle von "3b" (siehe oben) kann man noch entscheiden, ob das Projekt *in einem separaten Fenster* geöffnet werden soll -> `[New Window]`:
 
 image::images/intellij-git-new-window.png[width="50%", align="center"]
 

@@ -34,32 +34,35 @@ Im *Allgemeinen*:
   {icon-dir} <Modul-Wurzel>
     {icon-dir} docs        -> Dokumentation zum Modul
     {icon-dir} src         -> Wurzel für den gesamten Sourcecode
-      {icon-dir-src} main      -> Wurzel für den "produktiven" Sourcecode
+      {icon-dir} main      -> Wurzel für den "produktiven" Sourcecode
         {icon-dir-src} java ...
       {icon-dir-test} test      -> Wurzel für den Test-Sourcecode
         {icon-dir-src} java ...
-    {icon-dir} target      -> Kompilierte Klassen
+    {icon-dir-target} target      -> Kompilierte Klassen
 ----
 
 Am *Beispiel* des ersten Moduls `module-classes`:
 
 [subs=normal]
 ----
-{icon-dir} <Repository-Wurzel-Verzeichnis>
+{icon-dir} D:\Projekte\JavaProgammierung
   {icon-dir} module-classes
     {icon-dir} docs
     {icon-dir} src
-      {icon-dir-src} main
+      {icon-dir} main
         {icon-dir-src} java              -> ab hier "Package" Verzeichnisse
-          {icon-dir-src} de
-            {icon-dir-src} dhbw
-              {icon-dir-src} demo        -> Klassen zur Demonstration,
+          {icon-dir-package} de
+            {icon-dir-package} dhbw
+              {icon-dir-package} demo        -> Klassen zur Demonstration,
                                ggf. mit Unterverzeichnissen
-              {icon-dir-src} exercise    -> Klassen, die im Rahmen von Tests
+              {icon-dir-package} exercise    -> Klassen, die im Rahmen von Tests
                                implementiert werden
-              {icon-dir-src} solution    -> Klassen, die Lösungen für die Tests sind
+              {icon-dir-package} solution    -> Klassen, die Lösungen für die Tests sind
       {icon-dir-test} test
-    {icon-dir} target
+        {icon-dir-src} java
+          {icon-dir-package} de
+             ...
+    {icon-dir-target} target
 ----
 
 Ein sehr weit verbreitetes Framework bzw. Tool zur Erzeugung solcher Projektstrukturen ist das bekannte `Maven` (Alternative `Gradle`).

@@ -43,8 +43,10 @@
 :icon-welcome:          icon:heart[role=red]
 :icon-update-project:   icon:arrow-circle-o-down[role=red]
 :icon-dir:              icon:folder[role=yellow]
-:icon-dir-src:          icon:folder[role=yellow]
+:icon-dir-src:          icon:folder[role=blue]
 :icon-dir-test:         icon:folder[role=yellow]
+:icon-dir-package:      icon:folder[role=red]
+:icon-dir-target:       icon:folder[role=green]
 :icon-exercise:         icon:flask[role=red]
 :icon-topic:            icon:book[role=gray]
 :icon-theory:

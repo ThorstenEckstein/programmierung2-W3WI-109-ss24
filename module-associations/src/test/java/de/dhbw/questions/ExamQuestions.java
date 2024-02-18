@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @Disabled
 @SuppressWarnings({"All"})
-@DisplayName("Questions for module <module name>")
+@DisplayName("Questions for module associations")
 public class ExamQuestions {
 
     private final ExamAnswers correctAnswers = new ExamAnswers();

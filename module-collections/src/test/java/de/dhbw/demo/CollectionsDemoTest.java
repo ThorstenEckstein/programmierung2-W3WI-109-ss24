@@ -9,8 +9,27 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SuppressWarnings("DataFlowIssue")
+@SuppressWarnings("All")
 public class CollectionsDemoTest {
+
+    @Test
+    @DisplayName("Demo 0: Arrays")
+    public void demo0() {
+        // given
+        int[] arr1 = new int[4];             // feste Länge
+        int[] arr2 = new int[] {1, 2, 3, 4}; // mit initialen Werten
+        int[] arr3 = {1,2,3,4};              // ohne 'new'
+
+        String[] arr4 = new String[3];
+        String[] arr5 = new String[]{};
+        String[] arr6 = {"A", "xdre", "Frg%5"};
+
+        // when
+
+        // then
+        assertEquals(4, arr1.length);
+        assertEquals(3, arr4.length);
+    }
 
     @Test
     @DisplayName("Demo 1: Eine einfache Liste mit 'primitiven' Werten")

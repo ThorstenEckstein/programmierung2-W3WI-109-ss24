@@ -37,7 +37,12 @@ Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dab
 * *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
 * *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
 
-In der Übersicht:
+Vielfach wird bzgl. der Beziehungen zwischen Klassen zwischen folgenden zwei grundsätzlichen Varianten unterschieden:
+
+. `*is-a*` - Klasse A _ist eine_ Klasse vom Typ B => "Vererbung"
+. `*has-a*` - Klasse A _hat eine_ Klasse B => "Zusammensetzung"
+
+Zusammengefasst als Übersicht:
 
 [plantuml, "coupling", png, align="center"]
 ....

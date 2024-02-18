@@ -12,15 +12,43 @@ include::module-settings.adoc[]
 
 tag::content[]
 ----
-1. Collections Framework
-1.1. Java Collections API Interfaces
-1.2. Special Java Collections Classes
-1.3. Synchronized Wrappers
-1.4. Unmodifiable Wrappers
+1. Arrays
+2. Collections Framework
+2.1. Java Collections API Interfaces
+2.2. Special Java Collections Classes
+2.3. Synchronized Wrappers
+2.4. Unmodifiable Wrappers
 ----
 end::content[]
 ////
 
+== Arrays
+
+Laut Java-Dokumentation ist ein Array ein *Objekt, das eine feste Anzahl von Werten desselben Typs* enthält. Die Elemente eines Arrays sind indiziert, was bedeutet, dass mit Zahlen (sogenannten *Indizes*) auf sie zugegriffen werden kann.
+
+Ein Array kann als eine nummerierte Liste von Zellen betrachtet werden, wobei jede Zelle eine Variable ist, die einen Wert enthält. In Java beginnt die Nummerierung bei (_Index_) `0`. Ein Array erkennt man an den *eckigen* Klammern `[]`.
+
+[,java, subs=normal]
+----
+                       *Index*: {  0 ,  1 ,  2  , ... }
+                                 :    :    :
+String[] array = new String[] { "A", "B", "C" , ... };
+----
+
+Es gibt Arrays vom primitiven Typ und Arrays von komplexen Objekttypen. Das bedeutet, dass Arrays vom Typ `int`, `float`, `boolean` usw. verwendet werden können, aber auch Arrays vom Typ `String`, `Object` und benutzerdefinierte Typen.
+
+Ein paar *Beispiele*:
+
+[,java]
+----
+int[] arr1 = new int[4];             // feste Länge
+int[] arr2 = new int[] {1, 2, 3, 4}; // mit initialen Werten
+int[] arr3 = {1,2,3,4};              // ohne 'new'
+
+String[] arr4 = new String[3];
+String[] arr5 = new String[]{};
+String[] arr6 = {"A", "xdre", "Frg%5"};
+----
 
 == Collections Framework
 

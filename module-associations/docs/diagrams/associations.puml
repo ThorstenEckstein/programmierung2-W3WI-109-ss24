@@ -5,17 +5,18 @@
 scale 0.9
 
 abstract class Parent1
-Parent1 <|--- Subclass    : inherits\n (extends)
+Parent1 <|--- Subclass    : <<is-a>>\n\ninherits\n (extends)
 
 interface Parent2
-Parent2 <|... Class2      : realizes\n (implements)
+Parent2 <|... Class2      : <<is-a>>\n\nrealizes\n (implements)
 
-Whole1  *---  PartClass1  : is compo-\nsed of
+Whole1  *---  PartClass1  : <<has-a>>\n\nis compo-\nsed of
 
-Whole2  o---  PartClass2  : aggregates
+Whole2  o---  PartClass2  : <<has-a>>\n\naggregates
 
-ClassA  <...  ClassB      : uses
+ClassA  <...  ClassB      : <<call>>\n\nuses
 
-ClassC  <---  ClassD      : is asso-\nciated with
+ClassC  <---  ClassD      : "     "
+ClassC  ---  ClassD       : <<?>>\nis asso-\nciated with\n(//mit/ohne//\n//"Richtung"//)
 
 @enduml

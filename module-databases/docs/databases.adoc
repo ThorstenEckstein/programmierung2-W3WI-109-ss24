@@ -275,30 +275,17 @@ image::diagrams/jpa.svg[width="60%", align="center"]
 {tbd}
 
 
-=== Demonstrationen
-
-Die Unit-Tests zur *Demonstration* finden sich hier:
-
-[subs="normal"]
- {module-demo-path-tests}/DataSourceDBUnitTests.java
-
-Der zugehörige, in den Tests genutzte *Quellcode* findet sich hier:
-
-[subs="normal"]
- {module-demo-path-sources}/*.java
-
-
 === Exercises
 
 Nutze folgendes Package für deine *Unit-Tests*:
 
 [subs="normal"]
- {module-exercises-path-tests}/ExerciseTests.java
+ {mod-ref-test}/databases/ExerciseTests.java
 
 Die im Test benutzten *Implementierungen* gehören in das Package:
 
 [subs="normal"]
- {module-exercises-path-sources}/*.java
+ {mod-ref-src}/databases/exercises/*.java
 
 
 [[db-exercise-1]]

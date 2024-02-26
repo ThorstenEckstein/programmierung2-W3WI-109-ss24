@@ -146,6 +146,19 @@ Wie gesagt, hierin werden die Kursinhalte in den nächsten Schritten dann lokal 
 ////
 
 
+=== Agile Software Development
+
+Der "agile" Entwicklungsprozess als Grafik:
+
+.Der agile Entwicklungsprozess
+image::images/agile-software-engineering.png[]
+
+In diesem Kontext werden viele **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
+
+* IntelliJ
+* Git
+
+
 === Programmiersprache `Java`
 
 *Empfehlung*: Im Kurs soll folgende *Java* Version verwendet werden:
@@ -168,6 +181,7 @@ Ggf. muss diese Version noch installiert werden, wobei die Versionsnummern ("Min
  java -version
 
 Dann sollte eine Java Version angezeigt werden.
+
 
 === IDE `IntelliJ`
 
@@ -221,18 +235,6 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 
 |===
 [small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns recht zeitnah._#
-
-=== Agile Software Development
-
-Der "agile" Entwicklungsprozess als Grafik:
-
-.Der agile Entwicklungsprozess
-image::images/agile-software-engineering.png[]
-
-In diesem Kontext werden viele **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
-
-* IntelliJ
-* Git
 
 
 === Quellcodeverwaltung: `Git`

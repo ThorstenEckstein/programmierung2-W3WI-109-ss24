@@ -222,6 +222,18 @@ Für den Quellcode, Tests und Dokumentation sind weitere PlugIns erforderlich, d
 |===
 [small]#_PS: Ich persönlich aktualisiere IntelliJ selbst und auch die PlugIns recht zeitnah._#
 
+=== Agile Software Development
+
+Der "agile" Entwicklungsprozess als Grafik:
+
+.Der agile Entwicklungsprozess
+image::images/agile-software-engineering.png[]
+
+In diesem Kontext werden viele **Tools** eingesetzt, dazu gehören auch diese, die in dieser LV eingesetzt werden, vor allem:
+
+* IntelliJ
+* Git
+
 
 === Quellcodeverwaltung: `Git`
 

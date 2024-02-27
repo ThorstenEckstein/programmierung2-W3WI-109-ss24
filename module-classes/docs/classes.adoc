@@ -131,7 +131,7 @@ Die Erzeugung eines *Objektes* einer Klasse erfolgt durch die folgenden Schritte
 
 . *Deklaration*: Die Variablendeklaration mit einem Variablennamen und einem Objekttyp
 . *Instanziierung*: Das Schlüsselwort `new` wird zum Erstellen des Objekts verwendet
-. *Initialization*: Auf das Schlüsselwort `new` folgt ein Aufruf eines Konstruktors. Dieser Aufruf initialisiert das neue Objekt.
+. *Initialisierung*: Auf das Schlüsselwort `new` folgt ein Aufruf eines Konstruktors. Dieser Aufruf initialisiert das neue Objekt.
 
 [,java, subs=normal]
 ----
@@ -276,27 +276,23 @@ Von *Überladung* wird gesprochen, wenn eine Unterklasse neues Verhalten *hinzuf
 
 Das *Übersteuern* (synonym: Überschreiben) zeigt an, dass die Unterklasse geerbtes Verhalten *ersetzt*.
 
+// float="left"
+[plantuml, "overrides", png, align="center"]
+....
+include::diagrams/override.puml[]
+....
+
+
 [source,java,title="Beispiel Überladen von Methoden"]
 ----
 include::{mod-lnk-src}/demo/overload/PlatformDisplay.java[lines="5..16"]
 ----
-
-[plantuml, "overrides", png, float="left", width="100%"]
-....
-include::diagrams/override.puml[]
-....
 
 .Beispiel Übersteuern von Methoden
 [source,java]
 ----
 include::{mod-lnk-src}/demo/override/Display.java[lines="2..5"]
 ----
-
-{nl}
-{nl}
-{nl}
-{nl}
-{nl}
 
 Die zugehörige *Annotation* (eine Art "Anzeiger") im Code ist
 

@@ -1,8 +1,5 @@
 package de.dhbw.demo.classes;
 
-import de.dhbw.demo.classes.AClassWithField;
-import de.dhbw.demo.classes.AComplexClass;
-import de.dhbw.demo.classes.ASimpleClass;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

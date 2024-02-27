@@ -133,6 +133,12 @@ Das Projekt sollte jetzt insgesamt *"bauen"*, d.h. die Sourcen _kompilieren_ und
 [[tdd]]
 == Test-Driven-Development (`TDD`)
 
+////
+====
+_Kann übersprungen werden, wird vor den ersten Demo's bzw. Übungen zu "Klassen & Instanzen" vertieft._
+====
+////
+
 Test Driven Development (`TDD`) ist eine gute Praxis, um den Sourcecode von Beginn an - mithilfe von Unit-Tests regelmäßig und bei Änderungen auf Korrektheit zu überprüfen. Die erste Umsetzung erfolgt vielfach durch Testklassen, den `Unit-Tests`.
 
 Unit-Tests haben folgende *Eigenschaften*:

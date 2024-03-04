@@ -11,15 +11,15 @@ Mit:
 
    [S] [I]
 Di. 27.02.2024, 09:15 - 12:15 ::::: "Tag 1" :::::
-   [ ] [ ] 09:15 - 09:45 (30') [WI+S : Welcome ]  Herzlich Willkommen!
-   [ ] [ ] 09:45 - 10:00 (15') [WI+S : Domain  ]  Fachlicher Schwerpunkt der Lehrveranstaltung
-   [ ] [ ] 10:00 - 10:30 (30') [WI+S : Setup   ]  Technisches Setup (Workspace, Java, IntelliJ, Git)
+   [1] [1] 09:15 - 09:45 (30') [WI+S : Welcome ]  Herzlich Willkommen!
+   [1] [1] 09:45 - 10:00 (15') [WI+S : Domain  ]  Fachlicher Schwerpunkt der Lehrveranstaltung
+   [1] [1] 10:00 - 10:30 (30') [WI+S : Setup   ]  Technisches Setup (Workspace, Java, IntelliJ, Git)
            10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
-   [ ] [ ] 10:45 - 11:00 (15') [T+H  : Topic   ]  Projektverwaltung mit Maven, Projektstruktur
-   [ ] [ ] 11:00 - 11:15 (15') [T+H  : Topic   ]  Test-Driven-Development (TDD)
-   [ ] [ ] 11:15 - 11:45 (30') [T+H  : Topic   ]  Hilfreiches: Quellcodegenerierung, Autocompletion, Icons & Symbole
-   [ ] [ ] 11:45 - 11:55 (10') [C+O  : Demo    ]  Organisation & Nutzung von Java Klassen
-   [ ] [ ] 11:55 - 12:15 (20') [C+O  : Topic   ]  Klassen & Instanzen
+   [1] [1] 10:45 - 11:00 (15') [T+H  : Topic   ]  Projektverwaltung mit Maven, Projektstruktur
+   [1] [1] 11:00 - 11:15 (15') [T+H  : Topic   ]  Test-Driven-Development (TDD)
+   [1] [1] 11:15 - 11:45 (30') [T+H  : Topic   ]  Hilfreiches: Quellcodegenerierung, Autocompletion, Icons & Symbole
+   [1] [1] 11:45 - 11:55 (10') [C+O  : Demo    ]  Organisation & Nutzung von Java Klassen
+   [1] [1] 11:55 - 12:15 (20') [C+O  : Topic   ]  Klassen & Instanzen
 
 
 Di. 05.03.2024, 09:15 - 12:15 ::::: "Tag 2" :::::

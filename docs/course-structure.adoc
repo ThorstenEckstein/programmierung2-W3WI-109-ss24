@@ -40,14 +40,14 @@ include::../module-tools-n-help/docs/tools-and-help.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 09:30 | *link:../module-classes/docs/classes.adoc[module-classes]*
+| {icon-topic}  | 09:15 - 10:00 | *link:../module-classes/docs/classes.adoc[module-classes]*
 |===
 
 include::../module-classes/docs/classes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic} | 09:30 - 10:30 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
+| {icon-topic} | 10:00 - 10:30 | *link:../module-object-contract/docs/object-contract.adoc[module-object-contract]*
 |===
 
 include::../module-object-contract/docs/object-contract.adoc[tag="content"]

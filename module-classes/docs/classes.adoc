@@ -227,9 +227,8 @@ include::diagrams/inheritance.puml[]
 
 
 ====
-IMPORTANT: Einschub: "Der Objektvertrag" -> ggf. Referenz auf `module-object-contract`
+IMPORTANT: Einschub: -> <<../../module-object-contract/docs/object-contract.adoc#object-contract, Der Objektvertrag>> im Modul `module-object-contract`
 ====
-//include::../../module-object-contract/docs/object-contract.adoc[]
 
 
 [[demos_inheritance]]

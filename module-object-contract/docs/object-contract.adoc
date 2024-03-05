@@ -19,6 +19,7 @@ tag::content[]
 end::content[]
 ////
 
+[[object-contract]]
 == Der Objektvertrag
 
 In Java *erben* alle Klassen automatisch von der Klasse

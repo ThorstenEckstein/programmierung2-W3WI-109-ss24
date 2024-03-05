@@ -188,9 +188,8 @@ Folgendes soll implementiert werden:
 
 - Ergänze die Klasse Zug mit einem Feld namens "number". Erzeuge eine Instanz und teste für die Instanz, welchen Wert dieses Feld einer Instanz hat!
 
-Übung 3::
 
-Was fällt bei den Implementierungen besonders ins Auge?
+NOTE: _Was fällt bei den Implementierungen besonders ins Auge?_
 
 
 == Vererbung
@@ -325,20 +324,7 @@ _Testklasse_, in der die Übungen implementiert werden können:
  -> {mod-ref-test}/exercise/inheritance/InheritanceExerciseTest.java
 
 
-Übung 1::
-
-Erstelle *Klassen* im Verzeichnis
-
-[subs=normal]
- {mod-ref-src}/exercise/classes
-
-1. Erstelle eine neue Klasse `Fernzug` mit einem parameterlosen Konstruktor
-2. Erstelle eine neue Klasse `Regionalzug` mit einem parameterlosen Konstruktor
-3. Teste, ob die Instanzen korrekt erzeugt wurden!
-
-{nl}
-
-Übung 2::
+Übung 3::
 
 Übung zu *Syntax, Klassenmodell* und erforderliche *Methoden*.
 
@@ -351,7 +337,7 @@ Erstelle *Klassen* im Verzeichnis
 
 {nl}
 
-Übung 3 _(optional_)::
+Übung 4 _(optional_)::
 
 Nutze die Test-Klasse
 

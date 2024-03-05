@@ -163,8 +163,9 @@ public class MyClass {
  -> {mod-ref-test}/demo/classes/ClassesDemoTest.java
 
 ====
-IMPORTANT: Einschub: Zur *Theorie* des -> <<tdd,Test Driven Developments>>, dann wieder hierher zurück!
+IMPORTANT: Einschub: Zur *Theorie* des -> <<../../module-tools-n-help/docs/tools-and-help.adoc#tdd, Test Driven Developments>>, dann wieder hierher zurück!
 ====
+
 
 [[exercises_classes]]
 *Übungen*:

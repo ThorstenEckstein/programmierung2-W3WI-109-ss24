@@ -16,14 +16,14 @@ public class InterfaceDemoTest {
     @DisplayName("Demo 1: Interface & Realisierung")
     public void canRealizeInterface() {
         // given
-        ClassContract classContract;
+        Contract contract;
 
         // when
-        classContract = new ContractImpl();
-        classContract.setId(4);
+        contract = new EmploymentContract();
+        contract.setId(4);
 
         // then
-        assertEquals(4, classContract.getId());
+        assertEquals(4, contract.getId());
 
     }
     //end::interface-demo-1[]

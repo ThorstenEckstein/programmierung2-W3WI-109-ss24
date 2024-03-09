@@ -134,6 +134,12 @@ public class Square implements Shape {
 ----
 
 
+[%linenums, java, indent=0]
+----
+include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
+----
+
+
 [[demos_interfaces]]
 *Demo*:
 
@@ -142,38 +148,26 @@ Die Nutzung des Interfaces im Zusammenhang mit Polymorphismus anhand einer Demo
 [subs=normal]
  -> {mod-ref-test}/demo/InterfaceDemoTest.java
 
-[%linenums, java, indent=0]
-----
-include::{mod-lnk-test}/demo/InterfaceDemoTest.java[tags="interface-demo-2"]
-----
-
-[[exercises_interfaces]]
-*Übungen*:
-
-[subs=normal]
- -> {mod-ref-test}/exercise/InterfaceExerciseTest.java
-
-Übung 1::
-
-Erzeuge folgende *Klassen*:
-
-. Eine Schnittstelle `Zug` mit den Schnittstellenmethoden
-.. `getNumber` (soll den Wert des Feldes `number` vom Typ `String` zurückgeben) sowie
-.. `setNumber` (soll den Wert des Feldes `number` setzen)
-. Eine konkrete Klasse `Regionalzug`, die die Schnittstelle `Zug` realisiert
 
 
 == Abstrakte Klassen
 
-[big]#Schlüsselkonzepte#
+Man könnte behaupten, eine abstrakte Klasse sei eine Art *Hybrid* zwischen
 
-Die wichtigsten Merkmale von Abstraktionen in Form von `abstract classes`:
+. einer *konkreten* _Klasse_ auf der einen Seite und
+. einem *abstrakten* _Interface_ auf der anderen.
+
+Mit einer abstrakten Klasse können die Merkmale beider Welten (konkret & abstrakt) umgesetzt bzw. die Vorteile beider Konzepte in _einem_ bereitgestellt werden.
+
+[big]#Schlüsselkonzepte#
 
 Das *Schlüsselwort* ("abstrakter Modifikator") zur Umsetzung von Abstraktionen in Java ist
 
  abstract
 
-* Eine abstrakte Klasse enthält den abstrakten *Modifikator* in der Klassensignatur
+Die wichtigsten *Merkmale* dieser Abstraktionen sind:
+
+* Eine abstrakte Klasse enthält den abstrakten *Modifikator* `abstract` in der Klassensignatur
 * Eine abstrakte Klasse kann in Unterklassen unterteilt, aber *nicht instanziiert* werden
 * Wenn eine Klasse eine oder mehrere *abstrakte Methoden* definiert, muss die Klasse selbst als abstrakt deklariert werden
 * Eine abstrakte Klasse kann sowohl abstrakte als auch konkrete Methoden deklarieren
@@ -215,13 +209,29 @@ Java `interface` und `abstract class` sind beides Abstraktionen. Abstrakte Klass
 
 Zu beachten ist auch, dass die Wiederverwendung von Code oft ein "zwingender" Grund für die Verwendung abstrakter Klassen ist. Dazu in anderen Modulen mehr (-> Beziehungsarten zwischen Klassen)
 
+'''
 
+[[exercises_interfaces_and_abstract_classes]]
 *Übungen*:
 
-[subs=normal]
- -> {mod-ref-test}/exercise/ModelExerciseTest.java
+Übung 1 - Interface::
 
-Übung 1::
+Erzeuge folgende *Klassen*:
+
+. Ein *Interface* `Zug` mit den Schnittstellenmethoden
+.. `getNumber` (soll den Wert des Feldes `number` vom Typ `String` zurückgeben) sowie
+.. `setNumber` (soll den Wert des Feldes `number` setzen)
+. Eine konkrete Klasse `Regionalzug`, die die Schnittstelle `Zug` realisiert
+. Schreibe einen Test, setze eine Zugnummer, hole diese wieder und teste den korrekten Wert
+
+
+Umsetzung in
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/InterfaceExerciseTest.java
+
+
+Übung 2 - Mini-Modell mit abstrakter klassen und Interface::
 
 Ein Anwendungsfall (_echte Aussage aus einem Kunden-Interview)_:
 
@@ -234,10 +244,13 @@ Erzeuge ein kleines, aber "vollständiges" *Klassenmodell* daraus:
 . Eine Schnittstelle `Wagon` mit Methoden
 .. zum _Holen_ und _Setzen_ der Wagon-Reihenfolge (engl. `order` (Datentyp `int`))
 . Eine abstrakte Klasse `DefaultWagon`, die die Schnittstelle und die dortigen Methoden realisiert
-.. Das Feld `order` soll dabei möglichst stark geschützt sein
-. Zwei konkrete Klassen, die beide die abstrakte Klasse _beerben_, nämlich
+.. (_Optional_) Das Feld `order` soll dabei möglichst stark geschützt sein
+. Zwei konkrete Klassen, die beide von der abstrakten Klasse _erben_, nämlich
 .. `PassengerWagon` und
 .. `FreightWagon`
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/ModelExerciseTest.java
 
 
 [%collapsible, title="_Aufklappen mit grafischer Darstellung als kleine Hilfe..._"]

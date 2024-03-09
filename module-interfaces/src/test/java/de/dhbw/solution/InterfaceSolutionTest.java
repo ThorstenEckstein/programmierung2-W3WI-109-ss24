@@ -17,10 +17,10 @@ public class InterfaceSolutionTest {
 
         // when
         zug = new Regionalzug();
-        zug.setNumber("RB 10");
+        zug.setNumber("RB10");
 
         // then
-        assertEquals("RB 10", zug.getNumber());
+        assertEquals("RB10", zug.getNumber());
     }
 
 }

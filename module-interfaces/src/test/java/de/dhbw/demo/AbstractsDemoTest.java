@@ -27,15 +27,16 @@ public class AbstractsDemoTest {
     @DisplayName("Demo 2: Interface & abstrakte Klasse in Kombination")
     public void demoInterfaceAndAbstractClass() {
         // given
-        Identifiable citizen1;
-        NaturalPerson citizen2;
+        Identifiable identifiable;
+        NaturalPerson naturalPerson;
 
         // when
-        citizen1 = new Citizen("Schlossallee 1, Hamburg");
-        citizen2 = new Citizen("Badstraße 5, Frankfurt");
+        identifiable = new Citizen("Schlossallee 1, Hamburg");
+        naturalPerson = new Citizen("Badstraße 5, Frankfurt");
 
-        //String id = citizen2.getId(); // oder identifiable.getId();
-        String addressOfCitizen2 = citizen2.getPhysicalAddress();
+        //String id = naturalPerson.getId();
+        //String id = identifiable.getId();
+        String addressOfCitizen2 = naturalPerson.getPhysicalAddress();
 
         // then
         assertEquals("Badstraße 5, Frankfurt", addressOfCitizen2);

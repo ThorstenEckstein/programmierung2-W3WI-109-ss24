@@ -16,6 +16,7 @@ tag::content[]
 2. Typumwandlungen
 2.1. Implizite Typumwandlung
 2.2. Explizite Typumwandlung (Casting)
+3. Typumwandlung von komplexen Datentypen (Klassen)
 ----
 end::content[]
 ////
@@ -64,7 +65,37 @@ float wert2 = 30.5f;
 wert1 = (int) wert2; // Umwandlung per 'cast'
 ----
 
-Auch *komplexe Datentypen* - also Instanzen von Java *Klassen* - können den Typen wechseln. Das ist natürlich ebenso klaren Regeln unterworfen. So z.B. kann eine Klasse `Regionalzug` den Datentypen `Zug` bekommen, wenn die Klassen in einer Vererbungshierarchie stehen, ähnlich bei `Interfaces`. Das haben wir insb. schon im vorigen Modul `module-classes` gesehen und genutzt.
+
+== Typumwandlung von komplexen Datentypen (Klassen)
+
+Auch *komplexe Datentypen* - also Instanzen von Java *Klassen* - können den Typen wechseln. Das ist natürlich ebenso klaren Regeln unterworfen.
+
+So z.B. kann eine Klasse `Regionalzug` den Datentypen `Zug` bekommen, wenn die Klassen in einer Vererbungshierarchie stehen, ähnlich bei `Interfaces`. Das haben wir insb. schon im vorigen Modul `module-classes` gesehen und genutzt.
+
+
+Das ist also insbesondere im Kontext der Vererbung interessant bzw. von Nutzen:
+
+*Beispiel*:
+
+[, java]
+----
+public abstract class HumanBeing {
+ public String name;
+}
+
+public class German extends HumanBeing {
+  public String country;
+}
+
+HumanBeing human = new German();
+human.name = "Johnny Walker"; <1>
+
+German german = (German)human; <2>
+german.country = "Germany";
+----
+
+<1> Zugriff auf das Feld ´name´ der abstrakten Klasse `Human Being`
+<2> Zugriff auf das Feld `country` der konkreten Klasse `German` erst NACH dem *Down-Casting* möglich.
 
 
 *Demo/Beispiele*:
@@ -72,9 +103,12 @@ Auch *komplexe Datentypen* - also Instanzen von Java *Klassen* - können den Typ
 [subs=normal]
  -> {mod-ref-test}/demo/DatatypesDemoTest.java
 
+
+'''
+
 *Übungen*:
 
-*Übung 1* zu *Typumwandlung* in
+Übung 1 - Typumwandlung/Casting::
 
 [subs=normal]
  -> {mod-ref-test}/exercise/DatatypesExerciseTest.java
@@ -85,5 +119,4 @@ a. Gegeben `char c = '1'` -> Umwandlung in `int`
 b. Gegeben `int i = 127` -> Umwandlung in `byte`
 
 und prüfe das Ergebnis, also den erwarteten Wert, jeweils mithilfe der Assertions-Methode `assertEquals(<expected>, <actual>)`.
-
 

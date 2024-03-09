@@ -4,7 +4,7 @@ public class ConcreteClass extends AbstractClass {
 
     @Override
     public void doSomething() {
-        System.out.println("Now executing ...");
+        System.out.println("... i'm doing something ...");
     }
 
 }

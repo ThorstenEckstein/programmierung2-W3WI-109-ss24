@@ -1,6 +1,6 @@
 package de.dhbw.demo.realization;
 
-public interface ClassContract {
+public interface Contract {
 
     /* public abstract */ int getId();
 

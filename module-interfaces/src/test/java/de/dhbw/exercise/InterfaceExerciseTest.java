@@ -13,6 +13,7 @@ public class InterfaceExerciseTest {
         a) `getNumber` (soll den Wert des Feldes `number` vom Typ `String` zurückgeben) sowie
         b) `setNumber` (soll den Wert des Feldes `number` setzen)
        2. Eine Klasse `Regionalzug`, die das Interface `Zug` realisiert
+       3. Nutze diesen Test, setze eine Zugnummer, hole diese wieder und teste den Wert auf Gleichheit
     """)
     public void exercise1() {
         // given

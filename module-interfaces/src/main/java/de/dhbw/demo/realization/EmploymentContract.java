@@ -1,7 +1,7 @@
 package de.dhbw.demo.realization;
 
 //tag::interface[]
-public class ContractImpl implements ClassContract {
+public class EmploymentContract implements Contract {
 
     private int id;
 

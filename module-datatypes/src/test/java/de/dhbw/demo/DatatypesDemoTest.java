@@ -53,17 +53,16 @@ public class DatatypesDemoTest {
     public void demo2() {
         // given
         Train train = new RegionalTrain("RB 21", "Baureihe 123");
-        //Train train = new Train("RB 21");
 
         // when
         String trainNumber = train.getNumber();
 
         // when: down-casting
         RegionalTrain regionalTrain = (RegionalTrain) train;
-        String regionalTrainNumber = regionalTrain.getNumber();
+        String type = regionalTrain.getType();
 
         System.out.println(trainNumber);
-        System.out.println(regionalTrainNumber);
+        System.out.println(type);
     }
 
 }

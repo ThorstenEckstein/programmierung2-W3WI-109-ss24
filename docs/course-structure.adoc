@@ -59,7 +59,14 @@ include::../module-object-contract/docs/object-contract.adoc[tag="content"]
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
-== Tag 3 - Datentypen, Access Modifier & Kontrollstrukturen
+== Tag 3 - Abstraktionen, Datentypen & Kontrollstrukturen
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+|===
+
+include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -75,14 +82,15 @@ include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 include::../module-loops/docs/loops.adoc[tag="content"]
 
+
+== Tag 4 - Sichtbarkeiten, Collections & Assoziationen
+
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
 | {icon-topic}  | 11:20 - 12:15 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
 |===
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
-
-== Tag 4 - Collections, Assoziationen
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===

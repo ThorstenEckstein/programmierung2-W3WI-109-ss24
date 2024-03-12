@@ -63,21 +63,21 @@ include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
+| {icon-topic}  | 09:15 - 10:30 | *link:../module-interfaces/docs/interfaces.adoc[module-interfaces]*
 |===
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:40 | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
+| {icon-topic}  | 10:30 - 11:45 | *link:../module-datatypes/docs/datatypes.adoc[module-datatypes]*
 |===
 
 include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:40 - 11:20 | *link:../module-loops/docs/loops.adoc[module-loops]*
+| {icon-topic}  | 11:45 - 12:15 | *link:../module-loops/docs/loops.adoc[module-loops]*
 |===
 
 include::../module-loops/docs/loops.adoc[tag="content"]

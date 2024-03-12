@@ -42,30 +42,33 @@ Di. 12.03.2024, 09:15 - 12:15 ::::: "Tag 3" :::::
    09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
    09:25 - 09:40 (15') [I+AC : Topic   ]  Kurze Wiederholung Interfaces (Abstraktion Typ 1)
    09:40 - 09:50 (10') [I+AC : Demo    ]  Demo zu Abstraktionen: Interfaces
-   09:50 - 10:00 (10') [Opt  : Topic   ]  Abstrakte Klassen (Abstraktion Typ 2)
-   10:00 - 10:10 (10') [I+AC : Demo    ]  Demo zu Abstraktionen: abstrakte Klasse
-   10:10 - 10:30 (20') [I+AC : Exercise]  Übung zu Abstraktionen: abstrakte Klassen & Interfaces
+   09:50 - 10:05 (15') [I+AC : Exercise]  Übung zu Abstraktionen: Interfaces
+   10:05 - 10:20 (15') [Opt  : Topic   ]  Abstrakte Klassen (Abstraktion Typ 2)
+   10:20 - 10:30 (10') [I+AC : Demo    ]  Demo zu Abstraktionen: abstrakte Klasse
    10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
-   10:45 - 11:00 (15') [D+C  : Topic   ]  Datentypen
-   11:00 - 11:15 (15') [D+C  : Topic   ]  Typumwandlung (Casting)
-   11:15 - 11:30 (15') [D+C  : Demo    ]  Demo zu Datentypen & Typumwandlung
-   11:30 - 11:50 (20') [D+C  : Exercise]  Übung zu Datentypen & Typumwandlung
-   11:50 - 12:10 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
+   10:45 - 11:05 (20') [I+AC : Exercise]  Übung zu Abstraktionen: abstrakte Klassen & Interfaces
+   11:05 - 11:20 (15') [D+C  : Topic   ]  Datentypen
+   11:20 - 11:35 (15') [D+C  : Topic   ]  Typumwandlung (Casting)
+   11:35 - 11:50 (15') [D+C  : Demo    ]  Demo zu Datentypen & Typumwandlung
+   11:50 - 12:10 (20') [D+C  : Exercise]  Übung zu Datentypen & Typumwandlung
    12:10 - 12:15 ( 5') [Misc : Buffer  ]  Pufferzeit am Ende
 
-////////////////////////////////////////////////////////////////////////////////////////////
-
 Di. 19.03.2024, 09:15 - 12:15 ::::: "Tag 4" :::::
-   [ ] [ ] 09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
-   [ ] [ ] 09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
-   [ ] [ ] 09:25 - 09:55 (30') [C+E  : Topic   ]  Java Collections API Interfaces
-   [ ] [ ] 09:55 - 10:15 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API Interfaces
-   [ ] [ ] 10:15 - 10:30 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
-           10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
-   [ ] [ ] 10:45 - 11:15 (30') [A    : Topic   ]  Assoziationen zwischen Klassen
-   [ ] [ ] 11:15 - 11:35 (20') [A    : Demo    ]  Demo zum Thema Assoziationen zwischen Klassen
-   [ ] [ ] 11:35 - 11:55 (20') [A    : Exercise]  Übungen zum Thema Assoziationen zwischen Klassen
-   [ ] [ ] 11:55 - 12:15 (20') [Misc : Buffer  ]  Pufferzeit am Ende
+   09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Welcome etc.
+   09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
+   09:25 - 09:45 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
+   09:45 - 09:55 (10') [L+C  : Demo    ]  Demo zu Kontrollstrukturen
+   09:55 - 10:15 (20') [L+C  : Exercise]  Übung zu Kontrollstrukturen
+   10:15 - 10:30 (15') [V+AM : Topic   ]  Sichtbarkeiten & Scopes: Access Modifier
+   10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
+   10:45 - 10:55 (10') [V+AM : Demo    ]  Demo zum Thema Access Modifier
+   10:55 - 11:25 (30') [C+E  : Topic   ]  Java Collections API Interfaces
+   11:25 - 11:45 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API Interfaces
+   11:45 - 12:00 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
+   12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
 
 
 Di. 26.03.2024, 09:15 - 12:15 ::::: "Tag 5" :::::

@@ -25,6 +25,7 @@ public class Student /*extends Object*/ {
 
 
     /* Step 1: activate 'default' equals()
+
     @Override
     public boolean equals(Object o) {
         return super.equals(o);
@@ -36,7 +37,9 @@ public class Student /*extends Object*/ {
     }
     */
 
+
     /* Step 2: activate 'custom' equals()
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

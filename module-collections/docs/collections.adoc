@@ -13,8 +13,8 @@ include::module-settings.adoc[]
 tag::content[]
 ----
 1. Arrays
-2. Collections Framework
-2.1. Java Collections API Interfaces
+2. Collections
+2.1. Java Collections API
 2.2. Special Java Collections Classes
 2.3. Synchronized Wrappers
 2.4. Unmodifiable Wrappers
@@ -50,7 +50,7 @@ String[] arr5 = new String[]{};
 String[] arr6 = {"A", "xdre", "Frg%5"};
 ----
 
-== Collections Framework
+== Collections
 
 Siehe z.B. -> https://en.wikipedia.org/wiki/Java_collections_framework[Java Collections Framework auf Wikipedia]
 
@@ -67,7 +67,7 @@ CAUTION: -> _Duplikate in Listen? Wann ist ein Listenelement ein Duplikat? Techn
 image::images/collections-api.png["Collections API",width="100%",align="center"]
 
 
-==== Java Collections API Interfaces
+=== Java Collections API
 
 Java collection interfaces are the foundation of the Java Collections Framework. All core collection interfaces are generic.
 For example `public interface Collection<E>`. The <E> syntax is for Generics and when we declare Collection (_später mehr zum Thema_ `Generics`)
@@ -143,7 +143,7 @@ Its main usage is:
 Zu finden in:
 
 [subs=normal]
- {mod-ref-test}/demo/CollectionsDemoTest.java
+ -> {mod-ref-test}/demo/CollectionsDemoTest.java
 
 * Demo 1: Eine einfache Liste mit 'primitiven' Werten
 * Demo 2: Eine einfache Liste mit 'komplexen' Werten (Objektinstanzen)
@@ -158,12 +158,12 @@ Zu finden in:
 Die *Übungen* sollen in Form von *Unit-Tests* in folgendem _Package_ implementiert werden:
 
 [subs=normal]
- {mod-ref-test}/exercises/CollectionsExerciseTests.java
+ -> {mod-ref-test}/exercise/CollectionsExerciseTests.java
 
 Die *Testobjekte*, also die zu bearbeitenden Klassen, Interfaces oder anderer Sourcecode sollen getrennt, nämlich hier umgesetzt werden:
 
 [subs=normal]
- {mod-ref-src}/exercises
+ {mod-ref-src}/exercise
 
 Übung 1::
 

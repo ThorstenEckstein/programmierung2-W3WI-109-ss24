@@ -108,7 +108,7 @@ Die *Syntax* der for-Schleife ist:
 
 [, java]
 ----
-for (Initialization; Boolean-Expression; Step) {
+for (Initialization; boolean-expression; Step) {
    statement;
 }
 ----
@@ -133,15 +133,15 @@ for ( ; ; ) {
 }
 ----
 
-*Erweitert für Schleife*
+*Erweiterte `for` Schleife*
 
 Seit Java 5 gibt es eine zweite Art von `for`-Schleife namens *enhanced `for`*. Sie macht es einfacher, alle Elemente in einem Array oder einer Collection zu durchlaufen.
 
-Die Syntax der erweiterten for-Schleife ist:
+Die allgemeine Syntax der erweiterten for-Schleife ist:
 
 [, java]
 ----
-for(Type item : items) {
+for(<Type> item : items) {
     statement;
 }
 ----
@@ -165,7 +165,7 @@ for (int num : intArr) {
 
 Es kann auch gut verwendet werden, um über verschiedene Java-Datenstrukturen zu iterieren:
 
-Gegeben eine List von Strings:
+Gegeben eine List von `String` Werten:
 
 [, java]
 ----
@@ -200,7 +200,7 @@ Die *Syntax* der while-Schleife ist:
 
 [, java]
 ----
-while (Boolean-expression) {
+while (boolean-expression) {
     statement;
 }
 ----
@@ -225,7 +225,7 @@ Die do-while-Schleife funktioniert genauso wie die while-Schleife, mit der Ausna
 ----
 do {
    statement;
-} while (Boolean-expression);
+} while (boolean-expression);
 ----
 
 Ein einfaches Beispiel:
@@ -244,14 +244,18 @@ do {
 Die Unit-Tests zur *Demonstration* finden sich hier:
 
 [subs=normal]
- -> {mod-ref-test}/loops/demo/LoopTests.java
+ -> {mod-ref-test}/loops/LoopsDemoTests.java
 
 
 *Übungen*:
 
+[subs=normal]
+ -> {mod-ref-test}/loops/LoopsExerciseTests.java
+
+
 *Übung 1*:
 
-Gegeben eine Liste mit Zahlen. Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` (IntelliJ `fori`) Schleife und teste das Ergebnis mithilfe von `assertEquals`.
+Gegeben eine Liste mit Zahlen. Finde den größten Zahlenwert dieser Liste mithilfe eine (alten) `for` Schleife (IntelliJ: _"fori"_) und teste das Ergebnis mithilfe von `assertEquals`.
 
 _Optional_: Wandele die for Schleife in eine `enhanced for` Schleife um.
 

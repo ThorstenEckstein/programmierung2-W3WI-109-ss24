@@ -59,7 +59,7 @@ include::../module-object-contract/docs/object-contract.adoc[tag="content"]
 
 include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
-== Tag 3 - Abstraktionen, Datentypen & Kontrollstrukturen
+== Tag 3 - Abstraktionen & Datentypen
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -75,29 +75,32 @@ include::../module-interfaces/docs/interfaces.adoc[tag="content"]
 
 include::../module-datatypes/docs/datatypes.adoc[tag="content"]
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 11:45 - 12:15 | *link:../module-loops/docs/loops.adoc[module-loops]*
-|===
 
-include::../module-loops/docs/loops.adoc[tag="content"]
-
-
-== Tag 4 - Sichtbarkeiten, Collections & Assoziationen
+== Tag 4 - Kontrollstrukturen, Sichtbarkeiten & Collections
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:20 - 12:15 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
+| {icon-topic}  | 09:15 - 10:00 | *link:../module-visibility/docs/visibility.adoc[module-visibility]*
 |===
 
 include::../module-visibility/docs/visibility.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 10:30 | *link:../module-collections/docs/collections.adoc[module-collections]*
+| {icon-topic}  | 10:00 - 11:00 | *link:../module-loops/docs/loops.adoc[module-loops]*
+|===
+
+include::../module-loops/docs/loops.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 11:00 - 12:15 | *link:../module-collections/docs/collections.adoc[module-collections]*
 |===
 
 include::../module-collections/docs/collections.adoc[tag="content"]
+
+
+== Tag 5 - Associations, Java Generics & Enums
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -106,7 +109,12 @@ include::../module-collections/docs/collections.adoc[tag="content"]
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
-== Tag 5 - Enums & Java Generics
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 10:00 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
+|===
+
+include::../module-generics/docs/generics.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -115,12 +123,6 @@ include::../module-associations/docs/associations.adoc[tag="content"]
 
 include::../module-enums/docs/enums.adoc[tag="content"]
 
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 10:00 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
-|===
-
-include::../module-generics/docs/generics.adoc[tag="content"]
 
 == Tag 6 - Funktionale Programmierung
 

@@ -9,7 +9,7 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@SuppressWarnings("All")
+//@SuppressWarnings("All")
 public class CollectionsDemoTest {
 
     @Test
@@ -32,7 +32,7 @@ public class CollectionsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 1: Eine einfache Liste mit 'primitiven' Werten")
+    @DisplayName("Demo 1: Eine einfache Liste mit 'String' Werten")
     public void demo1() {
         // given
         List<String> list = new ArrayList<>();
@@ -48,7 +48,12 @@ public class CollectionsDemoTest {
     }
 
     @Test
-    @DisplayName("Demo 2: Eine einfache Liste mit 'komplexen' Werten (Objektinstanzen)")
+    @DisplayName("""
+        Demo 2: Eine einfache Liste mit 'komplexen' Werten (Objektinstanzen)
+        
+        Zusatz: Ein Ausflug in das Thema 'Objekt-Vertrag' bzw. zu dessen Methoden hashCode() und equals()
+        """
+    )
     public void demo2() {
         // given
         List<Student> students = new ArrayList<>();
@@ -56,10 +61,14 @@ public class CollectionsDemoTest {
         Student s2 = new Student("Alexander");
         Student s3 = new Student("Henrik");
 
+        //Student s4 = new Student("Alexander");
+
         // when
         students.add(s1);
         students.add(s2);
         students.add(s3);
+
+        // Alternativ: List.of(s1, s2, s3);
 
         System.out.println("Before removal: " + students);
 
@@ -77,7 +86,7 @@ public class CollectionsDemoTest {
     public void demo3() {
         // given
         // <KEY   , VALUE>
-        Map<String, Double> map = new HashMap<>();
+        Map<String, Double> map = new HashMap<String, Double>();
 
         // when
         map.put("a", 123.45);

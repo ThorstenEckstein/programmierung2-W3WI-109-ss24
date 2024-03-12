@@ -56,16 +56,16 @@ Di. 12.03.2024, 09:15 - 12:15 ::::: "Tag 3" :::::
 Di. 19.03.2024, 09:15 - 12:15 ::::: "Tag 4" :::::
    09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Welcome etc.
    09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
-   09:25 - 09:45 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
-   09:45 - 09:55 (10') [L+C  : Demo    ]  Demo zu Kontrollstrukturen
-   09:55 - 10:15 (20') [L+C  : Exercise]  Übung zu Kontrollstrukturen
-   10:15 - 10:30 (15') [V+AM : Topic   ]  Sichtbarkeiten & Scopes: Access Modifier
+   09:25 - 09:40 (15') [V+AM : Topic   ]  Sichtbarkeiten & Scopes: Access Modifier
+   09:40 - 09:55 (15') [V+AM : Demo    ]  Demo zum Thema Access Modifier
+   09:55 - 10:15 (20') [L+C  : Topic   ]  Kontrollstrukturen - Schleifen & Konditional-Ausdrücke
+   10:15 - 10:30 (15') [L+C  : Demo    ]  Demo zu Kontrollstrukturen
    10:30 - 10:45 (15') [Misc : Break   ]  --------------- Pause ---------------
-   10:45 - 10:55 (10') [V+AM : Demo    ]  Demo zum Thema Access Modifier
-   10:55 - 11:25 (30') [C+E  : Topic   ]  Java Collections API Interfaces
-   11:25 - 11:45 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API Interfaces
-   11:45 - 12:00 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
-   12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
+   10:45 - 11:05 (20') [L+C  : Exercise]  Übung zu Kontrollstrukturen
+   11:05 - 11:35 (30') [C+E  : Topic   ]  Java Collections API Interfaces
+   11:35 - 11:55 (20') [C+E  : Demo    ]  Demo zum Thema Java Collections API Interfaces
+   11:55 - 12:10 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
+   12:10 - 12:15 ( 5') [Misc : Buffer  ]  Pufferzeit am Ende
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////

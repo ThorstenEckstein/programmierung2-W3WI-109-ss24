@@ -1,6 +1,5 @@
 package de.dhbw.loops;
 
-import de.dhbw.commons.Logger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -8,8 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SuppressWarnings("unused")
 public class LoopsDemoTest {
-
-    private final Logger logger = new Logger(LoopsDemoTest.class);
 
     @Test
     @DisplayName("Demo 1: for loop")

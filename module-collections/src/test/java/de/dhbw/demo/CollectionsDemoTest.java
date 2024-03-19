@@ -135,6 +135,7 @@ public class CollectionsDemoTest {
 
         } catch (UnsupportedOperationException uoe) {
             // ignore exception, just to demonstrate 'unmodifiable'
+            uoe.printStackTrace();
         }
 
         // then

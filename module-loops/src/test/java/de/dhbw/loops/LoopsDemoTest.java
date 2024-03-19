@@ -36,4 +36,31 @@ public class LoopsDemoTest {
         assertEquals(5, i);
     }
 
+    @Test
+    @DisplayName("Demo 3: switch case")
+    public void demo3() {
+        // given
+        int i = 7;
+        int x;
+
+        // when
+        switch(i) {
+            case 0:
+                x = i;
+                break;
+            case 1:
+                x = i;
+                break;
+            case 2:
+                x = i;
+                break;
+            default:
+                x = -1;
+                break;
+        }
+
+        // then
+        System.out.println("Executed case: " + x);
+    }
+
 }

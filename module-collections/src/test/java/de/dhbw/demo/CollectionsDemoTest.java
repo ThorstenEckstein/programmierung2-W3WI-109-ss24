@@ -185,7 +185,7 @@ public class CollectionsDemoTest {
     }
 
     //tag::synchronized-list[]
-    //@Test
+    @Test
     public void demo6() {
         // given
         List<String> unsyncedList = new ArrayList<>();
@@ -207,7 +207,7 @@ public class CollectionsDemoTest {
         synchronized (syncedList) {
             Iterator<String> i = syncedList.iterator();
             while (i.hasNext()) {
-                logger.log(i.next());
+                System.out.println(i.next());
             }
         }
         */

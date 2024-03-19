@@ -67,10 +67,6 @@ Di. 19.03.2024, 09:15 - 12:15 ::::: "Tag 4" :::::
    11:55 - 12:10 (15') [C+E  : Exercise]  Übungen zum Thema Java Collections API Interfaces
    12:10 - 12:15 ( 5') [Misc : Buffer  ]  Pufferzeit am Ende
 
-
-////////////////////////////////////////////////////////////////////////////////////////////
-
-
 Di. 26.03.2024, 09:15 - 12:15 ::::: "Tag 5" :::::
    [ ] [ ] 09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.
    [ ] [ ] 09:20 - 09:25 ( 5') [WI+S : Setup   ]  Update Project
@@ -84,6 +80,7 @@ Di. 26.03.2024, 09:15 - 12:15 ::::: "Tag 5" :::::
    [ ] [ ] 11:25 - 12:00 (35') [Gen  : Exercise]  Übungen zu Java Generics
    [ ] [ ] 12:00 - 12:15 (15') [Misc : Buffer  ]  Pufferzeit am Ende
 
+/////////////////////////////////////////////////////////////////////////////////
 
 Di. 02.04.2024, 09:15 - 12:15 ::::: "Tag 6" :::::
    [ ] [ ] 09:15 - 09:20 ( 5') [WI+S : Buffer  ]  FAQ, Wiederholung etc.

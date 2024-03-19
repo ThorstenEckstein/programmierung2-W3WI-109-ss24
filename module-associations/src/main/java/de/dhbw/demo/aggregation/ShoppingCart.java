@@ -6,6 +6,8 @@ import java.util.List;
 public class ShoppingCart {
 
     private final String id;
+
+    // Aggregation
     private List<Product> products;
 
     public ShoppingCart(String id) {
@@ -27,5 +29,9 @@ public class ShoppingCart {
 
     public void removeProducts() {
         setProducts(new ArrayList<>());
+    }
+
+    public boolean isEmpty() {
+        return this.products != null && this.products.isEmpty();
     }
 }

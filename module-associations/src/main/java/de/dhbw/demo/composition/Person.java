@@ -32,8 +32,4 @@ public class Person {
         setPassport(null);
     }
 
-    public void comeOfAge(String passport) {
-        setPassport(new Passport(passport));
-    }
-
 }

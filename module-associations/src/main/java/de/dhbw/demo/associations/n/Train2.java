@@ -14,6 +14,8 @@ public class Train2 {
 
     public void addWagon(Wagon2 wagon2) {
         this.wagons.add(wagon2);
+        wagon2.trainId = id;
+        //wagon2.train = this;
     }
 
 }

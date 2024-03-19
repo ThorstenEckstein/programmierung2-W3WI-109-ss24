@@ -36,27 +36,28 @@ public class AssociationsDemoTest {
 
         // then
         assertNotNull(shoppingCart);
+        assertTrue(shoppingCart.isEmpty());
     }
 
     @Test
     @DisplayName("Demo 2: Komposition")
     public void demo2() {
         // given
-        de.dhbw.demo.composition.Person person;
+        de.dhbw.demo.composition.Person jonas;
 
-        person = Life.birth("Jonas");
-
-        // when
-        person.comeOfAge("38sh36sg");
+        jonas = Life.birth("Jonas");
 
         // when
-        Life.death(person);
+        Life.comingOfAge(jonas, "38sh36sg");
+
+        // when
+        Life.death(jonas);
 
         // then (Bemerkung: Warum kommt hier eigentlich keine NullPointerException? => siehe Modul 'Referenzsemantik')
-        assertNull(person.getPassport());
+        assertNull(jonas.getPassport());
 
-        person = null;
-        assertNull(person);
+        jonas = null;
+        assertNull(jonas);
     }
 
     @Test

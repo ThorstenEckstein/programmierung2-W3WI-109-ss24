@@ -33,7 +33,7 @@ Klassen existieren fast nie unabhängig, denn Software besteht immer auch vielen
 
 Klassen gehen also mit anderen Klassen viele sogenannte *"Beziehungen"* ein. Dabei gibt es verschiedene Arten von Beziehungen. Die wichtigsten sind:
 
-* *Aufruf* (_dynamische Beziehung zu Laufzeit_), kann innerhalb einer Software sein oder zwischen ganzen Systemen!
+* *Aufruf* (_dynamische Beziehung zur Laufzeit_), kann innerhalb einer Software sein oder zwischen ganzen Systemen!
 * *Vererbung*, *Realisierung* (_statische Beziehung zur Compilezeit_)
 * *Besitz* (_statische Beziehung zur Compilezeit_) -> wird (neben weiteren Varianten) oft auch als *Assoziation* bezeichnet.
 
@@ -61,7 +61,7 @@ Art & Grad der Abhängigkeit *zwischen* (einzelnen) Softwaremodulen, insb. Klass
 include::diagrams/coupling.puml[]
 ....
 
-Die *Kopplung* im obigen Diagramm ist die (Art und) *Anzahl der Pfeile* zwischen den Klassen. Sie gibt an, wie stark die einzelnen Programmmodule (hier Klassen) von den anderen abhängig sind. Wechselwirkungen zwischen zwei KLassen/Objekten treten auf, weil es eine Kopplung gibt. Lose gekoppelte Programme sind flexibel und erweiterbar, je stärker die Kopplung, desto schwieriger wird die Änderbarkeit der Klassen.
+Die *Kopplung* im obigen Diagramm ist die (Art und) *Anzahl der Pfeile* zwischen den Klassen. Sie gibt an, wie stark die einzelnen Programmmodule (hier Klassen) von den anderen abhängig sind. Wechselwirkungen zwischen zwei Klassen/Objekten treten auf, weil es eine Kopplung gibt. Lose gekoppelte Programme sind flexibel und erweiterbar, je stärker die Kopplung, desto schwieriger wird die Änderbarkeit der Klassen.
 
 ==== Kohäsion
 
@@ -76,7 +76,7 @@ include::diagrams/cohesion.puml[]
 
 *Kohäsion* misst, wie stark die einzelnen Klassen innerhalb eines Programmmoduls - z.B. eines Paketes - zusammenhängen, vor allem wie stark sie zu _einem/wenigen_ Aspekt oder auch Zusammenhang gehören. Gut *strukturierte* Software führen oft zu stark zusammenhängenden Anwendungen.
 
-IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Beziehungen zwischen den Klassen einer Software wird unter dem Begriffspaar *Kopplung & Kohäsion* zusammengefasst (*"loosely coupled along with high cohesion"*). Ein allgemeines Qualitätsziel von Software ist bspw., einen niedrigen Grad von Kopplung der Komponenten zu erreichen. Je geringer die Kopplung ist, desto besser ist die Software änderbar. Gleichzeitig sollen die KLassen innerhalb eines Paketes/Moduls zur gleichen Fachlichkeit gehören!_
+IMPORTANT: _Der Grad - also die Anzahl und Qualität - der Summe aller dieser Beziehungen zwischen den Klassen einer Software wird unter dem Begriffspaar *Kopplung & Kohäsion* zusammengefasst (*"loosely coupled along with high cohesion"*). Ein allgemeines Qualitätsziel von Software ist bspw., einen niedrigen Grad von Kopplung der Komponenten zu erreichen. Je geringer die Kopplung ist, desto besser ist die Software änderbar. Gleichzeitig sollen die Klassen innerhalb eines Paketes/Moduls zur gleichen Fachlichkeit gehören!_
 
 *Beispiel:*
 
@@ -88,6 +88,7 @@ Gleichzeitig haben die Module untereinander keine bzw. sehr wenige Abhängigkeit
 === Aggregation & Komposition
 
 Assoziationen können auch *qualitativ und semantisch* recht unterschiedlich sein. In diesem Zusammenhang sind *Aggregation* und *Komposition* von Bedeutung.
+
 
 ==== Aggregation
 
@@ -116,13 +117,14 @@ Ein paar Beispiele dazu:
 include::diagrams/composition.puml[]
 ....
 
-Die Unterschiede sind also fein, aber wichtig, daher bleibt die Frage ...
+Die Unterschiede sind also fein, aber wichtig.
 
 ====
-_... wie könnte man "existentielle Abhängigkeit" im Code ausdrücken?_
+_Es stellt sich außerdem die Frage, wie man so eine *"existentielle Abhängigkeit"* im Code ausdrücken könnte?_
 ====
 
-Demo:
+*Demo:*
+
 [subs=normal]
  {mod-ref-test}/demo/AssociationsDemoTest.demo2()
 

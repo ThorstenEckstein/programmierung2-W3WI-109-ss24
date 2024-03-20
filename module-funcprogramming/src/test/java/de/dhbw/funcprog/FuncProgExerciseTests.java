@@ -1,13 +1,25 @@
 package de.dhbw.funcprog;
 
+import de.dhbw.funcprog.solution.Product;
+import de.dhbw.funcprog.solution.ShoppingCart;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@SuppressWarnings("FieldCanBeLocal")
 public class FuncProgExerciseTests {
 
+    private ShoppingCart shoppingCart;
+
     @BeforeEach
-    public void beforeEach() { }
+    public void beforeEach() {
+        // given
+        this.shoppingCart = ShoppingCart.of(
+            new Product("Apple",      Product.Category.Food,    1.49),
+            new Product("Smartphone", Product.Category.NonFood, 299.00),
+            new Product("Glibber",    Product.Category.Unknown, 0.0)
+        );
+    }
 
     @Test
     @DisplayName("Exercise 1: Loop with Streams & Lambda")
@@ -48,10 +60,10 @@ public class FuncProgExerciseTests {
     @Test
     @DisplayName("Übung 3: Filter & reduce a shopping cart, calculate total price")
     public void exercise3() {
-        // given - use created shopping cart from above beforeEach()
+        // given - use member 'shoppingCart' containing 3 products, see above
 
         // when - step 1: filter your shopping cart for products for some 'category'
-        // when - step 2: reduce your shopping cart by summing product prices
+        // when - step 2: reduce your shopping cart by summing up all product prices
 
         // then - assert the correct total price
     }

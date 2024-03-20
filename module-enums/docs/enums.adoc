@@ -99,7 +99,7 @@ TIP: Ergänzung zur Nutzung vom *logischen UND* in den Unit-Tests -> siehe `modu
 
 === Zusätzliche Datenfelder
 
-Das Enums "normale" Klassen sind, lassen sie sich mit *instanz-spezifischen Datenfeldern* (_Instanzvariablen_) erweitern. Dazu müssen lediglich die Datenfelder selbst sowie ein oder mehrere *Konstruktoren* erzeugt werden, um die (ebenfalls konstanten) Werte für die Enum-Konstanten zu definieren.
+Da Enums "normale" Klassen sind, lassen sie sich mit *Datenfeldern* erweitern. Dazu müssen lediglich die Datenfelder selbst sowie ein oder mehrere *Konstruktoren* erzeugt werden, um die (ebenfalls konstanten) Werte für die Enum-Konstanten zu definieren.
 
 Dazu ein Beispiel:
 

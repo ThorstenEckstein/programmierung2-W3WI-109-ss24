@@ -104,34 +104,45 @@ include::../module-collections/docs/collections.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:45 - 12:15 | *link:../module-associations/docs/associations.adoc[module-associations]*
+| {icon-topic}  | 09:15 - 10:45 | *link:../module-operators/docs/operators.adoc[module-operators]*
+|===
+
+include::../module-operators/docs/operators.adoc[tag="content"]
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:45 - 11:10 | *link:../module-associations/docs/associations.adoc[module-associations]*
 |===
 
 include::../module-associations/docs/associations.adoc[tag="content"]
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 10:00 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
+| {icon-topic}  | 11:10 - 12:15 | *link:../module-generics/docs/generics.adoc[module-generics]*
 |===
 
 include::../module-generics/docs/generics.adoc[tag="content"]
-
-[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
-|===
-| {icon-topic}  | 09:15 - 10:00 | *link:../module-enums/docs/enums.adoc[module-enums]*
-|===
-
-include::../module-enums/docs/enums.adoc[tag="content"]
 
 
 == Tag 6 - Funktionale Programmierung
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 09:15 - 12:15 | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
+| {icon-topic}  | 09:15 - 09:45 | *link:../module-enums/docs/enums.adoc[module-enums]*
+|===
+
+include::../module-enums/docs/enums.adoc[tag="content"]
+
+
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 09:45 - 12:15 | *link:../module-funcprogramming/docs/functional-programming.adoc[module-funcprogramming]*
 |===
 
 include::../module-funcprogramming/docs/functional-programming.adoc[tag="content"]
+
++ [green]#_Austeilung & Erläuterungen zur Übungsklausur I - Basics (15')_#
+
 
 == Tag 7 - Ausnahmen, Fehlerbehandlung, Records & Statics
 
@@ -179,6 +190,8 @@ include::../module-javadoc/docs/javadoc.adoc[tag="content"]
 |===
 
 include::../module-clean-code/docs/clean-code.adoc[tag="content"]
+
++ [green]#_Austeilung & Erläuterungen zur Übungsklausur II - Advanced (15')_#
 
 
 == Tag 9 - Code-Qualität, Prüfungsvorbereitung

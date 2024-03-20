@@ -29,11 +29,14 @@ Im Wesentlichen stehen sich 2 *Programmierparadigmen* gegenüber:
 
 In der Übersicht:
 
+////
 [plantuml, title="Paradigmen", png, align="center"]
 ....
 include::diagrams/paradigms.puml[]
 ....
+////
 
+image::images/paradigms.png[]
 
 === Imperative Programmierung
 
@@ -55,7 +58,7 @@ Der *deklarative* Ansatz konzentriert sich auf die Endbedingungen eines gewünsc
 Die Charakteristiken von deklarativer Software sind:
 
 * Das Endergebnis hängt nicht von einem externen Zustand ab
-* Fehlen eines inneren Zustands zwischen den Hinrichtungen
+* Fehlen eines inneren Zustands zwischen den Ausführungen
 * Determinismus – für die gleichen Eingabeargumente liefert das Programm immer das gleiche Ergebnis
 * Die Ausführungsreihenfolge ist nicht immer wichtig – sie kann asynchron sein
 
@@ -64,7 +67,7 @@ Die *funktionale Programmierung* ist eine _Teilmenge_ der deklarativen Programmi
 
 === Lambda Ausdrücke
 
-Bei der *funktionalen Programmierung* stehen Funktionen im Mittelpunkt, sie werden nicht nur
+Bei der *funktionalen Programmierung* stehen also ^1Funktionen im Mittelpunkt, sie werden nicht nur
 
 * definiert und
 * angewendet
@@ -274,7 +277,7 @@ include::{mod-lnk-test}/funcprog/FuncProgExerciseTests.java[tags="modern-reduce"
 [[generics-exercise-3]]
 *Übung 3:*
 
-Für einen `Warenkorb` gilt es, darin enthaltene `Produkte` (mind. 3) zu nach ihrer `Produktkategorie` zu filtern.
+Für einen `Warenkorb` gilt es, die darin enthaltenen 3 `Produkte`nach ihrer `Produktkategorie` zu filtern.
 
 _Optional: Ermittle den gesamten `Preis` des Warenkorbs als Summe der produkt-spezifischen Einzel-`Preise`._
 

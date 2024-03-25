@@ -44,10 +44,14 @@ Vielfach wird bzgl. der Beziehungen zwischen Klassen zwischen folgenden zwei gru
 
 Zusammengefasst als Übersicht:
 
+////
 [plantuml, "coupling", png, align="center"]
 ....
 include::diagrams/associations.puml[]
 ....
+////
+
+image::images/associations.png[]
 
 
 ==== Kopplung
@@ -96,10 +100,14 @@ Die Aggregation, sowie auch die Komposition, ist eine Assoziation von *Teilen zu
 
 Ein paar Beispiele dazu:
 
+////
 [plantuml, "aggregation", png, align="center"]
 ....
 include::diagrams/aggregation.puml[]
 ....
+////
+
+image::images/aggregation.png[]
 
 Demo:
 [subs=normal]
@@ -112,10 +120,14 @@ Der Unterschied einer Komposition zur Aggregation ist, dass die Teile, die ein O
 
 Ein paar Beispiele dazu:
 
+////
 [plantuml, "composition", png, align="center"]
 ....
 include::diagrams/composition.puml[]
 ....
+////
+
+image::images/composition.png[]
 
 Die Unterschiede sind also fein, aber wichtig.
 

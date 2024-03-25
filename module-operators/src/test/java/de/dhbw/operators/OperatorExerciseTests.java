@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class OperatorExerciseTests {
 
     @Test
-    @DisplayName("Übung 1: ")
+    @DisplayName("Übung 1: Erstelle eine boolean Variable, negiere diese und teste das Ergebnis")
     public void exercise1() {
         // given
 

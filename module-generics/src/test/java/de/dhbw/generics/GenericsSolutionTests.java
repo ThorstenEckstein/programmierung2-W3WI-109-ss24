@@ -12,14 +12,17 @@ public class GenericsSolutionTests {
     @Test
     @DisplayName("Übung 1: Calculator")
     public void solution1() {
-        // given
-        Calculator<Integer> integerCalculator = new IntegerCalculator();
+        // given - mandatory part
+        Calculator<Integer> calculator = new IntegerCalculator();
+        //Calculator<Double> calculator = new DoubleCalculator();
 
         // when
-        Number number = integerCalculator.add(2, 7);
+        Number number = calculator.add(2, 7);
+        //Number number = calculator.add(1.9, 7.1);
 
         // then
         assertEquals(9, number);
+        //assertEquals(9.0, number);
     }
 
     @Test

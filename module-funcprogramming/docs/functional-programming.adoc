@@ -67,7 +67,7 @@ Die *funktionale Programmierung* ist eine _Teilmenge_ der deklarativen Programmi
 
 === Lambda Ausdrücke
 
-Bei der *funktionalen Programmierung* stehen also ^1Funktionen im Mittelpunkt, sie werden nicht nur
+Bei der *funktionalen Programmierung* stehen also Funktionen im Mittelpunkt, sie werden nicht nur
 
 * definiert und
 * angewendet
@@ -140,8 +140,8 @@ Die *wichtigsten* funktionalen interfaces sind:
 . `Consumer<T>` - beschreibt eine Aktion auf einem Element vom Type `T` mittels der Methode `void accept(T)`
 . `Predicate<T>` - definiert eine Methode `boolean test(T)`. Sie berechnet für einen Eingabewert T ein bool'sches Ergebnis. Das lässt sich sehr gut für Filterbedingungen ausnutzen.
 . `Function<T,R>` - Definiert eine Abbildungsmethode durch `R apply(T)`, wodurch Transformationen gut ausgedrückt werden können, gebräuchlich besonders für die Extraktion eines Attributes aus einem komplexen Typ
-. `Supplier<T>` - Stellt ein Ergebnis vom Typ `T` bereit. Im Gegensatz zu `Function<T,R>` erhält ein Supplier keinen Eingabewert mit der Methode `T get()`
 . `BiFunction<T,U,R>` und `BiConsumer<T,U>` - wie `Function`, nur mit zwei Eingabewerte `T` und `U`
+. `Supplier<T>` - Stellt ein Ergebnis vom Typ `T` bereit. Im Gegensatz zu `Function<T,R>` erhält ein Supplier keinen Eingabewert mit der Methode `T get()`
 
 Zu jedem dieser funktionalen Interfaces gibt es einen Unit-Test zur *Demonstration* hier:
 

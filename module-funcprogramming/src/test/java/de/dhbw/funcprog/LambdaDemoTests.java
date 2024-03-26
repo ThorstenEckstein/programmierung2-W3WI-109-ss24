@@ -1,7 +1,6 @@
 package de.dhbw.funcprog;
 
 import de.dhbw.commons.DateTimeUtil;
-import de.dhbw.commons.Logger;
 import de.dhbw.funcprog.demo.Schedule;
 import de.dhbw.funcprog.demo.Validator;
 import org.junit.jupiter.api.Test;
@@ -14,10 +13,8 @@ import java.util.function.*;
 import static de.dhbw.funcprog.demo.Validator.isScheduledFor2023;
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@SuppressWarnings("Convert2MethodRef")
 public class LambdaDemoTests {
-
-    private final Logger logger = new Logger(LambdaDemoTests.class);
 
     @Test
     public void consumer() {
@@ -39,7 +36,7 @@ public class LambdaDemoTests {
         Predicate<Integer> predicate = i -> (i < 18);
 
         // when
-        boolean result = predicate.test(17);
+        boolean result = predicate.test(11);
 
         // then
         assertTrue(result);
@@ -51,15 +48,20 @@ public class LambdaDemoTests {
 
         // Hier keine primitiven Datentypen möglich, man nutzt einfach die 'Wrapper' Typen
         // UnaryOperator<int> unaryFunction = (int x) -> { return x * x; };
-        UnaryOperator<Integer> function = (Integer x) -> {
-            return x * x;
+
+        Function<Integer, Integer> function = (Integer x) -> {
+            return 2 * x;
+        };
+
+        UnaryOperator<Integer> unaryFunction = (Integer x) -> {
+            return 2 * x;
         };
 
         // when
-        Integer result = function.apply(5);
+        Integer result = unaryFunction.apply(5);
 
         // then
-        assertEquals(25, result);
+        assertEquals(10, result);
     }
 
     @Test
@@ -76,16 +78,28 @@ public class LambdaDemoTests {
 
     @Test
     public void binaryFunction() {
-        // given
-        IntBinaryOperator lambda = (int x, int y) -> {
+        // Case (A) - given
+        BiFunction<Double, Double, String> biFunction = (Double x, Double y) -> {
+            return "Ergebnis: " + (x + y);
+        };
+
+        // when
+        String result1 = biFunction.apply(2.0, 1.1);
+
+        // then
+        assertEquals("Ergebnis: 3.1", result1);
+
+
+        // Case (B) - given
+        IntBinaryOperator binaryOperator = (int x, int y) -> {
             return x + y;
         };
 
         // when
-        int result = lambda.applyAsInt(7, 3);
+        int result2 = binaryOperator.applyAsInt(7, 3);
 
         // then
-        assertEquals(10, result);
+        assertEquals(10, result2);
     }
 
     //tag::lambda-example-1[]

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 public class GenericsExerciseTests {
 
     @Test
-    @DisplayName("Übung 1: Taschenrechner mit Grundrechenarten")
+    @DisplayName("Übung 1: Taschenrechner mit 4 Grundrechenarten")
     public void exercise1() {
         // given
 
@@ -16,7 +16,7 @@ public class GenericsExerciseTests {
     }
 
     @Test
-    @DisplayName("Übung 2: Workflow mit Schritten")
+    @DisplayName("Übung 2: Workflow mit Aktivitäten/Schritten")
     public void exercise2() {
         // given
 

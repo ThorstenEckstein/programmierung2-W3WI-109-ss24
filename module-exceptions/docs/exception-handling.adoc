@@ -111,13 +111,16 @@ include::diagrams/exceptions-model.puml[]
 
 === Exception Handling
 
-Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden, wie folgt **beispielhaft** umgesetzt:
+Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden,
+
+////
+, wie folgt **beispielhaft** umgesetzt:
 
 [,java, lines]
 ----
 try {
   String file = "document.docx";
-  bollean loaded = fileHandler.load(file);
+  boolean loaded = fileHandler.load(file);
 
   // ... weitere Verarbeitung ...
 
@@ -129,13 +132,14 @@ try {
   fileHandler.retryLoad(file);
 }
 ----
+////
 
 aber *NICHT* so (sogenanntes **"Anti-Pattern"**):
 
 [source, java, indent="0"]
 include::{mod-lnk-src}/exceptions/demo/DataLoader.java[tags=exception-handling-1]
 
-Besser ist eine echte Verarbeitung des Fehlers. Hier sind sehr verschiedene Prozesse möglich, anhängig vom eingetretenen Fehler. In vielen Fällen sind bei Fehlern sowohl ...
+Besser ist eine **echte Verarbeitung** des Fehlers. Hier sind sehr verschiedene Prozesse möglich, anhängig vom eingetretenen Fehler. In vielen Fällen sind bei Fehlern sowohl ...
 
 * _technische_ als auch
 * _fachliche_
@@ -248,8 +252,8 @@ Das Schlüsselwort `throw` dagegen wirft eine tatsächliche, konkrete Exception.
 
 [, java]
 ----
-public void vote(int ageOfVoter) throws TooYoungToVoteException {
-  if (ageOfVoter < 18) {
+public void vote(Vote vote, Voter voter) throws TooYoungToVoteException {
+  if (voter.getAge() < 18) {
     throw new TooYoungToVoteException(
       "Voter's must be at least 18 years old!");
   }

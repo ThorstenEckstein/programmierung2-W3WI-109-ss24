@@ -71,20 +71,24 @@ Die wichtigsten Codefragmente:
  public void process() {
    // code that may throw an exception in
    // a specific situation
-   if (!condition) {
+   if (!isValid) {
      throw new ValidationException(); <2>
    }
  }
 
- try {
+ public void execute() {
+   try {
+       process(); <3>
+   } catch (ValidationException ve) { <4>
      // ...
- } catch (ValidationException ve) {
-     // ...
+   }
  }
 ----
 
 <1> [small]#Die Methode zeigt an, dass sie diese `Exception` werfen kann#
 <2> [small]#Hier wird eine spezielle `Exception` tatsächlich geworfen#
+<3> [small]#Hier wird die Methode, die eine Exception wirft, genutzt/aufgerufen ...#
+<4> [small]#... und behandelt in Form des sogenannten `exception handler`#
 
 {nl}
 
@@ -107,7 +111,26 @@ include::diagrams/exceptions-model.puml[]
 
 === Exception Handling
 
-Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden, aber *NICHT* so:
+Grundsätzlich stellt Java einen sogenannten `exception handler` bereit, und zwar einfach mithilfe des `catch` Abschnittes. Hier sollte der abgefangene Fehler "behandelt" werden, wie folgt **beispielhaft** umgesetzt:
+
+[,java, lines]
+----
+try {
+  String file = "document.docx";
+  bollean loaded = fileHandler.load(file);
+
+  // ... weitere Verarbeitung ...
+
+} catch (FileNotFoundException e) {
+  // Varianten einer Fehlerbehandlung:
+  logger.error("File "+name+" not found");
+  logger.log(e);
+  app.trySendEmail("WARNING: ...");
+  fileHandler.retryLoad(file);
+}
+----
+
+aber *NICHT* so (sogenanntes **"Anti-Pattern"**):
 
 [source, java, indent="0"]
 include::{mod-lnk-src}/exceptions/demo/DataLoader.java[tags=exception-handling-1]

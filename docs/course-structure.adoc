@@ -100,7 +100,7 @@ include::../module-loops/docs/loops.adoc[tag="content"]
 include::../module-collections/docs/collections.adoc[tag="content"]
 
 
-== Tag 5 - Associations, Java Generics & Enums
+== Tag 5 - Operators, Associations & Java Generics
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
@@ -124,7 +124,7 @@ include::../module-associations/docs/associations.adoc[tag="content"]
 include::../module-generics/docs/generics.adoc[tag="content"]
 
 
-== Tag 6 - Funktionale Programmierung
+== Tag 6 - Enums & funktionale Programmierung
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===

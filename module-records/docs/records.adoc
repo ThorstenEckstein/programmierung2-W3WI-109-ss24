@@ -86,7 +86,7 @@ public class Station {
 Obwohl das *Ziel* erreicht wird, gibt es zwei Probleme:
 
 . Es gibt eine Menge _Boilerplate-Code_
-. Der Zweck der Klasse wird verschleiert, nämlich ein Bahnhof mit Adresse und Kapazitä darzustellen
+. Der Zweck der Klasse wird verschleiert, nämlich ein Bahnhof mit Adresse und Kapazität darzustellen
 
 Zu 1. In dem Fall muss der gleiche Erstellungsprozess für jede Datenklasse wiederholt werden und ein neues Feld für jedes Datenelement erstellt werde, zudem _equals()_, _hashCode()_ und _toString()_. Außerdem ein Konstruktor, der jedes Feld akzeptiert.
 

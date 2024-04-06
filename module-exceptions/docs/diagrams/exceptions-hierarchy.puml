@@ -23,7 +23,7 @@ Throwable   <|--   Error
 Exception   <|--   RuntimeException
 Exception   <|--   CheckedException
 
-note left of Error
+note bottom of Error
  - <color:red>Should not</color> be caught
  - <color:red>Could</color> be declared
  - <color:red>Irrecoverable</color> errors

@@ -68,7 +68,7 @@ Die wichtigsten Codefragmente:
     // code that may throw an exception
  }
 
- public void process() {
+ public void process() throws ValidationException {
    // code that may throw an exception in
    // a specific situation
    if (!isValid) {

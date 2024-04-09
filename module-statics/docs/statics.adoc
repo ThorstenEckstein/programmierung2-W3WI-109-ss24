@@ -29,20 +29,29 @@ bedeutet im Wesentlichen, das die Felder (Attribute) oder Methoden einer Klasse 
 
 Ein *Beispiel*:
 
-[source, java]
+[source,java]
 ----
-public class Configuration {
+import java.util.HashMap;public class Configuration {
 
     // statisches Feld
-    public static final String SETTING_KEY_AUTHOR = "setting.author";
+    public static final String SETTING_KEY_AUTHOR = "setting.author"; <1>
+    public static Map<String, String> settings = new HashMap<>();
+
+    // static initializer
+    static { <2>
+        settings.put(SETTING_KEY_AUTHOR, "Lady Gaga");
+    }
 
     // statische Methode
-    public static String getSetting(String key) {
+    public static String getSetting(String key) { <3>
         return settings.get(key);
     }
 
 }
 ----
+<1> statisches Feld
+<2> statischer Initialisierer (static initializer)
+<3> statische Methode
 
 /////////////////////////////
 [[demos_statics]]

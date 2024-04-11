@@ -131,3 +131,27 @@ ergibt eine Zeichenkette `str` ähnlich dem Folgenden:
 
  java.lang.Object@76b10754
 
+'''
+
+*Übungen*:
+
+[subs=normal]
+ -> {mod-ref-test}/exercise/ObjectContractExerciseTest.java
+
+
+NOTE: [small]#Für beide Übungen gilt: Der Code soll, soweit möglich, durch Generierung erzeugt werden, z.B.: _new class, generate constructor, generate getter and setter_#
+
+*Übung 1*:
+
+. Erzeuge eine Klasse `Geldschein` mit einem Feld `betrag` (_double_) ab
+. Erzeuge auch einen Konstruktor für dieses Feld
+. Erzeuge im einem Test zwei Instanzen mit demselben Geldbetrag
+. Teste, ob die Geldschein-Instanzen mittels `equals()` gleich sind
+
+*Übung 2*:
+
+. Nutze die Klasse `Geldschein` von _Übung 1_ nochmal
+. Erzeuge in dieser Klasse nun die Objektvertrags-Methoden `equals()` und `hashCode()` und nutze für deren Implementierung das Feld `betrag`
+. Erzeuge im nachstehenden Test zwei Instanzen, wieder mit demselben Betrag
+. Teste, ob die Geldschein-Instanzen gleich sind
+

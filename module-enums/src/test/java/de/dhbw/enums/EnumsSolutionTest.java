@@ -1,6 +1,5 @@
 package de.dhbw.enums;
 
-import de.dhbw.commons.Logger;
 import de.dhbw.enums.solution.Color;
 import de.dhbw.enums.solution.RgbColor;
 import org.junit.jupiter.api.DisplayName;
@@ -11,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 
 
 public class EnumsSolutionTest {
-
-    private final Logger logger = new Logger(EnumsSolutionTest.class);
 
     @Test
     @DisplayName("Exercise 1: 'Switch' anstelle von 'if-elseif-else'")

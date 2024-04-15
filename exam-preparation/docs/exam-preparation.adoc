@@ -16,6 +16,16 @@ Anhand der, durch Kunden, natürlich-sprachlich formulierten Anwendungsszenarien
 . *Technische Umsetzung* in konkrete Pakete, Klassen, Felder und/oder Methoden (Operationen)
 . *Testen* (Beweisführung) des technischen Modells durch ein oder mehrere Unit-Tests, etwa durch konkrete Instanziierung der Modellklassen
 
+Wurzel-*Package* für die Modellklassen, ggf. pro Szenario noch ein zusätzliches Package zur Vermeidung von Namenskonflikten und zur besseren Strukturierung:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/ScenarioTests.java
+
 
 === Szenario 1: Stromkunden-Verwaltung
 
@@ -53,6 +63,17 @@ Mögliche ...
 
 == Programmieraufgaben
 
+Wurzel-*Package*, nutzbar für mögliche Implementierungen/Klassen, die im Rahmen der Aufgabe erstellt werden können:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/ProgrammingTests.java
+
+
 === Aufgabe 1: Aufzählungen
 
 Gegeben sei die folgende *Aufzählung*. Implementiere zwei beispielhafte `switch` Anweisung für die Elemente dieses `enum's`, einmal in "alter" Form und einmal als "enhanced switch". Nutze dazu einfach einen *Unit-Tests*:
@@ -85,6 +106,18 @@ Password p2 = new Password("x84jdf754hf6");
 
 
 == Quizfragen (10)
+
+Wurzel-*Package*, nutzbar für mögliche Implementierungen/Klassen, die im Rahmen der Aufgabe erstellt werden können:
+
+[subs=normal]
+ {mod-ref-src}/exam/*.java
+
+Zugehöriger *Unit-Tests*:
+
+[subs=normal]
+ {mod-ref-test}/exam/QuizTests.java
+
+
 
 :question-seq: {counter:question-seq}
 [.big.red]#*Frage {question-seq}*#: Welche der folgenden *Listentypen* wäre am passendsten zur Speicherung von Listenelementen geeignet, wenn ein Listenelement aus einem Schlüssel und einem Wert besteht und deren Einträge natürlich sortiert werden sollen?

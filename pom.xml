@@ -19,6 +19,7 @@
     <modules>
         <module>commons</module>
         <module>docs</module>
+        <module>exam-preparation</module>
 
         <module>module-associations</module>
         <module>module-archive</module>         <!-- backup -->

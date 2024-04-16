@@ -181,11 +181,16 @@ include::../module-object-contract/docs/object-contract.adoc[tag="content"]
 
 include::../module-records/docs/records.adoc[tag="content"]
 
+[cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
+|===
+| {icon-topic}  | 12:00 - 12:15 |  [blue]#*Prüfungsvorbereitung* für Zuhause#
+|===
+
 -> [green]#_folgendes Modul "Clean Code" ist optional_#
 
 [cols="1m,3m,6m", grid="none", width="100%", stripes="odd"]
 |===
-| {icon-topic}  | 11:45 - 12:15 | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
+| {icon-topic}  | Dauer unbekannt | *link:../module-clean-code/docs/clean-code.adoc[module-clean-code]*
 |===
 
 include::../module-clean-code/docs/clean-code.adoc[tag="content"]

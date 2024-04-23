@@ -1,10 +1,11 @@
 package de.dhbw.exam;
 
+import java.util.LinkedList;
 import java.util.List;
 
 public class Kunde {
 
-    private List<Account> accounts;
+    private List<Account> accounts = new LinkedList<>();
 
     public List<Account> getAccounts() {
         return accounts;

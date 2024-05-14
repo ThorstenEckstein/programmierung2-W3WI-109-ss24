@@ -16,7 +16,7 @@
 	<properties>
 		<commons.version>1.0</commons.version>
 		<dbunit.version>2.7.3</dbunit.version>
-		<h2.database.version>2.1.214</h2.database.version>
+		<h2.database.version>2.2.224</h2.database.version>
 		<junit.4.version>4.13.2</junit.4.version>
 	</properties>
 
@@ -57,5 +57,12 @@
 			<!-- currently everything is specified in super pom  -->
 		</plugins>
 	</build>
+	<repositories>
+		<repository>
+			<id>maven_central</id>
+			<name>Maven Central</name>
+			<url>https://repo.maven.apache.org/maven2/</url>
+		</repository>
+	</repositories>
 
 </project>
